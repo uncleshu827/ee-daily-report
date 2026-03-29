@@ -1,1 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>EE 每日選品報告</title>
+<style>
+  :root {
+    --bg: #f5f5f0;
+    --card-bg: #ffffff;
+    --text: #1a1a1a;
+    --text-sec: #6b7280;
+    --accent: #e8785e;
+    --green: #10b981;
+    --green-bg: #ecfdf5;
+    --red: #ef4444;
+    --red-bg: #fef2f2;
+    --border: #e8e8e3;
+    --shadow: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 16px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 90px;
+  }
 
+  /* ===== HEADER ===== */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #fff;
+    padding: 20px 20px 16px;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .h-row { display: flex; justify-content: space-between; align-items: center; }
+  .h-date { font-size: 12px; opacity: .65; letter-spacing: .5px; }
+  .h-title { font-size: 20px; font-weight: 700; margin: 2px 0 6px; }
+  .h-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+  .h-pill {
+    font-size: 11px; padding: 3px 10px; border-radius: 100px;
+    background: rgba(255,255,255,.12); color: rgba(255,255,255,.85);
+  }
+  .h-notion {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 12px; color: rgba(255,255,255,.7);
+    text-decoration: none; margin-top: 8px;
+  }
+  .h-notion:hover { color: #fff; }
+
+  /* ===== EVOLUTION BANNER ===== */
+  .evo-banner {
+    margin: 12px 16px 0;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border-radius: 12px;
+    font-size: 13px;
+    color: #92400e;
+  }
+  .evo-banner strong { font-weight: 600; }
+
+  /* ===== PRODUCT CARD ===== */
+  .card {
+    background: var(--card-bg);
+    margin: 12px 16px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: box-shadow .25s;
+  }
+  .card.voted-up { box-shadow: 0 0 0 2.5px var(--green), var(--shadow-md); }
+  .card.voted-down { box-shadow: 0 0 0 2.5px var(--red), var(--shadow-md); }
+
+  /* Image */
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    background: #e5e5e5;
+  }
+
+  /* Top section */
+  .card-top {
+    padding: 14px 16px 10px;
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .score-ring {
+    width: 48px; height: 48px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; font-weight: 700; flex-shrink: 0;
+    border: 3px solid;
+  }
+  .score-high { background: #ecfdf5; color: #059669; border-color: #059669; }
+  .score-mid  { background: #fffbeb; color: #d97706; border-color: #d97706; }
+  .score-low  { background: #fef2f2; color: #dc2626; border-color: #dc2626; }
+  .card-info { flex: 1; min-width: 0; }
+  .card-name { font-size: 17px; font-weight: 600; line-height: 1.35; }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+  .tag {
+    display: inline-block; padding: 2px 9px; border-radius: 100px;
+    font-size: 11px; font-weight: 500;
+  }
+  .tag-cat  { background: #ede9fe; color: #7c3aed; }
+  .tag-src  { background: #e0f2fe; color: #0369a1; }
+  .tag-margin { background: #ecfdf5; color: #059669; }
+
+  /* Highlight */
+  .card-highlight {
+    padding: 0 16px 12px;
+    font-size: 14px; color: var(--text-sec); line-height: 1.55;
+  }
+
+  /* Numbers row */
+  .card-nums {
+    display: flex; border-top: 1px solid var(--border);
+  }
+  .card-n {
+    flex: 1; text-align: center; padding: 10px 4px;
+    border-right: 1px solid var(--border);
+  }
+  .card-n:last-child { border-right: none; }
+  .card-n-label { font-size: 10px; color: var(--text-sec); letter-spacing: .3px; }
+  .card-n-val { font-size: 15px; font-weight: 600; margin-top: 1px; }
+
+  /* Links row */
+  .card-links {
+    display: flex; gap: 0; border-top: 1px solid var(--border);
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+  }
+  .card-link {
+    flex: 1; min-width: 0;
+    display: flex; align-items: center; justify-content: center; gap: 4px;
+    padding: 9px 8px;
+    font-size: 12px; color: #3b82f6; font-weight: 500;
+    text-decoration: none;
+    border-right: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .card-link:last-child { border-right: none; }
+  .card-link:active { background: #eff6ff; }
+
+  /* Expand */
+  .expand-btn {
+    display: flex; align-items: center; justify-content: center; gap: 4px;
+    width: 100%; padding: 10px; border: none; background: transparent;
+    color: var(--text-sec); font-size: 13px; cursor: pointer;
+    border-top: 1px solid var(--border);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .expand-btn svg { transition: transform .3s; }
+  .expand-btn.open svg { transform: rotate(180deg); }
+
+  /* Detail */
+  .card-detail { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+  .card-detail.open { max-height: 3000px; }
+  .card-detail-inner { padding: 0 16px 16px; border-top: 1px solid var(--border); }
+  .d-sec { margin-top: 14px; }
+  .d-sec-title { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+  .d-sec-body { font-size: 13px; color: var(--text-sec); line-height: 1.65; }
+
+  /* Score bars */
+  .sb-grid {
+    display: grid; grid-template-columns: 72px 1fr 30px;
+    gap: 5px 8px; align-items: center; margin-top: 8px;
+  }
+  .sb-label { font-size: 11px; color: var(--text-sec); }
+  .sb-bar-bg { height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .sb-bar { height: 100%; border-radius: 3px; }
+  .sb-bar.high { background: #10b981; }
+  .sb-bar.mid  { background: #f59e0b; }
+  .sb-bar.low  { background: #ef4444; }
+  .sb-val { font-size: 11px; font-weight: 600; text-align: right; }
+
+  /* Vote buttons */
+  .card-actions { display: flex; border-top: 1px solid var(--border); }
+  .vote-btn {
+    flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 13px; border: none; background: transparent;
+    font-size: 15px; cursor: pointer; color: var(--text-sec);
+    transition: all .2s; -webkit-tap-highlight-color: transparent;
+  }
+  .vote-btn:first-child { border-right: 1px solid var(--border); }
+  .vote-btn:active { transform: scale(.96); }
+  .vote-btn.voted-up { background: var(--green-bg); color: var(--green); font-weight: 600; }
+  .vote-btn.voted-down { background: var(--red-bg); color: var(--red); font-weight: 600; }
+
+  /* Bottom bar */
+  .bottom-bar {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: #fff; padding: 10px 16px;
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+    box-shadow: 0 -2px 10px rgba(0,0,0,.08);
+    display: flex; align-items: center; gap: 12px; z-index: 100;
+  }
+  .fb-summary { flex: 1; font-size: 13px; color: var(--text-sec); }
+  .fb-summary strong { color: var(--text); }
+  .submit-btn {
+    background: linear-gradient(135deg, #e8785e, #d4644a);
+    color: #fff; border: none; padding: 10px 22px;
+    border-radius: 100px; font-size: 15px; font-weight: 600;
+    cursor: pointer; white-space: nowrap;
+    transition: transform .1s, opacity .2s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .submit-btn:active { transform: scale(.96); }
+  .submit-btn:disabled { opacity: .4; }
+
+  /* Toast */
+  .toast {
+    position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%,-50%) scale(.9);
+    background: rgba(0,0,0,.82); color: #fff;
+    padding: 14px 28px; border-radius: 12px;
+    font-size: 15px; font-weight: 500; z-index: 200;
+    opacity: 0; transition: all .3s; pointer-events: none;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+
+  /* Responsive tweaks */
+  @media (max-width: 390px) {
+    .card-img { height: 170px; }
+    .card-name { font-size: 16px; }
+    .h-title { font-size: 18px; }
+  }
+  @media (min-width: 768px) {
+    body { max-width: 480px; margin: 0 auto; }
+    .header { border-radius: 0 0 16px 16px; }
+    .bottom-bar { max-width: 480px; left: 50%; transform: translateX(-50%); border-radius: 16px 16px 0 0; }
+  }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+// ===== REPORT DATA =====
+// In production, this is auto-generated by the daily scheduled task
+const REPORT = {
+  date: "2026/03/30",
+  day: "週一",
+  source: "東南亞",
+  sourceDetail: "Shopee TH/VN/PH, Lazada",
+  evolution: "新增泰國 Shopee 熱銷排行榜 + Lazada 菲律賓趨勢頁作為數據源",
+  notionUrl: "https://www.notion.so/326c45deba0b80dc9660c661b84f6158",
+  products: [
+    {
+      id: 1,
+      name: "矽膠折疊寵物慢食碗",
+      score: 82,
+      category: "寵物用品",
+      source: "Shopee TH",
+      price: "$590",
+      cost: "$98",
+      margin: "3.8x",
+      image: "https://m.media-amazon.com/images/I/71qHh2vVMkL._AC_SL1500_.jpg",
+      highlight: "泰國寵物市場爆品，台灣尚無品牌化折疊慢食碗。露營＋寵物雙趨勢交叉，視覺差異化強。",
+      links: {
+        "1688": "https://s.1688.com/selloffer/offer_search.htm?keywords=硅胶折叠慢食碗",
+        "蝦皮": "https://shopee.tw/search?keyword=折疊寵物慢食碗",
+        "來源": "https://shopee.co.th/search?keyword=collapsible+slow+feeder"
+      },
+      details: {
+        "📍 來源與定位": "泰國 Shopee 寵物類熱銷 Top 20，月銷 8,000+。定位：戶外露營攜帶型寵物餐具，結合慢食健康概念。",
+        "💰 成本與利潤": "1688 採購 ¥15 → 落地成本約 NT$98\n建議售價 NT$590 ｜ 毛利 3.8x\n蝦皮淨利預估 NT$350/件",
+        "📊 需求驗證": "Google Trends「慢食碗」台灣 12 個月趨勢上升 40%、蝦皮搜「折疊寵物碗」僅 23 個結果，多点無品牌低價款。PTT 寵物板有 3 篇討論慢食碗推薦。",
+        "⚔️ 競爭分析": "蝦皮有折疊碗但無「慢食+折疊」組合款。momo/PChome 無此品項。Pinkoi 有設計款慢食碗但不可折疊，定價 $800+。市場空白度高。",
+        "📣 傳播力與客群": "視覺差異化強（折疊展開對比）。目標客群：25-40歲養寵露營族。短影音展示折疊過程+毛孩使用，預期高互動。",
+        "🛒 通路策略": "首發蝦皮，搭配「寵物露營」關鍵字。第二階段上 momo 寵物館。可搭配折疊水碗做套組。",
+        "⚠️ 風險與認證": "食品級矽膠需 SGS 檢驗。建議選已有 FDA 認證的 1688 工廠。無特殊進口限制。",
+        "🔄 複購與 LTV": "碗本身低複購，但可延伸寵物外出系列（水碗、便攜糧桶、外出包）提高 LTV。"
+      },
+      scores: { "毛利潛力":88, "需求驗證":78, "競爭壁壘":80, "傳播力":85, "操作難度":75, "複購潛力":65 }
+    },
+    {
+      id: 2,
+      name: "磁吸模組化桌面收納系統",
+      score: 78,
+      category: "居家辦公",
+      source: "Lazada PH",
+      price: "$1,290",
+      cost: "$210",
+      margin: "4.1x",
+      image: "https://m.media-amazon.com/images/I/71Zt8bqoMrL._AC_SL1500_.jpg",
+      highlight: "菲律賓 WFH 趨勢帶動的桌面整理系統。磁吸自由組合是賣點，模組化天然高複購。",
+      links: {
+        "1688": "https://s.1688.com/selloffer/offer_search.htm?keywords=磁吸桌面收纳模组",
+        "蝦皮": "https://shopee.tw/search?keyword=磁吸桌面收納",
+        "來源": "https://www.lazada.com.ph/catalog/?q=magnetic+desk+organizer"
+      },
+      details: {
+        "📍 來源與定位": "Lazada 菲律賓 Office Supplies 類月銷 3,200+。定位：極簡風磁吸桌面收納，可自由組合擴充。",
+        "💰 成本與利潤": "1688 採購 ¥38（基礎三件組）→ 落地成本約 NT$210\n建議售價 NT$1,290 ｜ 毛利 4.1x\n蝦皮淨利預估 NT$780/組",
+        "📊 需求驗證": "Google Trends「桌面收納」台灣穩定高搜索量。蝦皮「磁吸收納」搜索結果多為手機架，桌面系統極少。Dcard WFH 版常見桌面整理討論。",
+        "⚔️ 競爭分析": "蝦皮有大量桌面收納，但「磁吸模組化」概念產品 < 5 個，無品牌化。momo 有 IKEA/無印良品收納但非磁吸。差異化空間大。",
+        "📣 傳播力與客群": "磁吸「啪嗒」吸附的 ASMR 感極適合短影音。目標：25-45歲遠距工作者、設計師、學生。",
+        "🛒 通路策略": "蝦皮首發，主打「辦公桌改造」主題。可做開箱 KOL 合作。模組化可分開棋提高客單。",
+        "⚠️ 風險與認證": "無特殊認證需求。磁鐵強度需注意兒童安全警語。物流上磁鐵可能影響空運，建議海運。",
+        "🔄 複購與 LTV": "模組化設計天然高複購——買基礎組後會回購擴充模組（筆筒、手機架、cable夾等）。LTV 預估 3-4x 首購。"
+      },
+      scores: { "毛利潛力":92, "需求驗證":72, "競爭壁壘":75, "傳播力":82, "操作難度":80, "複購潛力":85 }
+    },
+    {
+      id: 3,
+      name: "UV-C 便攜奶嘴消毒盒",
+      score: 74,
+      category: "母嬰用品",
+      source: "Shopee VN",
+      price: "$890",
+      cost: "$155",
+      margin: "3.6x",
+      image: "https://m.media-amazon.com/images/I/61TIkgJn6GL._AC_SL1500_.jpg",
+      highlight: "越南母嬰爆品，3 分鐘紫外線消毒。台灣新手爸媽外出剛需，品牌化選擇極少。",
+      links: {
+        "1688": "https://s.1688.com/selloffer/offer_search.htm?keywords=便携紫外线奶嘴消毒盒",
+        "蝦皮": "https://shopee.tw/search?keyword=UV奶嘴消毒",
+        "來源": "https://shopee.vn/search?keyword=hộp+tiệt+trùng+núm+vú+UV"
+      },
+      details: {
+        "📍 來源與定位": "越南 Shopee 母嬰類 Top 50，月銷 5,500+。定位：外出攜帶型奶嘴/小物 UV 消毒，USB 充電。",
+        "💰 成本與利潤": "1688 採購 ¥28 → 落地成本約 NT$155\n建議售價 NT$890 ｜ 毛利 3.6x\n蝦皮淨利預估 NT$520/件",
+        "📊 需求驗證": "Google Trends「奶嘴消毒」台灣穩定搜索。蝦皮有消毒鍋但「便攜消毒盒」< 15 個結果。媽媽社團常見外出消毒困擾討論。",
+        "⚔️ 競爭分析": "台灣有 Combi、Philips 等大型消毒鍋品牌，但便攜型 UV 消毒盒品牌化產品極少。蝦皮現有款多為白牌低價($300-400)，品質參差。品牌化空間大。",
+        "📣 傳播力與客群": "目標：25-38歲新手父媽。外出場景痛點明確。可拍「公園/餐廳掉奶嘴→3分鐘消毒」短影片。",
+        "🛒 通路策略": "蝦皮母嬰館首發。第二階段上 momo。可搭配奶嘴收納鏈做套組。建議定價高於白牌突顯品質。",
+        "⚠️ 風險與認證": "UV-C 產品需注意 BSMI 認證（電器類）。建議選已有 CE/FCC 的工廠加速認證流程。紫外線安全性需在產品說明強調。",
+        "🔄 複購與 LTV": "消毒盒本身低複購，但可延伸母嬰外出系列（奶瓶保溫套、副食品分裝盒）。UV 燈管可作耗材。"
+      },
+      scores: { "毛利潛力":42, "需求驗證":75, "競爭壁壘":68, "傳播力":72, "操作難度":60, "複購潛力":58 }
+    }
+  ]
+};
+
+// ===== CONFIG =====
+const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZZj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH81pRkAL2Ffxb/exec';
+
+// ===== STATE =====
+const votes = {};
+const synced = {}; // track what's been sent to API
+
+function scoreClass(s) { return s >= 75 ? 'score-high' : s >= 60 ? 'score-mid' : 'score-low'; }
+function barClass(s)   { return s >= 75 ? 'high' : s >= 60 ? 'mid' : 'low'; }
+
+function toggleDetail(id) {
+  document.getElementById('det-'+id).classList.toggle('open');
+  document.getElementById('exp-'+id).classList.toggle('open');
+}
+
+function vote(id, type) {
+  // Toggle: same vote removes it
+  if (votes[id] === type) {
+    delete votes[id];
+  } else {
+    votes[id] = type;
+    // Auto-send feedback to Google Sheet
+    sendFeedback(id, type);
+  }
+  render();
+}
+
+function sendFeedback(id, type) {
+  const p = REPORT.products.find(x => x.id === id);
+  if (!p) return;
+  const payload = {
+    report_date: REPORT.date,
+    product_name: p.name,
+    product_score: p.score,
+    feedback: type === 'up' ? '👍' : '👎',
+    reviewer: 'EE_reviewer'
+  };
+  fetch(FEEDBACK_API, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  }).then(() => {
+    synced[id] = true;
+    toast(type === 'up' ? '👍 已記錄！' : '👎 已記錄！');
+  }).catch(() => {
+    toast('反饋暫存中，稍後重試');
+  });
+}
+
+function voteSummary() {
+  const up = Object.values(votes).filter(v=>v==='up').length;
+  const down = Object.values(votes).filter(v=>v==='down').length;
+  return { up, down, pending: REPORT.products.length - up - down, total: REPORT.products.length };
+}
+
+function toast(m) {
+  const el = document.getElementById('toast');
+  el.textContent = m; el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2000);
+}
+
+function render() {
+  const { products: ps, date, day, source, sourceDetail, evolution, notionUrl } = REPORT;
+  const s = voteSummary();
+  document.getElementById('app').innerHTML = `
+    <div class="header">
+      <div class="h-row">
+        <div>
+          <div class="h-date">${date} ${day}</div>
+          <div class="h-title">EE 每日選品報告</div>
+        </div>
+      </div>
+      <div class="h-pills">
+        <span class="h-pill">📦 ${ps.length} 選品</span>
+        <span class="h-pill">🔍 ${source}（${sourceDetail}）</span>
+      </div>
+      <a class="h-notion" href="${notionUrl}" target="_blank">📔 在 Notion 查看完整報告 →</a>
+    </div>
+
+    <div class="evo-banner">🧬 <strong>今日進化：</strong>${evolution}</div>
+
+    ${ps.map(p => `
+      <div class="card ${votes[p.id]==='up'?'voted-up':votes[p.id]==='down'?'voted-down':''}">
+        <img class="card-img" src="${p.image}" alt="${p.name}" onerror="this.style.display='none'" loading="lazy">
+
+        <div class="card-top">
+          <div class="score-ring ${scoreClass(p.score)}">${p.score}</div>
+          <div class="card-info">
+            <div class="card-name">${p.name}</div>
+            <div class="card-tags">
+              <span class="tag tag-cat">${p.category}</span>
+              <span class="tag tag-src">${p.source}</span>
+              <span class="tag tag-margin">毛利 ${p.margin}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-highlight">${p.highlight}</div>
+
+        <div class="card-nums">
+          <div class="card-n"><div class="card-n-label">建議售價</div><div class="card-n-val">${p.price}</div></div>
+          <div class="card-n"><div class="card-n-label">落地成本</div><div class="card-n-val">${p.cost}</div></div>
+          <div class="card-n"><div class="card-n-label">毛利倍數</div><div class="card-n-val" style="color:#059669">${p.margin}</div></div>
+        </div>
+
+        <div class="card-links">
+          ${Object.entries(p.links).map(([k,v]) => `<a class="card-link" href="${v}" target="_blank">🔗 ${k}</a>`).join('')}
+        </div>
+
+        <button class="expand-btn" id="exp-${p.id}" onclick="toggleDetail(${p.id})">
+          展開詳情
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="card-detail" id="det-${p.id}">
+          <div class="card-detail-inner">
+            ${Object.entries(p.details).map(([t,b]) => `
+              <div class="d-sec">
+                <div class="d-sec-title">${t}</div>
+                <div class="d-sec-body">${b.replace(/\n/g,'<br>')}</div>
+              </div>`).join('')}
+            <div class="d-sec">
+              <div class="d-sec-title">📐 評分明細</div>
+              <div class="sb-grid">
+                ${Object.entries(p.scores).map(([d,v]) => `
+                  <div class="sb-label">${d}</div>
+                  <div class="sb-bar-bg"><div class="sb-bar ${barClass(v)}" style="width:${v}%"></div></div>
+                  <div class="sb-val">${v}</div>`).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <button class="vote-btn ${votes[p.id]==='up'?'voted-up':''}" onclick="vote(${p.id},'up')">👍 有興趣</button>
+          <button class="vote-btn ${votes[p.id]==='down'?'voted-down':''}" onclick="vote(${p.id},'down')">👎 不適合</button>
+        </div>
+      </div>
+    `).join('')}
+
+    <div class="bottom-bar">
+      <div class="fb-summary"><strong>${s.up+s.down}</strong>/${s.total} 已評${s.up?' 👍'+s.up:''}${s.down?' 👎'+s.down:''}</div>
+      <div style="font-size:12px;color:var(--green);font-weight:500">${s.up+s.down>0?'✓ 自動儲存中':'點 👍👎 給反饋'}</div>
+    </div>
+    <div class="toast" id="toast"></div>`;
+}
+render();
+</script>
+</body>
+</html>
