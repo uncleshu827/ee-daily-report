@@ -3,391 +3,542 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EE 選品研究站</title>
+<title>EE 每日選品報告</title>
 <style>
   :root {
-    --bg: #0f1117;
-    --surface: #1a1d2e;
-    --surface2: #252840;
-    --border: #2e3250;
-    --text: #e8eaf6;
-    --text-muted: #8891b0;
-    --accent: #7c6af7;
-    --accent2: #4ecdc4;
-    --green: #4ade80;
-    --orange: #fb923c;
-    --red: #f87171;
-    --gold: #fbbf24;
+    --primary: #6c47ff;
+    --primary-light: #ede8ff;
+    --gold: #f59e0b;
+    --green: #10b981;
+    --red: #ef4444;
+    --bg: #f8f7ff;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --radius: 16px;
   }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
+
   body {
-    background: var(--bg); color: var(--text);
-    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
     min-height: 100vh;
   }
+
+  /* ── Header ── */
   .header {
-    background: linear-gradient(135deg, #1a1d2e, #252840);
-    padding: 20px 16px 14px;
-    border-bottom: 1px solid var(--border);
-    position: sticky; top: 0; z-index: 100;
-    backdrop-filter: blur(8px);
+    background: linear-gradient(135deg, #6c47ff 0%, #9b6dff 100%);
+    color: white;
+    padding: 24px 16px 20px;
+    text-align: center;
   }
-  .header h1 { font-size: 1.3rem; color: var(--accent); letter-spacing: 0.05em; }
-  .header p { font-size: 0.75rem; color: var(--text-muted); margin-top: 3px; }
+  .header h1 { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.3px; }
+  .header .subtitle { font-size: 0.85rem; opacity: 0.85; margin-top: 4px; }
+
+  /* ── Stats bar ── */
   .stats-bar {
-    display: flex; gap: 10px; overflow-x: auto;
-    padding: 12px 16px; background: var(--surface);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px 0;
+    flex-wrap: wrap;
+  }
+  .stat-pill {
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  /* ── Date Nav ── */
+  .date-nav-wrap {
+    background: white;
     border-bottom: 1px solid var(--border);
+    padding: 0 16px;
+    overflow-x: auto;
     scrollbar-width: none;
   }
-  .stats-bar::-webkit-scrollbar { display: none; }
-  .stat {
-    flex-shrink: 0; text-align: center;
-    padding: 8px 16px; background: var(--surface2);
-    border-radius: 10px; border: 1px solid var(--border);
-  }
-  .stat-val { font-size: 1.2rem; font-weight: 700; color: var(--accent); }
-  .stat-label { font-size: 0.65rem; color: var(--text-muted); margin-top: 2px; }
+  .date-nav-wrap::-webkit-scrollbar { display: none; }
   .date-nav {
-    display: flex; gap: 8px; overflow-x: auto;
-    padding: 10px 16px; background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    scrollbar-width: none;
+    display: flex;
+    gap: 4px;
+    padding: 12px 0;
+    width: max-content;
+    min-width: 100%;
   }
-  .date-nav::-webkit-scrollbar { display: none; }
   .date-btn {
-    flex-shrink: 0; padding: 6px 14px;
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 20px; color: var(--text-muted);
-    font-size: 0.8rem; cursor: pointer;
-    transition: all 0.2s;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    background: white;
+    color: var(--muted);
+    font-size: 0.8rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+    font-weight: 500;
   }
+  .date-btn:hover { border-color: var(--primary); color: var(--primary); }
   .date-btn.active {
-    background: var(--accent); border-color: var(--accent);
-    color: white; font-weight: 600;
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    font-weight: 600;
   }
-  .date-btn:hover:not(.active) {
-    border-color: var(--accent); color: var(--text);
+
+  /* ── Main content ── */
+  .main { max-width: 720px; margin: 0 auto; padding: 16px; }
+
+  /* ── Evolution box ── */
+  .evolution-box {
+    background: var(--primary-light);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #4c3a9e;
   }
-  .content { padding: 16px; max-width: 720px; margin: 0 auto; }
-  .evolution-note {
-    background: var(--surface); border: 1px solid var(--border);
-    border-left: 3px solid var(--accent2);
-    border-radius: 10px; padding: 12px 14px;
-    margin-bottom: 16px; font-size: 0.82rem;
-    color: var(--text-muted); line-height: 1.6;
+  .evolution-box .evo-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--primary);
+    margin-bottom: 6px;
   }
-  .evolution-note strong { color: var(--accent2); }
+
+  /* ── Product card ── */
   .product-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; margin-bottom: 14px;
-    overflow: hidden; transition: border-color 0.2s;
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-bottom: 14px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s;
   }
-  .product-card:hover { border-color: var(--accent); }
+  .product-card:hover { box-shadow: 0 4px 16px rgba(108,71,255,0.12); }
+
   .card-header {
-    padding: 14px; cursor: pointer;
-    display: flex; align-items: flex-start; gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px 10px;
+    cursor: pointer;
   }
   .rank-badge {
-    flex-shrink: 0; width: 32px; height: 32px;
-    border-radius: 50%; display: flex; align-items: center;
-    justify-content: center; font-weight: 700; font-size: 0.85rem;
-    background: var(--surface2); color: var(--text-muted);
-    border: 2px solid var(--border);
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 0.9rem;
+    flex-shrink: 0;
   }
-  .rank-badge.rank-1 { background: rgba(251,191,36,0.15); border-color: var(--gold); color: var(--gold); }
-  .rank-badge.rank-2 { background: rgba(148,163,184,0.15); border-color: #94a3b8; color: #94a3b8; }
-  .rank-badge.rank-3 { background: rgba(180,120,80,0.15); border-color: #b47850; color: #b47850; }
-  .card-info { flex: 1; min-width: 0; }
-  .card-name { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
-  .card-meta { display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.72rem; color: var(--text-muted); }
+  .rank-1 { background: #fef3c7; color: #d97706; }
+  .rank-2 { background: #f3f4f6; color: #6b7280; }
+  .rank-3 { background: #fce7f3; color: #db2777; }
+  .rank-other { background: var(--primary-light); color: var(--primary); }
+
+  .card-title-wrap { flex: 1; min-width: 0; }
+  .card-name { font-weight: 700; font-size: 1rem; line-height: 1.3; }
+  .card-meta {
+    display: flex; gap: 8px; margin-top: 4px; flex-wrap: wrap;
+  }
   .tag {
-    padding: 2px 8px; border-radius: 10px;
-    background: var(--surface2); border: 1px solid var(--border);
+    font-size: 0.72rem; padding: 2px 8px;
+    border-radius: 10px; font-weight: 600;
   }
-  .tag.category { color: var(--accent2); border-color: rgba(78,205,196,0.3); }
-  .tag.margin-good { color: var(--green); border-color: rgba(74,222,128,0.3); }
-  .tag.margin-ok { color: var(--orange); border-color: rgba(251,146,60,0.3); }
-  .score-ring {
-    flex-shrink: 0; width: 52px; height: 52px; position: relative;
+  .tag-cat { background: #ede8ff; color: var(--primary); }
+  .tag-price { background: #ecfdf5; color: #059669; }
+  .tag-margin { background: #fff7ed; color: #ea580c; }
+
+  .score-circle {
+    width: 44px; height: 44px; flex-shrink: 0;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 1.05rem;
+    border: 3px solid;
   }
-  .score-ring svg { width: 52px; height: 52px; transform: rotate(-90deg); }
-  .score-ring .track { fill: none; stroke: var(--surface2); stroke-width: 4; }
-  .score-ring .fill { fill: none; stroke-width: 4; stroke-linecap: round; }
-  .score-text {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.85rem; font-weight: 700;
+  .score-hi { border-color: var(--green); color: var(--green); }
+  .score-mid { border-color: var(--gold); color: var(--gold); }
+  .score-lo { border-color: var(--red); color: var(--red); }
+
+  /* ── Expand toggle arrow ── */
+  .toggle-arrow {
+    color: var(--muted); font-size: 0.8rem;
+    transition: transform 0.2s;
+    flex-shrink: 0;
   }
-  .expand-btn {
-    width: 100%; padding: 8px; background: transparent;
-    border: none; border-top: 1px solid var(--border);
-    color: var(--text-muted); font-size: 0.75rem; cursor: pointer;
-    transition: color 0.2s;
+  .card-body { display: none; padding: 0 16px 16px; }
+  .card-body.open { display: block; }
+  .toggle-arrow.open { transform: rotate(180deg); }
+
+  /* ── Highlight ── */
+  .highlight-text {
+    font-size: 0.85rem; color: var(--muted);
+    margin-bottom: 12px; line-height: 1.5;
+    padding-top: 2px;
   }
-  .expand-btn:hover { color: var(--text); }
-  .card-detail { padding: 0 14px; display: none; }
-  .card-detail.open { display: block; padding-top: 4px; }
-  .detail-section { margin-bottom: 14px; }
-  .detail-label {
-    font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;
-    letter-spacing: 0.05em; margin-bottom: 5px;
+
+  /* ── Score bars ── */
+  .score-section { margin-bottom: 12px; }
+  .score-section-title {
+    font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--muted); margin-bottom: 8px;
   }
-  .detail-content { font-size: 0.82rem; line-height: 1.7; color: var(--text); }
-  .scores-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 6px; margin-bottom: 14px;
+  .score-row {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 6px;
   }
-  .score-item { background: var(--surface2); border-radius: 8px; padding: 8px; text-align: center; }
-  .score-item-val { font-size: 1rem; font-weight: 700; color: var(--accent); }
-  .score-item-label { font-size: 0.62rem; color: var(--text-muted); margin-top: 2px; }
-  .links-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .score-label { font-size: 0.78rem; width: 80px; flex-shrink: 0; color: var(--text); }
+  .score-bar-wrap { flex: 1; background: #f3f4f6; border-radius: 4px; height: 8px; overflow: hidden; }
+  .score-bar { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+  .score-val { font-size: 0.78rem; font-weight: 600; width: 28px; text-align: right; color: var(--text); }
+
+  /* ── Info grid ── */
+  .info-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 8px; margin-bottom: 12px;
+  }
+  .info-item {
+    background: #f9fafb; border-radius: 10px; padding: 10px 12px;
+  }
+  .info-item .info-label {
+    font-size: 0.7rem; color: var(--muted); font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.3px;
+  }
+  .info-item .info-val {
+    font-size: 0.85rem; font-weight: 600; color: var(--text);
+    margin-top: 2px; line-height: 1.4;
+  }
+
+  /* ── Links ── */
+  .links-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
   .link-btn {
-    padding: 4px 10px; background: var(--surface2);
-    border: 1px solid var(--border); border-radius: 8px;
-    color: var(--accent); font-size: 0.75rem; text-decoration: none;
-    transition: border-color 0.2s;
+    font-size: 0.78rem; padding: 5px 12px;
+    border-radius: 8px; border: 1.5px solid var(--primary);
+    color: var(--primary); text-decoration: none;
+    font-weight: 600; transition: all 0.15s;
   }
-  .link-btn:hover { border-color: var(--accent); }
-  .card-actions {
-    display: flex; gap: 8px; padding: 12px 14px;
-    border-top: 1px solid var(--border);
+  .link-btn:hover { background: var(--primary); color: white; }
+
+  /* ── Feedback ── */
+  .feedback-row {
+    display: flex; align-items: center; gap: 12px;
+    padding-top: 10px; border-top: 1px solid var(--border);
   }
-  .rating-btn {
-    flex: 1; padding: 8px; border-radius: 10px;
-    border: 1px solid var(--border); background: var(--surface2);
-    color: var(--text-muted); font-size: 0.82rem; cursor: pointer;
-    transition: all 0.2s; display: flex; align-items: center;
-    justify-content: center; gap: 4px;
+  .feedback-label { font-size: 0.78rem; color: var(--muted); flex: 1; }
+  .fb-btn {
+    padding: 6px 14px; border-radius: 10px; border: 1.5px solid var(--border);
+    background: white; cursor: pointer; font-size: 0.85rem;
+    transition: all 0.15s; display: flex; align-items: center; gap: 4px;
   }
-  .rating-btn.liked { background: rgba(74,222,128,0.12); border-color: var(--green); color: var(--green); font-weight: 600; }
-  .rating-btn.disliked { background: rgba(248,113,113,0.12); border-color: var(--red); color: var(--red); font-weight: 600; }
-  .rating-btn:hover:not(.liked):not(.disliked) { border-color: var(--accent); color: var(--text); }
-  .all-time { margin-top: 28px; margin-bottom: 32px; }
-  .section-title {
-    font-size: 0.9rem; font-weight: 600; color: var(--text-muted);
-    margin-bottom: 12px; padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
+  .fb-btn.active-up { background: #ecfdf5; border-color: var(--green); }
+  .fb-btn.active-down { background: #fef2f2; border-color: var(--red); }
+
+  /* ── Top 10 ── */
+  .top10-section {
+    background: var(--card); border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 16px; margin-bottom: 20px;
   }
-  .mini-card {
+  .top10-title {
+    font-size: 0.9rem; font-weight: 700; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .top10-row {
     display: flex; align-items: center; gap: 10px;
-    padding: 10px 12px; background: var(--surface);
-    border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px;
+    padding: 8px 0; border-bottom: 1px solid var(--border);
+    font-size: 0.82rem;
   }
-  .mini-card-date { font-size: 0.7rem; color: var(--text-muted); margin-top: 2px; }
-  .mini-card-name { font-size: 0.85rem; font-weight: 500; }
-  .mini-score {
-    flex-shrink: 0; padding: 3px 10px; border-radius: 12px;
-    font-size: 0.8rem; font-weight: 700;
+  .top10-row:last-child { border-bottom: none; }
+  .top10-rank { font-weight: 800; width: 20px; color: var(--primary); }
+  .top10-name { flex: 1; font-weight: 600; }
+  .top10-date { color: var(--muted); font-size: 0.75rem; }
+  .top10-score { font-weight: 700; color: var(--primary); }
+
+  /* ── Loading / Error ── */
+  .loading-wrap {
+    text-align: center; padding: 60px 20px; color: var(--muted);
   }
-  .loading { text-align: center; padding: 60px 20px; color: var(--text-muted); font-size: 0.9rem; }
-  .error { color: var(--red); text-align: center; padding: 40px 20px; line-height: 1.6; }
-  .card-highlight {
-    margin-top: 6px; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;
+  .spinner {
+    width: 36px; height: 36px; border: 3px solid var(--border);
+    border-top-color: var(--primary); border-radius: 50%;
+    animation: spin 0.8s linear infinite; margin: 0 auto 12px;
   }
-  @media (max-width: 600px) {
-    .stats-bar {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      overflow-x: unset;
-    }
-    .stat { flex-shrink: unset; }
-    .scores-grid { grid-template-columns: repeat(2, 1fr); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .error-box {
+    background: #fef2f2; border: 1px solid #fecaca;
+    border-radius: 12px; padding: 16px; color: #b91c1c;
+    font-size: 0.85rem; text-align: center;
+  }
+
+  /* ── Section label ── */
+  .day-label {
+    font-size: 0.8rem; font-weight: 700; color: var(--muted);
+    margin-bottom: 10px; display: flex; align-items: center; gap: 6px;
+  }
+  .day-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* ── Mobile tweaks ── */
+  @media (max-width: 480px) {
+    .info-grid { grid-template-columns: 1fr; }
     .card-name { font-size: 0.95rem; }
-    .score-ring { width: 46px; height: 46px; }
-    .score-ring svg { width: 46px; height: 46px; }
-    .score-text { font-size: 0.8rem; }
+    .score-label { width: 70px; font-size: 0.75rem; }
+    .header h1 { font-size: 1.25rem; }
   }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>🦞 EE 選品研究站</h1>
-  <p id="header-sub">載入中…</p>
+  <h1>📦 EE 每日選品報告</h1>
+  <p class="subtitle" id="headerSub">載入中…</p>
+  <div class="stats-bar" id="statsBar"></div>
 </div>
 
-<div class="stats-bar">
-  <div class="stat"><div class="stat-val" id="total-days">—</div><div class="stat-label">天紀錄</div></div>
-  <div class="stat"><div class="stat-val" id="total-products">—</div><div class="stat-label">個產品</div></div>
-  <div class="stat"><div class="stat-val" id="avg-score">—</div><div class="stat-label">平均分</div></div>
-  <div class="stat"><div class="stat-val" id="top-score">—</div><div class="stat-label">歷史最高</div></div>
+<div class="date-nav-wrap">
+  <div class="date-nav" id="dateNav"></div>
 </div>
 
-<div class="date-nav" id="date-nav"></div>
+<div class="main">
+  <div id="content">
+    <div class="loading-wrap">
+      <div class="spinner"></div>
+      <div>載入選品報告中…</div>
+    </div>
+  </div>
 
-<div class="content" id="content">
-  <div class="loading">🔄 載入報告中…</div>
+  <div class="top10-section" id="top10Section" style="display:none">
+    <div class="top10-title">🏆 歷史 Top 10</div>
+    <div id="top10List"></div>
+  </div>
 </div>
 
 <script>
-const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZZj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH81pRkAL2Ffxb/exec';
+const DATA_URL = 'data.json';
+const SCORE_LABELS = {
+  margin: '毛利空間', demand: '需求驗證',
+  barrier: '競爭壁壘', viral: '病毒傳播',
+  difficulty: '操作難度', repurchase: '回購潛力'
+};
+const SCORE_MAX = { margin:25, demand:25, barrier:15, viral:15, difficulty:10, repurchase:10 };
+const SCORE_COLORS = { margin:'#6c47ff', demand:'#10b981', barrier:'#f59e0b', viral:'#ec4899', difficulty:'#06b6d4', repurchase:'#8b5cf6' };
+
 let allData = null;
 let currentDate = null;
 
-function getScoreColor(score) {
-  if (score >= 80) return '#4ade80';
-  if (score >= 65) return '#fbbf24';
-  return '#fb923c';
+async function loadData() {
+  try {
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    allData = await res.json();
+    init();
+  } catch(e) {
+    document.getElementById('content').innerHTML =
+      '<div class="error-box">⚠️ 資料載入失敗：' + e.message + '<br>請稍後重整頁面</div>';
+  }
 }
 
-function scoreCircle(score) {
-  const r = 20, c = 26, circ = 2 * Math.PI * r;
-  const offset = circ - (score / 100) * circ;
-  const col = getScoreColor(score);
-  return `<div class="score-ring">
-    <svg viewBox="0 0 52 52">
-      <circle class="track" cx="${c}" cy="${c}" r="${r}"/>
-      <circle class="fill" cx="${c}" cy="${c}" r="${r}"
-        stroke="${col}" stroke-dasharray="${circ.toFixed(2)}" stroke-dashoffset="${offset.toFixed(2)}"/>
-    </svg>
-    <div class="score-text" style="color:${col}">${score}</div>
-  </div>`;
+function init() {
+  if (!allData || !allData.reports || allData.reports.length === 0) {
+    document.getElementById('content').innerHTML = '<div class="error-box">暫無報告資料</div>';
+    return;
+  }
+
+  // Sort descending by date
+  allData.reports.sort((a, b) => b.date.localeCompare(a.date));
+  currentDate = allData.reports[0].date;
+
+  renderStats();
+  renderDateNav();
+  renderReport(currentDate);
+  renderTop10();
 }
 
-function getRatingKey(date, productName) {
-  return 'ee_rating_' + date + '_' + productName.replace(/\s+/g, '_');
+function renderStats() {
+  const reports = allData.reports;
+  const totalDays = reports.length;
+  const totalProducts = reports.reduce((s, r) => s + (r.products?.length || 0), 0);
+  const allScores = reports.flatMar(r => (r.products||[]).map(p => p.score)).filter(Boolean);
+  const avgScore = allScores.length ? Math.round(allScores.reduce((a,b)=>a+b,0)/allScores.length) : '-';
+  const maxScore = allScores.length ? Math.max(...allScores) : '-';
+
+  document.getElementById('headerSub').textContent = '最後更新：' + (allData.lastUpdated || '-');
+  document.getElementById('statsBar').innerHTML = [
+    ['📅', totalDays + ' 天'],
+    ['📦', totalProducts + ' 產品'],
+    ['⭐', '均分 ' + avgScore],
+    ['🏅', '最高 ' + maxScore],
+  ].map(([icon, val]) => `<div class="stat-pill">${icon} ${val}</div>`).join('');
 }
 
-function renderProduct(p, date, idx) {
-  const rankClass = idx < 3 ? 'rank-' + (idx + 1) : '';
-  const marginNum = parseFloat((p.margin || '0').replace('x', ''));
-  const marginClass = marginNum >= 3.5 ? 'margin-good' : 'margin-ok';
-  const ratingKey = getRatingKey(date, p.name);
-  const rating = localStorage.getItem(ratingKey);
-
-  const scoresHtml = p.scores ? `<div class="scores-grid">
-    <div class="score-item"><div class="score-item-val">${p.scores.margin != null ? p.scores.margin : '—'}</div><div class="score-item-label">毛利 25%</div></div>
-    <div class="score-item"><div class="score-item-val">${p.scores.demand != null ? p.scores.demand : '—'}</div><div class="score-item-label">需求驗證 25%</div></div>
-    <div class="score-item"><div class="score-item-val">${p.scores.barrier != null ? p.scores.barrier : '—'}</div><div class="score-item-label">競爭壁壘 15%</div></div>
-    <div class="score-item"><div class="score-item-val">${p.scores.viral != null ? p.scores.viral : '—'}</div><div class="score-item-label">傳播力 15%</div></div>
-    <div class="score-item"><div class="score-item-val">${p.scores.difficulty != null ? p.scores.difficulty : '—'}</div><div class="score-item-label">操作難度 10%</div></div>
-    <div class="score-item"><div class="score-item-val">${p.scores.repurchase != null ? p.scores.repurchase : '—'}</div><div class="score-item-label">複購潛力 10%</div></div>
-  </div>` : '';
-
-  const linksHtml = p.links && (Array.isArray(p.links) ? p.links.length : Object.keys(p.links).length) > 0 ? `<div class="detail-section">\n    <div class="detail-label">參考連結</div>\n    <div class="links-list">${Array.isArray(p.links) ? p.links.map((l, i) => `<a href="${l}" target="_blank" class="link-btn">🔗 連結${i + 1}</a>`).join('') : Object.entries(p.links).map(([k, v]) => `<a href="${v}" target="_blank" class="link-btn">🔗 ${k}</a>`).join('')}</div>\n  </div>` : '';
-
-  const safeName = p.name.replace(/'/g, "\\'");
-
-  return `<div class="product-card" id="card-${date}-${idx}">
-  <div class="card-header" onclick="toggleCard('${date}',${idx})">
-    <div class="rank-badge ${rankClass}">${idx + 1}</div>
-    <div class="card-info">
-      <div class="card-name">${p.name}</div>
-      <div class="card-meta">
-        <span class="tag category">${p.category || '—'}</span>
-        <span class="tag">${p.price || '—'}</span>
-        <span class="tag ${marginClass}">毛利 ${p.margin || '—'}</span>
-      </div>
-      <div class="card-highlight">${p.highlight || ''}</div>
-    </div>
-    ${scoreCircle(p.score)}
-  </div>
-  <button class="expand-btn" onclick="toggleCard('${date}',${idx})" id="expand-btn-${date}-${idx}">展開詳情 ▼</button>
-  <div class="card-detail" id="detail-${date}-${idx}">
-    ${scoresHtml}
-    ${p.details ? Object.entries(p.details).map(([t,b]) => `<div class="detail-section"><div class="detail-label">${t}</div><div class="detail-content">${b.replace(/\n/g,'<br>')}</div></div>`).join('') : `${p.demand_validation ? `<div class="detail-section"><div class="detail-label">需求驗證</div><div class="detail-content">${p.demand_validation}</div></div>` : ''}${p.cost_breakdown ? `<div class="detail-section"><div class="detail-label">成本分析</div><div class="detail-content">${p.cost_breakdown}</div></div>` : ''}`}}
-    ${linksHtml}
-  </div>
-  <div class="card-actions">
-    <button class="rating-btn ${rating === 'like' ? 'liked' : ''}" id="like-${date}-${idx}" onclick="rate('${date}',${idx},'${safeName}','like')">👍 看好</button>
-    <button class="rating-btn ${rating === 'dislike' ? 'disliked' : ''}" id="dislike-${date}-${idx}" onclick="rate('${date}',${idx},'${safeName}','dislike')">👎 觀望</button>
-  </div>
-</div>`;
+function renderDateNav() {
+  const nav = document.getElementById('dateNav');
+  nav.innerHTML = allData.reports.map(r =>
+    `<button class="date-btn${r.date === currentDate ? ' active' : ''}" onclick="switchDate('${r.date}')">${formatDate(r.date)}</button>`
+  ).join('');
 }
 
-function toggleCard(date, idx) {
-  const detail = document.getElementById('detail-' + date + '-' + idx);
-  const btn = document.getElementById('expand-btn-' + date + '-' + idx);
-  const open = detail.classList.toggle('open');
-  btn.textContent = open ? '收起 ▲' : '展開詳情 ▼';
-}
-
-function rate(date, idx, name, val) {
-  const ratingKey = getRatingKey(date, name);
-  if (localStorage.getItem(ratingKey) === val) return;
-  localStorage.setItem(ratingKey, val);
-  document.getElementById('like-' + date + '-' + idx).className = 'rating-btn' + (val === 'like' ? ' liked' : '');
-  document.getElementById('dislike-' + date + '-' + idx).className = 'rating-btn' + (val === 'dislike' ? ' disliked' : '');
-  const report = allData.reports.find(r => r.date === date);
-  const score = report && report.products[idx] ? report.products[idx].score : 0;
-  fetch(FEEDBACK_API, {
-    method: 'POST', mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ report_date: date, product_name: name, product_score: score, feedback: val === 'like' ? '看好' : '觀望', reviewer: 'EE Team' })
-  }).catch(() => {});
-}
-
-function selectDate(date) {
+function switchDate(date) {
   currentDate = date;
-  document.querySelectorAll('.date-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.date === date);
+  document.querySelectorAll('.date-btn').forEach(b => {
+    b.classList.toggle('active', b.textContent === formatDate(date));
   });
+  renderReport(date);
+}
+
+function formatDate(d) {
+  if (!d) return '';
+  const [y, m, day] = d.split('-');
+  return `${m}/${day}`;
+}
+
+function renderReport(date) {
   const report = allData.reports.find(r => r.date === date);
   if (!report) return;
 
+  const products = report.products || [];
   let html = '';
+
   if (report.evolution) {
-    html += `<div class="evolution-note"><strong>🧠 今日進化</strong>　${report.evolution}</div>`;
+    html += `<div class="evolution-box"><div class="evo-label">🧠 $��日進化</div>${escHtml(report.evolution)}</div>`;
   }
-  (report.products || []).forEach((p, i) => { html += renderProduct(p, date, i); });
 
-  // All-time top 10
-  const allProducts = allData.reports
-    .flatMap(r => (r.products || []).map(p => ({ ...p, reportDate: r.date })))
-    .sort((a, b) => b.score - a.score).slice(0, 10);
+  html += `<div class="day-label">📦 ${date} 精選產品（${products.length} $��）</div>`;
 
-  if (allProducts.length > 0) {
-    html += `<div class="all-time"><div class="section-title">🏆 歷史最高分 Top 10</div>
-    ${allProducts.map(p => {
-      const col = getScoreColor(p.score);
-      const isToday = p.reportDate === date;
-      return `<div class="mini-card">
-        <div style="flex:1">
-          <div class="mini-card-name">${p.name}${isToday ? ' <span style="font-size:0.65rem;color:var(--accent2);">今日</span>' : ''}</div>
-          <div class="mini-card-date">${p.reportDate.slice(5).replace('-', '/')} ｜ ${p.category || ''}</div>
+  products.forEach(p => {
+    const scoreClass = p.score >= 85 ? 'score-hi' : p.score >= 70 ? 'score-mid' : 'score-lo';
+    const rankClass = p.rank === 1 ? 'rank-1' : p.rank === 2 ? 'rank-2' : p.rank === 3 ? 'rank-3' : 'rank-other';
+    const fbKey = `fb_${date}_${p.rank}`;
+    const saved = localStorage.getItem(fbKey) || '';
+
+    let scoreBarHtml = '';
+    if (p.scores) {
+      scoreBarHtml = `<div class="score-section">
+        <div class="score-section-title">六維度評分</div>`;
+      Object.entries(SCORE_LABELS).forEach(([k, label]) => {
+        const val = p.scores[k] || 0;
+        const max = SCORE_MAX[k];
+        const pct = Math.round(val / max * 100);
+        scoreBarHtml += `<div class="score-row">
+          <div class="score-label">${label}</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:${pct}%;background:${SCORE_COLORS[k]}"></div></div>
+          <div class="score-val">${val}</div>
+        </div>`;
+      });
+      scoreBarHtml += '</div>';
+    }
+
+    const linksHtml = (p.links && p.links.length)
+      ? `<div class="links-row">${p.links.map((l,i) => `<a class="link-btn" href="${escHtml(l)}" target="_blank" rel="noopener">參考連結 ${i+1}</a>`).join('')}</div>`
+      : '';
+
+    html += `<div class="product-card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="rank-badge ${rankClass}">${p.rank}</div>
+        <div class="card-title-wrap">
+          <div class="card-name">${escHtml(p.name || '')}</div>
+          <div class="card-meta">
+            ${p.category ? `<span class="tag tag-cat">${escHtml(p.category)}</span>` : ''}
+            ${p.price ? `<span class="tag tag-price">${escHtml(p.price)}</span>` : ''}
+            ${p.margin ? `<span class="tag tag-margin">毛利 ${escHtml(p.margin)}</span>` : ''}
+          </div>
         </div>
-        <div class="mini-score" style="background:${col}22;color:${col};border:1px solid ${col}44">${p.score}</div>
-      </div>`;
-    }).join('')}
+        <div class="score-circle ${scoreClass}">${p.score || '?'}</div>
+        <div class="toggle-arrow">▼</div>
+      </div>
+      <div class="card-body">
+        ${p.highlight ? `<div class="highlight-text">💡 ${escHtml(p.highlight)}</div>` : ''}
+        ${scoreBarHtml}
+        <div class="info-grid">
+          ${p.demand_validation ? `<div class="info-item"><div class="info-label">需求驗證</div><div class="info-val">${escHtml(p.demand_validation)}</div></div>` : ''}
+          ${p.cost_breakdown ? `<div class="info-item"><div class="info-label">成本拆解</div><div class="info-val">${escHtml(p.cost_breakdown)}</div></div>` : ''}
+        </div>
+        ${linksHtml}
+        <div class="feedback-row">
+          <div class="feedback-label">這個選品怎麼樣？</div>
+          <button class="fb-btn ${saved==='up'?'active-up':''}" onclick="feedback('${date}','${p.rank}','up',this)">👍 <span id="up_${date}_${p.rank}">${(p.upvotes||0)}</span></button>
+          <button class="fb-btn ${saved==='down'?'active-down':''}" onclick="feedback('${date}','${p.rank}','down',this)">👎 <span id="dn_${date}_${p.rank}">${(p.downvotes||0)}</span></button>
+        </div>
+      </div>
     </div>`;
-  }
+  });
 
   document.getElementById('content').innerHTML = html;
 }
 
-function initApp(data) {
-  allData = data;
-  const reports = [...data.reports].sort((a, b) => b.date.localeCompare(a.date));
-  const allProducts = reports.flatMap(r => r.products || []);
-  const avgScore = allProducts.length ? Math.round(allProducts.reduce((s, p) => s + p.score, 0) / allProducts.length) : 0;
-  const topScore = allProducts.length ? Math.max(...allProducts.map(p => p.score)) : 0;
+function renderTop10() {
+  const all = allData.reports.flatMap(r =>
+    (r.products||[]).map(p => ({ ...p, date: r.date }))
+  );
+  all.sort((a,b) => (b.score||0) - (a.score||0));
+  const top = all.slice(0, 10);
+  if (!top.length) return;
 
-  document.getElementById('total-days').textContent = reports.length;
-  document.getElementById('total-products').textContent = allProducts.length;
-  document.getElementById('avg-score').textContent = avgScore || '—';
-  document.getElementById('top-score').textContent = topScore || '—';
-  document.getElementById('header-sub').textContent = `最新：${reports[0] ? reports[0].date : '—'} ｜ 累積 ${allProducts.length} 個候選產品`;
-
-  const nav = document.getElementById('date-nav');
-  nav.innerHTML = reports.map(r => {
-    const label = r.date.slice(5).replace('-', '/');
-    return `<button class="date-btn" data-date="${r.date}" onclick="selectDate('${r.date}')">${label}</button>`;
-  }).join('');
-
-  if (reports.length) {
-    selectDate(reports[0].date);
-  } else {
-    document.getElementById('content').innerHTML = `<div class="loading">📭 尚無報告資料，等待第一次排程執行</div>`;
-  }
+  document.getElementById('top10List').innerHTML = top.map((p, i) =>
+    `<div class="top10-row">
+      <div class="top10-rank">${i+1}</div>
+      <div class="top10-name">${escHtml(p.name||'')}</div>
+      <div class="top10-date">${p.date}</div>
+      <div class="top10-score">${p.score}</div>
+    </div>`
+  ).join('');
+  document.getElementById('top10Section').style.display = 'block';
 }
 
-fetch('./data.json?t=' + Date.now())
-  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-  .then(initApp)
-  .catch(err => {
-    document.getElementById('content').innerHTML = `<div class="error">❌ 無法載入報告資料<br><small style="color:var(--text-muted)">${err.message}</small><br><br><small>請確認 data.json 已上傳至 repo</small></div>`;
+function toggleCard(header) {
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.toggle-arrow');
+  const isOpen = body.classList.toggle('open');
+  arrow.classList.toggle('open', isOpen);
+}
+
+function feedback(date, rank, type, btn) {
+  const key = `fb_${date}_${rank}`;
+  const prev = localStorage.getItem(key);
+  if (prev === type) return;
+  localStorage.setItem(key, type);
+
+  // Visual update
+  const card = btn.closest('.feedback-row');
+  card.querySelectorAll('.fb-btn').forEach(b => {
+    b.classList.remove('active-up', 'active-down');
   });
+  btn.classList.add(type === 'up' ? 'active-up' : 'active-down');
+
+  // Send to Google Apps Script (non-blocking)
+  const API = 'https://script.google.com/macros/s/AKfycbwZZj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH81pRkAL2Ffxb/exec';
+  fetch(API, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      report_date: date,
+      product_name: '',
+      product_score: rank,
+      feedback: type,
+      reviewer: 'web'
+    })
+  }).catch(() => {});
+}
+
+function escHtml(s) {
+  if (!s) return '';
+  return String(s)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;');
+}
+
+loadData();
 </script>
 </body>
 </html>
