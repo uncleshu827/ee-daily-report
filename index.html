@@ -2,488 +2,387 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>EE 每日選品報告</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EE 選品研究站</title>
 <style>
   :root {
-    --bg: #f5f5f0;
-    --card-bg: #ffffff;
-    --text: #1a1a1a;
-    --text-sec: #6b7280;
-    --accent: #e8785e;
-    --green: #10b981;
-    --green-bg: #ecfdf5;
-    --red: #ef4444;
-    --red-bg: #fef2f2;
-    --border: #e8e8e3;
-    --shadow: 0 1px 3px rgba(0,0,0,0.05);
-    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-    --radius: 16px;
+    --bg: #0f1117;
+    --surface: #1a1d2e;
+    --surface2: #252840;
+    --border: #2e3250;
+    --text: #e8eaf6;
+    --text-muted: #8891b0;
+    --accent: #7c6af7;
+    --accent2: #4ecdc4;
+    --green: #4ade80;
+    --orange: #fb923c;
+    --red: #f87171;
+    --gold: #fbbf24;
   }
-  * { margin:0; padding:0; box-sizing:border-box; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang TC", "Microsoft JhengHei", sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    padding-bottom: 90px;
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    min-height: 100vh;
   }
-
-  /* ===== HEADER ===== */
   .header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    color: #fff;
-    padding: 20px 20px 16px;
+    background: linear-gradient(135deg, #1a1d2e, #252840);
+    padding: 20px 16px 14px;
+    border-bottom: 1px solid var(--border);
     position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(8px);
   }
-  .h-row { display: flex; justify-content: space-between; align-items: center; }
-  .h-date { font-size: 12px; opacity: .65; letter-spacing: .5px; }
-  .h-title { font-size: 20px; font-weight: 700; margin: 2px 0 6px; }
-  .h-pills { display: flex; gap: 8px; flex-wrap: wrap; }
-  .h-pill {
-    font-size: 11px; padding: 3px 10px; border-radius: 100px;
-    background: rgba(255,255,255,.12); color: rgba(255,255,255,.85);
+  .header h1 { font-size: 1.3rem; color: var(--accent); letter-spacing: 0.05em; }
+  .header p { font-size: 0.75rem; color: var(--text-muted); margin-top: 3px; }
+  .stats-bar {
+    display: flex; gap: 10px; overflow-x: auto;
+    padding: 12px 16px; background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    scrollbar-width: none;
   }
-  .h-notion {
-    display: inline-flex; align-items: center; gap: 4px;
-    font-size: 12px; color: rgba(255,255,255,.7);
-    text-decoration: none; margin-top: 8px;
+  .stats-bar::-webkit-scrollbar { display: none; }
+  .stat {
+    flex-shrink: 0; text-align: center;
+    padding: 8px 16px; background: var(--surface2);
+    border-radius: 10px; border: 1px solid var(--border);
   }
-  .h-notion:hover { color: #fff; }
-
-  /* ===== EVOLUTION BANNER ===== */
-  .evo-banner {
-    margin: 12px 16px 0;
-    padding: 10px 14px;
-    background: linear-gradient(135deg, #fef3c7, #fde68a);
-    border-radius: 12px;
-    font-size: 13px;
-    color: #92400e;
+  .stat-val { font-size: 1.2rem; font-weight: 700; color: var(--accent); }
+  .stat-label { font-size: 0.65rem; color: var(--text-muted); margin-top: 2px; }
+  .date-nav {
+    display: flex; gap: 8px; overflow-x: auto;
+    padding: 10px 16px; background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    scrollbar-width: none;
   }
-  .evo-banner strong { font-weight: 600; }
-
-  /* ===== PRODUCT CARD ===== */
-  .card {
-    background: var(--card-bg);
-    margin: 12px 16px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    transition: box-shadow .25s;
+  .date-nav::-webkit-scrollbar { display: none; }
+  .date-btn {
+    flex-shrink: 0; padding: 6px 14px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 20px; color: var(--text-muted);
+    font-size: 0.8rem; cursor: pointer;
+    transition: all 0.2s;
   }
-  .card.voted-up { box-shadow: 0 0 0 2.5px var(--green), var(--shadow-md); }
-  .card.voted-down { box-shadow: 0 0 0 2.5px var(--red), var(--shadow-md); }
-
-  /* Image */
-  .card-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    background: #e5e5e5;
+  .date-btn.active {
+    background: var(--accent); border-color: var(--accent);
+    color: white; font-weight: 600;
   }
-
-  /* Top section */
-  .card-top {
-    padding: 14px 16px 10px;
-    display: flex; gap: 12px; align-items: flex-start;
+  .date-btn:hover:not(.active) {
+    border-color: var(--accent); color: var(--text);
   }
-  .score-ring {
-    width: 48px; height: 48px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 17px; font-weight: 700; flex-shrink: 0;
-    border: 3px solid;
+  .content { padding: 16px; max-width: 720px; margin: 0 auto; }
+  .evolution-note {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent2);
+    border-radius: 10px; padding: 12px 14px;
+    margin-bottom: 16px; font-size: 0.82rem;
+    color: var(--text-muted); line-height: 1.6;
   }
-  .score-high { background: #ecfdf5; color: #059669; border-color: #059669; }
-  .score-mid  { background: #fffbeb; color: #d97706; border-color: #d97706; }
-  .score-low  { background: #fef2f2; color: #dc2626; border-color: #dc2626; }
+  .evolution-note strong { color: var(--accent2); }
+  .product-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; margin-bottom: 14px;
+    overflow: hidden; transition: border-color 0.2s;
+  }
+  .product-card:hover { border-color: var(--accent); }
+  .card-header {
+    padding: 14px; cursor: pointer;
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+  .rank-badge {
+    flex-shrink: 0; width: 32px; height: 32px;
+    border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; font-weight: 700; font-size: 0.85rem;
+    background: var(--surface2); color: var(--text-muted);
+    border: 2px solid var(--border);
+  }
+  .rank-badge.rank-1 { background: rgba(251,191,36,0.15); border-color: var(--gold); color: var(--gold); }
+  .rank-badge.rank-2 { background: rgba(148,163,184,0.15); border-color: #94a3b8; color: #94a3b8; }
+  .rank-badge.rank-3 { background: rgba(180,120,80,0.15); border-color: #b47850; color: #b47850; }
   .card-info { flex: 1; min-width: 0; }
-  .card-name { font-size: 17px; font-weight: 600; line-height: 1.35; }
-  .card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+  .card-name { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+  .card-meta { display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.72rem; color: var(--text-muted); }
   .tag {
-    display: inline-block; padding: 2px 9px; border-radius: 100px;
-    font-size: 11px; font-weight: 500;
+    padding: 2px 8px; border-radius: 10px;
+    background: var(--surface2); border: 1px solid var(--border);
   }
-  .tag-cat  { background: #ede9fe; color: #7c3aed; }
-  .tag-src  { background: #e0f2fe; color: #0369a1; }
-  .tag-margin { background: #ecfdf5; color: #059669; }
-
-  /* Highlight */
-  .card-highlight {
-    padding: 0 16px 12px;
-    font-size: 14px; color: var(--text-sec); line-height: 1.55;
+  .tag.category { color: var(--accent2); border-color: rgba(78,205,196,0.3); }
+  .tag.margin-good { color: var(--green); border-color: rgba(74,222,128,0.3); }
+  .tag.margin-ok { color: var(--orange); border-color: rgba(251,146,60,0.3); }
+  .score-ring {
+    flex-shrink: 0; width: 52px; height: 52px; position: relative;
   }
-
-  /* Numbers row */
-  .card-nums {
-    display: flex; border-top: 1px solid var(--border);
+  .score-ring svg { width: 52px; height: 52px; transform: rotate(-90deg); }
+  .score-ring .track { fill: none; stroke: var(--surface2); stroke-width: 4; }
+  .score-ring .fill { fill: none; stroke-width: 4; stroke-linecap: round; }
+  .score-text {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.85rem; font-weight: 700;
   }
-  .card-n {
-    flex: 1; text-align: center; padding: 10px 4px;
-    border-right: 1px solid var(--border);
-  }
-  .card-n:last-child { border-right: none; }
-  .card-n-label { font-size: 10px; color: var(--text-sec); letter-spacing: .3px; }
-  .card-n-val { font-size: 15px; font-weight: 600; margin-top: 1px; }
-
-  /* Links row */
-  .card-links {
-    display: flex; gap: 0; border-top: 1px solid var(--border);
-    overflow-x: auto; -webkit-overflow-scrolling: touch;
-  }
-  .card-link {
-    flex: 1; min-width: 0;
-    display: flex; align-items: center; justify-content: center; gap: 4px;
-    padding: 9px 8px;
-    font-size: 12px; color: #3b82f6; font-weight: 500;
-    text-decoration: none;
-    border-right: 1px solid var(--border);
-    white-space: nowrap;
-  }
-  .card-link:last-child { border-right: none; }
-  .card-link:active { background: #eff6ff; }
-
-  /* Expand */
   .expand-btn {
-    display: flex; align-items: center; justify-content: center; gap: 4px;
-    width: 100%; padding: 10px; border: none; background: transparent;
-    color: var(--text-sec); font-size: 13px; cursor: pointer;
+    width: 100%; padding: 8px; background: transparent;
+    border: none; border-top: 1px solid var(--border);
+    color: var(--text-muted); font-size: 0.75rem; cursor: pointer;
+    transition: color 0.2s;
+  }
+  .expand-btn:hover { color: var(--text); }
+  .card-detail { padding: 0 14px; display: none; }
+  .card-detail.open { display: block; padding-top: 4px; }
+  .detail-section { margin-bottom: 14px; }
+  .detail-label {
+    font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;
+    letter-spacing: 0.05em; margin-bottom: 5px;
+  }
+  .detail-content { font-size: 0.82rem; line-height: 1.7; color: var(--text); }
+  .scores-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 6px; margin-bottom: 14px;
+  }
+  .score-item { background: var(--surface2); border-radius: 8px; padding: 8px; text-align: center; }
+  .score-item-val { font-size: 1rem; font-weight: 700; color: var(--accent); }
+  .score-item-label { font-size: 0.62rem; color: var(--text-muted); margin-top: 2px; }
+  .links-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .link-btn {
+    padding: 4px 10px; background: var(--surface2);
+    border: 1px solid var(--border); border-radius: 8px;
+    color: var(--accent); font-size: 0.75rem; text-decoration: none;
+    transition: border-color 0.2s;
+  }
+  .link-btn:hover { border-color: var(--accent); }
+  .card-actions {
+    display: flex; gap: 8px; padding: 12px 14px;
     border-top: 1px solid var(--border);
-    -webkit-tap-highlight-color: transparent;
   }
-  .expand-btn svg { transition: transform .3s; }
-  .expand-btn.open svg { transform: rotate(180deg); }
-
-  /* Detail */
-  .card-detail { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
-  .card-detail.open { max-height: 3000px; }
-  .card-detail-inner { padding: 0 16px 16px; border-top: 1px solid var(--border); }
-  .d-sec { margin-top: 14px; }
-  .d-sec-title { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
-  .d-sec-body { font-size: 13px; color: var(--text-sec); line-height: 1.65; }
-
-  /* Score bars */
-  .sb-grid {
-    display: grid; grid-template-columns: 72px 1fr 30px;
-    gap: 5px 8px; align-items: center; margin-top: 8px;
+  .rating-btn {
+    flex: 1; padding: 8px; border-radius: 10px;
+    border: 1px solid var(--border); background: var(--surface2);
+    color: var(--text-muted); font-size: 0.82rem; cursor: pointer;
+    transition: all 0.2s; display: flex; align-items: center;
+    justify-content: center; gap: 4px;
   }
-  .sb-label { font-size: 11px; color: var(--text-sec); }
-  .sb-bar-bg { height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
-  .sb-bar { height: 100%; border-radius: 3px; }
-  .sb-bar.high { background: #10b981; }
-  .sb-bar.mid  { background: #f59e0b; }
-  .sb-bar.low  { background: #ef4444; }
-  .sb-val { font-size: 11px; font-weight: 600; text-align: right; }
-
-  /* Vote buttons */
-  .card-actions { display: flex; border-top: 1px solid var(--border); }
-  .vote-btn {
-    flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
-    padding: 13px; border: none; background: transparent;
-    font-size: 15px; cursor: pointer; color: var(--text-sec);
-    transition: all .2s; -webkit-tap-highlight-color: transparent;
+  .rating-btn.liked { background: rgba(74,222,128,0.12); border-color: var(--green); color: var(--green); font-weight: 600; }
+  .rating-btn.disliked { background: rgba(248,113,113,0.12); border-color: var(--red); color: var(--red); font-weight: 600; }
+  .rating-btn:hover:not(.liked):not(.disliked) { border-color: var(--accent); color: var(--text); }
+  .all-time { margin-top: 28px; margin-bottom: 32px; }
+  .section-title {
+    font-size: 0.9rem; font-weight: 600; color: var(--text-muted);
+    margin-bottom: 12px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
   }
-  .vote-btn:first-child { border-right: 1px solid var(--border); }
-  .vote-btn:active { transform: scale(.96); }
-  .vote-btn.voted-up { background: var(--green-bg); color: var(--green); font-weight: 600; }
-  .vote-btn.voted-down { background: var(--red-bg); color: var(--red); font-weight: 600; }
-
-  /* Bottom bar */
-  .bottom-bar {
-    position: fixed; bottom: 0; left: 0; right: 0;
-    background: #fff; padding: 10px 16px;
-    padding-bottom: max(10px, env(safe-area-inset-bottom));
-    box-shadow: 0 -2px 10px rgba(0,0,0,.08);
-    display: flex; align-items: center; gap: 12px; z-index: 100;
+  .mini-card {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px;
   }
-  .fb-summary { flex: 1; font-size: 13px; color: var(--text-sec); }
-  .fb-summary strong { color: var(--text); }
-  .submit-btn {
-    background: linear-gradient(135deg, #e8785e, #d4644a);
-    color: #fff; border: none; padding: 10px 22px;
-    border-radius: 100px; font-size: 15px; font-weight: 600;
-    cursor: pointer; white-space: nowrap;
-    transition: transform .1s, opacity .2s;
-    -webkit-tap-highlight-color: transparent;
+  .mini-card-date { font-size: 0.7rem; color: var(--text-muted); margin-top: 2px; }
+  .mini-card-name { font-size: 0.85rem; font-weight: 500; }
+  .mini-score {
+    flex-shrink: 0; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.8rem; font-weight: 700;
   }
-  .submit-btn:active { transform: scale(.96); }
-  .submit-btn:disabled { opacity: .4; }
-
-  /* Toast */
-  .toast {
-    position: fixed; top: 50%; left: 50%;
-    transform: translate(-50%,-50%) scale(.9);
-    background: rgba(0,0,0,.82); color: #fff;
-    padding: 14px 28px; border-radius: 12px;
-    font-size: 15px; font-weight: 500; z-index: 200;
-    opacity: 0; transition: all .3s; pointer-events: none;
+  .loading { text-align: center; padding: 60px 20px; color: var(--text-muted); font-size: 0.9rem; }
+  .error { color: var(--red); text-align: center; padding: 40px 20px; line-height: 1.6; }
+  .card-highlight {
+    margin-top: 6px; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;
   }
-  .toast.show { opacity: 1; transform: translate(-50%,-50%) scale(1); }
-
-  /* Responsive tweaks */
-  @media (max-width: 390px) {
-    .card-img { height: 170px; }
-    .card-name { font-size: 16px; }
-    .h-title { font-size: 18px; }
-  }
-  @media (min-width: 768px) {
-    body { max-width: 480px; margin: 0 auto; }
-    .header { border-radius: 0 0 16px 16px; }
-    .bottom-bar { max-width: 480px; left: 50%; transform: translateX(-50%); border-radius: 16px 16px 0 0; }
+  @media (max-width: 480px) {
+    .scores-grid { grid-template-columns: repeat(2, 1fr); }
+    .card-name { font-size: 0.95rem; }
   }
 </style>
 </head>
 <body>
-<div id="app"></div>
+
+<div class="header">
+  <h1>🦞 EE 選品研究站</h1>
+  <p id="header-sub">載入中…</p>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-val" id="total-days">—</div><div class="stat-label">天紀錄</div></div>
+  <div class="stat"><div class="stat-val" id="total-products">—</div><div class="stat-label">個產品</div></div>
+  <div class="stat"><div class="stat-val" id="avg-score">—</div><div class="stat-label">鹳均分</div></div>
+  <div class="stat"><div class="stat-val" id="top-score">—</div><div class="stat-label">歷史最高</div></div>
+</div>
+
+<div class="date-nav" id="date-nav"></div>
+
+<div class="content" id="content">
+  <div class="loading">🔄 載入報告中…</div>
+</div>
 
 <script>
-// ===== REPORT DATA =====
-// In production, this is auto-generated by the daily scheduled task
-const REPORT = {
-  date: "2026/03/30",
-  day: "週一",
-  source: "東南亞",
-  sourceDetail: "TikTok Shop SEA, Shopee TH/VN/PH, Lazada",
-  evolution: "B. 需求驗證升級 — 新增 Google Trends 跨國搜尋熱度比對，量化「信息差」指標：比較產品在東南亞 vs 台灣的搜尋熱度差異，熱度差越大代表市場空白信號越強",
-  notionUrl: "https://www.notion.so/326c45deba0b80dc9660c661b84f6158",
-  products: [
-    {
-      id: 1,
-      name: "3合1紅光導油頭皮按摩梳",
-      score: 76,
-      category: "美容科技",
-      source: "TikTok Shop SEA",
-      price: "$1,290",
-      cost: "$280",
-      margin: "4.6x",
-      image: "",
-      highlight: "TikTok #scalpcare 數十億觀看；台灣僅有基本紅光梳，無「導油+紅光+按摩」三合一款；毛利超4x；美容短影音天然爆款素材。",
-      links: {
-        "Amazon": "https://www.amazon.com/YXYOUNG-Functional-Electric-Waterproof-Applicator/dp/B0D72ZRLDT",
-        "蝦皮搜尋": "https://shopee.tw/search?keyword=%E7%B4%85%E5%85%89%E9%A0%AD%E7%9A%AE%E6%8C%89%E6%91%A9%E6%A2%B3",
-        "momo": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=%E7%B4%85%E5%85%89%E9%A0%AD%E7%9A%AE%E6%A2%B3"
-      },
-      details: {
-        "📍 來源與定位": "TikTok Shop SEA 美容品類 #1 GMV 類目。泰國 TikTok Shop 美容健康品類 GMV 達 $28.5 億，紅光頭皮按摩梳是 2025-2026 最火爆的美容小家電之一。3合1 = 紅光LED生髮 + 精油自動導入 + 電動按摩，比台灣現有基本紅光梳多了「導油」功能，是關鍵差異化。",
-        "💰 成本與利潤": "1688 採購 ¥15-30（紅光LED+導油槽+電動按摩模組+IPX7防水）→ 落地成本 NT$200-350\n建議售價 NT$1,290 ｜ 毛利 3.7-6.5x（均值 4.6x）\n蝦皮淨利預估 NT$750/支",
-        "📊 需求驗證": "【國外爆紅證據】TikTok #scalpcare 數十億觀看、#redlighttherapy 持續增長。Google Trends 全球「scalp massager red light」搜尋量 2025 年峰值達 69（滿分100），年增 15-20%。YXYOUNG、Breo Scalp3 等品牌 Amazon BSR 前列。\n【台灣市場空白】蝦皮搜「紅光頭皮按摩梳」僅有基本款（小米有品等），無導油功能版本 🔴。momo 有電流梳和基本紅光梳但無3合1 🔴。PChome 同樣空白 🔴。\n【台灣缺席原因】3合1 是 2024-2025 新創新，台灣美容市場資訊傳遞慧1-2個季度。無認證門檻阻擋。\n【Google Trends 信息差指標】「red light scalp massager」泰國搜尋量 vs 台灣：泰國高、台灣接近零 → 信息差極大 ✅",
-        "⚔️ 競爭分析": "蝦皮搜「紅光頭皮梳」約 2-3 頁結果，全部是基本款無導油功能。momo 有小米有品紅光梳 NT$599 但無導油功能。台灣零個「3合1導油紅光按摩」產品。國際品牌 Breo Scalp3（US$99）、OPUSCALP（US$150+）均未進入台灣。NT$1,290 價位帶完全空白。",
-        "📣 傳播力與客群": "目標：25-45歲女性、頭皮保養/生髮需求者。短影音⭐⭐⭐⭐⭐ — 紅光亮起+精油自動滲透+按摩頭皮畫面極具科技感和療癒感，before/after 生髮對比是天然爆款內容。美容 KOL 合作潛力極大。",
-        "🛒 通路策略": "蝦皮美容品類首發 → momo個人護理 → Pinkoi 質感定位。搭配精油套裝販售提升客單價。全年銷售無季節性限制。",
-        "⚠️ 風險與認證": "認證門檻低：USB充電小家電，無需 BSMI。紅光 LED 功率低，不涉及醫療器材認證。風險：技術門檻低易被模仿，需搶先建立品牌認知和 KOL 口碑。",
-        "🔄 複購與 LTV": "替換按摩頭 NT$149-199。搭售護髮精油套裝 NT$399-599。延伸：頭皮檢測儀、生髮精華液。年 LTV 約 NT$800-1,500。"
-      },
-      scores: { "毛利潛力":90, "需求驗證":80, "競爭壁壘":55, "傳播力":85, "操作難度":80, "複購潛力":45 }
-    },
-    {
-      id: 2,
-      name: "AI智慧賞鳥餵食器相機",
-      score: 71,
-      category: "自然科技",
-      source: "Shopee TH/SG",
-      price: "$3,490",
-      cost: "$1,100",
-      margin: "3.2x",
-      image: "",
-      highlight: "台灣完全市場空白；Birdfy Kickstarter募$270萬+驗證需求；台灣691種鳥類+2025世界賞鳥博覽會在台中；自然×科技跨界。",
-      links: {
-        "Birdfy": "https://www.birdfy.com/products/birdfy-feeder",
-        "Bird Buddy": "https://mybirdbuddy.com/",
-        "台灣賞鳥": "https://www.birdingintaiwan.com/"
-      },
-      details: {
-        "📍 來源與定位": "東南亞自然觀察科技趨勢。Birdfy（Netvue 旗下）從 Kickstarter 起家，2K HD 相機 + AI 辨識 6,000+ 鳥種 + 太陽能供電 + 手機即時通知。全球賞鳥人口持續增長，Smart Bird Feeder 是 Nature Tech 新品類。亞太地區（泰國、新加坡、馬來西亞）帶動自然觀察科技消費。",
-        "💰 成本與利潤": "1688 OEM WiFi 鳥類餵食器相機 ¥150-250（含 1080P/2K 相機模組+WiFi+太陽能板+APP）→ 落地成本 NT$900-1,300\n建議售價 NT$3,490 ｜ 毛利 2.7-3.9x（均值 3.2x）\n蝦皮淨利預估 NT$1,700/台",
-        "📊 需求驗證": "【國外爆紅證據】Birdfy Kickstarter 募資 US$270萬+，Bird Buddy 募資 US$740萬+，兩者均大幅超過目標。Amazon BSR 庭院品類前列，4.3+ 星評分。全球市場每年 15-20% 增長。\n【台灣市場空白】蝦皮搜「智慧餵鳥器」「bird feeder camera」零結果 🔴。momo 僅有傳統鳥類餵食器（塑膠殼無相機）🔴。PChome 同樣無相關產品 🔴。Google 搜「智慧餵鳥器 台灣」無任何品牌官網或代理商 🔴。完全市場空白。\n【台灣有潛在機會】台灣記錄 691 種鳥類、32 種特有種。2025 世界賞鳥博覽會在台中舉辦（全球矚目）。台灣賞鳥會社群活躍。都市陽台/公寓花園適合裝設。\n【Google Trends 信息差指標】「bird feeder camera」美國/歐洲搜尋量極高，台灣接近零 → 品類根本未被認知 ✅",
-        "⚔️ 競爭分析": "台灣零競爭。蝦皮/momo/PChome 三大平台完全空白。國際品牌 Birdfy、Bird Buddy 均無台灣代理。最接近的替代品是傳統鳥類餵食器（NT$200-500，無科技功能）和一般戶外監控相機（功能不同）。NT$3,490 定價遠低於 Bird Buddy PRO（US$299=NT$9,600+），有明顯價格空間。",
-        "📣 傳播力與客群": "目標：30-60歲自然愛好者、退休族、親子教育、城市陽台園藝族。短影音⭐⭐⭐⭐ — AI 辨識鳥種+手機推播「有鳥來了！」+慢動作鳥類特寫，內容溫馨治癒有話題性。與台灣賞鳥社群合作潛力大。",
-        "🛒 通路策略": "蝦皮生活品類首發 → momo3C周邊 → Pinkoi/citiesocial 質感生活定位。搭配鳥類知識卡片/圖鑑提升體驗。春秋鳥類遷徙季為旺季。",
-        "⚠️ 風險與認證": "NCC 認證（WiFi 裝置）：約 2-3 個月，費用 NT$15,000-30,000。BSMI（鋰電池）建議申請。APP 需中文化並支援台灣常見鳥種辨識。太陽能板需適應台灣多雨氣候。",
-        "🔄 複購與 LTV": "鳥飼料/種子 NT$199-399（每月）。替換太陽能板 NT$499。延伸配件：鳥巢相機、蜂鳥特化餵食器。APP 進階功能訂閱潛力。年 LTV 約 NT$2,000-3,500。"
-      },
-      scores: { "毛利潛力":75, "需求驗證":80, "競爭壁壘":70, "傳播力":65, "操作難度":55, "複購潛力":60 }
-    },
-    {
-      id: 3,
-      name: "智能遙控自動狗拋球機",
-      score: 68,
-      category: "寵物科技",
-      source: "Lazada TH/PH",
-      price: "$2,490",
-      cost: "$660",
-      margin: "3.8x",
-      image: "",
-      highlight: "台灣僅1賣家；泰國寵物電商YoY成長35%；狗內容短影音超高傳播力；遙控+可調距離+USB充電差異化。",
-      links: {
-        "搖滾尾巴": "https://www.rocktailshop.com.tw/products/dogtoy15",
-        "PetSafe": "https://www.petsafe.com/product/automatic-ball-launcher/?sku=PTY00-14665",
-        "Amazon": "https://www.amazon.com/JLGK-Automatic-Interactive-Distances-Rechargeable/dp/B0GJSBRVZS"
-      },
-      details: {
-        "📍 來源與定位": "泰國/菲律賓 Lazada 寵物科技品類。泰國 2026 寵物電商銷售 YoY 增長 35%，寵物科技搜尋量位居零售搜尋成長最快品類之一。自動拋球機讓狗狗自己玩 fetch，解決上班族無法陪伴寵物的痛點。含遙控器版本可調拋射距離 15-45 英尺，室內外兩用。",
-        "💰 成本與利潤": "1688 採購 ¥60-100（含遙控器+USB充電+6顆球+可調距離3檔）→ 落地成本 NT$500-780\n建議售價 NT$2,490 ｜ 毛利 3.2-5.0x（均值 3.8x）\n蝦皮淨利預估 NT$1,300/台",
-        "📊 需求驗證": "【國外爆紅證據】PetSafe 自動拋球機 Amazon 4.1 星 10,000+ 評論。iFetch、GoDogGo 等品牌長年 BSR 前列。全球寵物科技市場 CAGR 13.9%，亞太領先。TikTok #dogtoy 數十億觀看。\n【台灣市場空白】蝦皮搜「自動拋球機」僅 3-5 個白牌結果，無品牌化產品 🔴。momo 零結果 🔴。PChome 零結果 🔴。僅搖滾尾巴有 AFP 品牌一款（NT$3,280）🔴。市場極度空白。\n【台灣有潛在機會】台灣犬口約 150 萬隻，寵物市場年產值 600 億+。上班族養狗痛點：白天無人陪伴、運動量不足。\n【Google Trends 信息差指標】「automatic ball launcher dog」歐美搜尋量高，台灣幾乎為零 → 品類未被認知 ✅",
-        "⚔️ 競爭分析": "蝦皮僅 3-5 個白牌賣家，均為基礎款無遙控。momo/PChome 完全空白。唯一品牌化產品是搖滾尾巴的 AFP 款 NT$3,280，定價偏高。我們 NT$2,490 含遙控器+USB充電+6球，性價比優勢明顯。國際品牌 PetSafe、iFetch 均未進台灣。",
-        "📣 傳播力與客群": "目標：25-45歲養狗族、寵物 KOL。短影音⭐⭐⭐⭐⭐ — 狗狗自己叼球放回拋球機再接球的畫面超萌超療癒，寵物內容是社群傳播之王。#dogtok 流量極大。",
-        "🛒 通路策略": "蝦皮寵物品類首發 → momo 寵物用品 → 寵物展/寵物店合作。搭配替換球組合販售。全年銷售。",
-        "⚠️ 風險與認證": "認證門檻低：USB 充電小功率馬達，無需 BSMI。風險：體積較大物流成本高；僅適合中小型犬（大型犬力道可能損壞）；需確保安全感測器防誤射。",
-        "🔄 複購與 LTV": "替換球 6 入 NT$299（每 2-3 個月）。延伸：自動飛盤、互動零食玩具、寵物攝影機。寵物主人忠誠度高。年 LTV 約 NT$1,200-2,000。"
-      },
-      scores: { "毛利潛力":80, "需求驗證":65, "競爭壁壘":60, "傳播力":75, "操作難度":65, "複購潛力":50 }
-    }
-  ]
-};
-
-// ===== CONFIG =====
 const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZZj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH81pRkAL2Ffxb/exec';
+let allData = null;
+let currentDate = null;
 
-// ===== STATE =====
-const votes = {};
-const synced = {}; // track what's been sent to API
-
-function scoreClass(s) { return s >= 75 ? 'score-high' : s >= 60 ? 'score-mid' : 'score-low'; }
-function barClass(s)   { return s >= 75 ? 'high' : s >= 60 ? 'mid' : 'low'; }
-
-function toggleDetail(id) {
-  document.getElementById('det-'+id).classList.toggle('open');
-  document.getElementById('exp-'+id).classList.toggle('open');
+function getScoreColor(score) {
+  if (score >= 80) return '#4ade80';
+  if (score >= 65) return '#fbbf24';
+  return '#fb923c';
 }
 
-function vote(id, type) {
-  // Toggle: same vote removes it
-  if (votes[id] === type) {
-    delete votes[id];
-  } else {
-    votes[id] = type;
-    // Auto-send feedback to Google Sheet
-    sendFeedback(id, type);
-  }
-  render();
+function scoreCircle(score) {
+  const r = 20, c = 26, circ = 2 * Math.PI * r;
+  const offset = circ - (score / 100) * circ;
+  const col = getScoreColor(score);
+  return `<div class="score-ring">
+    <svg viewBox="0 0 52 52">
+      <circle class="track" cx="${c}" cy="${c}" r="${r}"/>
+      <circle class="fill" cx="${c}" cy="${c}" r="${r}"
+        stroke="${col}" stroke-dasharray="${circ.toFixed(2)}" stroke-dashoffset="${offset.toFixed(2)}"/>
+    </svg>
+    <div class="score-text" style="color:${col}">${score}</div>
+  </div>`;
 }
 
-function sendFeedback(id, type) {
-  const p = REPORT.products.find(x => x.id === id);
-  if (!p) return;
-  const payload = {
-    report_date: REPORT.date,
-    product_name: p.name,
-    product_score: p.score,
-    feedback: type === 'up' ? '👍' : '👎',
-    reviewer: 'EE_reviewer'
-  };
+function getRatingKey(date, productName) {
+  return 'ee_rating_' + date + '_' + productName.replace(/\s+/g, '_');
+}
+
+function renderProduct(p, date, idx) {
+  const rankClass = idx < 3 ? 'rank-' + (idx + 1) : '';
+  const marginNum = parseFloat((p.margin || '0').replace('x', ''));
+  const marginClass = marginNum >= 3.5 ? 'margin-good' : 'margin-ok';
+  const ratingKey = getRatingKey(date, p.name);
+  const rating = localStorage.getItem(ratingKey);
+
+  const scoresHtml = p.scores ? `<div class="scores-grid">
+    <div class="score-item"><div class="score-item-val">${p.scores.margin != null ? p.scores.margin : '—'}</div><div class="score-item-label">毛利 25%</div></div>
+    <div class="score-item"><div class="score-item-val">${p.scores.demand != null ? p.scores.demand : '—'}</div><div class="score-item-label">需求驗證 25%</div></div>
+    <div class="score-item"><div class="score-item-val">${p.scores.barrier != null ? p.scores.barrier : '—'}</div><div class="score-item-label">競爭壁壘 15%</div></div>
+    <div class="score-item"><div class="score-item-val">${p.scores.viral != null ? p.scores.viral : '—'}</div><div class="score-item-label">傳播力 15%</div></div>
+    <div class="score-item"><div class="score-item-val">${p.scores.difficulty != null ? p.scores.difficulty : '—'}</div><div class="score-item-label">操作難度 10%</div></div>
+    <div class="score-item"><div class="score-item-val">${p.scores.repurchase != null ? p.scores.repurchase : '—'}</div><div class="score-item-label">複購潛力 10%</div></div>
+  </div>` : '';
+
+  const linksHtml = p.links && p.links.length ? `<div class="detail-section">
+    <div class="detail-label">參考連結</div>
+    <div class="links-list">${p.links.map((l, i) => `<a href="${l}" target="_blank" class="link-btn">🔗 連結${i + 1}</a>`).join('')}</div>
+  </div>` : '';
+
+  const safeName = p.name.replace(/'/g, "\\'");
+
+  return `<div class="product-card" id="card-${date}-${idx}">
+  <div class="card-header" onclick="toggleCard('${date}',${idx})">
+    <div class="rank-badge ${rankClass}">${idx + 1}</div>
+    <div class="card-info">
+      <div class="card-name">${p.name}</div>
+      <div class="card-meta">
+        <span class="tag category">${p.category || '—'}</span>
+        <span class="tag">${p.price || '—'}</span>
+        <span class="tag ${marginClass}">毛利 ${p.margin || '—'}</span>
+      </div>
+      <div class="card-highlight">${p.highlight || ''}</div>
+    </div>
+    ${scoreCircle(p.score)}
+  </div>
+  <button class="expand-btn" onclick="toggleCard('${date}',${idx})" id="expand-btn-${date}-${idx}">展開詳情 ▼</button>
+  <div class="card-detail" id="detail-${date}-${idx}">
+    ${scoresHtml}
+    ${p.demand_validation ? `<div class="detail-section"><div class="detail-label">需求驗證</div><div class="detail-content">${p.demand_validation}</div></div>` : ''}
+    ${p.cost_breakdown ? `<div class="detail-section"><div class="detail-label">成本明細</div><div class="detail-content">${p.cost_breakdown}</div></div>` : ''}
+    ${linksHtml}
+  </div>
+  <div class="card-actions">
+    <button class="rating-btn ${rating === 'like' ? 'liked' : ''}" id="like-${date}-${idx}" onclick="rate('${date}',${idx},'${safeName}','like')">👍 看好</button>
+    <button class="rating-btn ${rating === 'dislike' ? 'disliked' : ''}" id="dislike-${date}-${idx}" onclick="rate('${date}',${idx},'${safeName}','dislike')">👎 觀望</button>
+  </div>
+</div>`;
+}
+
+function toggleCard(date, idx) {
+  const detail = document.getElementById('detail-' + date + '-' + idx);
+  const btn = document.getElementById('expand-btn-' + date + '-' + idx);
+  const open = detail.classList.toggle('open');
+  btn.textContent = open ? '收起 ▲' : '展開詳情 ▼';
+}
+
+function rate(date, idx, name, val) {
+  const ratingKey = getRatingKey(date, name);
+  if (localStorage.getItem(ratingKey) === val) return;
+  localStorage.setItem(ratingKey, val);
+  document.getElementById('like-' + date + '-' + idx).className = 'rating-btn' + (val === 'like' ? ' liked' : '');
+  document.getElementById('dislike-' + date + '-' + idx).className = 'rating-btn' + (val === 'dislike' ? ' disliked' : '');
+  const report = allData.reports.find(r => r.date === date);
+  const score = report && report.products[idx] ? report.products[idx].score : 0;
   fetch(FEEDBACK_API, {
-    method: 'POST',
-    mode: 'no-cors',
+    method: 'POST', mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
-  }).then(() => {
-    synced[id] = true;
-    toast(type === 'up' ? '👍 已記錄！' : '👎 已記錄！');
-  }).catch(() => {
-    toast('反饋暫存中，稍後重試');
+    body: JSON.stringify({ report_date: date, product_name: name, product_score: score, feedback: val === 'like' ? '看好' : '觀望', reviewer: 'EE Team' })
+  }).catch(() => {});
+}
+
+function selectDate(date) {
+  currentDate = date;
+  document.querySelectorAll('.date-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.date === date);
   });
+  const report = allData.reports.find(r => r.date === date);
+  if (!report) return;
+
+  let html = '';
+  if (report.evolution) {
+    html += `<div class="evolution-note"><strong>🧠 今日進化</strong>　${report.evolution}</div>`;
+  }
+  (report.products || []).forEach((p, i) => { html += renderProduct(p, date, i); });
+
+  // All-time top 10
+  const allProducts = allData.reports
+    .flatMap(r => (r.products || []).map(p => ({ ...p, reportDate: r.date })))
+    .sort((a, b) => b.score - a.score).slice(0, 10);
+
+  if (allProducts.length > 0) {
+    html += `<div class="all-time"><div class="section-title">🏆 歷史最高分 Top 10</div>
+    ${allProducts.map(p => {
+      const col = getScoreColor(p.score);
+      const isToday = p.reportDate === date;
+      return `<div class="mini-card">
+        <div style="flex:1">
+          <div class="mini-card-name">${p.name}${isToday ? ' <span style="font-size:0.65rem;color:var(--accent2);">今日</span>' : ''}</div>
+          <div class="mini-card-date">${p.reportDate.slice(5).replace('-', '/')} ｜ ${p.category || ''}</div>
+        </div>
+        <div class="mini-score" style="background:${col}22;color:${col};border:1px solid ${col}44">${p.score}</div>
+      </div>`;
+    }).join('')}
+    </div>`;
+  }
+
+  document.getElementById('content').innerHTML = html;
 }
 
-function voteSummary() {
-  const up = Object.values(votes).filter(v=>v==='up').length;
-  const down = Object.values(votes).filter(v=>v==='down').length;
-  return { up, down, pending: REPORT.products.length - up - down, total: REPORT.products.length };
+function initApp(data) {
+  allData = data;
+  const reports = [...data.reports].sort((a, b) => b.date.localeCompare(a.date));
+  const allProducts = reports.flatMap(r => r.products || []);
+  const avgScore = allProducts.length ? Math.round(allProducts.reduce((s, p) => s + p.score, 0) / allProducts.length) : 0;
+  const topScore = allProducts.length ? Math.max(...allProducts.map(p => p.score)) : 0;
+
+  document.getElementById('total-days').textContent = reports.length;
+  document.getElementById('total-products').textContent = allProducts.length;
+  document.getElementById('avg-score').textContent = avgScore || '—';
+  document.getElementById('top-score').textContent = topScore || '—';
+  document.getElementById('header-sub').textContent = `最新：${reports[0] ? reports[0].date : '—'} ｜ 累積 ${allProducts.length} 個候選產品`;
+
+  const nav = document.getElementById('date-nav');
+  nav.innerHTML = reports.map(r => {
+    const label = r.date.slice(5).replace('-', '/');
+    return `<button class="date-btn" data-date="${r.date}" onclick="selectDate('${r.date}')">${label}</button>`;
+  }).join('');
+
+  if (reports.length) {
+    selectDate(reports[0].date);
+  } else {
+    document.getElementById('content').innerHTML = `<div class="loading">📭 尚無報告資料，等待第一次排程執行</div>`;
+  }
 }
 
-function toast(m) {
-  const el = document.getElementById('toast');
-  el.textContent = m; el.classList.add('show');
-  setTimeout(() => el.classList.remove('show'), 2000);
-}
-
-function render() {
-  const { products: ps, date, day, source, sourceDetail, evolution, notionUrl } = REPORT;
-  const s = voteSummary();
-  document.getElementById('app').innerHTML = `
-    <div class="header">
-      <div class="h-row">
-        <div>
-          <div class="h-date">${date} ${day}</div>
-          <div class="h-title">EE 每日選品報告</div>
-        </div>
-      </div>
-      <div class="h-pills">
-        <span class="h-pill">📦 ${ps.length} 選品</span>
-        <span class="h-pill">🔍 ${source}（${sourceDetail}）</span>
-      </div>
-      <a class="h-notion" href="${notionUrl}" target="_blank">📔 在 Notion 查看完整報告 →</a>
-    </div>
-
-    <div class="evo-banner">🧬 <strong>今日進化：</strong>${evolution}</div>
-
-    ${ps.map(p => `
-      <div class="card ${votes[p.id]==='up'?'voted-up':votes[p.id]==='down'?'voted-down':''}">
-        <img class="card-img" src="${p.image}" alt="${p.name}" onerror="this.style.display='none'" loading="lazy">
-
-        <div class="card-top">
-          <div class="score-ring ${scoreClass(p.score)}">${p.score}</div>
-          <div class="card-info">
-            <div class="card-name">${p.name}</div>
-            <div class="card-tags">
-              <span class="tag tag-cat">${p.category}</span>
-              <span class="tag tag-src">${p.source}</span>
-              <span class="tag tag-margin">毛利 ${p.margin}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-highlight">${p.highlight}</div>
-
-        <div class="card-nums">
-          <div class="card-n"><div class="card-n-label">建議售價</div><div class="card-n-val">${p.price}</div></div>
-          <div class="card-n"><div class="card-n-label">落地成本</div><div class="card-n-val">${p.cost}</div></div>
-          <div class="card-n"><div class="card-n-label">毛利倍數</div><div class="card-n-val" style="color:#059669">${p.margin}</div></div>
-        </div>
-
-        <div class="card-links">
-          ${Object.entries(p.links).map(([k,v]) => `<a class="card-link" href="${v}" target="_blank">🔗 ${k}</a>`).join('')}
-        </div>
-
-        <button class="expand-btn" id="exp-${p.id}" onclick="toggleDetail(${p.id})">
-          展開詳情
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="card-detail" id="det-${p.id}">
-          <div class="card-detail-inner">
-            ${Object.entries(p.details).map(([t,b]) => `
-              <div class="d-sec">
-                <div class="d-sec-title">${t}</div>
-                <div class="d-sec-body">${b.replace(/\n/g,'<br>')}</div>
-              </div>`).join('')}
-            <div class="d-sec">
-              <div class="d-sec-title">📐 評分明細</div>
-              <div class="sb-grid">
-                ${Object.entries(p.scores).map(([d,v]) => `
-                  <div class="sb-label">${d}</div>
-                  <div class="sb-bar-bg"><div class="sb-bar ${barClass(v)}" style="width:${v}%"></div></div>
-                  <div class="sb-val">${v}</div>`).join('')}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-actions">
-          <button class="vote-btn ${votes[p.id]==='up'?'voted-up':''}" onclick="vote(${p.id},'up')">👍 有興趣</button>
-          <button class="vote-btn ${votes[p.id]==='down'?'voted-down':''}" onclick="vote(${p.id},'down')">👎 不適合</button>
-        </div>
-      </div>
-    `).join('')}
-
-    <div class="bottom-bar">
-      <div class="fb-summary"><strong>${s.up+s.down}</strong>/${s.total} 已評${s.up?' 👍'+s.up:''}${s.down?' 👎'+s.down:''}</div>
-      <div style="font-size:12px;color:var(--green);font-weight:500">${s.up+s.down>0?'✓ 自動儲存中':'點 👍👎 給反饋'}</div>
-    </div>
-    <div class="toast" id="toast"></div>`;
-}
-render();
+fetch('./data.json?t=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  .then(initApp)
+  .catch(err => {
+    document.getElementById('content').innerHTML = `<div class="error">❌ 無法載入報告資料<br><small style="color:var(--text-muted)">${err.message}</small><br><br><small>請確認 data.json 已上傳至 repo</small></div>`;
+  });
 </script>
 </body>
 </html>
