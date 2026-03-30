@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EE 選品研究站</title>
+<title>EE é¸åç ç©¶ç«</title>
 <style>
   :root {
     --bg: #0f1117;
@@ -203,21 +203,21 @@
 <body>
 
 <div class="header">
-  <h1>🦞 EE 選品研究站</h1>
-  <p id="header-sub">載入中…</p>
+  <h1>ð¦ EE é¸åç ç©¶ç«</h1>
+  <p id="header-sub">è¼å¥ä¸­â¦</p>
 </div>
 
 <div class="stats-bar">
-  <div class="stat"><div class="stat-val" id="total-days">—</div><div class="stat-label">天紀錄</div></div>
-  <div class="stat"><div class="stat-val" id="total-products">—</div><div class="stat-label">個產品</div></div>
-  <div class="stat"><div class="stat-val" id="avg-score">—</div><div class="stat-label">平均分</div></div>
-  <div class="stat"><div class="stat-val" id="top-score">—</div><div class="stat-label">歷史最高</div></div>
+  <div class="stat"><div class="stat-val" id="total-days">â</div><div class="stat-label">å¤©ç´é</div></div>
+  <div class="stat"><div class="stat-val" id="total-products">â</div><div class="stat-label">åç¢å</div></div>
+  <div class="stat"><div class="stat-val" id="avg-score">â</div><div class="stat-label">å¹³åå</div></div>
+  <div class="stat"><div class="stat-val" id="top-score">â</div><div class="stat-label">æ­·å²æé«</div></div>
 </div>
 
 <div class="date-nav" id="date-nav"></div>
 
 <div class="content" id="content">
-  <div class="loading">🔄 載入報告中…</div>
+  <div class="loading">ð è¼å¥å ±åä¸­â¦</div>
 </div>
 
 <script>
@@ -257,17 +257,17 @@ function renderProduct(p, date, idx) {
   const rating = localStorage.getItem(ratingKey);
 
   const scoresHtml = p.scores ? `<div class="scores-grid">
-    <div class="score-item"><div class="score-item-val">${p.scores.margin != null ? p.scores.margin : '—'}</div><div class="score-item-label">毛利 25%</div></div>
-    <div class="score-item"><div class="score-item-val">${p.scores.demand != null ? p.scores.demand : '—'}</div><div class="score-item-label">需求驗證 25%</div></div>
-    <div class="score-item"><div class="score-item-val">${p.scores.barrier != null ? p.scores.barrier : '—'}</div><div class="score-item-label">競爭壁壘 15%</div></div>
-    <div class="score-item"><div class="score-item-val">${p.scores.viral != null ? p.scores.viral : '—'}</div><div class="score-item-label">傳播力 15%</div></div>
-    <div class="score-item"><div class="score-item-val">${p.scores.difficulty != null ? p.scores.difficulty : '—'}</div><div class="score-item-label">操作難度 10%</div></div>
-    <div class="score-item"><div class="score-item-val">${p.scores.repurchase != null ? p.scores.repurchase : '—'}</div><div class="score-item-label">複購潛力 10%</div></div>
+    <div class="score-item"><div class="score-item-val">${p.scores.margin != null ? p.scores.margin : 'â'}</div><div class="score-item-label">æ¯å© 25%</div></div>
+    <div class="score-item"><div class="score-item-val">${p.scores.demand != null ? p.scores.demand : 'â'}</div><div class="score-item-label">éæ±é©è­ 25%</div></div>
+    <div class="score-item"><div class="score-item-val">${p.scores.barrier != null ? p.scores.barrier : 'â'}</div><div class="score-item-label">ç«¶ç­å£å£ 15%</div></div>
+    <div class="score-item"><div class="score-item-val">${p.scores.viral != null ? p.scores.viral : 'â'}</div><div class="score-item-label">å³æ­å 15%</div></div>
+    <div class="score-item"><div class="score-item-val">${p.scores.difficulty != null ? p.scores.difficulty : 'â'}</div><div class="score-item-label">æä½é£åº¦ 10%</div></div>
+    <div class="score-item"><div class="score-item-val">${p.scores.repurchase != null ? p.scores.repurchase : 'â'}</div><div class="score-item-label">è¤è³¼æ½å 10%</div></div>
   </div>` : '';
 
-  const linksHtml = p.links && p.links.length ? `<div class="detail-section">
+  const linksHtml = p.links && (Array.isArray(p.links) ? p.links.length : Object.keys(p.links).length) > 0 ? `<div class="detail-section">
     <div class="detail-label">參考連結</div>
-    <div class="links-list">${p.links.map((l, i) => `<a href="${l}" target="_blank" class="link-btn">🔗 連結${i + 1}</a>`).join('')}</div>
+    <div class="links-list">${Array.isArray(p.links) ? p.links.map((l, i) => `<a href="${l}" target="_blank" class="link-btn">🔗 連結${i + 1}</a>`).join('') : Object.entries(p.links).map(([k,v]) => `<a href="${v}" target="_blank" class="link-btn">🔗 ${k}</a>`).join('')}</div>
   </div>` : '';
 
   const safeName = p.name.replace(/'/g, "\\'");
@@ -278,24 +278,23 @@ function renderProduct(p, date, idx) {
     <div class="card-info">
       <div class="card-name">${p.name}</div>
       <div class="card-meta">
-        <span class="tag category">${p.category || '—'}</span>
-        <span class="tag">${p.price || '—'}</span>
-        <span class="tag ${marginClass}">毛利 ${p.margin || '—'}</span>
+        <span class="tag category">${p.category || 'â'}</span>
+        <span class="tag">${p.price || 'â'}</span>
+        <span class="tag ${marginClass}">æ¯å© ${p.margin || 'â'}</span>
       </div>
       <div class="card-highlight">${p.highlight || ''}</div>
     </div>
     ${scoreCircle(p.score)}
   </div>
-  <button class="expand-btn" onclick="toggleCard('${date}',${idx})" id="expand-btn-${date}-${idx}">展開詳情 ▼</button>
+  <button class="expand-btn" onclick="toggleCard('${date}',${idx})" id="expand-btn-${date}-${idx}">å±éè©³æ â¼</button>
   <div class="card-detail" id="detail-${date}-${idx}">
     ${scoresHtml}
-    ${p.demand_validation ? `<div class="detail-section"><div class="detail-label">需求驗證</div><div class="detail-content">${p.demand_validation}</div></div>` : ''}
-    ${p.cost_breakdown ? `<div class="detail-section"><div class="detail-label">成本明細</div><div class="detail-content">${p.cost_breakdown}</div></div>` : ''}
-    ${linksHtml}
+    ${p.details ? Object.entries(p.details).map(([t,b]) => `<div class="detail-section"><div class="detail-label">${t}</div><div class="detail-content">${b.replace(/\n/g,'<br>')}</div></div>`).join('') : `${p.demand_validation ? `<div class="detail-section"><div class="detail-label">需求驗證</div><div class="detail-content">${p.demand_validation}</div></div>` : ''}${p.cost_breakdown ? `<div class="detail-section"><div class="detail-label">成本明細</div><div class="detail-content">${p.cost_breakdown}</div></div>` : ''}`}
+        ${linksHtml}
   </div>
   <div class="card-actions">
-    <button class="rating-btn ${rating === 'like' ? 'liked' : ''}" id="like-${date}-${idx}" onclick="rate('${date}',${idx},'${safeName}','like')">👍 看好</button>
-    <button class="rating-btn ${rating === 'dislike' ? 'disliked' : ''}" id="dislike-${date}-${idx}" onclick="rate('${date}',${idx},'${safeName}','dislike')">👎 觀望</button>
+    <button class="rating-btn ${rating === 'like' ? 'liked' : ''}" id="like-${date}-${idx}" onclick="rate('${date}',${idx},'${safeName}','like')">ð çå¥½</button>
+    <button class="rating-btn ${rating === 'dislike' ? 'disliked' : ''}" id="dislike-${date}-${idx}" onclick="rate('${date}',${idx},'${safeName}','dislike')">ð è§æ</button>
   </div>
 </div>`;
 }
@@ -304,7 +303,7 @@ function toggleCard(date, idx) {
   const detail = document.getElementById('detail-' + date + '-' + idx);
   const btn = document.getElementById('expand-btn-' + date + '-' + idx);
   const open = detail.classList.toggle('open');
-  btn.textContent = open ? '收起 ▲' : '展開詳情 ▼';
+  btn.textContent = open ? 'æ¶èµ· â²' : 'å±éè©³æ â¼';
 }
 
 function rate(date, idx, name, val) {
@@ -318,7 +317,7 @@ function rate(date, idx, name, val) {
   fetch(FEEDBACK_API, {
     method: 'POST', mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ report_date: date, product_name: name, product_score: score, feedback: val === 'like' ? '看好' : '觀望', reviewer: 'EE Team' })
+    body: JSON.stringify({ report_date: date, product_name: name, product_score: score, feedback: val === 'like' ? 'çå¥½' : 'è§æ', reviewer: 'EE Team' })
   }).catch(() => {});
 }
 
@@ -332,7 +331,7 @@ function selectDate(date) {
 
   let html = '';
   if (report.evolution) {
-    html += `<div class="evolution-note"><strong>🧠 今日進化</strong>　${report.evolution}</div>`;
+    html += `<div class="evolution-note"><strong>ð§  ä»æ¥é²å</strong>ã${report.evolution}</div>`;
   }
   (report.products || []).forEach((p, i) => { html += renderProduct(p, date, i); });
 
@@ -342,14 +341,14 @@ function selectDate(date) {
     .sort((a, b) => b.score - a.score).slice(0, 10);
 
   if (allProducts.length > 0) {
-    html += `<div class="all-time"><div class="section-title">🏆 歷史最高分 Top 10</div>
+    html += `<div class="all-time"><div class="section-title">ð æ­·å²æé«å Top 10</div>
     ${allProducts.map(p => {
       const col = getScoreColor(p.score);
       const isToday = p.reportDate === date;
       return `<div class="mini-card">
         <div style="flex:1">
-          <div class="mini-card-name">${p.name}${isToday ? ' <span style="font-size:0.65rem;color:var(--accent2);">今日</span>' : ''}</div>
-          <div class="mini-card-date">${p.reportDate.slice(5).replace('-', '/')} ｜ ${p.category || ''}</div>
+          <div class="mini-card-name">${p.name}${isToday ? ' <span style="font-size:0.65rem;color:var(--accent2);">ä»æ¥</span>' : ''}</div>
+          <div class="mini-card-date">${p.reportDate.slice(5).replace('-', '/')} ï½ ${p.category || ''}</div>
         </div>
         <div class="mini-score" style="background:${col}22;color:${col};border:1px solid ${col}44">${p.score}</div>
       </div>`;
@@ -369,9 +368,9 @@ function initApp(data) {
 
   document.getElementById('total-days').textContent = reports.length;
   document.getElementById('total-products').textContent = allProducts.length;
-  document.getElementById('avg-score').textContent = avgScore || '—';
-  document.getElementById('top-score').textContent = topScore || '—';
-  document.getElementById('header-sub').textContent = `最新：${reports[0] ? reports[0].date : '—'} ｜ 累積 ${allProducts.length} 個候選產品`;
+  document.getElementById('avg-score').textContent = avgScore || 'â';
+  document.getElementById('top-score').textContent = topScore || 'â';
+  document.getElementById('header-sub').textContent = `ææ°ï¼${reports[0] ? reports[0].date : 'â'} ï½ ç´¯ç© ${allProducts.length} ååé¸ç¢å`;
 
   const nav = document.getElementById('date-nav');
   nav.innerHTML = reports.map(r => {
@@ -382,7 +381,7 @@ function initApp(data) {
   if (reports.length) {
     selectDate(reports[0].date);
   } else {
-    document.getElementById('content').innerHTML = `<div class="loading">📭 尚無報告資料，等待第一次排程執行</div>`;
+    document.getElementById('content').innerHTML = `<div class="loading">ð­ å°ç¡å ±åè³æï¼ç­å¾ç¬¬ä¸æ¬¡æç¨å·è¡</div>`;
   }
 }
 
@@ -390,7 +389,7 @@ fetch('./data.json?t=' + Date.now())
   .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
   .then(initApp)
   .catch(err => {
-    document.getElementById('content').innerHTML = `<div class="error">❌ 無法載入報告資料<br><small style="color:var(--text-muted)">${err.message}</small><br><br><small>請確認 data.json 已上傳至 repo</small></div>`;
+    document.getElementById('content').innerHTML = `<div class="error">â ç¡æ³è¼å¥å ±åè³æ<br><small style="color:var(--text-muted)">${err.message}</small><br><br><small>è«ç¢ºèª data.json å·²ä¸å³è³ repo</small></div>`;
   });
 </script>
 </body>
