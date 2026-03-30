@@ -1,4 +1,83 @@
 {
   "lastUpdated": "2026-03-30",
-  "reports": []
+  "reports": [
+    {
+      "date": "2026-03-30",
+      "evolution": "A. 數據源擴展 — 新增 TikTok Shop 東南亞熱銷榜監測 + Shopee Flash Sales 跨國比對，從 SEA GMV 數據捕捉台灣市場空白",
+      "products": [
+        {
+          "rank": 1,
+          "name": "藍牙APP智能計數跳繩",
+          "category": "健身科技",
+          "score": 72,
+          "price": "$799",
+          "margin": "3.6x",
+          "highlight": "momo僅1品牌3款；全球跳繩市場$22.4億+智能段20-25%高成長；APP生態差異化；健身短影音天然爆紅素材。",
+          "demand_validation": "",
+          "cost_breakdown": "落地成本約 $224",
+          "links": [
+            "https://renpho.com/products/smart-jump-rope-1",
+            "https://shopee.tw/search?keyword=%E6%99%BA%E8%83%BD%E8%A8%88%E6%95%B8%E8%B7%B3%E7%B9%A9%20LED",
+            "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=%E6%99%BA%E8%83%BD%E8%B7%B3%E7%B9%A9%20%E8%97%8D%E7%89%99%20APP"
+          ],
+          "scores": {
+            "margin": 19,
+            "demand": 19,
+            "barrier": 9,
+            "viral": 12,
+            "difficulty": 7,
+            "repurchase": 6
+          }
+        },
+        {
+          "rank": 2,
+          "name": "UV-C自潔智慧水壺",
+          "category": "健康生活",
+          "score": 71,
+          "price": "$1,099",
+          "margin": "3.5x",
+          "highlight": "蝦皮極少賣家；全球市場$1.62→2.95億CAGR7.88%；LARQ驗證需求；健康×科技跨界；NT$1,099遠低於國際品牌。",
+          "demand_validation": "",
+          "cost_breakdown": "落地成本約 $318",
+          "links": [
+            "https://www.livelarq.com/",
+            "https://shopee.tw/search?keyword=UV-C%20%E8%87%AA%E6%BD%94%E6%B0%B4%E5%A3%BA",
+            "https://luxe.digital/lifestyle/home/larq-review/"
+          ],
+          "scores": {
+            "margin": 19,
+            "demand": 20,
+            "barrier": 11,
+            "viral": 11,
+            "difficulty": 6,
+            "repurchase": 5
+          }
+        },
+        {
+          "rank": 3,
+          "name": "寶特瓶噴霧手持風扇",
+          "category": "夏季消暑",
+          "score": 66,
+          "price": "$449",
+          "margin": "3.1x",
+          "highlight": "蝦皮台灣零同款；日本Life on Products 3/25首發；夏季剛需+PET瓶創意視覺爆點；低認證門檻快速上架。",
+          "demand_validation": "",
+          "cost_breakdown": "落地成本約 $145",
+          "links": [
+            "https://www.haveagood-holiday.com/en/articles/life-on-products-pet-bottle-mist-handy-fan",
+            "https://shopee.tw/search?keyword=%E5%AF%B6%E7%89%B9%E7%93%B6%E5%99%B4%E9%9C%A7%E9%A2%A8%E6%89%87",
+            "https://www.lazada.com.ph/tag/portable-fan-with-mist/"
+          ],
+          "scores": {
+            "margin": 16,
+            "demand": 18,
+            "barrier": 8,
+            "viral": 12,
+            "difficulty": 9,
+            "repurchase": 4
+          }
+        }
+      ]
+    }
+  ]
 }
