@@ -185,9 +185,18 @@
   .card-highlight {
     margin-top: 6px; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      overflow-x: unset;
+    }
+    .stat { flex-shrink: unset; }
     .scores-grid { grid-template-columns: repeat(2, 1fr); }
     .card-name { font-size: 0.95rem; }
+    .score-ring { width: 46px; height: 46px; }
+    .score-ring svg { width: 46px; height: 46px; }
+    .score-text { font-size: 0.8rem; }
   }
 </style>
 </head>
@@ -201,7 +210,7 @@
 <div class="stats-bar">
   <div class="stat"><div class="stat-val" id="total-days">—</div><div class="stat-label">天紀錄</div></div>
   <div class="stat"><div class="stat-val" id="total-products">—</div><div class="stat-label">個產品</div></div>
-  <div class="stat"><div class="stat-val" id="avg-score">—</div><div class="stat-label">鹳均分</div></div>
+  <div class="stat"><div class="stat-val" id="avg-score">—</div><div class="stat-label">平均分</div></div>
   <div class="stat"><div class="stat-val" id="top-score">—</div><div class="stat-label">歷史最高</div></div>
 </div>
 
