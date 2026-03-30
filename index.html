@@ -459,8 +459,13 @@ function renderReport(date) {
         ${p.highlight ? `<div class="highlight-text">💡 ${escHtml(p.highlight)}</div>` : ''}
         ${scoreBarHtml}
         <div class="info-grid">
+          ${p.source ? `<div class="info-item"><div class="info-label">來源定位</div><div class="info-val">${escHtml(p.source)}</div></div>` : ''}
           ${p.demand_validation ? `<div class="info-item"><div class="info-label">需求驗證</div><div class="info-val">${escHtml(p.demand_validation)}</div></div>` : ''}
           ${p.cost_breakdown ? `<div class="info-item"><div class="info-label">成本拆解</div><div class="info-val">${escHtml(p.cost_breakdown)}</div></div>` : ''}
+          ${p.competition ? `<div class="info-item"><div class="info-label">競爭分析</div><div class="info-val">${escHtml(p.competition)}</div></div>` : ''}
+          ${p.strategy ? `<div class="info-item"><div class="info-label">通路策略</div><div class="info-val">${escHtml(p.strategy)}</div></div>` : ''}
+          ${p.risks ? `<div class="info-item"><div class="info-label">風險認證</div><div class="info-val">${escHtml(p.risks)}</div></div>` : ''}
+          ${p.repurchase_detail ? `<div class="info-item"><div class="info-label">複購LTV</div><div class="info-val">${escHtml(p.repurchase_detail)}</div></div>` : ''}
         </div>
         ${linksHtml}
         <div class="feedback-row">
