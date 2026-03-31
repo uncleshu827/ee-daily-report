@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>EE 選品報告</title>
+<title>EE \u00e9\u0081\u00b8\u00e5\u0093\u0081\u00e5\u00a0\u00b1\u00e5\u0091\u008a</title>
 <style>
 :root {
   --bg: #f5f5f0;
@@ -28,7 +28,7 @@ body {
   padding-bottom: 32px;
 }
 
-/* ─ Header ─ */
+/* \u00e2\u0094\u0080 Header \u00e2\u0094\u0080 */
 .hdr {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
   padding: 12px 16px 10px;
@@ -43,7 +43,7 @@ body {
 .hdr-notion { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: rgba(255,255,255,.45); text-decoration: none; margin-top: 6px; }
 .hdr-notion:hover { color: rgba(255,255,255,.8); }
 
-/* ─ Date tabs ─ */
+/* \u00e2\u0094\u0080 Date tabs \u00e2\u0094\u0080 */
 .date-nav {
   display: flex; background: #fff;
   border-bottom: 1px solid var(--border);
@@ -66,7 +66,7 @@ body {
 }
 .date-tab.active .tab-badge { background: #fff1ee; color: var(--accent); }
 
-/* ─ Evolution banner ─ */
+/* \u00e2\u0094\u0080 Evolution banner \u00e2\u0094\u0080 */
 .evo {
   margin: 10px 12px 0;
   background: #fffbeb; border-radius: 10px;
@@ -75,10 +75,10 @@ body {
 .evo-label { font-size: 10px; font-weight: 700; color: #d97706; letter-spacing: .6px; text-transform: uppercase; margin-bottom: 2px; }
 .evo-text { font-size: 13px; color: #78350f; line-height: 1.55; }
 
-/* ─ Section header ─ */
+/* \u00e2\u0094\u0080 Section header \u00e2\u0094\u0080 */
 .sec-hdr { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .4px; text-transform: uppercase; padding: 14px 16px 6px; }
 
-/* ─ Product card ─ */
+/* \u00e2\u0094\u0080 Product card \u00e2\u0094\u0080 */
 .card {
   background: var(--card); margin: 8px 12px;
   border-radius: var(--r); box-shadow: var(--sh);
@@ -109,7 +109,7 @@ body {
 .s-lo { background: #fef2f2; color: #dc2626; border-color: #dc2626; }
 
 .card-tags { display: flex; flex-wrap: wrap; gap: 5px; padding: 8px 14px 0; }
-.tag { padding: 2px 9px; border-radius: 100px; font-size: 11px; font-weight: 500; }
+.tag { padding: 2px 9px; border-radius: 100px; font-size: 11px; font-weight: 500; max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
 .t-cat { background: #ede9fe; color: #7c3aed; }
 .t-src { background: #dbeafe; color: #1d4ed8; }
 .t-mg  { background: #d1fae5; color: #065f46; }
@@ -123,7 +123,7 @@ body {
 .cn-val { font-size: 14px; font-weight: 600; margin-top: 1px; }
 .cn-val.g { color: #059669; }
 
-/* ─ Expand button ─ */
+/* \u00e2\u0094\u0080 Expand button \u00e2\u0094\u0080 */
 .exp-btn {
   width: 100%; padding: 9px; border: none; background: transparent;
   display: flex; align-items: center; justify-content: center; gap: 4px;
@@ -135,12 +135,12 @@ body {
 .exp-btn .arr { transition: transform .3s; display: inline-flex; }
 .exp-btn.open .arr { transform: rotate(180deg); }
 
-/* ─ Detail panel ─ */
+/* \u00e2\u0094\u0080 Detail panel \u00e2\u0094\u0080 */
 .det { max-height: 0; overflow: hidden; transition: max-height .45s ease; }
 .det.open { max-height: 9999px; }
 .det-inner { padding: 14px 14px 4px; border-top: 1px solid var(--border); }
 
-/* Score bars — KEY FIX: raw 0-100 scores */
+/* Score bars \u00e2\u0080\u0094 KEY FIX: raw 0-100 scores */
 .scores-head {
   display: flex; align-items: baseline; justify-content: space-between;
   margin-bottom: 10px;
@@ -173,7 +173,7 @@ body {
 }
 .link-btn:hover { background: #e5e7eb; }
 
-/* Vote — always visible below metrics */
+/* Vote \u00e2\u0080\u0094 always visible below metrics */
 .vote-row { display: flex; align-items: center; gap: 8px; padding: 9px 14px; border-top: 1px solid var(--border); }
 .vote-q { flex: 1; font-size: 12px; color: var(--muted); }
 .vbtn {
@@ -225,86 +225,86 @@ body {
 </style>
 </head>
 <body>
-<div id="app"><div class="loading"><div class="spin"></div>載入報告中…</div></div>
+<div id="app"><div class="loading"><div class="spin"></div>\u00e8\u00bc\u0089\u00e5\u0085\u00a5\u00e5\u00a0\u00b1\u00e5\u0091\u008a\u00e4\u00b8\u00ad\u00e2\u0080\u00a6</div></div>
 <div class="toast" id="toast"></div>
 
 <script>
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 //  CONFIG
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 const DATA_URL    = 'https://raw.githubusercontent.com/uncleshu827/ee-daily-report/main/data.json';
 const NOTION_URL  = 'https://www.notion.so/326c45deba0b80dc9660c661b84f6158';
 const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZZj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH81pRkAL2Ffxb/exec';
 
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 //  DIMENSION CONFIGS  (v2.0 = 6 dims, v2.1 = 7 dims)
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 const DIMS7 = [
-  { key:'margin',     label:'毛利潛力', w:20, c:'#6366f1' },
-  { key:'demand',     label:'需求驗證', w:20, c:'#10b981' },
-  { key:'window',     label:'市場窗口', w:14, c:'#f59e0b' },
-  { key:'barrier',    label:'競爭壁壘', w:14, c:'#f97316' },
-  { key:'viral',      label:'傳播力',   w:14, c:'#ec4899' },
-  { key:'difficulty', label:'操作難度', w:9,  c:'#06b6d4' },
-  { key:'repurchase', label:'複購LTV',  w:9,  c:'#8b5cf6' },
+  { key:'margin',     label:'\u00e6\u00af\u009b\u00e5\u0088\u00a9\u00e6\u00bd\u009b\u00e5\u008a\u009b', w:20, c:'#6366f1' },
+  { key:'demand',     label:'\u00e9\u009c\u0080\u00e6\u00b1\u0082\u00e9\u00a9\u0097\u00e8\u00ad\u0089', w:20, c:'#10b981' },
+  { key:'window',     label:'\u00e5\u00b8\u0082\u00e5\u00a0\u00b4\u00e7\u00aa\u0097\u00e5\u008f\u00a3', w:14, c:'#f59e0b' },
+  { key:'barrier',    label:'\u00e7\u00ab\u00b6\u00e7\u0088\u00ad\u00e5\u00a3\u0081\u00e5\u00a3\u0098', w:14, c:'#f97316' },
+  { key:'viral',      label:'\u00e5\u0082\u00b3\u00e6\u0092\u00ad\u00e5\u008a\u009b',   w:14, c:'#ec4899' },
+  { key:'difficulty', label:'\u00e6\u0093\u008d\u00e4\u00bd\u009c\u00e9\u009b\u00a3\u00e5\u00ba\u00a6', w:9,  c:'#06b6d4' },
+  { key:'repurchase', label:'\u00e8\u00a4\u0087\u00e8\u00b3\u00bcLTV',  w:9,  c:'#8b5cf6' },
 ];
 const DIMS6 = [
-  { key:'margin',     label:'毛利潛力', w:25, c:'#6366f1' },
-  { key:'demand',     label:'需求驗證', w:25, c:'#10b981' },
-  { key:'barrier',    label:'競爭壁壘', w:15, c:'#f97316' },
-  { key:'viral',      label:'傳播力',   w:15, c:'#ec4899' },
-  { key:'difficulty', label:'操作難度', w:10, c:'#06b6d4' },
-  { key:'repurchase', label:'複購LTV',  w:10, c:'#8b5cf6' },
+  { key:'margin',     label:'\u00e6\u00af\u009b\u00e5\u0088\u00a9\u00e6\u00bd\u009b\u00e5\u008a\u009b', w:25, c:'#6366f1' },
+  { key:'demand',     label:'\u00e9\u009c\u0080\u00e6\u00b1\u0082\u00e9\u00a9\u0097\u00e8\u00ad\u0089', w:25, c:'#10b981' },
+  { key:'barrier',    label:'\u00e7\u00ab\u00b6\u00e7\u0088\u00ad\u00e5\u00a3\u0081\u00e5\u00a3\u0098', w:15, c:'#f97316' },
+  { key:'viral',      label:'\u00e5\u0082\u00b3\u00e6\u0092\u00ad\u00e5\u008a\u009b',   w:15, c:'#ec4899' },
+  { key:'difficulty', label:'\u00e6\u0093\u008d\u00e4\u00bd\u009c\u00e9\u009b\u00a3\u00e5\u00ba\u00a6', w:10, c:'#06b6d4' },
+  { key:'repurchase', label:'\u00e8\u00a4\u0087\u00e8\u00b3\u00bcLTV',  w:10, c:'#8b5cf6' },
 ];
 function getDims(scores) {
   return 'window' in scores ? DIMS7 : DIMS6;
 }
 
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 //  DETAIL SECTIONS
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 const SECTIONS = [
-  { key:'source',            label:'📍 來源與定位' },
-  { key:'demand_validation', label:'📊 需求驗證'   },
-  { key:'cost_breakdown',    label:'💰 成本與利潤' },
-  { key:'competition',       label:'⚔️ 競爭分析'  },
-  { key:'strategy',          label:'🛒 通路策略'   },
-  { key:'risks',             label:'⚠️ 風險認證'  },
-  { key:'repurchase_detail', label:'🔄 複購與LTV'  },
+  { key:'source',            label:'\u00f0\u009f\u0093\u008d \u00e4\u00be\u0086\u00e6\u00ba\u0090\u00e8\u0088\u0087\u00e5\u00ae\u009a\u00e4\u00bd\u008d' },
+  { key:'demand_validation', label:'\u00f0\u009f\u0093\u008a \u00e9\u009c\u0080\u00e6\u00b1\u0082\u00e9\u00a9\u0097\u00e8\u00ad\u0089'   },
+  { key:'cost_breakdown',    label:'\u00f0\u009f\u0092\u00b0 \u00e6\u0088\u0090\u00e6\u009c\u00ac\u00e8\u0088\u0087\u00e5\u0088\u00a9\u00e6\u00bd\u00a4' },
+  { key:'competition',       label:'\u00e2\u009a\u0094\u00ef\u00b8\u008f \u00e7\u00ab\u00b6\u00e7\u0088\u00ad\u00e5\u0088\u0086\u00e6\u009e\u0090'  },
+  { key:'strategy',          label:'\u00f0\u009f\u009b\u0092 \u00e9\u0080\u009a\u00e8\u00b7\u00af\u00e7\u00ad\u0096\u00e7\u0095\u00a5'   },
+  { key:'risks',             label:'\u00e2\u009a\u00a0\u00ef\u00b8\u008f \u00e9\u00a2\u00a8\u00e9\u009a\u00aa\u00e8\u00aa\u008d\u00e8\u00ad\u0089'  },
+  { key:'repurchase_detail', label:'\u00f0\u009f\u0094\u0084 \u00e8\u00a4\u0087\u00e8\u00b3\u00bc\u00e8\u0088\u0087LTV'  },
 ];
 
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 //  STATE
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 let G = { data: null, date: null, votes: {}, pMap: {} };
 
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 //  HELPERS
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 const sc = s => s >= 75 ? 's-hi' : s >= 60 ? 's-md' : 's-lo';
 const e  = s => String(s)
   .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
   .replace(/"/g,'&quot;');
 
 function platform(url) {
-  if (!url) return { icon:'🔗', name:'連結' };
+  if (!url) return { icon:'\u00f0\u009f\u0094\u0097', name:'\u00e9\u0080\u00a3\u00e7\u00b5\u0090' };
   const u = url.toLowerCase();
-  if (u.includes('shopee.tw'))             return { icon:'🛍', name:'蝦皮' };
-  if (u.includes('momoshop')||u.includes('momo.com')) return { icon:'🛒', name:'momo' };
-  if (u.includes('pchome'))                return { icon:'🖥', name:'PChome' };
-  if (u.includes('amazon.'))               return { icon:'📦', name:'Amazon' };
-  if (u.includes('1688.com'))              return { icon:'🏭', name:'1688' };
-  if (u.includes('kickstarter'))           return { icon:'🚀', name:'Kickstarter' };
-  if (u.includes('pinkoi'))                return { icon:'🎨', name:'Pinkoi' };
-  if (u.includes('makuake'))               return { icon:'🇯🇵', name:'Makuake' };
-  if (u.includes('notion.so'))             return { icon:'📔', name:'Notion' };
-  return { icon:'🔗', name:'官網' };
+  if (u.includes('shopee.tw'))             return { icon:'\u00f0\u009f\u009b\u008d', name:'\u00e8\u009d\u00a6\u00e7\u009a\u00ae' };
+  if (u.includes('momoshop')||u.includes('momo.com')) return { icon:'\u00f0\u009f\u009b\u0092', name:'momo' };
+  if (u.includes('pchome'))                return { icon:'\u00f0\u009f\u0096\u00a5', name:'PChome' };
+  if (u.includes('amazon.'))               return { icon:'\u00f0\u009f\u0093\u00a6', name:'Amazon' };
+  if (u.includes('1688.com'))              return { icon:'\u00f0\u009f\u008f\u00ad', name:'1688' };
+  if (u.includes('kickstarter'))           return { icon:'\u00f0\u009f\u009a\u0080', name:'Kickstarter' };
+  if (u.includes('pinkoi'))                return { icon:'\u00f0\u009f\u008e\u00a8', name:'Pinkoi' };
+  if (u.includes('makuake'))               return { icon:'\u00f0\u009f\u0087\u00af\u00f0\u009f\u0087\u00b5', name:'Makuake' };
+  if (u.includes('notion.so'))             return { icon:'\u00f0\u009f\u0093\u0094', name:'Notion' };
+  return { icon:'\u00f0\u009f\u0094\u0097', name:'\u00e5\u00ae\u0098\u00e7\u00b6\u00b2' };
 }
 
-const DAYS = ['日','一','二','三','四','五','六'];
+const DAYS = ['\u00e6\u0097\u00a5','\u00e4\u00b8\u0080','\u00e4\u00ba\u008c','\u00e4\u00b8\u0089','\u00e5\u009b\u009b','\u00e4\u00ba\u0094','\u00e5\u0085\u00ad'];
 function fmtTab(s) {
   const d = new Date(s + 'T00:00:00');
-  return `${d.getMonth()+1}/${d.getDate()} 週${DAYS[d.getDay()]}`;
+  return `${d.getMonth()+1}/${d.getDate()} \u00e9\u0080\u00b1${DAYS[d.getDay()]}`;
 }
 
 function showToast(m) {
@@ -313,9 +313,9 @@ function showToast(m) {
   setTimeout(() => el.classList.remove('show'), 2200);
 }
 
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 //  RENDER
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 function render() {
   const { data, date } = G;
   if (!data) return;
@@ -339,20 +339,20 @@ function render() {
   document.getElementById('app').innerHTML = `
     <div class="hdr">
       <div class="hdr-top">
-        <div class="hdr-logo">🛒 <em>EE</em> 選品報告</div>
-        <div class="hdr-updated">更新 ${data.lastUpdated}</div>
+        <div class="hdr-logo">\u00f0\u009f\u009b\u0092 <em>EE</em> \u00e9\u0081\u00b8\u00e5\u0093\u0081\u00e5\u00a0\u00b1\u00e5\u0091\u008a</div>
+        <div class="hdr-updated">\u00e6\u009b\u00b4\u00e6\u0096\u00b0 ${data.lastUpdated}</div>
       </div>
       <div class="hdr-stats">
-        <span class="hdr-stat">📅 ${data.reports.length} 天</span>
-        <span class="hdr-stat">📦 ${all.length} 選品</span>
-        <span class="hdr-stat">⭐ 均分 ${avgScore}</span>
-        <span class="hdr-stat">🏆 最高 ${maxScore}</span>
+        <span class="hdr-stat">\u00f0\u009f\u0093\u0085 ${data.reports.length} \u00e5\u00a4\u00a9</span>
+        <span class="hdr-stat">\u00f0\u009f\u0093\u00a6 ${all.length} \u00e9\u0081\u00b8\u00e5\u0093\u0081</span>
+        <span class="hdr-stat">\u00e2\u00ad\u0090 \u00e5\u009d\u0087\u00e5\u0088\u0086 ${avgScore}</span>
+        <span class="hdr-stat">\u00f0\u009f\u008f\u0086 \u00e6\u009c\u0080\u00e9\u00ab\u0098 ${maxScore}</span>
       </div>
-      <a class="hdr-notion" href="${NOTION_URL}" target="_blank">📔 Notion 完整報告 →</a>
+      <a class="hdr-notion" href="${NOTION_URL}" target="_blank">\u00f0\u009f\u0093\u0094 Notion \u00e5\u00ae\u008c\u00e6\u0095\u00b4\u00e5\u00a0\u00b1\u00e5\u0091\u008a \u00e2\u0086\u0092</a>
     </div>
 
     <div class="date-nav">
-      ${[...data.reports].reverse().map(r => `
+      ${[...data.reports].sort((a,b)=>a.date.localeCompare(b.date)).map(r => `
         <button class="date-tab${r.date===date?' active':''}" onclick="switchDate('${r.date}')">
           ${fmtTab(r.date)}<span class="tab-badge">${r.products.length}</span>
         </button>`).join('')}
@@ -360,24 +360,24 @@ function render() {
 
     ${report?.evolution ? `
       <div class="evo">
-        <div class="evo-label">🧬 今日進化</div>
+        <div class="evo-label">\u00f0\u009f\u00a7\u00ac \u00e4\u00bb\u008a\u00e6\u0097\u00a5\u00e9\u0080\u00b2\u00e5\u008c\u0096</div>
         <div class="evo-text">${e(report.evolution)}</div>
       </div>` : ''}
 
-    <div class="sec-hdr">📊 ${date} 精選（${products.length} 件）</div>
+    <div class="sec-hdr">\u00f0\u009f\u0093\u008a ${date} \u00e7\u00b2\u00be\u00e9\u0081\u00b8\u00ef\u00bc\u0088${products.length} \u00e4\u00bb\u00b6\u00ef\u00bc\u0089</div>
 
     ${products.map((p, i) => cardHTML(p, i)).join('')}
 
-    <div class="sec-hdr">🏆 歷史 Top 10</div>
+    <div class="sec-hdr">\u00f0\u009f\u008f\u0086 \u00e6\u00ad\u00b7\u00e5\u008f\u00b2 Top 10</div>
     <div class="top10">
-      <div class="top10-hdr">跨日最高分排行</div>
+      <div class="top10-hdr">\u00e8\u00b7\u00a8\u00e6\u0097\u00a5\u00e6\u009c\u0080\u00e9\u00ab\u0098\u00e5\u0088\u0086\u00e6\u008e\u0092\u00e8\u00a1\u008c</div>
       ${top10.map((p, i) => `
-        <div class="top10-row" onclick="jumpToProduct('${p._d}',${p.rank})" title="跳轉至 ${p._d} ${e(p.name)}">
-          <div class="top10-rank">${i===0?'🥇':i===1?'🥈':i===2?'🥉':i+1}</div>
+        <div class="top10-row" onclick="jumpToProduct('${p._d}',${p.rank})" title="\u00e8\u00b7\u00b3\u00e8\u00bd\u0089\u00e8\u0087\u00b3 ${p._d} ${e(p.name)}">
+          <div class="top10-rank">${i===0?'\u00f0\u009f\u00a5\u0087':i===1?'\u00f0\u009f\u00a5\u0088':i===2?'\u00f0\u009f\u00a5\u0089':i+1}</div>
           <div class="top10-name">${e(p.name)}</div>
           <div class="top10-date">${p._d.slice(5)}</div>
           <div class="top10-score ${sc(p.score)}">${p.score}</div>
-          <div class="top10-arrow">›</div>
+          <div class="top10-arrow">\u00e2\u0080\u00ba</div>
         </div>`).join('')}
     </div>
   `;
@@ -390,9 +390,9 @@ function render() {
   });
 }
 
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 //  CARD HTML
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 function cardHTML(p, i) {
   const key  = `${G.date}-${p.rank}`;
   const dims = getDims(p.scores);
@@ -436,31 +436,31 @@ function cardHTML(p, i) {
       <div class="card-tags">
         <span class="tag t-cat">${e(p.category)}</span>
         <span class="tag t-src">${e(p.source)}</span>
-        <span class="tag t-mg">毛利 ${e(p.margin)}</span>
+        <span class="tag t-mg">\u00e6\u00af\u009b\u00e5\u0088\u00a9 ${e(p.margin)}</span>
       </div>
 
       ${p.highlight ? `<div class="card-hl">${e(p.highlight)}</div>` : ''}
 
       <div class="card-nums">
-        <div class="cn"><div class="cn-label">建議售價</div><div class="cn-val">${e(p.price)}</div></div>
-        <div class="cn"><div class="cn-label">毛利倍數</div><div class="cn-val g">${e(p.margin)}</div></div>
+        <div class="cn"><div class="cn-label">\u00e5\u00bb\u00ba\u00e8\u00ad\u00b0\u00e5\u0094\u00ae\u00e5\u0083\u00b9</div><div class="cn-val">${e(p.price)}</div></div>
+        <div class="cn"><div class="cn-label">\u00e6\u00af\u009b\u00e5\u0088\u00a9\u00e5\u0080\u008d\u00e6\u0095\u00b8</div><div class="cn-val g">${e(p.margin)}</div></div>
       </div>
 
       <div class="vote-row">
-        <div class="vote-q">快速評價</div>
-        <button class="vbtn${myV==='up'?' v-up':''}" id="vup-${key}" onclick="vote('${key}','up')">👍 值得</button>
-        <button class="vbtn${myV==='down'?' v-down':''}" id="vdn-${key}" onclick="vote('${key}','down')">👎 跳過</button>
+        <div class="vote-q">\u00e5\u00bf\u00ab\u00e9\u0080\u009f\u00e8\u00a9\u0095\u00e5\u0083\u00b9</div>
+        <button class="vbtn${myV==='up'?' v-up':''}" id="vup-${key}" onclick="vote('${key}','up')">\u00f0\u009f\u0091\u008d \u00e5\u0080\u00bc\u00e5\u00be\u0097</button>
+        <button class="vbtn${myV==='down'?' v-down':''}" id="vdn-${key}" onclick="vote('${key}','down')">\u00f0\u009f\u0091\u008e \u00e8\u00b7\u00b3\u00e9\u0081\u008e</button>
       </div>
 
       <button class="exp-btn" id="expbtn-${key}" onclick="toggleDet('${key}')">
-        展開詳情 <span class="arr">▾</span>
+        \u00e5\u00b1\u0095\u00e9\u0096\u008b\u00e8\u00a9\u00b3\u00e6\u0083\u0085 <span class="arr">\u00e2\u0096\u00be</span>
       </button>
 
       <div class="det" id="det-${key}">
         <div class="det-inner">
           <div class="scores-head">
-            <span class="scores-title">${dims.length} 維度評分</span>
-            <span class="scores-note">原始分 0–100，括號為權重</span>
+            <span class="scores-title">${dims.length} \u00e7\u00b6\u00ad\u00e5\u00ba\u00a6\u00e8\u00a9\u0095\u00e5\u0088\u0086</span>
+            <span class="scores-note">\u00e5\u008e\u009f\u00e5\u00a7\u008b\u00e5\u0088\u0086 0\u00e2\u0080\u0093100\u00ef\u00bc\u008c\u00e6\u008b\u00ac\u00e8\u0099\u009f\u00e7\u0082\u00ba\u00e6\u00ac\u008a\u00e9\u0087\u008d</span>
           </div>
           ${scoreBars}
           ${sections ? `<div class="ds-grid">${sections}</div>` : ''}
@@ -470,9 +470,9 @@ function cardHTML(p, i) {
     </div>`;
 }
 
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 //  ACTIONS
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 function switchDate(d) {
   G.date = d;
   render();
@@ -502,7 +502,7 @@ function toggleDet(key) {
   const btn = document.getElementById('expbtn-'+key);
   const open = det.classList.toggle('open');
   btn.classList.toggle('open', open);
-  btn.innerHTML = (open ? '收起詳情' : '展開詳情') + ' <span class="arr">▾</span>';
+  btn.innerHTML = (open ? '\u00e6\u0094\u00b6\u00e8\u00b5\u00b7\u00e8\u00a9\u00b3\u00e6\u0083\u0085' : '\u00e5\u00b1\u0095\u00e9\u0096\u008b\u00e8\u00a9\u00b3\u00e6\u0083\u0085') + ' <span class="arr">\u00e2\u0096\u00be</span>';
 }
 
 function vote(key, type) {
@@ -537,17 +537,17 @@ function vote(key, type) {
         report_date:   G.date,
         product_name:  p.name,
         product_score: p.score,
-        feedback:      type==='up' ? '👍' : '👎',
+        feedback:      type==='up' ? '\u00f0\u009f\u0091\u008d' : '\u00f0\u009f\u0091\u008e',
         reviewer:      'EE_member'
       })
     }).catch(() => {});
   }
-  showToast(type === 'up' ? '👍 已記錄！' : '👎 已記錄！');
+  showToast(type === 'up' ? '\u00f0\u009f\u0091\u008d \u00e5\u00b7\u00b2\u00e8\u00a8\u0098\u00e9\u008c\u0084\u00ef\u00bc\u0081' : '\u00f0\u009f\u0091\u008e \u00e5\u00b7\u00b2\u00e8\u00a8\u0098\u00e9\u008c\u0084\u00ef\u00bc\u0081');
 }
 
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 //  BOOT
-// ──────────────────────────────────────────
+// \u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080\u00e2\u0094\u0080
 fetch(DATA_URL + '?v=' + Date.now())
   .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
   .then(data => {
@@ -558,7 +558,7 @@ fetch(DATA_URL + '?v=' + Date.now())
   .catch(err => {
     document.getElementById('app').innerHTML =
       `<div class="loading" style="color:#ef4444">
-        ⚠️ 報告載入失敗，請重整頁面<br>
+        \u00e2\u009a\u00a0\u00ef\u00b8\u008f \u00e5\u00a0\u00b1\u00e5\u0091\u008a\u00e8\u00bc\u0089\u00e5\u0085\u00a5\u00e5\u00a4\u00b1\u00e6\u0095\u0097\u00ef\u00bc\u008c\u00e8\u00ab\u008b\u00e9\u0087\u008d\u00e6\u0095\u00b4\u00e9\u00a0\u0081\u00e9\u009d\u00a2<br>
         <small style="font-size:11px;opacity:.6">${err.message}</small>
       </div>`;
   });
