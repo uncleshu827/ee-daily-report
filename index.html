@@ -388,6 +388,14 @@ function render() {
     document.getElementById('vup-'+k)?.classList.toggle('v-up',   v==='up');
     document.getElementById('vdn-'+k)?.classList.toggle('v-down', v==='down');
   });
+
+  // Scroll date-nav bar so active tab is centered/visible
+  const _nav = document.querySelector('.date-nav');
+  const _activeTab = _nav?.querySelector('.date-tab.active');
+  if (_nav && _activeTab) {
+    const target = _activeTab.offsetLeft - (_nav.clientWidth - _activeTab.offsetWidth) / 2;
+    _nav.scrollLeft = Math.max(0, target);
+  }
 }
 
 // ──────────────────────────────────────────
