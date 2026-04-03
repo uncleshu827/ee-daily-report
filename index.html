@@ -28,7 +28,7 @@ body {
   padding-bottom: 32px;
 }
 
-/* ─ Header ─ */
+/* ── Header ── */
 .hdr {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
   padding: 12px 16px 10px;
@@ -37,23 +37,63 @@ body {
 .hdr-top { display: flex; align-items: center; }
 .hdr-logo { font-size: 17px; font-weight: 800; color: #fff; letter-spacing: -.3px; }
 .hdr-logo em { color: var(--accent); font-style: normal; }
-.hdr-updated { font-size: 11px; color: rgba(255,255,255,.45); margin-left: auto; }
-.hdr-stats { display: flex; gap: 6px; margin-top: 7px; flex-wrap: wrap; }
+.hdr-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+.hdr-updated { font-size: 11px; color: rgba(255,255,255,.45); }
+.top10-btn {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-size: 11px; font-weight: 600; color: rgba(255,255,255,.8);
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+  border-radius: 100px; padding: 3px 10px;
+  cursor: pointer; transition: background .15s; white-space: nowrap;
+}
+.top10-btn:hover { background: rgba(255,255,255,.2); }
+
+.hdr-stats { display: flex; gap: 5px; margin-top: 7px; flex-wrap: wrap; align-items: center; }
+.stat-mode-btn {
+  font-size: 10px; font-weight: 600; padding: 2px 8px;
+  border-radius: 100px; border: 1px solid rgba(255,255,255,.25);
+  background: transparent; color: rgba(255,255,255,.5);
+  cursor: pointer; transition: all .15s; white-space: nowrap;
+}
+.stat-mode-btn.active {
+  background: rgba(255,255,255,.18); color: #fff;
+  border-color: rgba(255,255,255,.4);
+}
 .hdr-stat { font-size: 11px; color: rgba(255,255,255,.75); background: rgba(255,255,255,.1); border-radius: 100px; padding: 2px 9px; }
 .hdr-notion { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: rgba(255,255,255,.45); text-decoration: none; margin-top: 6px; }
 .hdr-notion:hover { color: rgba(255,255,255,.8); }
 
-/* ─ Date tabs ─ */
+/* ── Date nav with right-side fade ── */
+.date-nav-wrapper {
+  position: sticky; top: 72px; z-index: 90;
+}
+.date-nav-wrapper::after {
+  content: '';
+  position: absolute; right: 0; top: 0; bottom: 1px;
+  width: 48px;
+  background: linear-gradient(to right, transparent, #fff);
+  pointer-events: none;
+  z-index: 1;
+}
 .date-nav {
   display: flex; background: #fff;
   border-bottom: 1px solid var(--border);
   overflow-x: auto; -webkit-overflow-scrolling: touch;
-  position: sticky; top: 72px; z-index: 90;
   scrollbar-width: none;
 }
 .date-nav::-webkit-scrollbar { display: none; }
+.week-sep {
+  display: flex; align-items: center;
+  font-size: 10px; font-weight: 600; color: var(--muted);
+  padding: 0 6px 0 10px; white-space: nowrap; flex-shrink: 0;
+  letter-spacing: .3px;
+}
+.week-sep::after {
+  content: ''; display: block; width: 1px; height: 14px;
+  background: var(--border); margin-left: 6px;
+}
 .date-tab {
-  flex: none; padding: 9px 15px;
+  flex: none; padding: 9px 14px;
   font-size: 13px; font-weight: 500; color: var(--muted);
   border: none; background: transparent; cursor: pointer;
   border-bottom: 2px solid transparent; white-space: nowrap;
@@ -66,7 +106,32 @@ body {
 }
 .date-tab.active .tab-badge { background: #fff1ee; color: var(--accent); }
 
-/* ─ Evolution banner ─ */
+/* ── Search bar ── */
+.search-wrap {
+  position: relative; padding: 8px 12px;
+  background: #fff; border-bottom: 1px solid var(--border);
+}
+.search-input {
+  width: 100%; padding: 8px 34px 8px 34px;
+  border: 1px solid var(--border); border-radius: 100px;
+  font-size: 13px; color: var(--text);
+  background: #f9f9f7;
+  outline: none; transition: border-color .15s;
+  -webkit-appearance: none;
+}
+.search-input:focus { border-color: var(--accent); background: #fff; }
+.search-icon {
+  position: absolute; left: 24px; top: 50%; transform: translateY(-50%);
+  font-size: 14px; pointer-events: none; opacity: .5;
+}
+.search-clear {
+  position: absolute; right: 24px; top: 50%; transform: translateY(-50%);
+  border: none; background: none; color: var(--muted);
+  font-size: 15px; cursor: pointer; padding: 2px 6px;
+  display: flex; align-items: center; line-height: 1;
+}
+
+/* ── Evolution banner ── */
 .evo {
   margin: 10px 12px 0;
   background: #fffbeb; border-radius: 10px;
@@ -75,10 +140,10 @@ body {
 .evo-label { font-size: 10px; font-weight: 700; color: #d97706; letter-spacing: .6px; text-transform: uppercase; margin-bottom: 2px; }
 .evo-text { font-size: 13px; color: #78350f; line-height: 1.55; }
 
-/* ─ Section header ─ */
+/* ── Section header ── */
 .sec-hdr { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .4px; text-transform: uppercase; padding: 14px 16px 6px; }
 
-/* ─ Product card ─ */
+/* ── Product card ── */
 .card {
   background: var(--card); margin: 8px 12px;
   border-radius: var(--r); box-shadow: var(--sh);
@@ -99,8 +164,9 @@ body {
 .rank-num.r2 { background: #f1f5f9; color: #475569; }
 .rank-num.r3 { background: #fce7f3; color: #be185d; }
 .card-name { flex: 1; font-size: 16px; font-weight: 600; line-height: 1.3; }
+.voted-badge { font-size: 14px; flex-shrink: 0; }
 .score-ring {
-  width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+  width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0;
   border: 2.5px solid; display: flex; align-items: center; justify-content: center;
   font-size: 15px; font-weight: 700;
 }
@@ -116,14 +182,23 @@ body {
 
 .card-hl { padding: 8px 14px 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-.card-nums { display: flex; border-top: 1px solid var(--border); margin-top: 10px; }
+/* ── Mini dimension bars (collapsed state preview) ── */
+.mini-scores {
+  display: flex; gap: 3px; padding: 8px 14px 2px;
+}
+.mini-s { flex: 1; }
+.mini-track { height: 4px; background: #f0f0ee; border-radius: 2px; overflow: hidden; }
+.mini-fill { height: 100%; border-radius: 2px; transition: width 0.6s cubic-bezier(.4,0,.2,1); min-width: 3px; }
+
+/* ── Card metrics ── */
+.card-nums { display: flex; border-top: 1px solid var(--border); margin-top: 8px; }
 .cn { flex: 1; text-align: center; padding: 9px 4px; }
 .cn + .cn { border-left: 1px solid var(--border); }
 .cn-label { font-size: 10px; color: var(--muted); }
 .cn-val { font-size: 14px; font-weight: 600; margin-top: 1px; }
 .cn-val.g { color: #059669; }
 
-/* ─ Expand button ─ */
+/* ── Expand button ── */
 .exp-btn {
   width: 100%; padding: 9px; border: none; background: transparent;
   display: flex; align-items: center; justify-content: center; gap: 4px;
@@ -135,12 +210,9 @@ body {
 .exp-btn .arr { transition: transform .3s; display: inline-flex; }
 .exp-btn.open .arr { transform: rotate(180deg); }
 
-/* ─ Detail panel ─ */
-.det { max-height: 0; overflow: hidden; transition: max-height .45s ease; }
-.det.open { max-height: 9999px; }
+/* ── Detail panel (JS sets max-height for smooth animation) ── */
+.det { max-height: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.4,0,.2,1); }
 .det-inner { padding: 14px 14px 4px; border-top: 1px solid var(--border); }
-
-/* Score bars — KEY FIX: raw 0-100 scores */
 .scores-head {
   display: flex; align-items: baseline; justify-content: space-between;
   margin-bottom: 10px;
@@ -153,7 +225,7 @@ body {
 .sb-fill  { height: 100%; border-radius: 3px; transition: width .7s cubic-bezier(.4,0,.2,1); }
 .sb-right { text-align: right; }
 .sb-score  { font-size: 11px; font-weight: 700; line-height: 1.2; }
-.sb-wt    { font-size: 9px; color: var(--muted); line-height: 1.2; }
+.sb-wt     { font-size: 9px; color: var(--muted); line-height: 1.2; }
 
 /* Detail sections */
 .ds-grid { display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 14px; }
@@ -173,7 +245,7 @@ body {
 }
 .link-btn:hover { background: #e5e7eb; }
 
-/* Vote — always visible below metrics */
+/* Vote */
 .vote-row { display: flex; align-items: center; gap: 8px; padding: 9px 14px; border-top: 1px solid var(--border); }
 .vote-q { flex: 1; font-size: 12px; color: var(--muted); }
 .vbtn {
@@ -186,6 +258,10 @@ body {
 .vbtn:hover { border-color: #9ca3af; color: var(--text); }
 .vbtn.v-up   { background: #ecfdf5; border-color: #10b981; color: #059669; }
 .vbtn.v-down { background: #fef2f2; border-color: #f87171; color: #dc2626; }
+
+/* No results */
+.no-results { padding: 32px 16px; text-align: center; color: var(--muted); font-size: 14px; }
+.no-results em { display: block; font-size: 28px; font-style: normal; margin-bottom: 8px; }
 
 /* Top 10 */
 .top10 { margin: 8px 12px 4px; background: var(--card); border-radius: var(--r); box-shadow: var(--sh); overflow: hidden; }
@@ -201,7 +277,7 @@ body {
 .top10-rank { width: 22px; font-size: 13px; font-weight: 700; color: var(--muted); text-align: center; flex-shrink: 0; }
 .top10-name { flex: 1; font-size: 13px; font-weight: 500; }
 .top10-date { font-size: 11px; color: var(--muted); white-space: nowrap; }
-.top10-score { font-size: 15px; font-weight: 700; width: 28px; text-align: right; flex-shrink: 0; }
+.top10-score { font-size: 15px; font-weight: 700; width: 30px; text-align: right; flex-shrink: 0; }
 
 /* Loading */
 .loading { padding: 60px 20px; text-align: center; color: var(--muted); font-size: 14px; }
@@ -212,7 +288,7 @@ body {
 .toast {
   position: fixed; bottom: 20px; left: 50%;
   transform: translateX(-50%) translateY(10px);
-  background: #1f2937; color: #fff; padding: 10px 22px;
+  background: #1f2936; color: #fff; padding: 10px 22px;
   border-radius: 100px; font-size: 13px; font-weight: 500;
   z-index: 999; opacity: 0; transition: all .25s;
   pointer-events: none; white-space: nowrap;
@@ -225,15 +301,14 @@ body {
 </style>
 </head>
 <body>
-<div id="app"><div class="loading"><div class="spin"></div>載入報告中…</div></div>
-<div class="toast" id="toast"></div>
-
+<div id="app"><div class="loading"><div class="spin"></div>載入中…</div></div>
+<div id="toast" class="toast"></div>
 <script>
 // ──────────────────────────────────────────
 //  CONFIG
 // ──────────────────────────────────────────
-const DATA_URL    = 'https://raw.githubusercontent.com/uncleshu827/ee-daily-report/main/data.json';
-const NOTION_URL  = 'https://www.notion.so/326c45deba0b80dc9660c661b84f6158';
+const DATA_URL     = 'https://raw.githubusercontent.com/uncleshu827/ee-daily-report/main/data.json';
+const NOTION_URL   = 'https://www.notion.so/326c45deba0b80dc9660c661b84f6158';
 const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZZj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH81pRkAL2Ffxb/exec';
 
 // ──────────────────────────────────────────
@@ -269,14 +344,32 @@ const SECTIONS = [
   { key:'cost_breakdown',    label:'💰 成本與利潤' },
   { key:'competition',       label:'⚔️ 競爭分析'  },
   { key:'strategy',          label:'🛒 通路策略'   },
-  { key:'risks',             label:'⚠️ 風險認證'  },
+  { key:'risks',             label:'⚠️ 風險認知'  },
   { key:'repurchase_detail', label:'🔄 複購與LTV'  },
 ];
 
 // ──────────────────────────────────────────
 //  STATE
 // ──────────────────────────────────────────
-let G = { data: null, date: null, votes: {}, pMap: {} };
+let G = {
+  data: null, date: null,
+  votes: {}, pMap: {},
+  statsMode: 'day',   // 'day' | 'global'
+  searchQuery: '',
+  _searchFocused: false
+};
+
+// ──────────────────────────────────────────
+//  PERSISTENCE (votes survive page reload)
+// ──────────────────────────────────────────
+function loadVotes() {
+  try { G.votes = JSON.parse(localStorage.getItem('ee-votes') || '{}'); }
+  catch(e) { G.votes = {}; }
+}
+function saveVotes() {
+  try { localStorage.setItem('ee-votes', JSON.stringify(G.votes)); }
+  catch(e) {}
+}
 
 // ──────────────────────────────────────────
 //  HELPERS
@@ -289,15 +382,15 @@ const e  = s => String(s)
 function platform(url) {
   if (!url) return { icon:'🔗', name:'連結' };
   const u = url.toLowerCase();
-  if (u.includes('shopee.tw'))             return { icon:'🛍', name:'蝦皮' };
+  if (u.includes('shopee.tw'))                        return { icon:'🛍', name:'蝦皮' };
   if (u.includes('momoshop')||u.includes('momo.com')) return { icon:'🛒', name:'momo' };
-  if (u.includes('pchome'))                return { icon:'🖥', name:'PChome' };
-  if (u.includes('amazon.'))               return { icon:'📦', name:'Amazon' };
-  if (u.includes('1688.com'))              return { icon:'🏭', name:'1688' };
-  if (u.includes('kickstarter'))           return { icon:'🚀', name:'Kickstarter' };
-  if (u.includes('pinkoi'))                return { icon:'🎨', name:'Pinkoi' };
-  if (u.includes('makuake'))               return { icon:'🇯🇵', name:'Makuake' };
-  if (u.includes('notion.so'))             return { icon:'📔', name:'Notion' };
+  if (u.includes('pchome'))                           return { icon:'🖥', name:'PChome' };
+  if (u.includes('amazon.'))                          return { icon:'📦', name:'Amazon' };
+  if (u.includes('1688.com'))                         return { icon:'🏭', name:'1688' };
+  if (u.includes('kickstarter'))                      return { icon:'🚀', name:'Kickstarter' };
+  if (u.includes('pinkoi'))                           return { icon:'🎨', name:'Pinkoi' };
+  if (u.includes('makuake'))                          return { icon:'🇯🇵', name:'Makuake' };
+  if (u.includes('notion.so'))                        return { icon:'📔', name:'Notion' };
   return { icon:'🔗', name:'官網' };
 }
 
@@ -313,6 +406,22 @@ function showToast(m) {
   setTimeout(() => el.classList.remove('show'), 2200);
 }
 
+// ── Week grouping for date nav ──
+function getMonday(d) {
+  const day = d.getDay();
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+  return new Date(d.getFullYear(), d.getMonth(), diff).toISOString().slice(0, 10);
+}
+function getWeekLabel(dateStr) {
+  const today    = new Date();
+  const thisM    = getMonday(today);
+  const targetM  = getMonday(new Date(dateStr + 'T00:00:00'));
+  const diffDays = Math.round((new Date(thisM) - new Date(targetM)) / 86400000);
+  if (diffDays === 0) return '本週';
+  if (diffDays === 7) return '上週';
+  return diffDays <= 21 ? `${Math.round(diffDays/7)}週前` : '更早';
+}
+
 // ──────────────────────────────────────────
 //  RENDER
 // ──────────────────────────────────────────
@@ -323,39 +432,85 @@ function render() {
   const report   = data.reports.find(r => r.date === date) || data.reports[0];
   const products = report?.products || [];
 
-  // Build sorted cross-day top 10
+  // Cross-day all products
   const all = data.reports.flatMap(r => r.products.map(p => ({...p, _d: r.date})));
   all.sort((a,b) => b.score - a.score);
   const top10 = all.slice(0, 10);
 
-  // Stats
-  const avgScore = Math.round(all.reduce((s,p)=>s+p.score,0) / all.length);
-  const maxScore = Math.max(...all.map(p=>p.score));
+  // Global stats
+  const avgScore = all.length ? Math.round(all.reduce((s,p)=>s+p.score,0) / all.length) : 0;
+  const maxScore = all.length ? Math.max(...all.map(p=>p.score)) : 0;
 
-  // Build product map for vote lookups
+  // Current day stats
+  const dayAvg = products.length ? Math.round(products.reduce((s,p)=>s+p.score,0) / products.length) : 0;
+  const dayMax = products.length ? Math.max(...products.map(p=>p.score)) : 0;
+
+  // Product map for vote lookups
   G.pMap = {};
   products.forEach(p => { G.pMap[`${date}-${p.rank}`] = p; });
+
+  // Filter by search
+  const q = G.searchQuery.toLowerCase();
+  const filtered = q ? products.filter(p =>
+    p.name.toLowerCase().includes(q) ||
+    p.category.toLowerCase().includes(q) ||
+    (p.highlight||'').toLowerCase().includes(q) ||
+    (p.source||'').toLowerCase().includes(q)
+  ) : products;
+
+  // Date nav: newest first, grouped by week
+  const sortedReports = [...data.reports].sort((a,b) => b.date.localeCompare(a.date));
+  let lastWeekLabel = null;
+  const dateTabs = sortedReports.map(r => {
+    const wLabel = getWeekLabel(r.date);
+    let sep = '';
+    if (wLabel !== lastWeekLabel) {
+      lastWeekLabel = wLabel;
+      sep = `<span class="week-sep">${wLabel}</span>`;
+    }
+    return sep + `<button class="date-tab${r.date===date?' active':''}" onclick="switchDate('${r.date}')">${fmtTab(r.date)}<span class="tab-badge">${r.products.length}</span></button>`;
+  }).join('');
+
+  // Stats badges (today vs global toggle)
+  const statsHtml = G.statsMode === 'day' ? `
+    <span class="hdr-stat">📦 ${products.length} 選品</span>
+    <span class="hdr-stat">⭐ 均分 ${dayAvg}</span>
+    <span class="hdr-stat">🏆 最高 ${dayMax}</span>
+  ` : `
+    <span class="hdr-stat">📅 ${data.reports.length} 天</span>
+    <span class="hdr-stat">📦 ${all.length} 選品</span>
+    <span class="hdr-stat">⭐ 均分 ${avgScore}</span>
+    <span class="hdr-stat">🏆 最高 ${maxScore}</span>
+  `;
 
   document.getElementById('app').innerHTML = `
     <div class="hdr">
       <div class="hdr-top">
         <div class="hdr-logo">🛒 <em>EE</em> 選品報告</div>
-        <div class="hdr-updated">更新 ${data.lastUpdated}</div>
+        <div class="hdr-right">
+          <div class="hdr-updated">更新 ${e(data.lastUpdated)}</div>
+          <button class="top10-btn" onclick="jumpToTop10()">👑 Top10</button>
+        </div>
       </div>
       <div class="hdr-stats">
-        <span class="hdr-stat">📅 ${data.reports.length} 天</span>
-        <span class="hdr-stat">📦 ${all.length} 選品</span>
-        <span class="hdr-stat">⭐ 均分 ${avgScore}</span>
-        <span class="hdr-stat">🏆 最高 ${maxScore}</span>
+        <button class="stat-mode-btn${G.statsMode==='day'?' active':''}" onclick="setStatsMode('day')">今日</button>
+        <button class="stat-mode-btn${G.statsMode==='global'?' active':''}" onclick="setStatsMode('global')">全域</button>
+        ${statsHtml}
       </div>
       <a class="hdr-notion" href="${NOTION_URL}" target="_blank">📔 Notion 完整報告 →</a>
     </div>
 
-    <div class="date-nav">
-      ${[...data.reports].sort((a,b)=>a.date.localeCompare(b.date)).map(r => `
-        <button class="date-tab${r.date===date?' active':''}" onclick="switchDate('${r.date}')">
-          ${fmtTab(r.date)}<span class="tab-badge">${r.products.length}</span>
-        </button>`).join('')}
+    <div class="date-nav-wrapper">
+      <div class="date-nav">${dateTabs}</div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input id="search-input" class="search-input" type="text"
+             placeholder="搜尋產品名稱、分類…"
+             value="${e(G.searchQuery)}"
+             oninput="onSearch(this.value)">
+      ${G.searchQuery ? `<button class="search-clear" onclick="onSearch('')">✕</button>` : ''}
     </div>
 
     ${report?.evolution ? `
@@ -364,15 +519,18 @@ function render() {
         <div class="evo-text">${e(report.evolution)}</div>
       </div>` : ''}
 
-    <div class="sec-hdr">📊 ${date} 精選（${products.length} 件）</div>
+    <div class="sec-hdr">📊 ${date} 精選${q ? ` &mdash; 搜尋「${e(G.searchQuery)}」` : `（${products.length} 件）`}</div>
 
-    ${products.map((p, i) => cardHTML(p, i)).join('')}
+    ${filtered.length
+      ? filtered.map((p, i) => cardHTML(p, i)).join('')
+      : `<div class="no-results"><em>🔍</em>沒有符合「${e(G.searchQuery)}」的產品</div>`
+    }
 
-    <div class="sec-hdr">🏆 歷史 Top 10</div>
+    <div class="sec-hdr" id="top10-section">🏆 歷史 Top 10</div>
     <div class="top10">
       <div class="top10-hdr">跨日最高分排行</div>
       ${top10.map((p, i) => `
-        <div class="top10-row" onclick="jumpToProduct('${p._d}',${p.rank})" title="跳轉至 ${p._d} ${e(p.name)}">
+        <div class="top10-row" onclick="jumpToProduct('${p._d}',${p.rank})">
           <div class="top10-rank">${i===0?'🥇':i===1?'🥈':i===2?'🥉':i+1}</div>
           <div class="top10-name">${e(p.name)}</div>
           <div class="top10-date">${p._d.slice(5)}</div>
@@ -389,12 +547,19 @@ function render() {
     document.getElementById('vdn-'+k)?.classList.toggle('v-down', v==='down');
   });
 
-  // Scroll date-nav bar so active tab is centered/visible
+  // Scroll date-nav so active tab is visible
   const _nav = document.querySelector('.date-nav');
-  const _activeTab = _nav?.querySelector('.date-tab.active');
-  if (_nav && _activeTab) {
-    const target = _activeTab.offsetLeft - (_nav.clientWidth - _activeTab.offsetWidth) / 2;
+  const _active = _nav?.querySelector('.date-tab.active');
+  if (_nav && _active) {
+    const target = _active.offsetLeft - (_nav.clientWidth - _active.offsetWidth) / 2;
     _nav.scrollLeft = Math.max(0, target);
+  }
+
+  // Restore search focus
+  if (G._searchFocused) {
+    const inp = document.getElementById('search-input');
+    if (inp) { inp.focus(); inp.setSelectionRange(inp.value.length, inp.value.length); }
+    G._searchFocused = false;
   }
 }
 
@@ -402,20 +567,26 @@ function render() {
 //  CARD HTML
 // ──────────────────────────────────────────
 function cardHTML(p, i) {
-  const key  = `${G.date}-${p.rank}`;
-  const dims = getDims(p.scores);
-  const myV  = G.votes[key];
+  const key   = `${G.date}-${p.rank}`;
+  const dims  = getDims(p.scores);
+  const myV   = G.votes[key];
   const links = Array.isArray(p.links) ? p.links : Object.values(p.links || {});
 
+  // Mini dimension bars (collapsed-state preview)
+  const miniScores = `<div class="mini-scores">
+    ${dims.map(d => {
+      const raw = p.scores[d.key] ?? 0;
+      return `<div class="mini-s" title="${d.label}: ${raw}"><div class="mini-track"><div class="mini-fill" style="width:${raw}%;background:${d.c}"></div></div></div>`;
+    }).join('')}
+  </div>`;
+
+  // Full score bars (in expanded detail)
   const scoreBars = dims.map(d => {
     const raw = p.scores[d.key] ?? 0;
     return `<div class="sb">
       <div class="sb-lbl">${d.label}</div>
       <div class="sb-track"><div class="sb-fill" style="width:${raw}%;background:${d.c}"></div></div>
-      <div class="sb-right">
-        <div class="sb-score">${raw}</div>
-        <div class="sb-wt">${d.w}%</div>
-      </div>
+      <div class="sb-right"><div class="sb-score">${raw}</div><div class="sb-wt">${d.w}%</div></div>
     </div>`;
   }).join('');
 
@@ -434,10 +605,11 @@ function cardHTML(p, i) {
     </div>` : '';
 
   return `
-    <div class="card${myV?' v-'+myV:''}" id="card-${key}">
+    <div class="card${myV?' v-'+myW:''}" id="card-${key}">
       <div class="card-top">
         <div class="rank-num${i<3?' r'+(i+1):''}">${i+1}</div>
         <div class="card-name">${e(p.name)}</div>
+        ${myV ? `<div class="voted-badge">${myV==='up'?'👍':'👎'}</div>` : ''}
         <div class="score-ring ${sc(p.score)}">${p.score}</div>
       </div>
 
@@ -448,6 +620,8 @@ function cardHTML(p, i) {
       </div>
 
       ${p.highlight ? `<div class="card-hl">${e(p.highlight)}</div>` : ''}
+
+      ${miniScores}
 
       <div class="card-nums">
         <div class="cn"><div class="cn-label">建議售價</div><div class="cn-val">${e(p.price)}</div></div>
@@ -483,20 +657,20 @@ function cardHTML(p, i) {
 // ──────────────────────────────────────────
 function switchDate(d) {
   G.date = d;
+  G.searchQuery = '';
   render();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function jumpToProduct(date, rank) {
-  // Switch to the correct date, then scroll + expand target card
   G.date = date;
+  G.searchQuery = '';
   render();
   const key = `${date}-${rank}`;
   setTimeout(() => {
     const card = document.getElementById('card-' + key);
     if (card) {
       card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // Auto-expand if not already open
       const det = document.getElementById('det-' + key);
       if (det && !det.classList.contains('open')) {
         setTimeout(() => toggleDet(key), 300);
@@ -505,36 +679,76 @@ function jumpToProduct(date, rank) {
   }, 80);
 }
 
+function jumpToTop10() {
+  const el = document.getElementById('top10-section');
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Smooth expand/collapse using actual scrollHeight (fixes 9999px hack)
 function toggleDet(key) {
   const det = document.getElementById('det-'+key);
   const btn = document.getElementById('expbtn-'+key);
-  const open = det.classList.toggle('open');
-  btn.classList.toggle('open', open);
-  btn.innerHTML = (open ? '收起詳情' : '展開詳情') + ' <span class="arr">▾</span>';
+  if (!det.classList.contains('open')) {
+    det.style.maxHeight = det.scrollHeight + 'px';
+    det.classList.add('open');
+    btn.classList.add('open');
+    btn.innerHTML = '收起詳情 <span class="arr">▾</span>';
+  } else {
+    det.style.maxHeight = '0';
+    det.classList.remove('open');
+    btn.classList.remove('open');
+    btn.innerHTML = '展開詳情 <span class="arr">▾</span>';
+  }
+}
+
+function setStatsMode(mode) {
+  G.statsMode = mode;
+  render();
+}
+
+function onSearch(q) {
+  G._searchFocused = true;
+  G.searchQuery = q;
+  render();
 }
 
 function vote(key, type) {
-  const prev = G.votes[key];
-  const card = document.getElementById('card-'+key);
+  const prev  = G.votes[key];
+  const card  = document.getElementById('card-'+key);
   const upBtn = document.getElementById('vup-'+key);
   const dnBtn = document.getElementById('vdn-'+key);
 
-  // Toggle off if same
+  // Toggle off if same button tapped twice
   if (prev === type) {
     delete G.votes[key];
+    saveVotes();
     card?.classList.remove('v-up','v-down');
     upBtn?.classList.remove('v-up');
     dnBtn?.classList.remove('v-down');
+    card?.querySelector('.voted-badge')?.remove();
     return;
   }
 
   G.votes[key] = type;
+  saveVotes();
   card?.classList.remove('v-up','v-down');
   card?.classList.add('v-'+type);
   upBtn?.classList.toggle('v-up',   type==='up');
   upBtn?.classList.toggle('v-down', false);
   dnBtn?.classList.toggle('v-down', type==='down');
   dnBtn?.classList.toggle('v-up',   false);
+
+  // Update or insert voted badge
+  const cardTop = card?.querySelector('.card-top');
+  let badge = card?.querySelector('.voted-badge');
+  if (!badge && cardTop) {
+    badge = document.createElement('div');
+    badge.className = 'voted-badge';
+    const ring = cardTop.querySelector('.score-ring');
+    if (ring) cardTop.insertBefore(badge, ring);
+    else cardTop.appendChild(badge);
+  }
+  if (badge) badge.textContent = type==='up' ? '👍' : '👎';
 
   const p = G.pMap[key];
   if (p) {
@@ -556,6 +770,7 @@ function vote(key, type) {
 // ──────────────────────────────────────────
 //  BOOT
 // ──────────────────────────────────────────
+loadVotes();
 fetch(DATA_URL + '?v=' + Date.now())
   .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
   .then(data => {
