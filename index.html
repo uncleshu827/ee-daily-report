@@ -307,7 +307,7 @@ body {
 // ──────────────────────────────────────────
 const DATA_URL     = 'https://raw.githubusercontent.com/uncleshu827/ee-daily-report/main/data.json';
 const NOTION_URL   = 'https://www.notion.so/326c45deba0b80dc9660c661b84f6158';
-const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZZj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH81pRkAL2Ffxb/exec';
+const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZaj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH81pRkAL2Ffxb/exec';
 
 // ──────────────────────────────────────────
 //  DIMENSION CONFIGS  (v2.0 = 6 dims, v2.1 = 7 dims)
@@ -343,7 +343,7 @@ const SECTIONS = [
   { key:'competition',       label:'⚔️ 競爭分析'  },
   { key:'strategy',          label:'🛒 通路策略'   },
   { key:'risks',             label:'⚠️ 風險認知'  },
-  { key:'repurchase_detail', label:'🔄 複購與LTV'  },
+  { key:'repurchase_detail', label:'🔄 複購�LTV'  },
 ];
 
 // ──────────────────────────────────────────
@@ -481,11 +481,11 @@ function render() {
         </div>
       </div>
       <div class="hdr-stats">
-        <button class="stat-mode-btn${G.statsMode==='day' ? ' active':''}" onclick="setStatsMode('day')">今日</button>
-        <button class="stat-mode-btn${G.statsMode==='global'?' active':'}" onclick="setStatsMode('global')">全埏</button>
+        <button class="stat-mode-btn${G.statsMode==='day'?' active':''}" onclick="setStatsMode('day')">今日</button>
+        <button class="stat-mode-btn${G.statsMode==='global'?' active':''}" onclick="setStatsMode('global')">全域</button>
         ${statsHtml}
       </div>
-      <a class="hdr-notion" href="${NOTION_URL}" target="_blank">📔 Notion 完整報告 ↂ</a>
+      <a class="hdr-notion" href="${NOTION_URL}" target="_blank">📔 Notion 完整報告 →</a>
     </div>
 
     <div class="date-nav-wrapper">
@@ -503,20 +503,20 @@ function render() {
 
     ${report?.evolution ? `
       <div class="evo">
-        <div class="evo-label">🧬 廊日同中化進</div>
+        <div class="evo-label">🧬 今日進化</div>
         <div class="evo-text">${e(report.evolution)}</div>
       </div>` : ''}
 
     <div class="sec-hdr" id="sec-hdr-main">📊 ${date} 精選（${products.length} 件）</div>
-    <div id="no-results-msg" class="no-results" style="display:none"><em>🔍</em>沒有紦合搜尋條件皞產品</div>
+    <div id="no-results-msg" class="no-results" style="display:none"><em>🔍</em>沒有符合搜尋條件的產品</div>
 
     ${products.map((p, i) => cardHTML(p, i)).join('')}
 
-    <div class="sec-hdr" id="top10-section">🏆&昢分巷 Top 10</div>
+    <div class="sec-hdr" id="top10-section">🏆 歷史 Top 10</div>
     <div class="top10">
       <div class="top10-hdr">跨日最高分排行</div>
       ${top10.map((p, i) => `
-        <div class="top10-row" onclick="jumpToProduct('${p._d}', ${p.rank})">
+        <div class="top10-row" onclick="jumpToProduct('${p._d}',${p.rank})">
           <div class="top10-rank">${i===0?'🥇':i===1?'🥈':i===2?'🥉':i+1}</div>
           <div class="top10-name">${e(p.name)}</div>
           <div class="top10-date">${p._d.slice(5)}</div>
@@ -584,7 +584,7 @@ function cardHTML(p, i) {
         ${links.map(url => { const pl = platform(url); return `<a class="link-chip" href="${e(url)}" target="_blank" rel="noopener">${pl.icon} ${pl.name}</a>`; }).join('')}
       </div>
       <div class="action-vote">
-        <button class="vbtn${myV==='up'?' v-up':''}" id="vup-${key}" onclick="vote('${key}','up')">👍 值嶗</button>
+        <button class="vbtn${myV==='up'?' v-up':''}" id="vup-${key}" onclick="vote('${key}','up')">👍 值得</button>
         <button class="vbtn${myV==='down'?' v-down':''}" id="vdn-${key}" onclick="vote('${key}','down')">👎 跳過</button>
       </div>
     </div>`;
@@ -592,7 +592,7 @@ function cardHTML(p, i) {
   const searchText = [p.name, p.category, p.highlight||'', p.source||''].join(' ');
 
   return `
-    <div class="card${myV?' v-'+myV:'}�${key}" data-search="${e(searchText)}">
+    <div class="card${myV?' v-'+myV:''}" id="card-${key}" data-search="${e(searchText)}">
       <div class="card-top">
         <div class="rank-num${i<3?' r'+(i+1):''}">${i+1}</div>
         <div class="card-name">${e(p.name)}</div>
