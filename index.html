@@ -455,50 +455,52 @@ function getMonday(d) {
 }
 function getWeekLabel(dateStr) {
   const today    = new Date();
-  const thisM    = getMonday
-�^JN�ۜ�\��]HH�][ۙ^J�]�]J]T��
-�	���	�JN�ۜ�Y��^\�HX]���[�
+  const thisM    = getMonday(today);
+  const targetM  = getMonday(new Date(dateStr + 'T00:00:00'));
+  const diffDays = Math.round((new Date(thisM) - new Date(targetM)) / 86400000);
+  if (diffDays === 0) return '本週';
+  if (diffDays === 7) return '上週';
+  return diffDays <= 21 ? `${Math.round(diffDays/7)}週前` : '更早';
+}
 
-�]�]J\�JHH�]�]J\��]JJH�
-�
-NY�
-Y��^\�OOH
-H�]\��	��+:`,I�Y�
-Y��^\�OOH
-�H�]\��	�."�`,I��]\��Y��^\�H�H�	�X]���[�
-Y��^\���_z`,ybcX�	���9��I�B����8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� ����S�T����8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� 8� ��[��[ۈ�[�\�
-H�ۜ��]K]HHH�Y�
-Y]JH�]\�����8� 8� �VN�ۛH���]\�H�^H8� 8� ��ۜ��^HH�^T��
-N�ۜ��[Y�\ܝ�H]K��\ܝ˙�[\��O���]HH�^JN��ۜ��\ܝH�[Y�\ܝ˙�[�
-�O���]HOOH]JH�[Y�\ܝ��N�ۜ���X��H�\ܝ˜��X���N���ܛ���Y^H[��X��
-ۛH\���^JB��ۜ�[H�[Y�\ܝ˙�]X\
-�O�����X�˛X\
-O�
-ˋ������]_JJJN[��ܝ
+// ──────────────────────────────────────────
+//  RENDER
+// ──────────────────────────────────────────
+function render() {
+  const { data, date } = G;
+  if (!data) return;
 
-K�HO�����ܙHHK���ܙJN�ۜ��LH[��X�JL
-N����ؘ[�]�ۜ�]����ܙHH[�[���X]���[�
-[��YX�J
-�
-OO������ܙK
-H�[�[��
-H��ۜ�X^��ܙHH[�[���X]�X^
-���[�X\
-O����ܙJJH�����\��[�^H�]�ۜ�^P]��H��X�˛[���X]���[�
-��X�˜�YX�J
-�
-OO������ܙK
-H���X�˛[��
-H��ۜ�^SX^H��X�˛[���X]�X^
-�����X�˛X\
-O����ܙJJH������X�X\�܈��H���\˜X\H�N��X�˙�ܑXX�
-O��˜X\�	�]_KI���[��XHH�JN���]H�]���]�\��\��ܛ�\Y�H�YZ�
-ۛH�[Y]\�B��ۜ��ܝY�\ܝ�Hˋ���[Y�\ܝ�K��ܝ
+  // ── FIX 1: only show dates <= today ──
+  const today = todayStr();
+  const validReports = data.reports.filter(r => r.date <= today);
 
-K�HO���]K���[P��\\�JK�]JJN]\��YZ�X�[H�[�ۜ�]UX��H�ܝY�\ܝ˛X\
-�O��ۜ��X�[H�]�YZ�X�[
-��]JN]�\H	��Y�
-�X�el !== lastWeekLabel) {
+  const report   = validReports.find(r => r.date === date) || validReports[0];
+  const products = report?.products || [];
+
+  // Cross-day all products (only past/today)
+  const all = validReports.flatMap(r => r.products.map(p => ({...p, _d: r.date})));
+  all.sort((a,b) => b.score - a.score);
+  const top10 = all.slice(0, 10);
+
+  // Global stats
+  const avgScore = all.length ? Math.round(all.reduce((s,p)=>s+p.score,0) / all.length) : 0;
+  const maxScore = all.length ? Math.max(...all.map(p=>p.score)) : 0;
+
+  // Current day stats
+  const dayAvg = products.length ? Math.round(products.reduce((s,p)=>s+p.score,0) / products.length) : 0;
+  const dayMax = products.length ? Math.max(...products.map(p=>p.score)) : 0;
+
+  // Product map for vote lookups
+  G.pMap = {};
+  products.forEach(p => { G.pMap[`${date}-${p.rank}`] = p; });
+
+  // Date nav: newest first, grouped by week (only valid dates)
+  const sortedReports = [...validReports].sort((a,b) => b.date.localeCompare(a.date));
+  let lastWeekLabel = null;
+  const dateTabs = sortedReports.map(r => {
+    const wLabel = getWeekLabel(r.date);
+    let sep = '';
+    if (wLabel !== lastWeekLabel) {
       lastWeekLabel = wLabel;
       sep = `<span class="week-sep">${wLabel}</span>`;
     }
@@ -586,7 +588,7 @@ H��ۜ�^SX^H��X�˛[���X]�X^
   }
 
   renderProductList();
-}
+
 
 // ──────────────────────────────────────────
 //  CARD HTML
