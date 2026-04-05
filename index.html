@@ -435,7 +435,7 @@ function platform(url) {
   return { icon:'🔗', name:'官網' };
 }
 
-const DAYS= ['敥','一','二','三','四','五','六'];
+const DAYS = ['日','一','二','三','四','五','六'];
 function fmtTab(s) {
   const d = new Date(s + 'T00:00:00');
   return `${d.getMonth()+1}/${d.getDate()} 週${DAYS[d.getDay()]}`;
@@ -588,7 +588,7 @@ function render() {
   }
 
   renderProductList();
-
+}
 
 // ──────────────────────────────────────────
 //  CARD HTML
