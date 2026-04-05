@@ -235,8 +235,8 @@ body {
 .ds-body  { font-size: 12px; color: #4b5563; line-height: 1.7; }
 
 /* Action row (links + vote merged) */
-.action-row { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-top: 1px solid var(--border); }
-.action-links { display: flex; flex-wrap: wrap; gap: 5px; flex: 1; min-width: 0; }
+.action-row { display: flex; align-items: center; gap: 6px 8px; padding: 8px 12px; border-top: 1px solid var(--border); flex-wrap: wrap; }
+.action-links { display: flex; flex-wrap: wrap; gap: 5px; flex: 1; min-width: 160px; }
 .link-chip {
   display: inline-flex; align-items: center; gap: 3px;
   padding: 4px 10px; border-radius: 100px;
@@ -256,6 +256,15 @@ body {
 .vbtn:hover { border-color: #9ca3af; color: var(--text); }
 .vbtn.v-up   { background: #ecfdf5; border-color: #10b981; color: #059669; }
 .vbtn.v-down { background: #fef2f2; border-color: #f87171; color: #dc2626; }
+
+/* Category filter chips */
+.cat-filter-wrap { display: flex; gap: 6px; padding: 6px 12px 8px; overflow-x: auto; scrollbar-width: none; background: #fff; border-bottom: 1px solid var(--border); }
+.cat-filter-wrap::-webkit-scrollbar { display: none; }
+.cat-chip { flex-shrink: 0; padding: 3px 11px; border-radius: 100px; font-size: 12px; font-weight: 500; border: 1.5px solid var(--border); background: #fff; color: var(--muted); cursor: pointer; transition: all .15s; white-space: nowrap; }
+.cat-chip.active { background: #ede9fe; border-color: #7c3aed; color: #7c3aed; }
+
+/* Cross-date result date label */
+.card-date-label { font-size: 10px; color: var(--muted); padding: 4px 14px 0; letter-spacing: .2px; }
 
 /* No results */
 .no-results { padding: 32px 16px; text-align: center; color: var(--muted); font-size: 14px; }
@@ -299,7 +308,7 @@ body {
 </style>
 </head>
 <body>
-<div id="app"><div class="loading"><div class="spin"></div>載入中…</div></div>
+<div id="app"><div class="loading"><div class="spin"></div>���免中…</div></div>
 <div id="toast" class="toast"></div>
 <script>
 // ──────────────────────────────────────────
@@ -307,7 +316,7 @@ body {
 // ──────────────────────────────────────────
 const DATA_URL     = 'https://raw.githubusercontent.com/uncleshu827/ee-daily-report/main/data.json';
 const NOTION_URL   = 'https://www.notion.so/326c45deba0b80dc9660c661b84f6158';
-const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZaj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH81pRkAL2Ffxb/exec';
+const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZZj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH81pRkAL2Ffxb/exec';
 
 // ──────────────────────────────────────────
 //  DIMENSION CONFIGS  (v2.0 = 6 dims, v2.1 = 7 dims)
@@ -343,7 +352,7 @@ const SECTIONS = [
   { key:'competition',       label:'⚔️ 競爭分析'  },
   { key:'strategy',          label:'🛒 通路策略'   },
   { key:'risks',             label:'⚠️ 風險認知'  },
-  { key:'repurchase_detail', label:'🔄 複購�LTV'  },
+  { key:'repurchase_detail', label:'🔄 複購與LTV'  },
 ];
 
 // ──────────────────────────────────────────
@@ -353,7 +362,8 @@ let G = {
   data: null, date: null,
   votes: {}, pMap: {},
   statsMode: 'day',   // 'day' | 'global'
-  searchQuery: ''
+  searchQuery: '',
+  catFilter: ''       // '' = all categories
 };
 
 // ──────────────────────────────────────────
@@ -501,6 +511,8 @@ function render() {
       <button id="search-clear" class="search-clear" onclick="onSearch('')" style="${G.searchQuery?'display:flex':'display:none'}">✕</button>
     </div>
 
+    <div id="cat-filters" class="cat-filter-wrap"></div>
+
     ${report?.evolution ? `
       <div class="evo">
         <div class="evo-label">🧬 今日進化</div>
@@ -508,9 +520,8 @@ function render() {
       </div>` : ''}
 
     <div class="sec-hdr" id="sec-hdr-main">📊 ${date} 精選（${products.length} 件）</div>
-    <div id="no-results-msg" class="no-results" style="display:none"><em>🔍</em>沒有符合搜尋條件的產品</div>
 
-    ${products.map((p, i) => cardHTML(p, i)).join('')}
+    <div id="product-list"></div>
 
     <div class="sec-hdr" id="top10-section">🏆 歷史 Top 10</div>
     <div class="top10">
@@ -526,13 +537,6 @@ function render() {
     </div>
   `;
 
-  // Restore vote visual state
-  Object.entries(G.votes).forEach(([k, v]) => {
-    document.getElementById('card-'+k)?.classList.add('v-'+v);
-    document.getElementById('vup-'+k)?.classList.toggle('v-up',   v==='up');
-    document.getElementById('vdn-'+k)?.classList.toggle('v-down', v==='down');
-  });
-
   // Scroll date-nav so active tab is visible
   const _nav = document.querySelector('.date-nav');
   const _active = _nav?.querySelector('.date-tab.active');
@@ -541,15 +545,15 @@ function render() {
     _nav.scrollLeft = Math.max(0, target);
   }
 
-  // Re-apply search filter if active
-  if (G.searchQuery) onSearch(G.searchQuery);
+  renderProductList();
 }
 
 // ──────────────────────────────────────────
 //  CARD HTML
 // ──────────────────────────────────────────
-function cardHTML(p, i) {
-  const key   = `${G.date}-${p.rank}`;
+function cardHTML(p, i, dateOverride, showDate) {
+  const date  = dateOverride || G.date;
+  const key   = `${date}-${p.rank}`;
   const dims  = getDims(p.scores);
   const myV   = G.votes[key];
   const links = Array.isArray(p.links) ? p.links : Object.values(p.links || {});
@@ -590,10 +594,11 @@ function cardHTML(p, i) {
     </div>`;
 
   const searchText = [p.name, p.category, p.highlight||'', p.source||''].join(' ');
+  const dateLabelHtml = showDate ? `<div class="card-date-label">📅 ${date}</div>` : '';
 
   return `
-    <div class="card${myV?' v-'+myV:''}" id="card-${key}" data-search="${e(searchText)}">
-      <div class="card-top">
+    <div class="card${myV?' v-'+myV:''}" id="card-${key}" data-search="${e(searchText)}" data-cat="${e(p.category||'')}">
+      ${dateLabelHtml}<div class="card-top">
         <div class="rank-num${i<3?' r'+(i+1):''}">${i+1}</div>
         <div class="card-name">${e(p.name)}</div>
         ${myV ? `<div class="voted-badge">${myV==='up'?'👍':'👎'}</div>` : ''}
@@ -640,6 +645,7 @@ function cardHTML(p, i) {
 function switchDate(d) {
   G.date = d;
   G.searchQuery = '';
+  G.catFilter   = '';
   render();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -690,21 +696,97 @@ function setStatsMode(mode) {
 
 function onSearch(q) {
   G.searchQuery = q;
-  const lq = q.toLowerCase().trim();
-  let visible = 0;
-  document.querySelectorAll('.card').forEach(card => {
-    const text = (card.dataset.search || '').toLowerCase();
-    const show = !lq || text.includes(lq);
-    card.style.display = show ? '' : 'none';
-    if (show) visible++;
-  });
-  const hdr = document.getElementById('sec-hdr-main');
-  const total = G.data?.reports.find(r => r.date === G.date)?.products.length || 0;
-  if (hdr) hdr.textContent = lq ? `🔍 搜尋「${q}」— ${visible} 件` : `📊 ${G.date} 精選（${total} 件）`;
-  const nr = document.getElementById('no-results-msg');
-  if (nr) nr.style.display = (lq && visible === 0) ? '' : 'none';
   const clr = document.getElementById('search-clear');
   if (clr) clr.style.display = q ? 'flex' : 'none';
+  // If cleared via ✕ button, also clear the input field value
+  if (!q) {
+    const inp = document.getElementById('search-input');
+    if (inp && inp.value !== '') inp.value = '';
+  }
+  renderProductList();
+}
+
+function setCategory(cat) {
+  G.catFilter = (cat === '全部') ? '' : cat;
+  renderProductList();
+}
+
+function renderProductList() {
+  if (!G.data) return;
+  const lq = G.searchQuery.toLowerCase().trim();
+  const cf = G.catFilter;
+  const isGlobalMode = lq.length > 0;
+
+  // ── Build candidate pool ──
+  let pool = [];
+  if (isGlobalMode) {
+    G.data.reports.forEach(r => {
+      r.products.forEach(p => { pool.push({...p, _date: r.date}); });
+    });
+  } else {
+    const report = G.data.reports.find(r => r.date === G.date) || G.data.reports[0];
+    (report?.products || []).forEach(p => { pool.push({...p, _date: G.date}); });
+  }
+
+  // ── Category filter chips (from unfiltered pool) ──
+  const cats = [...new Set(pool.map(p => p.category).filter(Boolean))].sort();
+  const catFiltersEl = document.getElementById('cat-filters');
+  if (catFiltersEl) {
+    catFiltersEl.innerHTML = ['全部', ...cats].map(c => {
+      const isActive = (c === '全部' && !cf) || c === cf;
+      return `<button class="cat-chip${isActive?' active':''}" onclick="setCategory('${e(c)}')">${e(c)}</button>`;
+    }).join('');
+  }
+
+  // ── Apply search + category filters ──
+  let results = pool.filter(p => {
+    const text = [p.name, p.category, p.highlight||'', p.source||''].join(' ').toLowerCase();
+    const matchSearch = !lq || text.includes(lq);
+    const matchCat    = !cf  || p.category === cf;
+    return matchSearch && matchCat;
+  });
+
+  // ── Render product list ──
+  const listEl = document.getElementById('product-list');
+  if (!listEl) return;
+
+  if (results.length === 0) {
+    listEl.innerHTML = '<div class="no-results"><em>🔍</em>沒有符合條件的產品</div>';
+  } else if (isGlobalMode) {
+    // Group by date (newest first)
+    const byDate = {};
+    results.forEach(p => { (byDate[p._date] = byDate[p._date] || []).push(p); });
+    let html = '';
+    Object.entries(byDate).sort((a,b) => b[0].localeCompare(a[0])).forEach(([date, prods]) => {
+      html += `<div class="sec-hdr">${date}（${prods.length} 件）</div>`;
+      prods.forEach((p, i) => { html += cardHTML(p, i, date, true); });
+    });
+    listEl.innerHTML = html;
+  } else {
+    listEl.innerHTML = results.map((p, i) => cardHTML(p, i, G.date, false)).join('');
+  }
+
+  // ── Restore vote visual state ──
+  Object.entries(G.votes).forEach(([k, v]) => {
+    document.getElementById('card-'+k)?.classList.add('v-'+v);
+    document.getElementById('vup-'+k)?.classList.toggle('v-up',   v==='up');
+    document.getElementById('vdn-'+k)?.classList.toggle('v-down', v==='down');
+  });
+
+  // ── Update section header ──
+  const hdr = document.getElementById('sec-hdr-main');
+  if (hdr) {
+    const total = results.length;
+    const dates = new Set(results.map(p => p._date));
+    if (lq) {
+      hdr.textContent = `🔍 搜尋「${G.searchQuery}」— ${total} 件${dates.size > 1 ? `（跨 ${dates.size} 天）` : ''}`;
+    } else if (cf) {
+      hdr.textContent = `🏷 ${cf}（${total} 件）`;
+    } else {
+      const dayTotal = G.data.reports.find(r => r.date === G.date)?.products.length || 0;
+      hdr.textContent = `📊 ${G.date} 精選（${dayTotal} 件）`;
+    }
+  }
 }
 
 function vote(key, type) {
