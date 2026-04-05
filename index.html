@@ -509,7 +509,7 @@ function render() {
       <input id="search-input" class="search-input" type="text"
              placeholder="搜尋產品名稱、分類…"
              value="${e(G.searchQuery)}"
-             oninput="onSearch(this.value)">
+             oninput="if(!event.isComposing)onSearch(this.value)" oncompositionend="onSearch(this.value)">
       ${G.searchQuery ? `<button class="search-clear" onclick="onSearch('')">✕</button>` : ''}
     </div>
 
@@ -628,6 +628,7 @@ function cardHTML(p, i) {
         <div class="cn"><div class="cn-label">毛利倍數</div><div class="cn-val g">${e(p.margin)}</div></div>
       </div>
 
+      ${linkBtns}
       <div class="vote-row">
         <div class="vote-q">快速評價</div>
         <button class="vbtn${myV==='up'?' v-up':''}" id="vup-${key}" onclick="vote('${key}','up')">👍 值得</button>
@@ -647,7 +648,6 @@ function cardHTML(p, i) {
           ${scoreBars}
           ${sections ? `<div class="ds-grid">${sections}</div>` : ''}
         </div>
-        ${linkBtns}
       </div>
     </div>`;
 }
