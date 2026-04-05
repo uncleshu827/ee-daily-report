@@ -9,7 +9,7 @@
 <style>
 :root {
   --bg: #f5f5f0;
-  --card: #ffffff;
+  --card: #fffffc;
   --text: #1a1a1a;
   --muted: #6b7280;
   --border: #e8e8e2;
@@ -97,106 +97,144 @@ body {
   font-size: 13px; font-weight: 500; color: var(--muted);
   border: none; background: transparent; cursor: pointer;
   border-bottom: 2px solid transparent; white-space: nowrap;
-  transition: color .15s, border-color .15s;
 }
-.date-tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
-.tab-badge {
-  display: inline-block; font-size: 10px; background: #f3f4f6; color: var(--muted);
-  border-radius: 100px; padding: 1px 6px; margin-left: 4px;
+.date-tab.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
 }
-.date-tab.active .tab-badge { background: #fff1ee; color: var(--accent); }
+.date-tab:hover { color: var(--text); }
 
-/* ── Search bar ── */
-.search-wrap {
-  position: relative; padding: 8px 12px;
-  background: #fff; border-bottom: 1px solid var(--border);
-}
-.search-input {
-  width: 100%; padding: 8px 34px 8px 34px;
-  border: 1px solid var(--border); border-radius: 100px;
-  font-size: 13px; color: var(--text);
-  background: #f9f9f7;
-  outline: none; transition: border-color .15s;
-  -webkit-appearance: none;
-}
-.search-input:focus { border-color: var(--accent); background: #fff; }
-.search-icon {
-  position: absolute; left: 24px; top: 50%; transform: translateY(-50%);
-  font-size: 14px; pointer-events: none; opacity: .5;
-}
-.search-clear {
-  position: absolute; right: 24px; top: 50%; transform: translateY(-50%);
-  border: none; background: none; color: var(--muted);
-  font-size: 15px; cursor: pointer; padding: 2px 6px;
-  display: flex; align-items: center; line-height: 1;
-}
-
-/* ── Evolution banner ── */
-.evo {
-  margin: 10px 12px 0;
-  background: #fffbeb; border-radius: 10px;
-  padding: 9px 13px; border-left: 3px solid #f59e0b;
-}
-.evo-label { font-size: 10px; font-weight: 700; color: #d97706; letter-spacing: .6px; text-transform: uppercase; margin-bottom: 2px; }
-.evo-text { font-size: 13px; color: #78350f; line-height: 1.55; }
-
-/* ── Section header ── */
-.sec-hdr { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .4px; text-transform: uppercase; padding: 14px 16px 6px; }
-
-/* ── Product card ── */
+/* ── Product cards ── */
+.cards { padding: 12px 16px; }
 .card {
-  background: var(--card); margin: 8px 12px;
-  border-radius: var(--r); box-shadow: var(--sh);
-  overflow: hidden; border: 1.5px solid transparent;
-  transition: border-color .2s;
+  background: var(-card); border: 1px solid var(-border); border-radius: var(--r);
+  padding: 12px; margin-bottom: 12px: cursor: pointer; transition: all .2s;
 }
-.card.v-up   { border-color: #10b981; }
-.card.v-down { border-color: #ef4444; }
-
-.card-top { display: flex; align-items: center; gap: 10px; padding: 12px 14px 0; }
-.rank-num {
-  width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 700;
-  background: #f3f4f6; color: var(--muted);
+.card:hover {
+  border-color: var(-accent); box-shadow: var(--sh);
 }
-.rank-num.r1 { background: #fef3c7; color: #d97706; }
-.rank-num.r2 { background: #f1f5f9; color: #475569; }
-.rank-num.r3 { background: #fce7f3; color: #be185d; }
-.card-name { flex: 1; font-size: 16px; font-weight: 600; line-height: 1.3; }
-.voted-badge { font-size: 14px; flex-shrink: 0; }
-.score-ring {
-  width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0;
-  border: 2.5px solid; display: flex; align-items: center; justify-content: center;
-  font-size: 15px; font-weight: 700;
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>EE 選品報告</title>
+<style>
+:root {
+  --bg: #f5f5f0;
+  --card: #fffffc;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --border: #e8e8e2;
+  --accent: #e8785e;
+  --green: #10b981;
+  --red: #ef4444;
+  --navy: #1a1a2e;
+  --r: 14px;
+  --sh: 0 1px 3px rgba(0,0,0,.05), 0 4px 12px rgba(0,0,0,.07);
 }
-.s-hi { background: #ecfdf5; color: #059669; border-color: #059669; }
-.s-md { background: #fffbeb; color: #d97706; border-color: #d97706; }
-.s-lo { background: #fef2f2; color: #dc2626; border-color: #dc2626; }
-
-.card-tags { display: flex; flex-wrap: wrap; gap: 5px; padding: 8px 14px 0; }
-.tag { padding: 2px 9px; border-radius: 100px; font-size: 11px; font-weight: 500; max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
-.t-cat { background: #ede9fe; color: #7c3aed; }
-.t-src { background: #dbeafe; color: #1d4ed8; }
-.t-mg  { background: #d1fae5; color: #065f46; }
-
-.card-hl { padding: 8px 14px 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
-
-/* ── Mini dimension bars (collapsed state preview) ── */
-.mini-scores {
-  display: flex; gap: 3px; padding: 8px 14px 2px;
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg); color: var(--text);
+  line-height: 1.6; -webkit-font-smoothing: antialiased;
+  padding-bottom: 32px;
 }
-.mini-s { flex: 1; }
-.mini-track { height: 4px; background: #f0f0ee; border-radius: 2px; overflow: hidden; }
-.mini-fill { height: 100%; border-radius: 2px; transition: width 0.6s cubic-bezier(.4,0,.2,1); min-width: 3px; }
 
-/* ── Card metrics ── */
-.card-nums { display: flex; border-top: 1px solid var(--border); margin-top: 8px; }
-.cn { flex: 1; text-align: center; padding: 9px 4px; }
-.cn + .cn { border-left: 1px solid var(--border); }
-.cn-label { font-size: 10px; color: var(--muted); }
-.cn-val { font-size: 14px; font-weight: 600; margin-top: 1px; }
-.cn-val.g { color: #059669; }
+/* ── Header ── */
+.hdr {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+  padding: 12px 16px 10px;
+  position: sticky; top: 0; z-index: 100;
+}
+.hdr-top { display: flex; align-items: center; }
+.hdr-logo { font-size: 17px; font-weight: 800; color: #fff; letter-spacing: -.3px; }
+.hdr-logo em { color: var(--accent); font-style: normal; }
+.hdr-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+.hdr-updated { font-size: 11px; color: rgba(255,255,255,.45); }
+.top10-btn {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-size: 11px; font-weight: 600; color: rgba(255,255,255,.8);
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+  border-radius: 100px; padding: 3px 10px;
+  cursor: pointer; transition: background .15s; white-space: nowrap;
+}
+.top10-btn:hover { background: rgba(255,255,255,.2); }
+
+.hdr-stats { display: flex; gap: 5px; margin-top: 7px; flex-wrap: wrap; align-items: center; }
+.stat-mode-btn {
+  font-size: 10px; font-weight: 600; padding: 2px 8px;
+  border-radius: 100px; border: 1px solid rgba(255,255,255,.25);
+  background: transparent; color: rgba(255,255,255,.5);
+  cursor: pointer; transition: all .15s; white-space: nowrap;
+}
+.stat-mode-btn.active {
+  background: rgba(255,255,255,.18); color: #fff;
+  border-color: rgba(255,255,255,.4);
+}
+.hdr-stat { font-size: 11px; color: rgba(255,255,255,.75); background: rgba(255,255,255,.1); border-radius: 100px; padding: 2px 9px; }
+.hdr-notion { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: rgba(255,255,255,.45); text-decoration: none; margin-top: 6px; }
+.hdr-notion:hover { color: rgba(255,255,255,.8); }
+
+/* ── Date nav with right-side fade ── */
+.date-nav-wrapper {
+  position: sticky; top: 72px; z-index: 90;
+}
+.date-nav-wrapper::after {
+  content: '';
+  position: absolute; right: 0; top: 0; bottom: 1px;
+  width: 48px;
+  background: linear-gradient(to right, transparent, #fff);
+  pointer-events: none;
+  z-index: 1;
+}
+.date-nav {
+  display: flex; background: #fff;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.date-nav::-webkit-scrollbar { display: none; }
+.week-sep {
+  display: flex; align-items: center;
+  font-size: 10px; font-weight: 600; color: var(--muted);
+  padding: 0 6px 0 10px; white-space: nowrap; flex-shrink: 0;
+  letter-spacing: .3px;
+}
+.week-sep::after {
+  content: ''; display: block; width: 1px; height: 14px;
+  background: var(--border); margin-left: 6px;
+}
+.date-tab {
+  flex: none; padding: 9px 14px;
+  font-size: 13px; font-weight: 500; color: var(--muted);
+  border: none; background: transparent; cursor: pointer;
+  border-bottom: 2px solid transparent; white-space: nowrap;
+}
+.date-tab.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+.date-tab:hover { color: var(--text); }
+
+/* ── Product cards ── */
+.cards { padding: 12px 16px; }
+.card {
+  background: var(-card); border: 1px solid var(-border); border-radius: var(--r);
+  padding: 12px; margin-bottom: 12px: cursor: pointer; transition: all .2s;
+}
+.card:hover {
+  border-color: var(-accent); box-shadow: var(--sh);
+}
+.card-hd {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 4px; margin-bottom: 6px;
+}
+.card-title {
+  flex: 1; font-weight: 600; line-height: 1.2; word-break: break-word;
+}
+ { color: #059669; }
 
 /* ── Expand button ── */
 .exp-btn {
@@ -257,15 +295,6 @@ body {
 .vbtn.v-up   { background: #ecfdf5; border-color: #10b981; color: #059669; }
 .vbtn.v-down { background: #fef2f2; border-color: #f87171; color: #dc2626; }
 
-/* Category filter chips */
-.cat-filter-wrap { display: flex; gap: 6px; padding: 6px 12px 8px; overflow-x: auto; scrollbar-width: none; background: #fff; border-bottom: 1px solid var(--border); }
-.cat-filter-wrap::-webkit-scrollbar { display: none; }
-.cat-chip { flex-shrink: 0; padding: 3px 11px; border-radius: 100px; font-size: 12px; font-weight: 500; border: 1.5px solid var(--border); background: #fff; color: var(--muted); cursor: pointer; transition: all .15s; white-space: nowrap; }
-.cat-chip.active { background: #ede9fe; border-color: #7c3aed; color: #7c3aed; }
-
-/* Cross-date result date label */
-.card-date-label { font-size: 10px; color: var(--muted); padding: 4px 14px 0; letter-spacing: .2px; }
-
 /* No results */
 .no-results { padding: 32px 16px; text-align: center; color: var(--muted); font-size: 14px; }
 .no-results em { display: block; font-size: 28px; font-style: normal; margin-bottom: 8px; }
@@ -308,560 +337,5 @@ body {
 </style>
 </head>
 <body>
-<div id="app"><div class="loading"><div class="spin"></div>���免中…</div></div>
-<div id="toast" class="toast"></div>
-<script>
-// ──────────────────────────────────────────
-//  CONFIG
-// ──────────────────────────────────────────
-const DATA_URL     = 'https://raw.githubusercontent.com/uncleshu827/ee-daily-report/main/data.json';
-const NOTION_URL   = 'https://www.notion.so/326c45deba0b80dc9660c661b84f6158';
-const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZZj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH81pRkAL2Ffxb/exec';
-
-// ──────────────────────────────────────────
-//  DIMENSION CONFIGS  (v2.0 = 6 dims, v2.1 = 7 dims)
-// ──────────────────────────────────────────
-const DIMS7 = [
-  { key:'margin',     label:'毛利潛力', w:20, c:'#6366f1' },
-  { key:'demand',     label:'需求驗證', w:20, c:'#10b981' },
-  { key:'window',     label:'市場窗口', w:14, c:'#f59e0b' },
-  { key:'barrier',    label:'競爭壁壘', w:14, c:'#f97316' },
-  { key:'viral',      label:'傳播力',   w:14, c:'#ec4899' },
-  { key:'difficulty', label:'操作難度', w:9,  c:'#06b6d4' },
-  { key:'repurchase', label:'複購LTV',  w:9,  c:'#8b5cf6' },
-];
-const DIMS6 = [
-  { key:'margin',     label:'毛利潛力', w:25, c:'#6366f1' },
-  { key:'demand',     label:'需求驗證', w:25, c:'#10b981' },
-  { key:'barrier',    label:'競爭壁壘', w:15, c:'#f97316' },
-  { key:'viral',      label:'傳播力',   w:15, c:'#ec4899' },
-  { key:'difficulty', label:'操作難度', w:10, c:'#06b6d4' },
-  { key:'repurchase', label:'複購LTV',  w:10, c:'#8b5cf6' },
-];
-function getDims(scores) {
-  return 'window' in scores ? DIMS7 : DIMS6;
-}
-
-// ──────────────────────────────────────────
-//  DETAIL SECTIONS
-// ──────────────────────────────────────────
-const SECTIONS = [
-  { key:'source',            label:'📍 來源與定位' },
-  { key:'demand_validation', label:'📊 需求驗證'   },
-  { key:'cost_breakdown',    label:'💰 成本與利潤' },
-  { key:'competition',       label:'⚔️ 競爭分析'  },
-  { key:'strategy',          label:'🛒 通路策略'   },
-  { key:'risks',             label:'⚠️ 風險認知'  },
-  { key:'repurchase_detail', label:'🔄 複購與LTV'  },
-];
-
-// ──────────────────────────────────────────
-//  STATE
-// ──────────────────────────────────────────
-let G = {
-  data: null, date: null,
-  votes: {}, pMap: {},
-  statsMode: 'day',   // 'day' | 'global'
-  searchQuery: '',
-  catFilter: ''       // '' = all categories
-};
-
-// ──────────────────────────────────────────
-//  PERSISTENCE (votes survive page reload)
-// ──────────────────────────────────────────
-function loadVotes() {
-  try { G.votes = JSON.parse(localStorage.getItem('ee-votes') || '{}'); }
-  catch(e) { G.votes = {}; }
-}
-function saveVotes() {
-  try { localStorage.setItem('ee-votes', JSON.stringify(G.votes)); }
-  catch(e) {}
-}
-
-// ──────────────────────────────────────────
-//  HELPERS
-// ──────────────────────────────────────────
-const sc = s => s >= 75 ? 's-hi' : s >= 60 ? 's-md' : 's-lo';
-const e  = s => String(s)
-  .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
-  .replace(/"/g,'&quot;');
-
-function platform(url) {
-  if (!url) return { icon:'🔗', name:'連結' };
-  const u = url.toLowerCase();
-  if (u.includes('shopee.tw'))                        return { icon:'🛍', name:'蝦皮' };
-  if (u.includes('momoshop')||u.includes('momo.com')) return { icon:'🛒', name:'momo' };
-  if (u.includes('pchome'))                           return { icon:'🖥', name:'PChome' };
-  if (u.includes('amazon.'))                          return { icon:'📦', name:'Amazon' };
-  if (u.includes('1688.com'))                         return { icon:'🏭', name:'1688' };
-  if (u.includes('kickstarter'))                      return { icon:'🚀', name:'Kickstarter' };
-  if (u.includes('pinkoi'))                           return { icon:'🎨', name:'Pinkoi' };
-  if (u.includes('makuake'))                          return { icon:'🇯🇵', name:'Makuake' };
-  if (u.includes('notion.so'))                        return { icon:'📔', name:'Notion' };
-  return { icon:'🔗', name:'官網' };
-}
-
-const DAYS = ['日','一','二','三','四','五','六'];
-function fmtTab(s) {
-  const d = new Date(s + 'T00:00:00');
-  return `${d.getMonth()+1}/${d.getDate()} 週${DAYS[d.getDay()]}`;
-}
-
-function showToast(m) {
-  const el = document.getElementById('toast');
-  el.textContent = m; el.classList.add('show');
-  setTimeout(() => el.classList.remove('show'), 2200);
-}
-
-// ── Week grouping for date nav ──
-function getMonday(d) {
-  const day = d.getDay();
-  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
-  return new Date(d.getFullYear(), d.getMonth(), diff).toISOString().slice(0, 10);
-}
-function getWeekLabel(dateStr) {
-  const today    = new Date();
-  const thisM    = getMonday(today);
-  const targetM  = getMonday(new Date(dateStr + 'T00:00:00'));
-  const diffDays = Math.round((new Date(thisM) - new Date(targetM)) / 86400000);
-  if (diffDays === 0) return '本週';
-  if (diffDays === 7) return '上週';
-  return diffDays <= 21 ? `${Math.round(diffDays/7)}週前` : '更早';
-}
-
-// ──────────────────────────────────────────
-//  RENDER
-// ──────────────────────────────────────────
-function render() {
-  const { data, date } = G;
-  if (!data) return;
-
-  const report   = data.reports.find(r => r.date === date) || data.reports[0];
-  const products = report?.products || [];
-
-  // Cross-day all products
-  const all = data.reports.flatMap(r => r.products.map(p => ({...p, _d: r.date})));
-  all.sort((a,b) => b.score - a.score);
-  const top10 = all.slice(0, 10);
-
-  // Global stats
-  const avgScore = all.length ? Math.round(all.reduce((s,p)=>s+p.score,0) / all.length) : 0;
-  const maxScore = all.length ? Math.max(...all.map(p=>p.score)) : 0;
-
-  // Current day stats
-  const dayAvg = products.length ? Math.round(products.reduce((s,p)=>s+p.score,0) / products.length) : 0;
-  const dayMax = products.length ? Math.max(...products.map(p=>p.score)) : 0;
-
-  // Product map for vote lookups
-  G.pMap = {};
-  products.forEach(p => { G.pMap[`${date}-${p.rank}`] = p; });
-
-  // Date nav: newest first, grouped by week
-  const sortedReports = [...data.reports].sort((a,b) => b.date.localeCompare(a.date));
-  let lastWeekLabel = null;
-  const dateTabs = sortedReports.map(r => {
-    const wLabel = getWeekLabel(r.date);
-    let sep = '';
-    if (wLabel !== lastWeekLabel) {
-      lastWeekLabel = wLabel;
-      sep = `<span class="week-sep">${wLabel}</span>`;
-    }
-    return sep + `<button class="date-tab${r.date===date?' active':''}" onclick="switchDate('${r.date}')">${fmtTab(r.date)}<span class="tab-badge">${r.products.length}</span></button>`;
-  }).join('');
-
-  // Stats badges (today vs global toggle)
-  const statsHtml = G.statsMode === 'day' ? `
-    <span class="hdr-stat">📦 ${products.length} 選品</span>
-    <span class="hdr-stat">⭐ 均分 ${dayAvg}</span>
-    <span class="hdr-stat">🏆 最高 ${dayMax}</span>
-  ` : `
-    <span class="hdr-stat">📅 ${data.reports.length} 天</span>
-    <span class="hdr-stat">📦 ${all.length} 選品</span>
-    <span class="hdr-stat">⭐ 均分 ${avgScore}</span>
-    <span class="hdr-stat">🏆 最高 ${maxScore}</span>
-  `;
-
-  document.getElementById('app').innerHTML = `
-    <div class="hdr">
-      <div class="hdr-top">
-        <div class="hdr-logo">🛒 <em>EE</em> 選品報告</div>
-        <div class="hdr-right">
-          <div class="hdr-updated">更新 ${e(data.lastUpdated)}</div>
-          <button class="top10-btn" onclick="jumpToTop10()">👑 Top10</button>
-        </div>
-      </div>
-      <div class="hdr-stats">
-        <button class="stat-mode-btn${G.statsMode==='day'?' active':''}" onclick="setStatsMode('day')">今日</button>
-        <button class="stat-mode-btn${G.statsMode==='global'?' active':''}" onclick="setStatsMode('global')">全域</button>
-        ${statsHtml}
-      </div>
-      <a class="hdr-notion" href="${NOTION_URL}" target="_blank">📔 Notion 完整報告 →</a>
-    </div>
-
-    <div class="date-nav-wrapper">
-      <div class="date-nav">${dateTabs}</div>
-    </div>
-
-    <div class="search-wrap">
-      <span class="search-icon">🔍</span>
-      <input id="search-input" class="search-input" type="text"
-             placeholder="搜尋產品名稱、分類…"
-             value="${e(G.searchQuery)}"
-             oninput="if(!event.isComposing)onSearch(this.value)" oncompositionend="onSearch(this.value)">
-      <button id="search-clear" class="search-clear" onclick="onSearch('')" style="${G.searchQuery?'display:flex':'display:none'}">✕</button>
-    </div>
-
-    <div id="cat-filters" class="cat-filter-wrap"></div>
-
-    ${report?.evolution ? `
-      <div class="evo">
-        <div class="evo-label">🧬 今日進化</div>
-        <div class="evo-text">${e(report.evolution)}</div>
-      </div>` : ''}
-
-    <div class="sec-hdr" id="sec-hdr-main">📊 ${date} 精選（${products.length} 件）</div>
-
-    <div id="product-list"></div>
-
-    <div class="sec-hdr" id="top10-section">🏆 歷史 Top 10</div>
-    <div class="top10">
-      <div class="top10-hdr">跨日最高分排行</div>
-      ${top10.map((p, i) => `
-        <div class="top10-row" onclick="jumpToProduct('${p._d}',${p.rank})">
-          <div class="top10-rank">${i===0?'🥇':i===1?'🥈':i===2?'🥉':i+1}</div>
-          <div class="top10-name">${e(p.name)}</div>
-          <div class="top10-date">${p._d.slice(5)}</div>
-          <div class="top10-score ${sc(p.score)}">${p.score}</div>
-          <div class="top10-arrow">›</div>
-        </div>`).join('')}
-    </div>
-  `;
-
-  // Scroll date-nav so active tab is visible
-  const _nav = document.querySelector('.date-nav');
-  const _active = _nav?.querySelector('.date-tab.active');
-  if (_nav && _active) {
-    const target = _active.offsetLeft - (_nav.clientWidth - _active.offsetWidth) / 2;
-    _nav.scrollLeft = Math.max(0, target);
-  }
-
-  renderProductList();
-}
-
-// ──────────────────────────────────────────
-//  CARD HTML
-// ──────────────────────────────────────────
-function cardHTML(p, i, dateOverride, showDate) {
-  const date  = dateOverride || G.date;
-  const key   = `${date}-${p.rank}`;
-  const dims  = getDims(p.scores);
-  const myV   = G.votes[key];
-  const links = Array.isArray(p.links) ? p.links : Object.values(p.links || {});
-
-  // Mini dimension bars (collapsed-state preview)
-  const miniScores = `<div class="mini-scores">
-    ${dims.map(d => {
-      const raw = p.scores[d.key] ?? 0;
-      return `<div class="mini-s" title="${d.label}: ${raw}"><div class="mini-track"><div class="mini-fill" style="width:${raw}%;background:${d.c}"></div></div></div>`;
-    }).join('')}
-  </div>`;
-
-  // Full score bars (in expanded detail)
-  const scoreBars = dims.map(d => {
-    const raw = p.scores[d.key] ?? 0;
-    return `<div class="sb">
-      <div class="sb-lbl">${d.label}</div>
-      <div class="sb-track"><div class="sb-fill" style="width:${raw}%;background:${d.c}"></div></div>
-      <div class="sb-right"><div class="sb-score">${raw}</div><div class="sb-wt">${d.w}%</div></div>
-    </div>`;
-  }).join('');
-
-  const sections = SECTIONS.filter(s => p[s.key]).map(s => `
-    <div class="ds">
-      <div class="ds-title">${s.label}</div>
-      <div class="ds-body">${e(p[s.key]).replace(/\n/g,'<br>')}</div>
-    </div>`).join('');
-
-  const actionRow = `
-    <div class="action-row">
-      <div class="action-links">
-        ${links.map(url => { const pl = platform(url); return `<a class="link-chip" href="${e(url)}" target="_blank" rel="noopener">${pl.icon} ${pl.name}</a>`; }).join('')}
-      </div>
-      <div class="action-vote">
-        <button class="vbtn${myV==='up'?' v-up':''}" id="vup-${key}" onclick="vote('${key}','up')">👍 值得</button>
-        <button class="vbtn${myV==='down'?' v-down':''}" id="vdn-${key}" onclick="vote('${key}','down')">👎 跳過</button>
-      </div>
-    </div>`;
-
-  const searchText = [p.name, p.category, p.highlight||'', p.source||''].join(' ');
-  const dateLabelHtml = showDate ? `<div class="card-date-label">📅 ${date}</div>` : '';
-
-  return `
-    <div class="card${myV?' v-'+myV:''}" id="card-${key}" data-search="${e(searchText)}" data-cat="${e(p.category||'')}">
-      ${dateLabelHtml}<div class="card-top">
-        <div class="rank-num${i<3?' r'+(i+1):''}">${i+1}</div>
-        <div class="card-name">${e(p.name)}</div>
-        ${myV ? `<div class="voted-badge">${myV==='up'?'👍':'👎'}</div>` : ''}
-        <div class="score-ring ${sc(p.score)}">${p.score}</div>
-      </div>
-
-      <div class="card-tags">
-        <span class="tag t-cat">${e(p.category)}</span>
-        <span class="tag t-src">${e(p.source)}</span>
-        <span class="tag t-mg">毛利 ${e(p.margin)}</span>
-      </div>
-
-      ${p.highlight ? `<div class="card-hl">${e(p.highlight)}</div>` : ''}
-
-      ${miniScores}
-
-      <div class="card-nums">
-        <div class="cn"><div class="cn-label">建議售價</div><div class="cn-val">${e(p.price)}</div></div>
-        <div class="cn"><div class="cn-label">毛利倍數</div><div class="cn-val g">${e(p.margin)}</div></div>
-      </div>
-
-      ${actionRow}
-
-      <button class="exp-btn" id="expbtn-${key}" onclick="toggleDet('${key}')">
-        展開詳情 <span class="arr">▾</span>
-      </button>
-
-      <div class="det" id="det-${key}">
-        <div class="det-inner">
-          <div class="scores-head">
-            <span class="scores-title">${dims.length} 維度評分</span>
-            <span class="scores-note">原始分 0–100，括號為權重</span>
-          </div>
-          ${scoreBars}
-          ${sections ? `<div class="ds-grid">${sections}</div>` : ''}
-        </div>
-      </div>
-    </div>`;
-}
-
-// ──────────────────────────────────────────
-//  ACTIONS
-// ──────────────────────────────────────────
-function switchDate(d) {
-  G.date = d;
-  G.searchQuery = '';
-  G.catFilter   = '';
-  render();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function jumpToProduct(date, rank) {
-  G.date = date;
-  G.searchQuery = '';
-  render();
-  const key = `${date}-${rank}`;
-  setTimeout(() => {
-    const card = document.getElementById('card-' + key);
-    if (card) {
-      card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      const det = document.getElementById('det-' + key);
-      if (det && !det.classList.contains('open')) {
-        setTimeout(() => toggleDet(key), 300);
-      }
-    }
-  }, 80);
-}
-
-function jumpToTop10() {
-  const el = document.getElementById('top10-section');
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-// Smooth expand/collapse using actual scrollHeight (fixes 9999px hack)
-function toggleDet(key) {
-  const det = document.getElementById('det-'+key);
-  const btn = document.getElementById('expbtn-'+key);
-  if (!det.classList.contains('open')) {
-    det.style.maxHeight = det.scrollHeight + 'px';
-    det.classList.add('open');
-    btn.classList.add('open');
-    btn.innerHTML = '收起詳情 <span class="arr">▾</span>';
-  } else {
-    det.style.maxHeight = '0';
-    det.classList.remove('open');
-    btn.classList.remove('open');
-    btn.innerHTML = '展開詳情 <span class="arr">▾</span>';
-  }
-}
-
-function setStatsMode(mode) {
-  G.statsMode = mode;
-  render();
-}
-
-function onSearch(q) {
-  G.searchQuery = q;
-  const clr = document.getElementById('search-clear');
-  if (clr) clr.style.display = q ? 'flex' : 'none';
-  // If cleared via ✕ button, also clear the input field value
-  if (!q) {
-    const inp = document.getElementById('search-input');
-    if (inp && inp.value !== '') inp.value = '';
-  }
-  renderProductList();
-}
-
-function setCategory(cat) {
-  G.catFilter = (cat === '全部') ? '' : cat;
-  renderProductList();
-}
-
-function renderProductList() {
-  if (!G.data) return;
-  const lq = G.searchQuery.toLowerCase().trim();
-  const cf = G.catFilter;
-  const isGlobalMode = lq.length > 0;
-
-  // ── Build candidate pool ──
-  let pool = [];
-  if (isGlobalMode) {
-    G.data.reports.forEach(r => {
-      r.products.forEach(p => { pool.push({...p, _date: r.date}); });
-    });
-  } else {
-    const report = G.data.reports.find(r => r.date === G.date) || G.data.reports[0];
-    (report?.products || []).forEach(p => { pool.push({...p, _date: G.date}); });
-  }
-
-  // ── Category filter chips (from unfiltered pool) ──
-  const cats = [...new Set(pool.map(p => p.category).filter(Boolean))].sort();
-  const catFiltersEl = document.getElementById('cat-filters');
-  if (catFiltersEl) {
-    catFiltersEl.innerHTML = ['全部', ...cats].map(c => {
-      const isActive = (c === '全部' && !cf) || c === cf;
-      return `<button class="cat-chip${isActive?' active':''}" onclick="setCategory('${e(c)}')">${e(c)}</button>`;
-    }).join('');
-  }
-
-  // ── Apply search + category filters ──
-  let results = pool.filter(p => {
-    const text = [p.name, p.category, p.highlight||'', p.source||''].join(' ').toLowerCase();
-    const matchSearch = !lq || text.includes(lq);
-    const matchCat    = !cf  || p.category === cf;
-    return matchSearch && matchCat;
-  });
-
-  // ── Render product list ──
-  const listEl = document.getElementById('product-list');
-  if (!listEl) return;
-
-  if (results.length === 0) {
-    listEl.innerHTML = '<div class="no-results"><em>🔍</em>沒有符合條件的產品</div>';
-  } else if (isGlobalMode) {
-    // Group by date (newest first)
-    const byDate = {};
-    results.forEach(p => { (byDate[p._date] = byDate[p._date] || []).push(p); });
-    let html = '';
-    Object.entries(byDate).sort((a,b) => b[0].localeCompare(a[0])).forEach(([date, prods]) => {
-      html += `<div class="sec-hdr">${date}（${prods.length} 件）</div>`;
-      prods.forEach((p, i) => { html += cardHTML(p, i, date, true); });
-    });
-    listEl.innerHTML = html;
-  } else {
-    listEl.innerHTML = results.map((p, i) => cardHTML(p, i, G.date, false)).join('');
-  }
-
-  // ── Restore vote visual state ──
-  Object.entries(G.votes).forEach(([k, v]) => {
-    document.getElementById('card-'+k)?.classList.add('v-'+v);
-    document.getElementById('vup-'+k)?.classList.toggle('v-up',   v==='up');
-    document.getElementById('vdn-'+k)?.classList.toggle('v-down', v==='down');
-  });
-
-  // ── Update section header ──
-  const hdr = document.getElementById('sec-hdr-main');
-  if (hdr) {
-    const total = results.length;
-    const dates = new Set(results.map(p => p._date));
-    if (lq) {
-      hdr.textContent = `🔍 搜尋「${G.searchQuery}」— ${total} 件${dates.size > 1 ? `（跨 ${dates.size} 天）` : ''}`;
-    } else if (cf) {
-      hdr.textContent = `🏷 ${cf}（${total} 件）`;
-    } else {
-      const dayTotal = G.data.reports.find(r => r.date === G.date)?.products.length || 0;
-      hdr.textContent = `📊 ${G.date} 精選（${dayTotal} 件）`;
-    }
-  }
-}
-
-function vote(key, type) {
-  const prev  = G.votes[key];
-  const card  = document.getElementById('card-'+key);
-  const upBtn = document.getElementById('vup-'+key);
-  const dnBtn = document.getElementById('vdn-'+key);
-
-  // Toggle off if same button tapped twice
-  if (prev === type) {
-    delete G.votes[key];
-    saveVotes();
-    card?.classList.remove('v-up','v-down');
-    upBtn?.classList.remove('v-up');
-    dnBtn?.classList.remove('v-down');
-    card?.querySelector('.voted-badge')?.remove();
-    return;
-  }
-
-  G.votes[key] = type;
-  saveVotes();
-  card?.classList.remove('v-up','v-down');
-  card?.classList.add('v-'+type);
-  upBtn?.classList.toggle('v-up',   type==='up');
-  upBtn?.classList.toggle('v-down', false);
-  dnBtn?.classList.toggle('v-down', type==='down');
-  dnBtn?.classList.toggle('v-up',   false);
-
-  // Update or insert voted badge
-  const cardTop = card?.querySelector('.card-top');
-  let badge = card?.querySelector('.voted-badge');
-  if (!badge && cardTop) {
-    badge = document.createElement('div');
-    badge.className = 'voted-badge';
-    const ring = cardTop.querySelector('.score-ring');
-    if (ring) cardTop.insertBefore(badge, ring);
-    else cardTop.appendChild(badge);
-  }
-  if (badge) badge.textContent = type==='up' ? '👍' : '👎';
-
-  const p = G.pMap[key];
-  if (p) {
-    fetch(FEEDBACK_API, {
-      method: 'POST', mode: 'no-cors',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        report_date:   G.date,
-        product_name:  p.name,
-        product_score: p.score,
-        feedback:      type==='up' ? '👍' : '👎',
-        reviewer:      'EE_member'
-      })
-    }).catch(() => {});
-  }
-  showToast(type === 'up' ? '👍 已記錄！' : '👎 已記錄！');
-}
-
-// ──────────────────────────────────────────
-//  BOOT
-// ──────────────────────────────────────────
-loadVotes();
-fetch(DATA_URL + '?v=' + Date.now())
-  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-  .then(data => {
-    G.data = data;
-    G.date = data.reports[0]?.date || '';
-    render();
-  })
-  .catch(err => {
-    document.getElementById('app').innerHTML =
-      `<div class="loading" style="color:#ef4444">
-        ⚠️ 報告載入失敗，請重整頁面<br>
-        <small style="font-size:11px;opacity:.6">${err.message}</small>
-      </div>`;
-  });
-</script>
-</body>
-</html>
+<div id="app"><div class="loading"><div class="spin"></div>載倥丨選品堰報堰�B��WrFFR����&WGW&�B�vWDgV�ŖV"���r�r��7G&��r�B�vWD���F������E7F'B�"�sr��r�r��7G&��r�B�vWDFFR����E7F'B�"�sr���Р�gV�7F����Ff�&҇W&���b�W&&WGW&���6��	�Irr���S�~�
+>{YrӰ�6��7BR�W&��F���vW$66R�����b�R��6�VFW2�w6��VR�Grr��&WGW&���6��	���r���S�~��ny��rӰ��b�R��6�VFW2�v����6��r���R��6�VFW2�v�����6��r��&WGW&���6��	��"r���S�v����rӰ��b�R��6�VFW2�w6���Rr��&WGW&���6��	�jRr���S�u6���RrӰ��b�R��6�VFW2�v�����r��&WGW&���6��	�:br���S�t����rӰ��b�R��6�VFW2�sc���6��r��&WGW&���6��	���r���S�sc��rӰ��b�R��6�VFW2�v��6�7F'FW"r��&WGW&���6��	��r���S�t��6�7F'FW"rӰ��b�R��6�VFW2�w����r��&WGW&���6��	��r���S�u����rӰ��b�R��6�VFW2�v��V�Rr��&WGW&���6��	�z�	�{Rr���S�t��V�RrӰ��b�R��6�VFW2�v��F����6�r��&WGW&���6��	�9Br���S�t��F���rӰ�&WGW&���6��	�Irr���S�~Z�{k"rӰ�Р�6��7BD�2��~izRr�~K�r�~K��r�~K��r�~Y��r�~K�Br�~XZ�uӰ�gV�7F���f�EF"�2���6��7BB��WrFFR�2�uC��r���&WGW&�G�B�vWD���F������G�B�vWDFFR����G�D�5�B�vWDF�������Р�gV�7F���6��uF�7B�Ғ��6��7BV��F�7V�V�B�vWDV�V�V�D'��B�wF�7Br���V��FW�D6��FV�B�ӲV��6�74Ɨ7B�FB�w6��rr���6WEF��V�WB�����V��6�74Ɨ7B�&V��fR�w6��rr��##���Р���)H)HvVV�w&�W��rf�"FFR�b)H)H �gV�7F���vWD���F��B���6��7BF��B�vWDF�����6��7BF�fb�B�vWDFFR���F���F������b����&WGW&��WrFFR�B�vWDgV�ŖV"���B�vWD���F����F�fb��F��4�7G&��r���6Ɩ6R�����ЦgV�7F���vWEvVV��&VFFU7G"���6��7BF�F���WrFFR����6��7BF��4��vWD���F��F�F����6��7BF&vWD��vWD���F���WrFFR�FFU7G"�uC��r����6��7BF�fdF�2��F��&�V�B���WrFFR�F��4Ғ��WrFFR�F&vWDҒ���cC����b�F�fdF�2����&WGW&�~i�Θs���b�F�fdF�2���r�&WGW&�~K���s��&WGW&�F�fdF�2��#�G��F��&�V�B�F�fdF�2�r�ޘX���~i�Niz�s��Р���)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H ���$T�DU ���)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H �gV�7F���&V�FW"����6��7B�FF�FFR��s���b�FF�&WGW&㰠���)H)Hd�����ǒ6��rFFW2��F�F�)H)H �6��7BF�F��F�F�7G"����6��7BfƖE&W�'G2�FF�&W�'G2�f��FW"�"��"�FFR��F�F�����6��7B&W�'B�fƖE&W�'G2�f��B�"��"�FFR���FFR���fƖE&W�'G5�Ӱ�6��7B&�GV7G2�&W�'C��&�GV7G2���Ӱ����7&�72�F���&�GV7G2���ǒ7B�F�F���6��7B���fƖE&W�'G2�f�D��"��"�&�GV7G2������������C�"�FFWҒ�������6�'B���"���"�66�&R��66�&R���6��7BF�����6Ɩ6R��������v��&�7FG0�6��7Bfu66�&R�����V�wF���F��&�V�B����&VGV6R��2����2��66�&R�������V�wF�����6��7B��66�&R�����V�wF���F����������������66�&R��������7W'&V�BF�7FG0�6��7BF�fr�&�GV7G2��V�wF���F��&�V�B�&�GV7G2�&VGV6R��2����2��66�&R���&�GV7G2��V�wF�����6��7BF����&�GV7G2��V�wF���F��������&�GV7G2������66�&R��������&�GV7B�f�"f�FR����W0�r����Ӱ�&�GV7G2�f�$V6�����r���G�FFW��G��&�����ғ�����FFR�c��WvW7Bf�'7B�w&�WVB'�vVV����ǒfƖBFFW2��6��7B6�'FVE&W�'G2�����fƖE&W�'G5��6�'B���"���"�FFR���6�T6��&R��FFR�����WB�7EvVV��&V���V�ð�6��7BFFUF'2�6�'FVE&W�'G2���"����6��7Bt�&V��vWEvVV��&V"�FFR����WB6W�rs���b�t�&V����7EvVV��&V���7EvVV��&V��t�&Vð�6W��7�6�73�'vVV��6W#�G�t�&V����7����Т&WGW&�6W��'WGF��6�73�&FFR�F"G�"�FFS���FFS�r7F�fRs�rw�"��6Ɩ6��'7v�F6�FFR�rG�"�FFW�r�#�G�f�EF"�"�FFR���7�6�73�'F"�&FvR#�G�"�&�GV7G2��V�wF����7����'WGF�����Ғ����rr������7FG2&FvW2�F�F�g2v��&�F�vv�R��6��7B7FG4�F���r�7FG4��FR���vF�r� ��7�6�73�&�G"�7FB#�	�:bG�&�GV7G2��V�wF����Y8��7���7�6�73�&�G"�7FB#�*�Y�~X�bG�F�fw���7���7�6�73�&�G"�7FB#�	��bi����G�F������7��� ��7�6�73�&�G"�7FB#�	�8RG�fƖE&W�'G2��V�wF��ZJ���7���7�6�73�&�G"�7FB#�	�:bG�����V�wF����Y8��7���7�6�73�&�G"�7FB#�*�Y�~X�bG�fu66�&W���7���7�6�73�&�G"�7FB#�	��bi����G���66�&W���7�� ���t��6WBF�7V�V�B�vWDV�V�V�D'��B�vr����W$�D��c���wWs�rb�Ws�rw�"�C�'gW�G��W��"��6Ɩ6��'f�FR�rG��W��r�wWr�#�	��X�[�s��'WGF����'WGF��6�73�'f'F�G�וc���vF�v�s�rb�F�v�s�rw�"�C�'fF��G��W��"��6Ɩ6��'f�FR�rG��W��r�vF�v�r�#�	�:X�[�s��'WGF�����F�c���F�cࠢG�6V7F���7Р�G�6��tFFR� ��F�b6�73�&W��'F�"��6Ɩ6��'F�vv�T&��6��w6�&6R�FWF��r�F��2�#� c�(i"d�V�6V7F���7�6V7F���0��7�6�73�&'"#�*(S��7����F�c��F�b6�73�&FWB"7G��S�&��ֆV�v�C����WFW"�C�'6�W&6R�FWF��#��F�b6�73�&FWB֖��W"#� c�(i"d�V�6V7F���7�6V7F���0���F�c���F�c��rwТ�
