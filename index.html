@@ -234,20 +234,18 @@ body {
 .ds-title { font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
 .ds-body  { font-size: 12px; color: #4b5563; line-height: 1.7; }
 
-/* Links */
-.card-links { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 14px; border-top: 1px solid var(--border); }
-.link-btn {
-  display: inline-flex; align-items: center; gap: 4px;
-  padding: 6px 12px; border-radius: 100px;
+/* Action row (links + vote merged) */
+.action-row { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-top: 1px solid var(--border); }
+.action-links { display: flex; flex-wrap: wrap; gap: 5px; flex: 1; min-width: 0; }
+.link-chip {
+  display: inline-flex; align-items: center; gap: 3px;
+  padding: 4px 10px; border-radius: 100px;
   background: #f3f4f6; color: #374151;
   font-size: 12px; font-weight: 500; text-decoration: none;
-  transition: background .15s;
+  white-space: nowrap; transition: background .15s;
 }
-.link-btn:hover { background: #e5e7eb; }
-
-/* Vote */
-.vote-row { display: flex; align-items: center; gap: 8px; padding: 9px 14px; border-top: 1px solid var(--border); }
-.vote-q { flex: 1; font-size: 12px; color: var(--muted); }
+.link-chip:hover { background: #e5e7eb; }
+.action-vote { display: flex; gap: 6px; flex-shrink: 0; }
 .vbtn {
   display: inline-flex; align-items: center; gap: 4px;
   padding: 6px 14px; border-radius: 100px;
@@ -355,8 +353,7 @@ let G = {
   data: null, date: null,
   votes: {}, pMap: {},
   statsMode: 'day',   // 'day' | 'global'
-  searchQuery: '',
-  _searchFocused: false
+  searchQuery: ''
 };
 
 // ──────────────────────────────────────────
@@ -449,15 +446,6 @@ function render() {
   G.pMap = {};
   products.forEach(p => { G.pMap[`${date}-${p.rank}`] = p; });
 
-  // Filter by search
-  const q = G.searchQuery.toLowerCase();
-  const filtered = q ? products.filter(p =>
-    p.name.toLowerCase().includes(q) ||
-    p.category.toLowerCase().includes(q) ||
-    (p.highlight||'').toLowerCase().includes(q) ||
-    (p.source||'').toLowerCase().includes(q)
-  ) : products;
-
   // Date nav: newest first, grouped by week
   const sortedReports = [...data.reports].sort((a,b) => b.date.localeCompare(a.date));
   let lastWeekLabel = null;
@@ -493,11 +481,11 @@ function render() {
         </div>
       </div>
       <div class="hdr-stats">
-        <button class="stat-mode-btn${G.statsMode==='day'?' active':''}" onclick="setStatsMode('day')">今日</button>
-        <button class="stat-mode-btn${G.statsMode==='global'?' active':''}" onclick="setStatsMode('global')">全域</button>
+        <button class="stat-mode-btn${G.statsMode==='day' ? ' active':''}" onclick="setStatsMode('day')">今日</button>
+        <button class="stat-mode-btn${G.statsMode==='global'?' active':'}" onclick="setStatsMode('global')">全埏</button>
         ${statsHtml}
       </div>
-      <a class="hdr-notion" href="${NOTION_URL}" target="_blank">📔 Notion 完整報告 →</a>
+      <a class="hdr-notion" href="${NOTION_URL}" target="_blank">📔 Notion 完整報告 ↂ</a>
     </div>
 
     <div class="date-nav-wrapper">
@@ -510,27 +498,25 @@ function render() {
              placeholder="搜尋產品名稱、分類…"
              value="${e(G.searchQuery)}"
              oninput="if(!event.isComposing)onSearch(this.value)" oncompositionend="onSearch(this.value)">
-      ${G.searchQuery ? `<button class="search-clear" onclick="onSearch('')">✕</button>` : ''}
+      <button id="search-clear" class="search-clear" onclick="onSearch('')" style="${G.searchQuery?'display:flex':'display:none'}">✕</button>
     </div>
 
     ${report?.evolution ? `
       <div class="evo">
-        <div class="evo-label">🧬 今日進化</div>
+        <div class="evo-label">🧬 廊日同中化進</div>
         <div class="evo-text">${e(report.evolution)}</div>
       </div>` : ''}
 
-    <div class="sec-hdr">📊 ${date} 精選${q ? ` &mdash; 搜尋「${e(G.searchQuery)}」` : `（${products.length} 件）`}</div>
+    <div class="sec-hdr" id="sec-hdr-main">📊 ${date} 精選（${products.length} 件）</div>
+    <div id="no-results-msg" class="no-results" style="display:none"><em>🔍</em>沒有紦合搜尋條件皞產品</div>
 
-    ${filtered.length
-      ? filtered.map((p, i) => cardHTML(p, i)).join('')
-      : `<div class="no-results"><em>🔍</em>沒有符合「${e(G.searchQuery)}」的產品</div>`
-    }
+    ${products.map((p, i) => cardHTML(p, i)).join('')}
 
-    <div class="sec-hdr" id="top10-section">🏆 歷史 Top 10</div>
+    <div class="sec-hdr" id="top10-section">🏆&昢分巷 Top 10</div>
     <div class="top10">
       <div class="top10-hdr">跨日最高分排行</div>
       ${top10.map((p, i) => `
-        <div class="top10-row" onclick="jumpToProduct('${p._d}',${p.rank})">
+        <div class="top10-row" onclick="jumpToProduct('${p._d}', ${p.rank})">
           <div class="top10-rank">${i===0?'🥇':i===1?'🥈':i===2?'🥉':i+1}</div>
           <div class="top10-name">${e(p.name)}</div>
           <div class="top10-date">${p._d.slice(5)}</div>
@@ -555,12 +541,8 @@ function render() {
     _nav.scrollLeft = Math.max(0, target);
   }
 
-  // Restore search focus
-  if (G._searchFocused) {
-    const inp = document.getElementById('search-input');
-    if (inp) { inp.focus(); inp.setSelectionRange(inp.value.length, inp.value.length); }
-    G._searchFocused = false;
-  }
+  // Re-apply search filter if active
+  if (G.searchQuery) onSearch(G.searchQuery);
 }
 
 // ──────────────────────────────────────────
@@ -596,16 +578,21 @@ function cardHTML(p, i) {
       <div class="ds-body">${e(p[s.key]).replace(/\n/g,'<br>')}</div>
     </div>`).join('');
 
-  const linkBtns = links.length ? `
-    <div class="card-links">
-      ${links.map(url => {
-        const pl = platform(url);
-        return `<a class="link-btn" href="${e(url)}" target="_blank" rel="noopener">${pl.icon} ${pl.name}</a>`;
-      }).join('')}
-    </div>` : '';
+  const actionRow = `
+    <div class="action-row">
+      <div class="action-links">
+        ${links.map(url => { const pl = platform(url); return `<a class="link-chip" href="${e(url)}" target="_blank" rel="noopener">${pl.icon} ${pl.name}</a>`; }).join('')}
+      </div>
+      <div class="action-vote">
+        <button class="vbtn${myV==='up'?' v-up':''}" id="vup-${key}" onclick="vote('${key}','up')">👍 值嶗</button>
+        <button class="vbtn${myV==='down'?' v-down':''}" id="vdn-${key}" onclick="vote('${key}','down')">👎 跳過</button>
+      </div>
+    </div>`;
+
+  const searchText = [p.name, p.category, p.highlight||'', p.source||''].join(' ');
 
   return `
-    <div class="card${myV?' v-'+myW:''}" id="card-${key}">
+    <div class="card${myV?' v-'+myV:'}�${key}" data-search="${e(searchText)}">
       <div class="card-top">
         <div class="rank-num${i<3?' r'+(i+1):''}">${i+1}</div>
         <div class="card-name">${e(p.name)}</div>
@@ -628,12 +615,7 @@ function cardHTML(p, i) {
         <div class="cn"><div class="cn-label">毛利倍數</div><div class="cn-val g">${e(p.margin)}</div></div>
       </div>
 
-      ${linkBtns}
-      <div class="vote-row">
-        <div class="vote-q">快速評價</div>
-        <button class="vbtn${myV==='up'?' v-up':''}" id="vup-${key}" onclick="vote('${key}','up')">👍 值得</button>
-        <button class="vbtn${myV==='down'?' v-down':''}" id="vdn-${key}" onclick="vote('${key}','down')">👎 跳過</button>
-      </div>
+      ${actionRow}
 
       <button class="exp-btn" id="expbtn-${key}" onclick="toggleDet('${key}')">
         展開詳情 <span class="arr">▾</span>
@@ -707,9 +689,22 @@ function setStatsMode(mode) {
 }
 
 function onSearch(q) {
-  G._searchFocused = true;
   G.searchQuery = q;
-  render();
+  const lq = q.toLowerCase().trim();
+  let visible = 0;
+  document.querySelectorAll('.card').forEach(card => {
+    const text = (card.dataset.search || '').toLowerCase();
+    const show = !lq || text.includes(lq);
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  const hdr = document.getElementById('sec-hdr-main');
+  const total = G.data?.reports.find(r => r.date === G.date)?.products.length || 0;
+  if (hdr) hdr.textContent = lq ? `🔍 搜尋「${q}」— ${visible} 件` : `📊 ${G.date} 精選（${total} 件）`;
+  const nr = document.getElementById('no-results-msg');
+  if (nr) nr.style.display = (lq && visible === 0) ? '' : 'none';
+  const clr = document.getElementById('search-clear');
+  if (clr) clr.style.display = q ? 'flex' : 'none';
 }
 
 function vote(key, type) {
