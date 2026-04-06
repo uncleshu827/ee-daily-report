@@ -7,153 +7,155 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>EE 選品報告</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #f5f5f3;
-  --surface: #ffffff;
-  --text: #111827;
-  --text2: #374151;
-  --muted: #9ca3af;
-  --border: #e5e7eb;
-  --accent: #c45d3e;
-  --accent-light: #fef2ee;
-  --green: #059669;
-  --green-light: #ecfdf5;
-  --red: #dc2626;
-  --red-light: #fef2f2;
-  --r: 12px;
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang TC", sans-serif;
+  --bg: #FAF8F5;
+  --surface: #FFFFFF;
+  --cream: #F5EDE3;
+  --cream2: #EDE4D8;
+  --text: #1A1A1A;
+  --text2: #5C5550;
+  --muted: #A09890;
+  --border: #E8E2DA;
+  --accent: #BF8445;
+  --accent-hover: #A87038;
+  --accent-light: #F9F1E8;
+  --green: #4A7C59;
+  --green-light: #EFF6F0;
+  --red: #C0392B;
+  --red-light: #FDF0EE;
+  --font: 'DM Sans', -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang TC", sans-serif;
 }
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.5; -webkit-font-smoothing: antialiased; }
 
 /* ── Layout ── */
-.wrap { max-width: 720px; margin: 0 auto; padding-bottom: 48px; }
+.wrap { max-width: 680px; margin: 0 auto; padding-bottom: 60px; }
 
 /* ── Header ── */
 .hdr {
-  padding: 20px 20px 16px;
+  padding: 32px 24px 24px;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
 }
-.hdr-row { display: flex; align-items: center; justify-content: space-between; }
-.hdr-brand { display: flex; align-items: baseline; gap: 10px; }
-.hdr-logo { font-size: 20px; font-weight: 800; letter-spacing: -.5px; color: var(--text); }
-.hdr-logo span { color: var(--accent); }
-.hdr-sub { font-size: 12px; color: var(--muted); font-weight: 500; }
-.hdr-stats { display: flex; gap: 16px; margin-top: 10px; }
-.hdr-stat { font-size: 13px; color: var(--text2); }
-.hdr-stat strong { font-weight: 700; color: var(--text); }
-.hdr-links { display: flex; gap: 8px; }
-.hdr-link {
-  font-size: 12px; font-weight: 600; color: var(--accent);
-  text-decoration: none; padding: 5px 12px;
-  border: 1.5px solid var(--accent); border-radius: 100px;
-  transition: all .15s;
+.hdr-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.hdr-brand { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent); }
+.hdr-notion {
+  font-size: 11px; font-weight: 500; color: var(--muted);
+  text-decoration: none; padding: 5px 14px;
+  border: 1px solid var(--border); border-radius: 100px;
+  transition: all .2s;
 }
-.hdr-link:hover { background: var(--accent); color: #fff; }
+.hdr-notion:hover { border-color: var(--accent); color: var(--accent); }
+.hdr-title { font-size: 26px; font-weight: 700; letter-spacing: -.5px; color: var(--text); line-height: 1.2; margin-bottom: 12px; }
+.hdr-title span { color: var(--accent); }
+.hdr-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+.hdr-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--text2); font-weight: 500;
+  background: var(--cream); padding: 5px 12px; border-radius: 100px;
+}
+.hdr-pill strong { font-weight: 700; color: var(--text); }
 
 /* ── Toolbar (sticky) ── */
 .toolbar {
   position: sticky; top: 0; z-index: 100;
-  background: var(--surface);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
-  padding: 10px 20px;
+  padding: 12px 24px;
 }
-.tb-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-.tb-search {
-  flex: 1; min-width: 160px; position: relative;
-}
+.tb-search-row { margin-bottom: 8px; }
+.tb-search { position: relative; }
 .tb-search input {
-  width: 100%; padding: 8px 12px 8px 34px;
-  border: 1.5px solid var(--border); border-radius: 8px;
-  font-size: 13px; font-family: var(--font); color: var(--text);
-  background: var(--bg); outline: none; transition: border-color .15s;
+  width: 100%; padding: 10px 14px 10px 38px;
+  border: 1.5px solid var(--border); border-radius: 10px;
+  font-size: 14px; font-family: var(--font); color: var(--text);
+  background: var(--bg); outline: none; transition: all .2s;
   -webkit-appearance: none;
 }
-.tb-search input:focus { border-color: var(--accent); background: #fff; }
+.tb-search input:focus { border-color: var(--accent); background: #fff; box-shadow: 0 0 0 3px rgba(191,132,69,.08); }
 .tb-search input::placeholder { color: var(--muted); }
 .tb-search-icon {
-  position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
-  font-size: 14px; color: var(--muted); pointer-events: none;
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  font-size: 15px; color: var(--muted); pointer-events: none;
 }
 .tb-search-clear {
-  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
   border: none; background: none; color: var(--muted); cursor: pointer;
   font-size: 14px; padding: 2px; display: none; line-height: 1;
 }
+.tb-filter-row { display: flex; gap: 8px; }
 .tb-select {
-  padding: 8px 28px 8px 10px;
+  flex: 1; padding: 8px 28px 8px 10px;
   border: 1.5px solid var(--border); border-radius: 8px;
   font-size: 12px; font-family: var(--font); font-weight: 500;
-  color: var(--text2); background: var(--bg);
+  color: var(--text2); background: var(--surface);
   outline: none; cursor: pointer;
   -webkit-appearance: none; appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%239ca3af'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23A09890'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 10px center;
+  transition: border-color .15s;
 }
 .tb-select:focus { border-color: var(--accent); }
 .tb-count {
   font-size: 12px; color: var(--muted); font-weight: 500;
-  white-space: nowrap; padding: 0 4px;
+  padding: 10px 24px 2px;
 }
 
 /* ── Date group header ── */
 .date-group {
-  padding: 16px 20px 6px;
+  padding: 18px 24px 6px;
   display: flex; align-items: baseline; gap: 8px;
 }
 .date-group-label { font-size: 13px; font-weight: 700; color: var(--text); letter-spacing: -.2px; }
-.date-group-evo {
-  font-size: 12px; color: var(--muted); font-weight: 400;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  flex: 1; min-width: 0;
-}
-.date-group-count { font-size: 11px; color: var(--muted); font-weight: 500; flex-shrink: 0; }
+.date-group-count { font-size: 11px; color: var(--muted); font-weight: 500; flex-shrink: 0; margin-left: auto; }
 
 /* ── Product Card ── */
 .card {
   background: var(--surface);
-  margin: 6px 12px;
-  border-radius: var(--r);
+  margin: 6px 16px;
+  border-radius: 12px;
   border: 1.5px solid var(--border);
   overflow: hidden;
-  transition: border-color .2s, box-shadow .2s;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+  cursor: pointer;
 }
-.card:hover { box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.05); transform: translateY(-1px); }
+.card:active { transform: translateY(0); }
 .card.v-up { border-color: var(--green); }
 .card.v-down { border-color: var(--red); }
 
 .card-main {
   display: grid;
-  grid-template-columns: 36px 1fr auto;
-  gap: 0 10px;
-  padding: 12px 14px;
+  grid-template-columns: 32px 1fr auto;
+  gap: 0 12px;
+  padding: 14px 16px;
   align-items: start;
 }
 .card-rank {
-  width: 28px; height: 28px; border-radius: 6px;
+  width: 26px; height: 26px; border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 700;
-  background: var(--bg); color: var(--muted);
+  font-size: 11px; font-weight: 700;
+  background: var(--cream); color: var(--muted);
   margin-top: 2px;
 }
-.card-rank.r1 { background: #fef3c7; color: #b45309; }
-.card-rank.r2 { background: #f1f5f9; color: #475569; }
-.card-rank.r3 { background: #fce7f3; color: #be185d; }
+.card-rank.r1 { background: #FEF3C7; color: #92400E; }
+.card-rank.r2 { background: var(--cream); color: var(--text2); }
+.card-rank.r3 { background: #FDE8D8; color: #BF6930; }
 
 .card-body { min-width: 0; }
 .card-name {
-  font-size: 15px; font-weight: 700; line-height: 1.35;
+  font-size: 15px; font-weight: 600; line-height: 1.35;
   color: var(--text); letter-spacing: -.2px;
 }
 .card-meta {
-  display: flex; flex-wrap: wrap; gap: 4px 8px;
-  margin-top: 3px; font-size: 12px; color: var(--muted); font-weight: 500;
+  display: flex; flex-wrap: wrap; gap: 3px 0;
+  margin-top: 4px; font-size: 12px; color: var(--muted); font-weight: 400;
 }
-.card-meta .sep { color: var(--border); }
+.card-meta .sep { margin: 0 6px; color: var(--border); }
 .card-hl {
   margin-top: 4px; font-size: 13px; color: var(--text2);
   line-height: 1.5;
@@ -161,31 +163,31 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
 }
 
 .card-score {
-  width: 44px; height: 44px; border-radius: 50%;
+  width: 42px; height: 42px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 15px; font-weight: 800; flex-shrink: 0;
+  font-size: 15px; font-weight: 700; flex-shrink: 0;
   margin-top: 2px;
 }
 .s-hi { background: var(--green-light); color: var(--green); }
-.s-md { background: #fffbeb; color: #d97706; }
+.s-md { background: #FFF8EB; color: #B8860B; }
 .s-lo { background: var(--red-light); color: var(--red); }
 
-/* ── Card Footer (links + vote + expand) ── */
+/* ── Card Footer (links + vote) — always visible ── */
 .card-footer {
   display: flex; align-items: center; gap: 6px;
-  padding: 0 14px 10px;
+  padding: 0 16px 12px;
   flex-wrap: wrap;
 }
 .card-links { display: flex; flex-wrap: wrap; gap: 4px; flex: 1; min-width: 0; }
 .link-pill {
   display: inline-flex; align-items: center; gap: 3px;
   padding: 3px 10px; border-radius: 100px;
-  background: var(--bg); color: var(--text2);
+  background: var(--cream); color: var(--text2);
   font-size: 11px; font-weight: 500; text-decoration: none;
-  white-space: nowrap; transition: background .15s;
-  border: 1px solid var(--border);
+  white-space: nowrap; transition: all .15s;
+  border: 1px solid transparent;
 }
-.link-pill:hover { background: #e5e7eb; border-color: #d1d5db; }
+.link-pill:hover { background: var(--cream2); border-color: var(--border); }
 
 .card-actions { display: flex; gap: 4px; flex-shrink: 0; align-items: center; }
 .vbtn {
@@ -195,39 +197,36 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
   font-size: 12px; font-weight: 500; color: var(--muted);
   cursor: pointer; transition: all .15s; font-family: var(--font);
 }
-.vbtn:hover { border-color: #9ca3af; color: var(--text2); }
+.vbtn:hover { border-color: var(--cream2); color: var(--text2); }
 .vbtn.v-up { background: var(--green-light); border-color: var(--green); color: var(--green); }
 .vbtn.v-down { background: var(--red-light); border-color: var(--red); color: var(--red); }
-.exp-toggle {
-  display: inline-flex; align-items: center;
-  padding: 4px 8px; border-radius: 100px;
-  border: 1.5px solid var(--border); background: var(--surface);
-  font-size: 11px; font-weight: 600; color: var(--muted);
-  cursor: pointer; transition: all .15s; font-family: var(--font);
-}
-.exp-toggle:hover { border-color: #9ca3af; color: var(--text2); }
-.exp-toggle .arr { transition: transform .3s; display: inline-flex; margin-left: 2px; font-size: 10px; }
-.exp-toggle.open { background: var(--bg); color: var(--text2); }
-.exp-toggle.open .arr { transform: rotate(180deg); }
 
 /* ── Detail Panel ── */
 .det { max-height: 0; overflow: hidden; transition: max-height .35s cubic-bezier(.4,0,.2,1); }
-.det-inner { padding: 12px 14px; border-top: 1px solid var(--border); }
-.det-scores { margin-bottom: 12px; }
-.det-scores-title {
-  font-size: 11px; font-weight: 700; color: var(--muted);
-  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px;
+.det-inner { padding: 14px 16px; border-top: 1px solid var(--border); }
+.det-close-row { display: flex; justify-content: flex-end; margin-bottom: 10px; }
+.det-close {
+  font-size: 11px; font-weight: 600; color: var(--muted);
+  background: var(--cream); border: none; border-radius: 100px;
+  padding: 4px 14px; cursor: pointer; font-family: var(--font);
+  transition: all .15s;
 }
-.sb { display: grid; grid-template-columns: 68px 1fr 36px; gap: 2px 8px; align-items: center; margin-bottom: 4px; }
+.det-close:hover { color: var(--text); background: var(--cream2); }
+.det-scores { margin-bottom: 14px; }
+.det-scores-title {
+  font-size: 10px; font-weight: 700; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;
+}
+.sb { display: grid; grid-template-columns: 68px 1fr 32px; gap: 2px 8px; align-items: center; margin-bottom: 5px; }
 .sb-lbl { font-size: 12px; color: var(--text2); font-weight: 500; }
-.sb-track { height: 5px; background: #f3f4f6; border-radius: 3px; overflow: hidden; }
-.sb-fill { height: 100%; border-radius: 3px; transition: width .6s cubic-bezier(.4,0,.2,1); }
+.sb-track { height: 4px; background: var(--cream); border-radius: 2px; overflow: hidden; }
+.sb-fill { height: 100%; border-radius: 2px; transition: width .6s cubic-bezier(.4,0,.2,1); }
 .sb-val { font-size: 12px; font-weight: 700; text-align: right; color: var(--text); }
 
 .det-sections { display: grid; grid-template-columns: 1fr; gap: 8px; }
 @media (min-width: 560px) { .det-sections { grid-template-columns: 1fr 1fr; } }
-.ds { background: var(--bg); border-radius: 8px; padding: 10px 12px; }
-.ds-title { font-size: 11px; font-weight: 700; color: var(--text); text-transform: uppercase; letter-spacing: .3px; margin-bottom: 4px; }
+.ds { background: var(--cream); border-radius: 10px; padding: 12px 14px; }
+.ds-title { font-size: 10px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
 .ds-body { font-size: 12px; color: var(--text2); line-height: 1.65; }
 
 /* ── Empty / Loading ── */
@@ -236,99 +235,99 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
 .empty-text { font-size: 14px; color: var(--muted); }
 
 .loading { padding: 80px 20px; text-align: center; color: var(--muted); font-size: 14px; }
-.spin { width: 28px; height: 28px; border: 2.5px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite; margin: 0 auto 12px; }
+.spin { width: 24px; height: 24px; border: 2px solid var(--cream2); border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite; margin: 0 auto 12px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ── Toast ── */
 .toast {
   position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(8px);
   background: var(--text); color: #fff; padding: 8px 20px;
-  border-radius: 8px; font-size: 13px; font-weight: 500;
+  border-radius: 10px; font-size: 13px; font-weight: 500;
   z-index: 999; opacity: 0; transition: all .2s; pointer-events: none;
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 /* ── Responsive ── */
 @media (max-width: 520px) {
-  .hdr { padding: 16px 16px 12px; }
-  .hdr-logo { font-size: 18px; }
-  .hdr-stats { gap: 10px; }
-  .hdr-stat { font-size: 12px; }
-  .toolbar { padding: 8px 12px; }
-  .tb-row { gap: 6px; }
+  .hdr { padding: 24px 16px 18px; }
+  .hdr-title { font-size: 22px; }
+  .hdr-meta { gap: 8px; }
+  .hdr-pill { font-size: 11px; padding: 4px 10px; }
+  .toolbar { padding: 10px 12px; }
+  .tb-filter-row { gap: 6px; }
   .tb-select { font-size: 11px; padding: 7px 24px 7px 8px; }
-  .date-group { padding: 12px 16px 4px; }
-  .card { margin: 5px 8px; }
-  .card-main { padding: 10px 12px; grid-template-columns: 30px 1fr auto; gap: 0 8px; }
-  .card-rank { width: 24px; height: 24px; font-size: 11px; }
+  .date-group { padding: 14px 16px 4px; }
+  .card { margin: 5px 10px; }
+  .card-main { padding: 12px 14px; grid-template-columns: 28px 1fr auto; gap: 0 8px; }
+  .card-rank { width: 22px; height: 22px; font-size: 10px; }
   .card-name { font-size: 14px; }
-  .card-score { width: 38px; height: 38px; font-size: 14px; }
-  .card-footer { padding: 0 12px 8px; }
+  .card-score { width: 36px; height: 36px; font-size: 13px; }
+  .card-footer { padding: 0 14px 10px; }
 }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div id="app"><div class="loading"><div class="spin"></div>Loading…</div></div>
+  <div id="app"><div class="loading"><div class="spin"></div>Loading&hellip;</div></div>
 </div>
 <div id="toast" class="toast"></div>
 
 <script>
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 //  CONFIG
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 const DATA_URL     = 'https://raw.githubusercontent.com/uncleshu827/ee-daily-report/main/data.json';
 const NOTION_URL   = 'https://www.notion.so/326c45deba0b80dc9660c661b84f6158';
 const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZZj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH41pRkAL2Ffxb/exec';
 
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 //  DIMENSION CONFIGS (v2.0=6, v2.1=7)
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 const DIMS7 = [
-  { key:'margin',     label:'毛利潛力', w:20, c:'#6366f1' },
-  { key:'demand',     label:'需求驗證', w:20, c:'#10b981' },
-  { key:'window',     label:'市場窗口', w:14, c:'#f59e0b' },
-  { key:'barrier',    label:'競爭壁壘', w:14, c:'#f97316' },
-  { key:'viral',      label:'傳播力',   w:14, c:'#ec4899' },
-  { key:'difficulty', label:'操作難度', w:9,  c:'#06b6d4' },
-  { key:'repurchase', label:'複購LTV',  w:9,  c:'#8b5cf6' },
+  { key:'margin',     label:'毛利潛力', w:20, c:'#BF8445' },
+  { key:'demand',     label:'需求驗證', w:20, c:'#4A7C59' },
+  { key:'window',     label:'市場窗口', w:14, c:'#D4903E' },
+  { key:'barrier',    label:'競爭壁壘', w:14, c:'#C07030' },
+  { key:'viral',      label:'傳播力',   w:14, c:'#B85C6A' },
+  { key:'difficulty', label:'操作難度', w:9,  c:'#5A8FA0' },
+  { key:'repurchase', label:'複購LTV',  w:9,  c:'#8B7BB0' },
 ];
 const DIMS6 = [
-  { key:'margin',     label:'毛利潛力', w:25, c:'#6366f1' },
-  { key:'demand',     label:'需求驗證', w:25, c:'#10b981' },
-  { key:'barrier',    label:'競爭壁壘', w:15, c:'#f97316' },
-  { key:'viral',      label:'傳播力',   w:15, c:'#ec4899' },
-  { key:'difficulty', label:'操作難度', w:10, c:'#06b6d4' },
-  { key:'repurchase', label:'複購LTV',  w:10, c:'#8b5cf6' },
+  { key:'margin',     label:'毛利潛力', w:25, c:'#BF8445' },
+  { key:'demand',     label:'需求驗證', w:25, c:'#4A7C59' },
+  { key:'barrier',    label:'競爭壁壘', w:15, c:'#C07030' },
+  { key:'viral',      label:'傳播力',   w:15, c:'#B85C6A' },
+  { key:'difficulty', label:'操作難度', w:10, c:'#5A8FA0' },
+  { key:'repurchase', label:'複購LTV',  w:10, c:'#8B7BB0' },
 ];
 function getDims(scores) { return 'window' in scores ? DIMS7 : DIMS6; }
 
 const SECTIONS = [
-  { key:'source',            label:'📍 來源與定位' },
-  { key:'demand_validation', label:'📊 需求驗證'   },
-  { key:'cost_breakdown',    label:'💰 成本與利潤' },
-  { key:'competition',       label:'⚔️ 競爭分析'  },
-  { key:'strategy',          label:'🛒 通路策略'   },
-  { key:'risks',             label:'⚠️ 風險認知'  },
-  { key:'repurchase_detail', label:'🔄 複購與LTV'  },
+  { key:'source',            label:'來源與定位' },
+  { key:'demand_validation', label:'需求驗證'   },
+  { key:'cost_breakdown',    label:'成本與利潤' },
+  { key:'competition',       label:'競爭分析'  },
+  { key:'strategy',          label:'通路策略'   },
+  { key:'risks',             label:'i��險評估'  },
+  { key:'repurchase_detail', label:'複購與LTV'  },
 ];
 
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 //  STATE
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 let G = {
   data: null,
   votes: {},
   pMap: {},
-  sort: 'date-desc',   // date-desc | date-asc | score-desc | score-asc
+  sort: 'date-desc',
   catFilter: '',
   dateFilter: '',
   searchQuery: '',
 };
 
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 //  PERSISTENCE
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 function loadVotes() {
   try { G.votes = JSON.parse(localStorage.getItem('ee-votes') || '{}'); } catch(e) { G.votes = {}; }
 }
@@ -336,9 +335,9 @@ function saveVotes() {
   try { localStorage.setItem('ee-votes', JSON.stringify(G.votes)); } catch(e) {}
 }
 
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 //  HELPERS
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 const sc = s => s >= 75 ? 's-hi' : s >= 60 ? 's-md' : 's-lo';
 const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 
@@ -382,31 +381,30 @@ function showToast(m) {
   setTimeout(() => el.classList.remove('show'), 2000);
 }
 
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 //  GET ALL PRODUCTS (flattened)
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 function getAllProducts() {
   if (!G.data) return [];
   const today = todayStr();
   const all = [];
   G.data.reports.filter(r => r.date <= today).forEach(r => {
     r.products.forEach(p => {
-      all.push({ ...p, _date: r.date, _evo: r.evolution || '' });
+      all.push({ ...p, _date: r.date });
     });
   });
   return all;
 }
 
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 //  FILTER + SORT
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 function getFilteredProducts() {
   let pool = getAllProducts();
   const lq = G.searchQuery.toLowerCase().trim();
   const cf = G.catFilter;
   const df = G.dateFilter;
 
-  // Filter
   pool = pool.filter(p => {
     if (lq) {
       const text = [p.name, p.category, p.highlight||'', p.source||''].join(' ').toLowerCase();
@@ -417,7 +415,6 @@ function getFilteredProducts() {
     return true;
   });
 
-  // Sort
   switch(G.sort) {
     case 'date-desc': pool.sort((a,b) => b._date.localeCompare(a._date) || b.score - a.score); break;
     case 'date-asc':  pool.sort((a,b) => a._date.localeCompare(b._date) || b.score - a.score); break;
@@ -427,9 +424,9 @@ function getFilteredProducts() {
   return pool;
 }
 
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 //  RENDER SHELL (header + toolbar)
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 function render() {
   if (!G.data) return;
   const all = getAllProducts();
@@ -439,7 +436,6 @@ function render() {
   const avgScore = all.length ? Math.round(all.reduce((s,p)=>s+p.score,0)/all.length) : 0;
   const maxScore = all.length ? Math.max(...all.map(p=>p.score)) : 0;
 
-  // Categories & dates for filters
   const cats = [...new Set(all.map(p=>p.category).filter(Boolean))].sort();
   const dates = validReports.map(r => r.date);
 
@@ -448,36 +444,35 @@ function render() {
 
   document.getElementById('app').innerHTML = `
     <div class="hdr">
-      <div class="hdr-row">
-        <div class="hdr-brand">
-          <div class="hdr-logo"><span>EE</span> 選品報告</div>
-          <div class="hdr-sub">updated ${esc(G.data.lastUpdated)}</div>
-        </div>
-        <div class="hdr-links">
-          <a class="hdr-link" href="${NOTION_URL}" target="_blank">Notion ↗</a>
-        </div>
+      <div class="hdr-top">
+        <div class="hdr-brand">EE PRODUCT RESEARCH</div>
+        <a class="hdr-notion" href="${NOTION_URL}" target="_blank">Notion ↗</a>
       </div>
-      <div class="hdr-stats">
-        <div class="hdr-stat"><strong>${totalDays}</strong> 天</div>
-        <div class="hdr-stat"><strong>${all.length}</strong> 產品</div>
-        <div class="hdr-stat">均分 <strong>${avgScore}</strong></div>
-        <div class="hdr-stat">最高 <strong>${maxScore}</strong></div>
+      <div class="hdr-title"><span>每日選品</span>報告</div>
+      <div class="hdr-meta">
+        <div class="hdr-pill"><strong>${totalDays}</strong> 天</div>
+        <div class="hdr-pill"><strong>${all.length}</strong> 產品</div>
+        <div class="hdr-pill">均分 <strong>${avgScore}</strong></div>
+        <div class="hdr-pill">最高 <strong>${maxScore}</strong></div>
+        <div class="hdr-pill">更新 ${esc(G.data.lastUpdated)}</div>
       </div>
     </div>
 
     <div class="toolbar">
-      <div class="tb-row">
+      <div class="tb-search-row">
         <div class="tb-search">
           <span class="tb-search-icon">⌕</span>
-          <input id="search-input" type="search" placeholder="Search products…"
+          <input id="search-input" type="search" placeholder="搜尋產品名稱、分類..."
                  value="${esc(G.searchQuery)}"
                  onkeydown="if(event.key==='Enter'&&!event.isComposing){event.preventDefault();doSearch()}"
                  oncompositionend="doSearch()">
           <button class="tb-search-clear" id="search-clear" onclick="clearSearch()">✕</button>
         </div>
+      </div>
+      <div class="tb-filter-row">
         <select class="tb-select" id="sort-select" onchange="setSort(this.value)">
           <option value="date-desc"${G.sort==='date-desc'?' selected':''}>最新優先</option>
-          <option value="date-asc"${G.sort==='date-asc'?' selected':''}>最舊優先</option>
+          <option value="date-asc"${G.sort==='date-asc'?' selected':''}>最早優先</option>
           <option value="score-desc"${G.sort==='score-desc'?' selected':''}>評分高→低</option>
           <option value="score-asc"${G.sort==='score-asc'?' selected':''}>評分低→高</option>
         </select>
@@ -496,26 +491,24 @@ function render() {
     <div id="product-list"></div>
   `;
 
-  // Show/hide search clear btn
   const clr = document.getElementById('search-clear');
   if (clr) clr.style.display = G.searchQuery ? 'block' : 'none';
 
   renderProducts();
 }
 
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 //  RENDER PRODUCT LIST
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 function renderProducts() {
   const results = getFilteredProducts();
   const listEl = document.getElementById('product-list');
   const infoEl = document.getElementById('result-info');
   if (!listEl) return;
 
-  // Result count
   if (infoEl) {
     const isFiltered = G.searchQuery || G.catFilter || G.dateFilter;
-    infoEl.innerHTML = `<div style="padding:8px 20px 0;"><span class="tb-count">${results.length} 件產品${isFiltered ? '(已篩選)' : ''}</span></div>`;
+    infoEl.innerHTML = `<div class="tb-count">${results.length} 件產品${isFiltered ? '（已篩選）' : ''}</div>`;
   }
 
   if (results.length === 0) {
@@ -523,19 +516,17 @@ function renderProducts() {
     return;
   }
 
-  // Group by date if sorting by date, otherwise flat list
   const byDate = G.sort.startsWith('date-');
   let html = '';
 
   if (byDate) {
-    // Group products by date
     const groups = [];
     let currentDate = null;
     let currentGroup = null;
     results.forEach(p => {
       if (p._date !== currentDate) {
         currentDate = p._date;
-        currentGroup = { date: p._date, evo: p._evo, products: [] };
+        currentGroup = { date: p._date, products: [] };
         groups.push(currentGroup);
       }
       currentGroup.products.push(p);
@@ -544,13 +535,11 @@ function renderProducts() {
     groups.forEach(g => {
       html += `<div class="date-group">
         <div class="date-group-label">${fmtDateFull(g.date)}</div>
-        ${g.evo ? `<div class="date-group-evo" title="${esc(g.evo)}">${esc(g.evo)}</div>` : ''}
         <div class="date-group-count">${g.products.length} 件</div>
       </div>`;
       g.products.forEach((p, i) => { html += cardHTML(p, i); });
     });
   } else {
-    // Flat ranked list
     results.forEach((p, i) => { html += cardHTML(p, i); });
   }
 
@@ -564,21 +553,20 @@ function renderProducts() {
   });
 }
 
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 //  CARD HTML
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 function cardHTML(p, displayIndex) {
   const key = `${p._date}-${p.rank}`;
   const dims = getDims(p.scores);
   const myV = G.votes[key];
   const links = Array.isArray(p.links) ? p.links : Object.values(p.links || {});
-  const showDateInMeta = !G.sort.startsWith('date-'); // show date in meta when not grouped by date
+  const showDateInMeta = !G.sort.startsWith('date-');
 
-  // Score bars for detail panel
   const scoreBars = dims.map(d => {
     const raw = p.scores[d.key] ?? 0;
     return `<div class="sb">
-      <div class="sb-lbl">${d.label} <span style="color:var(--muted);font-size:10px">${d.w}%</span></div>
+      <div class="sb-lbl">${d.label}</div>
       <div class="sb-track"><div class="sb-fill" style="width:${raw}%;background:${d.c}"></div></div>
       <div class="sb-val">${raw}</div>
     </div>`;
@@ -590,7 +578,6 @@ function cardHTML(p, displayIndex) {
       <div class="ds-body">${esc(p[s.key]).replace(/\n/g,'<br>')}</div>
     </div>`).join('');
 
-  // Meta line: category · source · price · margin [· date]
   const metaParts = [];
   if (p.category) metaParts.push(esc(p.category));
   if (p.source) metaParts.push(esc(p.source));
@@ -600,7 +587,7 @@ function cardHTML(p, displayIndex) {
   const metaHtml = metaParts.join(' <span class="sep">·</span> ');
 
   return `
-    <div class="card${myV ? ' v-'+myV : ''}" id="card-${key}">
+    <div class="card${myV ? ' v-'+myV : ''}" id="card-${key}" onclick="cardClick(event,'${key}')">
       <div class="card-main">
         <div class="card-rank${displayIndex < 3 ? ' r'+(displayIndex+1) : ''}">${displayIndex + 1}</div>
         <div class="card-body">
@@ -612,16 +599,16 @@ function cardHTML(p, displayIndex) {
       </div>
       <div class="card-footer">
         <div class="card-links">
-          ${links.map(url => { const pl = platform(url); return `<a class="link-pill" href="${esc(url)}" target="_blank" rel="noopener">${pl.icon} ${pl.name}</a>`; }).join('')}
+          ${links.map(url => { const pl = platform(url); return `<a class="link-pill" href="${esc(url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${pl.icon} ${pl.name}</a>`; }).join('')}
         </div>
         <div class="card-actions">
-          <button class="vbtn${myV==='up'?' v-up':''}" id="vup-${key}" onclick="vote('${key}','up')">👍</button>
-          <button class="vbtn${myV==='down'?' v-down':''}" id="vdn-${key}" onclick="vote('${key}','down')">👎</button>
-          <button class="exp-toggle" id="expbtn-${key}" onclick="toggleDet('${key}')">詳情 <span class="arr">▾</span></button>
+          <button class="vbtn${myV==='up'?' v-up':''}" id="vup-${key}" onclick="event.stopPropagation();vote('${key}','up')">👍</button>
+          <button class="vbtn${myV==='down'?' v-down':''}" id="vdn-${key}" onclick="event.stopPropagation();vote('${key}','down')">👎</button>
         </div>
       </div>
       <div class="det" id="det-${key}">
         <div class="det-inner">
+          <div class="det-close-row"><button class="det-close" onclick="event.stopPropagation();closeDet('${key}')">收起 ▲</button></div>
           <div class="det-scores">
             <div class="det-scores-title">${dims.length} 維度評分</div>
             ${scoreBars}
@@ -632,9 +619,15 @@ function cardHTML(p, displayIndex) {
     </div>`;
 }
 
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 //  ACTIONS
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
+function cardClick(event, key) {
+  // Don't toggle if clicking a link, button, or action
+  if (event.target.closest('a, button, .card-actions')) return;
+  toggleDet(key);
+}
+
 function doSearch() {
   const inp = document.getElementById('search-input');
   if (inp) G.searchQuery = inp.value;
@@ -656,19 +649,20 @@ function setDate(v) { G.dateFilter = v; renderProducts(); }
 
 function toggleDet(key) {
   const det = document.getElementById('det-'+key);
-  const btn = document.getElementById('expbtn-'+key);
-  if (!det || !btn) return;
+  if (!det) return;
   if (!det.classList.contains('open')) {
     det.style.maxHeight = det.scrollHeight + 'px';
     det.classList.add('open');
-    btn.classList.add('open');
-    btn.innerHTML = '收起 <span class="arr">▾</span>';
   } else {
-    det.style.maxHeight = '0';
-    det.classList.remove('open');
-    btn.classList.remove('open');
-    btn.innerHTML = '詳情 <span class="arr">▾</span>';
+    closeDet(key);
   }
+}
+
+function closeDet(key) {
+  const det = document.getElementById('det-'+key);
+  if (!det) return;
+  det.style.maxHeight = '0';
+  det.classList.remove('open');
 }
 
 function vote(key, type) {
@@ -712,9 +706,9 @@ function vote(key, type) {
   showToast(type === 'up' ? '👍 已記錄' : '👎 已記錄');
 }
 
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 //  BOOT
-// ──────────────────────────────────────────
+// ──────────────────────────────────────────────
 loadVotes();
 fetch(DATA_URL + '?v=' + Date.now())
   .then(r => { if (!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
@@ -722,7 +716,7 @@ fetch(DATA_URL + '?v=' + Date.now())
   .catch(err => {
     document.getElementById('app').innerHTML =
       `<div class="loading" style="color:var(--red)">
-        ⚠️ 載入失敗，請重整頁面br >
+        ⚠️ 載入失敗，請重整頁面<br>
         <small style="opacity:.5">${err.message}</small>
       </div>`;
   });
