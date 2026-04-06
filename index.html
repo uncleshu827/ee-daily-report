@@ -86,9 +86,17 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
   border: none; background: none; color: var(--muted); cursor: pointer;
   font-size: 14px; padding: 2px; display: none; line-height: 1;
 }
-.tb-filter-row { display: flex; gap: 8px; }
+.tb-filter-row { display: flex; align-items: center; gap: 8px; }
+.tb-group { display: flex; align-items: center; gap: 6px; }
+.tb-group-label {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-size: 11px; font-weight: 600; color: var(--muted);
+  white-space: nowrap; flex-shrink: 0;
+}
+.tb-group-label svg { width: 13px; height: 13px; }
+.tb-sep { width: 1px; height: 24px; background: var(--border); margin: 0 4px; flex-shrink: 0; }
 .tb-select {
-  flex: 1; padding: 8px 28px 8px 10px;
+  padding: 8px 28px 8px 10px;
   border: 1.5px solid var(--border); border-radius: 8px;
   font-size: 12px; font-family: var(--font); font-weight: 500;
   color: var(--text2); background: var(--surface);
@@ -254,7 +262,8 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
   .hdr-meta { gap: 8px; }
   .hdr-pill { font-size: 11px; padding: 4px 10px; }
   .toolbar { padding: 10px 12px; }
-  .tb-filter-row { gap: 6px; }
+  .tb-filter-row { gap: 6px; flex-wrap: wrap; }
+  .tb-group-label { font-size: 10px; }
   .tb-select { font-size: 11px; padding: 7px 24px 7px 8px; }
   .date-group { padding: 14px 16px 4px; }
   .card { margin: 5px 10px; }
@@ -308,7 +317,7 @@ const SECTIONS = [
   { key:'cost_breakdown',    label:'成本與利潤' },
   { key:'competition',       label:'競爭分析'  },
   { key:'strategy',          label:'通路策略'   },
-  { key:'risks',             label:'i��險評估'  },
+  { key:'risks',             label:'風險評估'  },
   { key:'repurchase_detail', label:'複購與LTV'  },
 ];
 
@@ -470,20 +479,27 @@ function render() {
         </div>
       </div>
       <div class="tb-filter-row">
-        <select class="tb-select" id="sort-select" onchange="setSort(this.value)">
-          <option value="date-desc"${G.sort==='date-desc'?' selected':''}>最新優先</option>
-          <option value="date-asc"${G.sort==='date-asc'?' selected':''}>最早優先</option>
-          <option value="score-desc"${G.sort==='score-desc'?' selected':''}>評分高→低</option>
-          <option value="score-asc"${G.sort==='score-asc'?' selected':''}>評分低→高</option>
-        </select>
-        <select class="tb-select" id="cat-select" onchange="setCat(this.value)">
-          <option value="">全部分類</option>
-          ${cats.map(c => `<option value="${esc(c)}"${G.catFilter===c?' selected':''}>${esc(c)}</option>`).join('')}
-        </select>
-        <select class="tb-select" id="date-select" onchange="setDate(this.value)">
-          <option value="">全部日期</option>
-          ${dates.map(d => `<option value="${d}"${G.dateFilter===d?' selected':''}>${fmtDate(d)}</option>`).join('')}
-        </select>
+        <div class="tb-group">
+          <span class="tb-group-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>篩選</span>
+          <select class="tb-select" id="cat-select" onchange="setCat(this.value)">
+            <option value="">全部分類</option>
+            ${cats.map(c => `<option value="${esc(c)}"${G.catFilter===c?' selected':''}>${esc(c)}</option>`).join('')}
+          </select>
+          <select class="tb-select" id="date-select" onchange="setDate(this.value)">
+            <option value="">全部日期</option>
+            ${dates.map(d => `<option value="${d}"${G.dateFilter===d?' selected':''}>${fmtDate(d)}</option>`).join('')}
+          </select>
+        </div>
+        <div class="tb-sep"></div>
+        <div class="tb-group">
+          <span class="tb-group-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M8 2v20M8 2l-4 4M8 2l4 4M16 22V2M16 22l-4-4M16 22l4-4"/></svg>排序</span>
+          <select class="tb-select" id="sort-select" onchange="setSort(this.value)">
+            <option value="date-desc"${G.sort==='date-desc'?' selected':''}>最新優先</option>
+            <option value="date-asc"${G.sort==='date-asc'?' selected':''}>最早優先</option>
+            <option value="score-desc"${G.sort==='score-desc'?' selected':''}>評分高→低</option>
+            <option value="score-asc"${G.sort==='score-asc'?' selected':''}>評分低→高</option>
+          </select>
+        </div>
       </div>
     </div>
 
