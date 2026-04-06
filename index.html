@@ -264,14 +264,22 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
   .toolbar { padding: 10px 12px; }
   .tb-filter-row { gap: 6px; flex-wrap: wrap; }
   .tb-group-label { font-size: 10px; }
-  .tb-select { font-size: 11px; padding: 7px 24px 7px 8px; }
+  .tb-select { font-size: 11px; padding: 7px 24px 7px 8px; max-width: 90px; }
+  .tb-sep { display: none; }
   .date-group { padding: 14px 16px 4px; }
   .card { margin: 5px 10px; }
   .card-main { padding: 12px 14px; grid-template-columns: 28px 1fr auto; gap: 0 8px; }
   .card-rank { width: 22px; height: 22px; font-size: 10px; }
   .card-name { font-size: 14px; }
+  .card-meta { font-size: 11px; }
   .card-score { width: 36px; height: 36px; font-size: 13px; }
-  .card-footer { padding: 0 14px 10px; }
+  .card-footer { padding: 0 14px 10px; gap: 4px; }
+  .sb { grid-template-columns: 56px 1fr 28px; gap: 2px 6px; }
+  .sb-lbl { font-size: 11px; }
+  .sb-val { font-size: 11px; }
+  .det-sections { grid-template-columns: 1fr !important; }
+  .link-pill { font-size: 10px; padding: 3px 8px; }
+  .vbtn { font-size: 11px; padding: 4px 9px; }
 }
 </style>
 </head>
@@ -287,7 +295,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
 // ──────────────────────────────────────────────
 const DATA_URL     = 'https://raw.githubusercontent.com/uncleshu827/ee-daily-report/main/data.json';
 const NOTION_URL   = 'https://www.notion.so/326c45deba0b80dc9660c661b84f6158';
-const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZZj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH41pRkAL2Ffxb/exec';
+const FEEDBACK_API = 'https://script.google.com/macros/s/AKfycbwZZj_KXEh3Q67nJwW_c5xmYdBVnVoxlSJLYtVfbHRwq0NKxKN9NtKH81pRkAL2Ffxb/exec';
 
 // ──────────────────────────────────────────────
 //  DIMENSION CONFIGS (v2.0=6, v2.1=7)
@@ -709,7 +717,7 @@ function vote(key, type) {
   if (p) {
     fetch(FEEDBACK_API, {
       method:'POST', mode:'no-cors',
-      headers:{'Content-Type':'application/json'},
+      headers:{'Content-Type':'text/plain'},
       body: JSON.stringify({
         report_date: p._date || key.split('-').slice(0,3).join('-'),
         product_name: p.name,
