@@ -236,6 +236,12 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
 .ds { background: var(--cream); border-radius: 10px; padding: 12px 14px; }
 .ds-title { font-size: 10px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
 .ds-body { font-size: 12px; color: var(--text2); line-height: 1.65; }
+.verdict-badge { font-size: .75rem; font-weight: 600; padding: 2px 8px; border-radius: 99px; margin-left: 6px; }
+.v-pending { background: #FEF3C7; color: #92400E; }
+.v-hit { background: #D1FAE5; color: #065F46; }
+.v-miss { background: #FEE2E2; color: #991B1B; }
+.pred-date { font-size: .8rem; color: #888; margin-top: 4px; }
+.pred-note { font-size: .85rem; color: #555; margin-top: 6px; font-style: italic; }
 
 /* ── Empty / Loading ── */
 .empty-state { padding: 48px 20px; text-align: center; }
@@ -602,6 +608,23 @@ function cardHTML(p, displayIndex) {
       <div class="ds-body">${esc(p[s.key]).replace(/\n/g,'<br>')}</div>
     </div>`).join('');
 
+  const predBlock = (p.prediction || p.verify_date) ? (() => {
+    const vIcon = p.verdict === true ? '✅ 命中' : p.verdict === false ? '❌ 未命中' : '⏳ 待驗證';
+    const vCls  = p.verdict === true ? 'v-hit'  : p.verdict === false ? 'v-miss'    : 'v-pending';
+    const days  = p.verify_date ? Math.ceil((new Date(p.verify_date) - new Date()) / 86400000) : null;
+    const dayStr = (days !== null && p.verdict === null)
+      ? (days > 0 ? `${days}天後驗證` : '驗證到期')
+      : (p.verify_date || '');
+    return `<div class="ds ds-pred">
+      <div class="ds-title">📍 可證偽預測 <span class="verdict-badge ${vCls}">${vIcon}</span></div>
+      <div class="ds-body">
+        <div class="pred-stmt">${esc(p.prediction||'')}</div>
+        ${dayStr ? `<div class="pred-date">🗓 ${esc(dayStr)}</div>` : ''}
+        ${p.verdict_note ? `<div class="pred-note">${esc(p.verdict_note)}</div>` : ''}
+      </div>
+    </div>`;
+  })() : '';
+
   const metaParts = [];
   if (p.category) metaParts.push(esc(p.category));
   if (p.source) metaParts.push(esc(p.source));
@@ -637,6 +660,7 @@ function cardHTML(p, displayIndex) {
             <div class="det-scores-title">${dims.length} 維度評分</div>
             ${scoreBars}
           </div>
+          ${predBlock}
           ${sections ? `<div class="det-sections">${sections}</div>` : ''}
         </div>
       </div>
@@ -646,7 +670,7 @@ function cardHTML(p, displayIndex) {
 // ──────────────────────────────────────────────
 //  ACTIONS
 // ──────────────────────────────────────────────
-function cardClick(event, key) {
+function cardClich(event, key) {
   // Don't toggle if clicking a link, button, or action
   if (event.target.closest('a, button, .card-actions')) return;
   toggleDet(key);
