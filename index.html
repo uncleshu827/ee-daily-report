@@ -670,7 +670,7 @@ function cardHTML(p, displayIndex) {
 // ──────────────────────────────────────────────
 //  ACTIONS
 // ──────────────────────────────────────────────
-function cardClich(event, key) {
+function cardClick(event, key) {
   // Don't toggle if clicking a link, button, or action
   if (event.target.closest('a, button, .card-actions')) return;
   toggleDet(key);
