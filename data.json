@@ -20,7 +20,9 @@
           "strategy": "🎯 進場包裝：「韓妝 2026 年度成分 × 儀式感劑型」；IG/TikTok 以「擠破瞬間」slo-mo 為主視覺；主打小資 OL 25-35 歲；首批 500 單試水，數據好再談通路",
           "risks": "⚠️ PDRN 在台尚未完成消費者教育，初期需投入 2-3 萬廣告成本；⚠️ 膠囊球破裂後 60 秒內要用完，體驗門檻略高需明確教學；⚠️ 成分依賴進口，若韓國 FDA 對 PDRN 宣稱加嚴，行銷話術要調整",
           "repurchase_detail": "保養品類中度複購：30ml/30 天用量 → 月用量剛好，若體感佳複購月週期穩定；評估 6 個月內 42% 老客複購",
-          "links": "https://www.amazon.com/s?k=PDRN+skincare+capsule",
+          "links": [
+            "https://www.amazon.com/HAUA-Hyaluronic-Skincare-Anti-Aging-Hydration/dp/B0FNPW3LMH"
+          ],
           "scores": {
             "margin": 92,
             "demand": 88,
@@ -51,7 +53,9 @@
           "strategy": "🎯 進場包裝：「韓國 Olive Young 暢銷第 7 名同類技術」；IG/TikTok 主打「顆粒滑動聲 ASMR」；主打 25-35 歲敏感性/粉刺肌女性；首批 600 單配合 20 位奈米 KOC 試用",
           "risks": "⚠️ 顆粒品質不穩會磨傷皮膚，1688 供應商必須嚴選 3 家 SKU 測試；⚠️ Dr. Althea 如有商標爭議要避免蹭名；⚠️ 韓妝代購盤商反擊可能壓價",
           "repurchase_detail": "卸妝膏 70g 用量約 45-60 天，複購週期穩定；評估 6 個月 38% 複購率",
-          "links": "https://www.amazon.com/s?k=korean+cleansing+balm+scrub",
+          "links": [
+            "https://www.amazon.com/Grinding-Cleansing-One-Step-Madecassoside-Non-Greasy/dp/B0CTK1TYNG"
+          ],
           "scores": {
             "margin": 78,
             "demand": 82,
@@ -82,7 +86,9 @@
           "strategy": "🎯 進場包裝：「外出香氛自由切換 × 日韓設計磁吸」；IG 主打「通勤 3 層堆疊教學」；主打 22-32 歲白領女性；首批 400 單，重點測磁吸強度與漏液率",
           "risks": "⚠️ 磁吸式玻璃瓶若強度不足易碰撞破裂，1688 要測壓 2 米跌落；⚠️ 香精配方 IFRA 合規要核對；⚠️ 與 4/12 推薦品項同趨勢線，需差異化論述清楚避免內耗",
           "repurchase_detail": "禮品+自用混合型：自用 6 個月內 28% 複購，禮品季 Q4 及情人節有二次購買峰；整體 6 個月複購 32%",
-          "links": "https://www.pinterest.com/search/pins/?q=scent%20stacking",
+          "links": [
+            "https://hunchoo.com/products/luxury-solid-perfume"
+          ],
           "scores": {
             "margin": 82,
             "demand": 75,
@@ -113,7 +119,9 @@
           "strategy": "🎯 進場包裝：「日本 Makuake 募資 800% 同類設計」；IG/TikTok 主打「無人在家貓咪玩爽爽」情境；主打 28-40 歲上班族飼主；首批 500 單，配電池續航測試",
           "risks": "⚠️ 貓咪個體差異大，部分對機械聲恐懼，退貨率可能比預估高；⚠️ 羽毛掉落吞食風險要標示；⚠️ 毛利 3.1-3.8x 空間較薄，行銷預算要控制",
           "repurchase_detail": "玩具類低複購，但互動+消耗品（替換羽毛組）可延伸月營收；評估 6 個月內 22% 主商品複購 + 38% 配件複購",
-          "links": "https://www.amazon.com/s?k=potaroma+interactive+cat+toy",
+          "links": [
+            "https://www.amazon.com/Potaroma-Rechargeable-Flapping-Activated-Interactive/dp/B0BJZKYL1D"
+          ],
           "scores": {
             "margin": 62,
             "demand": 75,
@@ -182,7 +190,7 @@
           "risks": "產品簡單易複刽壁壘低；需教育消費者正確使用方式",
           "repurchase_detail": "一次性購買使用壽命長，需搭配冰感精華液提升回購",
           "links": [
-            "https://www.amazon.com/s?k=ice+face+roller+beauty"
+            "https://www.amazon.com/Ice-Roller-Face-Eyes-Cryotherapy/dp/B0GGSVFDC2"
           ],
           "scores": {
             "margin": 68,
@@ -215,7 +223,7 @@
           "risks": "需 BSMI 認證；EMS 故障退貨率較高；孕婦/癲癇/心律調節器禁用需標示",
           "repurchase_detail": "導入凝膠/精華液為消耗品，預估每 2 個月回賷，主機+凝膠訂閱模式",
           "links": [
-            "https://www.amazon.co.jp/s?k=EMS+face+lifting+massager"
+            "https://www.amazon.com/SZMDLX-Microcurrent-Tightening-Puffiness-Rechargeable/dp/B0FYCVZJHP"
           ],
           "scores": {
             "margin": 69,
@@ -248,7 +256,7 @@
           "risks": "需 BSMI；白牌競爭激烈需持續差異化",
           "repurchase_detail": "真空袋為消耗品預估每月回購，刀片模式（主機引流+耗材回賷）",
           "links": [
-            "https://www.amazon.com/s?k=mini+vacuum+sealer+handheld"
+            "https://www.amazon.com/Handheld-Portable-Preservation-Electric-Compression/dp/B0BCFR8H6Z"
           ],
           "scores": {
             "margin": 77,
@@ -281,7 +289,7 @@
           "risks": "需基本 BSMI；貓咪興趣度因個體差異大；白牌價格戰壓力",
           "repurchase_detail": "一次性購買球體耐用，需建立寵物玩具品牌線交叉銷售",
           "links": [
-            "https://www.amazon.com/s?k=interactive+cat+ball+toy+LED"
+            "https://www.amazon.com/Interactive-Spinning-Rotating-Intelligent-Rechargeable/dp/B08B16V3FN"
           ],
           "scores": {
             "margin": 93,
@@ -314,7 +322,7 @@
           "risks": "需 BSMI；毛利 3.0x 勉強過開檻價格戰空間小；摺疊機構耐用性待驗證",
           "repurchase_detail": "一次性購買，可銷售替換按摩頭配件",
           "links": [
-            "https://www.amazon.com/s?k=foldable+massage+gun+mini"
+            "https://www.amazon.com/KingPavonini-Dual-Ball-Adjustable-Extendable-Percussion/dp/B0F4824VJR"
           ],
           "scores": {
             "margin": 62,
@@ -1142,7 +1150,7 @@
           "risks": "仿製風險高，需快速建立品牌",
           "repurchase_detail": "補購週期3-6月，多色款加成",
           "links": [
-            "https://www.amazon.com/s?k=UV+protection+running+face+mask"
+            "https://www.amazon.com/SUIGOLF-KOREA-Type-Protection-Balaclava/dp/B0DSJ7VR21"
           ],
           "scores": {
             "margin": 95,
@@ -2184,5 +2192,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-04-14T01:02:08.779Z"
+  "lastUpdated": "2026-04-14T01:38:38.120Z"
 }
