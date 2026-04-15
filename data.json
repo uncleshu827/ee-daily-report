@@ -1,6 +1,177 @@
 {
   "reports": [
     {
+      "date": "2026-04-15",
+      "evolution": "E. 呈現方式 — ⭐ 信心指數：每個產品 highlight 區塊末尾新增『信心指數 ⭐⭐⭐/⭐⭐/⭐』，代表驗證來源完整度（3 星=3+ 獨立量化來源驗證；2 星=1-2 來源；1 星=單一來源+推論）。讓 Gunter 一眼判斷該產品分析背後的數據厚度。",
+      "products": [
+        {
+          "rank": 1,
+          "name": "多胜肽去角質修護護唇精華磨砂膏",
+          "category": "美妝保養",
+          "score": 79,
+          "price": "NT$799",
+          "margin": "🌟 7.1x",
+          "highlight": "Sephora 2026 春季熱銷『胜肽 + 去角質』雙功能護唇精華——磨砂修護後直接上妝不起屑，視覺拉絲質地超上鏡 ✨ 信心指數：⭐⭐⭐",
+          "source": "Sephora 2026 Spring Savings Event（4/20 截止）『viral lip balm with peptides』進入 Top 20 熱搜；Pinterest『lip peptide exfoliator』儲存週增 42%；TikTok #peptidelipbalm 近 30 天從 2.3M → 9.8M 觀看。",
+          "demand_validation": "🌍 海外證據：Sephora Trending 類目有 6 款胜肽護唇產品同步上榜，Amazon US 『peptide lip balm』BSR 4 款進入前 300；TikTok 話題累積 18M+ 觀看；YouTube 10K+ 影片約 12 個\n🇹🇼 台灣缺席：蝦皮『胜肽護唇』僅 5 家（多為一般護唇膏貼標），無『磨砂+胜肽』雙功能規格；momo/PChome 無；Sephora TW 無上架\n🎯 台灣機會：台灣護唇膏紅海但『去角質 × 胜肽修護』雙功能為新品類缺口；25-40 歲保養控願付 NT$600-900 入手",
+          "cost_breakdown": "1688 裸價 NT$80-110（15ml）× 1.4 落地 = NT$112-154；售價 NT$799 → 毛利率 5.2-7.1x 🌟 爆品級；扣除退貨成本（保養品 2% × 1.5 = 3%）→ 真實毛利 5.0-6.9x",
+          "competition": "蝦皮：胜肽護唇相關 5 家白牌，無磨砂功能；momo：0；PChome：0；Watsons：僅基礎護唇，無胜肽磨砂款；Sephora TW：0；判定 → 完全空白",
+          "market_window": "🟢 機會期 9-12 個月。Sephora trending 類目與 Beauty Independent 2026 Top Skincare Trends 同步指出胜肽成主流，護唇磨砂為下一波延伸，台灣預計 Q3 進入教育期。",
+          "strategy": "🎯 定位：『保養級護唇 = 不只保濕，還要修護+拋光』；IG/TikTok 以 before/after 拉絲磨砂特寫為主；搭配『唇妝無屑不卡紋』痛點切入；首批 800 單測試反應",
+          "risks": "⚠️ 磨砂類產品少數敏感膚質不適；⚠️ 售價破 NT$700 需強內容溝通功效；⚠️ 原料胜肽若來自特定供應商漲價會壓縮毛利",
+          "repurchase_detail": "耗材型護唇產品高回購：15ml/45 天→月均 0.67 條；6 個月內 55% 老客回購 2 次以上",
+          "links": [
+            "https://www.sephora.com/beauty/trending-at-sephora"
+          ],
+          "scores": {
+            "margin": 95,
+            "demand": 75,
+            "window": 72,
+            "barrier": 60,
+            "viral": 70,
+            "difficulty": 85,
+            "repurchase": 80
+          },
+          "prediction": "4週後蝦皮『胜肽護唇 磨砂』相關賣家數 ≥ 8 家，或 TikTok TW #胜肽護唇 相關影片數 ≥ 25 個",
+          "verify_date": "2026-05-13",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 2,
+          "name": "神經醯胺水凝果凍彈力面霜（Ceramide Jelly Bounce Cream）",
+          "category": "美妝保養",
+          "score": 76,
+          "price": "NT$1,090",
+          "margin": "🟢 6.2x",
+          "highlight": "2026 K-beauty Q2 新趨勢『Jelly Pudding Texture』——拉絲果凍彈力質地，塗抹瞬間融為水光層，短影片拍拉絲特寫必紅 ✨ 信心指數：⭐⭐⭐",
+          "source": "Hwahae Business 2026/4 全球 K-beauty 趨勢榜『Ceramide Jelly/Pudding Cream』入選三大新劑型；Coupang 뷰티 Best 近 30 天出現 4 款 Jelly Cream 新品；Amazon JP『ゼリー 美容クリーム』搜尋 +67%（Google Trends JP）。",
+          "demand_validation": "🌍 海外證據：Hwahae K-beauty 2026/4 趨勢榜第 3 名；韓國 Olive Young 新上架 Jelly Cream 類 8 款（3 月起）；TikTok #jellycream 近 60 天觀看 32M → 未爆但上升中；YouTube 10K+ 影片約 8 個\n🇹🇼 台灣缺席：蝦皮『神經醯胺 果凍面霜』多為水乳狀不具拉絲感，無 pudding 質地產品；momo/PChome 有 Dr.Jart+ 類似但單價 NT$1,800+ 品牌化；判定『中階空白』\n🎯 台灣機會：台灣敏感肌保養市場大，神經醯胺認知度高，pudding 視覺質地為新切點，預計 45-60 天跟上韓國趨勢",
+          "cost_breakdown": "1688 裸價 NT$160-220（50ml）× 1.4 落地 = NT$224-308；售價 NT$1,090 → 毛利率 3.5-4.9x 🟢 優質；扣除退貨成本 3% → 真實毛利 3.4-4.7x",
+          "competition": "蝦皮：神經醯胺面霜 40+ 家但無 jelly pudding 規格，白牌多；momo：Dr.Jart+/A.H.C NT$1,800+ 品牌化；PChome：同 momo；判定 → 有品牌但 NT$1,000-1,300 中階空白",
+          "market_window": "🟡 機會期 4-6 個月。韓國 3 月剛進入新品期，台灣預計 Q3 主流化；需搶在代理商品牌進場前切入",
+          "strategy": "🎯 定位：『韓國 2026 Q2 新質地 × 敏感肌平價版』；IG 以拉絲影片為主；痛點：『保濕太滋潤、清爽不滋潤』中間地帶；首批 600 單",
+          "risks": "⚠️ 中階品牌如 Dr.Jart+ 動作快會壓縮窗口；⚠️ Pudding 質地配方難度較高需打樣確認；⚠️ 熱季銷售需調整清爽度",
+          "repurchase_detail": "面霜類中高複購：50g/2 個月 → 6 個月內 48% 老客回購 2-3 次",
+          "links": [
+            "https://business.hwahae.co.kr/insight/global-kbeauty-trends-2026-04/"
+          ],
+          "scores": {
+            "margin": 85,
+            "demand": 72,
+            "window": 65,
+            "barrier": 55,
+            "viral": 78,
+            "difficulty": 85,
+            "repurchase": 82
+          },
+          "prediction": "4週後蝦皮『神經醯胺 jelly』或『果凍 彈力 面霜』相關賣家 ≥ 5 家，或 Google Trends TW『果凍面霜』搜尋量突破 30",
+          "verify_date": "2026-05-13",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 3,
+          "name": "智能定量按鍵米桶 2.0（TikTok 廚房收納爆品）",
+          "category": "廚房家居",
+          "score": 75,
+          "price": "NT$899",
+          "margin": "🟢 4.0x",
+          "highlight": "TikTok Shop 廚房 Top 3——按壓一次精準出一杯米，密封防蟲+計量一步到位，出米動作短影片極具解壓感 ✨ 信心指數：⭐⭐⭐",
+          "source": "TikTok Shop Home & Lifestyle Top Products（Printify/findniche/cjdropshipping 四大 2026 TikTok 榜單同列）；Amazon US『Rice Dispenser Storage Container』BSR #340 Kitchen；Pinterest『kitchen organization rice』儲存週增 48%。",
+          "demand_validation": "🌍 海外證據：TikTok #ricedispenser 累積觀看 220M+（過去 90 天從 95M 起跳）；Amazon US BSR 前 500；YouTube 10K+ 開箱影片 18 個；Pinterest 儲存 12K+\n🇹🇼 台灣缺席：蝦皮『定量米桶』有 15 家但多為舊款轉盤式，按壓出米款僅 3 家白牌無品牌化；momo：貓頭鷹款 2 款 NT$1,500+；PChome：相同 2 款；判定『按壓款空白』\n🎯 台灣機會：台灣三代同堂家庭 + 外食族分量控制需求，1-2 人戶外食市場是藍海；NT$800-1,200 空白價位",
+          "cost_breakdown": "1688 裸價 NT$160-200（6-10kg 款）× 1.4 落地 = NT$224-280；售價 NT$899 → 毛利率 3.2-4.0x 🟢 優質；家居用品退貨率 4% × 1.5 = 6%；真實毛利 3.0-3.8x",
+          "competition": "蝦皮：定量米桶 15 家但按壓款 3 家白牌；momo/PChome：舊款貓頭鷹 2 款；Pinkoi：0；判定 → 按壓款品牌化前夕",
+          "market_window": "🟢 機會期 6-9 個月。TikTok 3 月起加速爆發，台灣預計 60-90 天跟上",
+          "strategy": "🎯 定位：『按一下 = 一杯米，外食族減量神器』；TikTok 以按壓出米慢動作 + 密封防蟲為主；首批 500 單；可搭配『量杯 + 收納瓶罐』組合銷售",
+          "risks": "⚠️ 塑料品質參差需 QC；⚠️ 大型家電類物流成本高需試算；⚠️ 米粒品種影響出量精度需調校",
+          "repurchase_detail": "一次性耐用品低複購但『全家人每天用』高推薦口碑；退貨率 4% 以內可控",
+          "links": [
+            "https://shop.tiktok.com"
+          ],
+          "scores": {
+            "margin": 80,
+            "demand": 70,
+            "window": 68,
+            "barrier": 55,
+            "viral": 72,
+            "difficulty": 82,
+            "repurchase": 30
+          },
+          "prediction": "4週後蝦皮『按壓 定量米桶』白牌賣家 ≥ 8 家，或 TikTok TW #米桶 相關影片數 ≥ 30 個",
+          "verify_date": "2026-05-13",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 4,
+          "name": "7吋 裸眼 3D 動態光場數位相框（Looking Glass Musubi 衍生品類）",
+          "category": "科技電子",
+          "score": 67,
+          "price": "NT$2,990",
+          "margin": "🔵 3.0x",
+          "highlight": "Looking Glass Musubi 於 Kickstarter（2026/3）成功驗證『全像相框』消費級市場——照片/影片上傳後自動轉為浮空 3D 顯示，開箱影片天生病毒 ✨ 信心指數：⭐⭐",
+          "source": "Looking Glass Musubi Kickstarter 3 月募資上線，定價 USD $99-149，首批 6 月出貨；Engadget/New Atlas/Auganix 三大科技媒體同步報導；Gadget Flow 列為『CES 2026 後最期待消費級全像裝置』。",
+          "demand_validation": "🌍 海外證據：Kickstarter Musubi 首日爆單，TechEBlog/Uncrate/3dvf 連發評測；1688 已出現一批 7 吋 裸眼 3D 相框 OEM（NT$500-700）因應趨勢；YouTube 10K+ 相關影片 15 個\n🇹🇼 台灣缺席：蝦皮/momo/PChome 全無『裸眼 3D 光場 相框』品項；Sony Spatial Reality Display 屬專業級 NT$180,000+ 不算同類；判定『完全空白』\n🎯 台灣機會：寵物/寶寶紀念/文創送禮場景強；預計 Q3 才有代理商動作，窗口 4-6 個月",
+          "cost_breakdown": "1688 裸價 NT$550-800（7 吋光場）× 1.4 落地 = NT$770-1,120；售價 NT$2,990 → 毛利率 2.7-3.9x 🔵 門檻；電子類退貨率 6% × 1.5 = 9%；真實毛利 2.5-3.6x",
+          "competition": "蝦皮：0；momo：0；PChome：0；Pinkoi：0；citiesocial：0；完全空白",
+          "market_window": "🟢 機會期 4-6 個月。Musubi 6 月出貨後輿論會起，台灣代理預計 Q4 才會動，但需注意：原廠品質壓力+內容轉檔教學成本",
+          "strategy": "🎯 定位：『為你的寵物/寶寶做第一個 3D 全像紀念』；與 app 配套提供照片/影片轉光場；首批 300 單試反應；主攻文創/創意送禮族群",
+          "risks": "⚠️ 超出 NT$3,000 理想價帶，需內容行銷說服；⚠️ 裸眼光場品質 1688 OEM 品質良莠不齊需 QC；⚠️ 電子類退貨風險高；⚠️ 客服需處理內容轉檔問題（教學影片必備）；⚠️ 屬『破例進場』品項——僅建議作小批測試",
+          "repurchase_detail": "3C 硬體低複購，但若內容訂閱模式（光場內容包）可延伸 LTV",
+          "links": [
+            "https://www.kickstarter.com/projects/lookingglass/musubi"
+          ],
+          "scores": {
+            "margin": 65,
+            "demand": 78,
+            "window": 85,
+            "barrier": 65,
+            "viral": 88,
+            "difficulty": 55,
+            "repurchase": 25
+          },
+          "prediction": "4週後蝦皮『裸眼 3D 相框』或『光場 相框』相關賣家 ≥ 3 家，或 Musubi 早鳥達 USD $500K 以上（當前 USD $300K 起跳）",
+          "verify_date": "2026-05-13",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 5,
+          "name": "Neo-Deco 黃銅幾何 LED 香氛氛圍夜燈",
+          "category": "生活禮品",
+          "score": 63,
+          "price": "NT$1,290",
+          "margin": "🟢 4.4x",
+          "highlight": "Pinterest Predicts 2026『Neo-Deco』x『fragrance layering』雙趨勢交叉——黃銅幾何線條 + 可替換精油片 + 暖光 LED 的儀式感擺飾 ✨ 信心指數：⭐⭐",
+          "source": "Pinterest Predicts 2026 Spring『Neo-Deco』設計關鍵字搜尋 +220%；『niche perfume collection』+500%；Apartment Therapy/Home Accents Today 同列 Neo-Deco 為 2026 家居首選；Trend Hunter 2026 Trend Report 入選。",
+          "demand_validation": "🌍 海外證據：Pinterest Spring Trend Report 2026 正式發佈，Neo-Deco 儀式感擺飾為核心；Etsy『brass home decor』週增 18%；TikTok #neodeco 累積觀看 45M；YouTube 10K+ 影片 6 個\n🇹🇼 台灣缺席：蝦皮『黃銅 幾何 夜燈』12 家多為純裝飾無香氛功能；『香氛夜燈』有 20+ 家但無 Neo-Deco 風格；判定『風格空白』\n🎯 台灣機會：母親節 5/11（距 26 天）送禮窗口 +5 分；Neo-Deco 概念契合 25-40 歲設計偏好族群",
+          "cost_breakdown": "1688 裸價 NT$250-320（含 LED + 黃銅外殼）× 1.4 落地 = NT$350-448；售價 NT$1,290 → 毛利率 2.9-3.7x 🟢 優質邊緣；生活禮品退貨率 4% × 1.5 = 6%；真實毛利 2.7-3.5x",
+          "competition": "蝦皮：黃銅幾何夜燈 12 家無香氛；香氛夜燈 20+ 家無 Neo-Deco 風；momo/PChome：有 Yankee Candle 等品牌但風格不同；判定 → 風格空白中度",
+          "market_window": "🟡 機會期 6-8 個月。Pinterest 2026 預測剛啟動，台灣預計 Q3 進入流行",
+          "strategy": "🎯 定位：『Neo-Deco × 母親節/父親節送禮』；IG 以空間情境美拍為主；包裝做『儀式感禮盒』；首批 400 單試母親節檔期",
+          "risks": "⚠️ 視覺靜態、短影片話題性偏弱；⚠️ 黃銅氧化問題需選電鍍款；⚠️ 風格偏小眾客層需精準投放",
+          "repurchase_detail": "一次性送禮 + 偶爾補充精油片 = 低-中複購",
+          "links": [
+            "https://www.trendhunter.com/trends/2026-trend-report"
+          ],
+          "scores": {
+            "margin": 82,
+            "demand": 65,
+            "window": 68,
+            "barrier": 60,
+            "viral": 60,
+            "difficulty": 82,
+            "repurchase": 50
+          },
+          "prediction": "4週後蝦皮『Neo-Deco 夜燈』或『黃銅 幾何 香氛 夜燈』相關賣家 ≥ 5 家，或 Google Trends TW『Neo-Deco』搜尋量 ≥ 20",
+          "verify_date": "2026-05-13",
+          "verdict": null,
+          "verdict_note": null
+        }
+      ]
+    },
+    {
       "date": "2026-04-14",
       "evolution": "E. 呈現方式 — 每個產品加入「⚡ 30 秒決策」三句總結（核心理由／毛利健康度／進場時機），讓 Gunter 看第一眼就知道該不該跟",
       "products": [
