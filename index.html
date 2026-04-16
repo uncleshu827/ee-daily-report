@@ -435,6 +435,8 @@ function fmtDateFull(s) {
   const d = new Date(s + 'T00:00:00');
   return `${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()} 週${DAYS[d.getDay()]}`;
 
+}
+
 function fmtUpdated(iso) {
   if (!iso) return '';
   const d = new Date(iso);
@@ -445,7 +447,6 @@ function fmtISOInline(text) {
   return text.replace(/(\d{4})-(\d{2})-(\d{2})/g, (m, y, mo, da) => {
     return `${parseInt(mo)}/${parseInt(da)}`;
   });
-}
 }
 
 function showToast(m) {
@@ -755,7 +756,6 @@ function toggleDet(key) {
   } else {
     closeDet(key);
   }
-}
 
 function closeDet(key) {
   const det = document.getElementById('det-'+key);
