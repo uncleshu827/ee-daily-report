@@ -434,9 +434,7 @@ function fmtDate(s) {
 function fmtDateFull(s) {
   const d = new Date(s + 'T00:00:00');
   return `${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()} 週${DAYS[d.getDay()]}`;
-
 }
-
 function fmtUpdated(iso) {
   if (!iso) return '';
   const d = new Date(iso);
@@ -444,6 +442,7 @@ function fmtUpdated(iso) {
   return `${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
 }
 function fmtISOInline(text) {
+  // Replace YYYY-MM-DD dates in text with M/D format
   return text.replace(/(\d{4})-(\d{2})-(\d{2})/g, (m, y, mo, da) => {
     return `${parseInt(mo)}/${parseInt(da)}`;
   });
@@ -641,7 +640,7 @@ function cardHTML(p, displayIndex) {
   const key = `${p._date}-${p.rank}`;
   const dims = getDims(p.scores);
   const myV = G.votes[key];
-  const links = Array.isArray(p.links) ? p.links : (typeof p.links === 'string' ? [p.links] : Object.values(p.links || {}));
+  const links = Array.isArray(p.links) ? p.links : Object.values(p.links || {});
   const showDateInMeta = !G.sort.startsWith('date-');
 
   const scoreBars = dims.map(d => {
@@ -756,6 +755,7 @@ function toggleDet(key) {
   } else {
     closeDet(key);
   }
+}
 
 function closeDet(key) {
   const det = document.getElementById('det-'+key);
@@ -818,11 +818,10 @@ fetch(DATA_URL + '?v=' + Date.now())
   .catch(err => {
     document.getElementById('app').innerHTML =
       `<div class="loading" style="color:var(--red)">
-        ⚠️ 載入失敗，請重整頁面<br>
+        ⚠️ 載入失敗（請重整頁面<br>
         <small style="opacity:.5">${err.message}</small>
       </div>`;
   });
-}
 </script>
 </body>
 </html>
