@@ -434,6 +434,18 @@ function fmtDate(s) {
 function fmtDateFull(s) {
   const d = new Date(s + 'T00:00:00');
   return `${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()} 週${DAYS[d.getDay()]}`;
+
+function fmtUpdated(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (isNaN(d)) return iso;
+  return `${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+}
+function fmtISOInline(text) {
+  return text.replace(/(\d{4})-(\d{2})-(\d{2})/g, (m, y, mo, da) => {
+    return `${parseInt(mo)}/${parseInt(da)}`;
+  });
+}
 }
 
 function showToast(m) {
@@ -515,7 +527,7 @@ function render() {
         <div class="hdr-pill"><strong>${all.length}</strong> 產品</div>
         <div class="hdr-pill">均分 <strong>${avgScore}</strong></div>
         <div class="hdr-pill">最高 <strong>${maxScore}</strong></div>
-        <div class="hdr-pill">更新 ${esc(G.data.lastUpdated)}</div>
+        <div class="hdr-pill">更新 ${fmtUpdated(G.data.lastUpdated)}</div>
       </div>
     </div>
 
@@ -652,7 +664,7 @@ function cardHTML(p, displayIndex) {
     const days  = p.verify_date ? Math.ceil((new Date(p.verify_date) - new Date()) / 86400000) : null;
     const dayStr = (days !== null && p.verdict === null)
       ? (days > 0 ? `${days}天後驗證` : '驗證到期')
-      : (p.verify_date || '');
+      : (p.verify_date ? fmtISOInline(p.verify_date) : '');
     return `<div class="ds ds-pred">
       <div class="ds-title">📍 可證偽預測 <span class="verdict-badge ${vCls}">${vIcon}</span></div>
       <div class="ds-body">
@@ -680,7 +692,7 @@ function cardHTML(p, displayIndex) {
         <div class="card-body">
           <div class="card-name">${esc(p.name)}</div>
           <div class="card-meta">${metaHtml}</div>
-          ${p.highlight ? `<div class="card-hl">${esc(p.highlight)}</div>` : ''}
+          ${p.highlight ? `<div class="card-hl">${fmtISOInline(esc(p.highlight))}</div>` : ''}
         </div>
         <div class="card-score ${sc(p.score)}">${p.score}</div>
       </div>
