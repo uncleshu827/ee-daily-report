@@ -1,6 +1,177 @@
 {
   "reports": [
     {
+      "date": "2026-04-16",
+      "evolution": "E. 呈現方式 — 📅 進場截止日：每個產品 highlight 區塊新增『最後安全進場日』，依市場窗口 × 70% 折算出具體日期，讓 Gunter 一眼判斷時機緊迫性（超過此日再入場將失去先發優勢）。",
+      "products": [
+        {
+          "rank": 1,
+          "name": "冷燙髮捲無熱感造型套組（Heatless Curl Kit）",
+          "category": "美妝保養",
+          "score": 69,
+          "price": "NT$490",
+          "margin": "🟢 4.0x",
+          "highlight": "TikTok #heatlesscurls 破百億觀看，睡前戴上早晨取下的零傷髮捲套組——無電無熱，視覺轉場影片天生爆款體質。📅 最後安全進場日：2026-06-30 ⚠️ 信心指數：⭐⭐⭐",
+          "source": "TikTok #heatlesscurls 話題累積觀看破 100 億，#heatlesscurl / #heatlesscurltutorial 近 30 天影片數成長 +38%；Amazon US『heatless curling rod』品類 BSR 前 100 內有 7 款；Today Show Shop 4/2026 再度推薦 'The Effortless Shop' 套組。",
+          "demand_validation": "🌍 海外證據：Amazon US BSR Hair Styling Tools 前 200 中有 5 款 heatless curler（累積評論均破 20K）；TikTok Shop US 近 30 天熱銷榜該品類 3 款入前 50；YouTube 10K+ 觀看教學影片約 45 個\n🇹🇼 台灣缺席：蝦皮『無熱髮捲』相關 18 家但全為裸賣白牌無套組，momo/PChome 0 家有完整套組（緞面+髮網+收納袋）；Dcard/PTT 美妝板有零星討論尚未爆發\n🎯 台灣機會：台灣 20-35 歲長髮族大，但市場僅有散件販售，套組化+包裝設計+故事化可直接切入中階送禮市場",
+          "cost_breakdown": "1688 裸價 NT$60-80（長款矽膠+緞布套+髮網+收納袋完整套組）× 1.4 落地 = NT$84-112；售價 NT$490 → 毛利率 4.4-5.8x 🟢 優質；扣除退貨成本（生活禮品 4% × 1.5 = 6%）→ 真實毛利 4.1-5.5x",
+          "competition": "蝦皮：18 家但多為單件散賣無套組，價格帶 NT$99-199 無品牌化；momo：0；PChome：0；Watsons：0；判定 → 套組+品牌化完全空白",
+          "market_window": "🟡 中期窗口 10 個月。歐美已成熟 3 年但台灣仍在早期擴散，預計 2026 Q3 進入加速期，品牌化建立需把握 6 月前完成上架。",
+          "strategy": "🎯 定位『睡前 5 分鐘＝早晨 30 分鐘省下』；IG/TikTok 前後對比為核心素材；包裝走療癒色系；首批 800 組測試",
+          "risks": "⚠️ 低單價品類易殺價戰；⚠️ 教育成本高（首次使用需看影片）；⚠️ 髮質細軟者效果差評風險，需明確受眾說明",
+          "repurchase_detail": "耐用品低複購（6-12 月損耗）；但套組內髮網/緞布為耗材（3-4 月汰換），可延伸單售髮網補充包維持複購",
+          "links": [
+            "https://www.amazon.com/s?k=heatless+curling+rod+set&i=beauty"
+          ],
+          "scores": {
+            "margin": 75,
+            "demand": 82,
+            "window": 65,
+            "barrier": 45,
+            "viral": 85,
+            "difficulty": 80,
+            "repurchase": 35
+          },
+          "prediction": "4 週後蝦皮『無熱髮捲 套組』賣家數 ≥ 30 家，或 TikTok TW #heatlesscurls 相關影片數 ≥ 60 個",
+          "verify_date": "2026-05-14",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 2,
+          "name": "UV 殺菌靜音循環寵物飲水機",
+          "category": "寵物",
+          "score": 66,
+          "price": "NT$990",
+          "margin": "🔵 3.2x",
+          "highlight": "多貓家庭剛需新世代——UV-C 內建殺菌+靜音馬達<30dB+可拆洗全水路，濾芯月拋回購穩定。📅 最後安全進場日：2026-07-20 ⚠️ 信心指數：⭐⭐",
+          "source": "Amazon US Pet Water Fountain BSR 前 50 中 UV 殺菌款佔 14 款；Amazon JP『ペット 給水器 UV』近 90 天銷量 +54%；TikTok #catwaterfountain 近 30 天觀看 28M，台灣多貓家庭討論熱度持續上升（Dcard 寵物板）。",
+          "demand_validation": "🌍 海外證據：Amazon US『UV cat water fountain』BSR 14 款進 Pet Supplies 前 300，評論多 >3K；Amazon JP 同品類 BSR 前 30 中 8 款 UV 款；YouTube 10K+ 影片約 18 個（多為開箱比較）\n🇹🇼 台灣缺席：蝦皮『寵物飲水機 UV』僅 6 家有 UV 功能（多為 MoliFun/PetKit 品牌），售價 NT$1,500-2,800，中階 NT$890-1,100 完全空白；momo 有 3 款但 >NT$1,800\n🎯 台灣機會：台灣貓經濟 2026 年達 80 億+，多貓家庭佔 38%，UV 款中階市場空白，濾芯月拋建立長期複購護城河",
+          "cost_breakdown": "1688 裸價 NT$200-260（含 1 顆濾芯）× 1.4 落地 = NT$280-364；售價 NT$990 → 毛利率 2.7-3.5x 🔵 門檻；濾芯耗材 1688 單顆 NT$15 × 1.4 = NT$21，售 NT$150 → 7.1x 🌟 爆品級（主要利潤來源）",
+          "competition": "蝦皮：UV 款 6 家中高階；momo：3 款 >NT$1,800；PChome：2 款；判定 → 中階 NT$890-1,100 完全空白",
+          "market_window": "🟡 中期窗口 10-12 個月。寵物消費升級剛啟動，UV 教育期預計 6 個月，品牌需於 2026 Q3 前卡位。",
+          "strategy": "🎯 定位『裝好就忘＝貓咪 24 小時活水』；主打月拋濾芯訂閱刵；IG/Threads 與寵物 KOL 合作實測",
+          "risks": "⚠️ 電器需 BSMI 認證（4-6 週）；⚠️ 濾芯品質不穩會流失訂閱客；⚠️ 馬達噪音若 >30dB 退貨風險高",
+          "repurchase_detail": "🔑 濾芯每月 1 顆，6 個月 80% 老客仍在訂閱，年化複購 ARPU ≈ NT$1,800（本機 + 12 顆濾芯）",
+          "links": [
+            "https://www.amazon.com/s?k=uv+cat+water+fountain+silent&i=pet-supplies"
+          ],
+          "scores": {
+            "margin": 68,
+            "demand": 78,
+            "window": 68,
+            "barrier": 50,
+            "viral": 60,
+            "difficulty": 60,
+            "repurchase": 78
+          },
+          "prediction": "4 週後蝦皮『UV 寵物飲水機』中階（NT$800-1,200）賣家數 ≥ 10 家，或 momo 同品類上架 ≥ 5 款",
+          "verify_date": "2026-05-14",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 3,
+          "name": "卡扣式矽膠鍋邊瀝水夾（Snap N' Strain 型）",
+          "category": "廚房家居",
+          "score": 65,
+          "price": "NT$280",
+          "margin": "🟢 4.4x",
+          "highlight": "Amazon Kitchen Strainers 類目第 2 名、累積 >13,500 評論的永動機爆品——夾上鍋邊就能瀝水，免搬重鍋免濾網。📅 最後安全進場日：2026-06-15 ⚠️ 信心指數：⭐⭐⭐",
+          "source": "Amazon US Food Strainers BSR 第 2（Kitchen Gizmo Snap N' Strain，累積 >13,500 評論）；Today Show Shop 專文推薦；TikTok #kitchengadgets 相關影片累積 80M+ 觀看，Snap N' Strain 為常客。",
+          "demand_validation": "🌍 海外證據：Amazon US BSR Food Strainers 前 5 有 3 款同型矽膠夾式瀝水器；累積主評論 >30K；TikTok 視覺化影片每則平均 50 萬觀看；YouTube 10K+ 影片 22 個\n🇹🇼 台灣缺席：蝦皮『矽膠瀝水夾 鍋邊』相關 22 家但多為裸賣白牌售價 NT$59-120，無品牌化；momo 1 款 NT$299 庫存有限；PChome 0\n🎯 台灣機會：台灣小家庭單人廚房普及，『省空間免搬重鍋』痛點真實，品牌化+設計色系+禮盒包裝即可進駐生活禮品通路",
+          "cost_breakdown": "1688 裸價 NT$35-50 × 1.4 落地 = NT$49-70；售價 NT$280 → 毛利率 4.0-5.7x 🟢 優質；扣除退貨成本（廚房家居 3% × 1.5 = 4.5%）→ 真實毛利 3.8-5.5x",
+          "competition": "蝦皮：22 家白牌無品牌化；momo：1 款；PChome：0；Pinkoi：2 款設計款 NT$350+；判定 → 中階品牌化空白",
+          "market_window": "🟡 中期窗口 8 個月。歐美爆紅 4 年已成熟，台灣仍在早期滲透，2026 下半年將進入大眾化，品牌化窗口緊迫。",
+          "strategy": "🎯 定位『單身小廚神器』；與生活類 KOL 合作廚房收納主題；搭配色系+印刷 logo 禮盒化；首批 1,200 單",
+          "risks": "⚠️ 仿品進入門檻低易殺價；⚠️ 結構簡單消費者容易自行找低價白牌；⚠️ 需強視覺設計差異化才能守住中階價位",
+          "repurchase_detail": "耐用品（2-3 年）低複購；可用色系收藏邏輯延伸回購（多色系+不同鍋具對應）",
+          "links": [
+            "https://www.amazon.com/Kitchen-Gizmo-Strainer-Silicone-Colander/dp/B01MZ14LJV"
+          ],
+          "scores": {
+            "margin": 78,
+            "demand": 80,
+            "window": 55,
+            "barrier": 40,
+            "viral": 72,
+            "difficulty": 85,
+            "repurchase": 30
+          },
+          "prediction": "4 週後蝦皮『矽膠瀝水夾』賣家數 ≥ 35 家，或 momo 同品類上架 ≥ 3 款品牌款",
+          "verify_date": "2026-05-14",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 4,
+          "name": "日出光療喚醒燈鬧鐘（Sunrise Wake-Up Light）",
+          "category": "科技電子",
+          "score": 65,
+          "price": "NT$990",
+          "margin": "🟡 3.9x",
+          "highlight": "Pinterest Spring 2026『Sunday reset』趨勢 +65%，加上睡眠經濟延伸——晨光模擬 30 分鐘漸亮喚醒+白噪音助眠，療癒儀式感天花板。📅 最後安全進場日：2026-07-05 ⚠️ 信心指數：⭐⭐",
+          "source": "Pinterest Predicts 2026『Sunday reset checklist』搜尋 +65%；『natural wake up light』Google Trends 全球近 90 天 +38%；Amazon US 『wake up light alarm』BSR Alarm Clocks 前 10 有 4 款；T3/Wired 2026 wellness gadget 推薦清單收錄。",
+          "demand_validation": "🌍 海外證據：Amazon US Alarm Clocks BSR 前 20 有 6 款晨光喚醒款（Philips/Hatch 為主）；累積評論 >40K；YouTube『best sunrise alarm』10K+ 影片 15 個；Reddit r/sleep 常年推薦品類\n🇹🇼 台灣缺席：蝦皮『日出鬧鐘』相關 14 家多為 Philips 水貨售價 NT$2,500+，中階 NT$800-1,200 完全空白；momo 3 款 Philips >NT$3,000；PChome 0\n🎯 台灣機會：台灣睡眠問題族群擴大（衛福部 2025 調查失眠率 28%），中階價格帶空白，品牌化+晨間儀式敘事可精準切入 25-40 歲上班族",
+          "cost_breakdown": "1688 裸價 NT$180-260（含白噪音+藍牙款）× 1.4 落地 = NT$252-364；售價 NT$990 → 毛利率 2.7-3.9x 🟡 理想；扣除退貨成本（3C 6% × 1.5 = 9%）→ 真實毛利 2.5-3.6x",
+          "competition": "蝦皮：Philips 水貨 14 家高階；中階空白；momo：Philips 3 款；PChome：0；判定 → 中階完全空白",
+          "market_window": "🟡 中期 12 個月。睡眠經濟上升期，晨光喚醒為新興心智佔位戰場，2026 下半年前建立品牌認知。",
+          "strategy": "🎯 定位『療癒系晨間儀式』；IG 社群+Threads 失眠話題共創；搭配 Pinterest 風格產品攝影；首批 800 台",
+          "risks": "⚠️ BSMI 認證必要（6-8 週）；⚠️ 3C 退貨率高需保留 9% 成本；⚠️ Philips 品牌壓力需差異化（白噪音+氣氛燈多場景）",
+          "repurchase_detail": "耐用品（3-5 年）極低複購；可延伸助眠香氛/白噪音訂閱 app 增補收入",
+          "links": [
+            "https://www.amazon.com/s?k=sunrise+alarm+clock+wake+up+light&i=electronics"
+          ],
+          "scores": {
+            "margin": 72,
+            "demand": 72,
+            "window": 72,
+            "barrier": 58,
+            "viral": 68,
+            "difficulty": 65,
+            "repurchase": 25
+          },
+          "prediction": "4 週後蝦皮『日出鬧鐘 喚醒燈』中階（NT$800-1,200）賣家數 ≥ 8 家，或 momo 同品類品牌款上架 ≥ 4 款",
+          "verify_date": "2026-05-14",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 5,
+          "name": "石墨烯熱敷便攜摺疊眼罩按摩儀",
+          "category": "健康療癒",
+          "score": 62,
+          "price": "NT$1,690",
+          "margin": "🔵 3.4x",
+          "highlight": "日亞 Electric Eye Massagers 熱銷類目——石墨烯快速加熱+氣壓按摩+藍牙音樂，辦公族 10 分鐘快充療癒剛需。📅 最後安全進場日：2026-06-25 ⚠️ 信心指數：⭐⭐",
+          "source": "Amazon JP Electric Eye Massagers BSR Top 20 中 7 款為石墨烯加熱款；Makuake 2026/4『目元ケア』MIX PLANET 等多款 82g 輕量化機型熱銷；CNN Underscored 2026 Best Eye Massager 專文推薦。",
+          "demand_validation": "🌍 海外證據：Amazon JP Electric Eye Massagers 類目熱銷；累積評論 >15K；CNN 2026 測評認可 7 款；YouTube『eye massager』10K+ 影片 20 個；Makuake 相關專案 2026/4 人氣延續\n🇹🇼 台灣缺席：蝦皮『眼罩按摩 石墨烯』相關 12 家多為 NT$990 白牌低階無音樂；中階 NT$1,500-1,800 有藍牙音樂款空白；momo 4 款（飛利浦/眼博士）>NT$2,500 高階；PChome 2 款\n🎯 台灣機會：台灣上班族眼睛疲勞剛需，石墨烯快熱+藍牙音樂為新差異點，中階品牌化空白",
+          "cost_breakdown": "1688 裸價 NT$350-480（石墨烯+藍牙款）× 1.4 落地 = NT$490-672；售價 NT$1,690 → 毛利率 2.5-3.4x 🔵 門檻；扣除退貨成本（3C 9%）→ 真實毛利 2.3-3.1x",
+          "competition": "蝦皮：低階白牌 12 家；中階藍牙音樂款 0 家；momo：高階 4 款 >NT$2,500；PChome：2 款；判定 → 中階藍牙款空白",
+          "market_window": "🟡 中期 9 個月。日本市場成熟台灣滲透率低，2026 Q3 窗口收窄，需快速卡位。",
+          "strategy": "🎯 定位『辦公族 10 分鐘療癒儀式』；IG/Threads 上班族痛點共創；搭配企業禮盒通路；首批 500 台",
+          "risks": "⚠️ BSMI 認證必要；⚠️ 毛利勉強達門檻對行銷成本敏感；⚠️ 白牌低價廝殺激烈需品牌化差異",
+          "repurchase_detail": "耐用品（2-3 年）低複購；可延伸熱敷眼罩貼片耗材增補收入",
+          "links": [
+            "https://www.amazon.co.jp/-/en/gp/bestsellers/kitchen/5013080051"
+          ],
+          "scores": {
+            "margin": 65,
+            "demand": 75,
+            "window": 70,
+            "barrier": 55,
+            "viral": 65,
+            "difficulty": 55,
+            "repurchase": 25
+          },
+          "prediction": "4 週後蝦皮『石墨烯 眼罩 按摩』中階（NT$1,500-1,900）賣家數 ≥ 6 家，或 momo 同類品牌款上架 ≥ 3 款",
+          "verify_date": "2026-05-14",
+          "verdict": null,
+          "verdict_note": null
+        }
+      ]
+    },
+    {
       "date": "2026-04-15",
       "evolution": "E. 呈現方式 — ⭐ 信心指數：每個產品 highlight 區塊末尾新增『信心指數 ⭐⭐⭐/⭐⭐/⭐』，代表驗證來源完整度（3 星=3+ 獨立量化來源驗證；2 星=1-2 來源；1 星=單一來源+推論）。讓 Gunter 一眼判斷該產品分析背後的數據厚度。",
       "products": [
@@ -2359,5 +2530,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-04-14T01:38:38.120Z"
+  "lastUpdated": "2026-04-16T01:19:04.890Z"
 }
