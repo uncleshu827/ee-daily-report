@@ -1,6 +1,177 @@
 {
   "reports": [
     {
+      "date": "2026-04-17",
+      "evolution": "方向 B 需求驗證升級 v3.2 — 🛒 蝦皮競品月銷量｜新增「台灣蝦皮前 3 名競品月銷量加縥」為第 5 量化需求信號，閾值：>5,000/月=已驗證市場；1,000-5,000=中等；<500=完全空白（正面信號）。今日 5 個產品全部套用此信號。狀態：待固化（下次優先更新 references/scoring_rules.md）。",
+      "products": [
+        {
+          "rank": 1,
+          "name": "便攜式折疊冷水浴桶 Cold Plunge Tub",
+          "category": "健康療癒",
+          "score": 87,
+          "price": "NT$6,800",
+          "margin": "🔵 2.84x",
+          "highlight": "Huberman/Joe Rogan recovery 爆紅 2 年仍升溫，台灣品牌化 0 蝦皮僅 8 家工業款；📅 最後安全進場日 2027-05-03 ✨ 信心指數：⭐⭐⭐（Huberman Podcast + TikTok 翻拍 60+ + Amazon BSR<300 三來源獨立驗證）",
+          "source": "Kickstarter 熱門硬體 / Amazon US Ice Bath BSR<300 / TikTok #coldplunge 翻拍 60+ / Huberman Lab Podcast 持續推薦",
+          "demand_validation": "① 國外爆紅：Amazon US BSR<300 × 評論 >5,000；TikTok #coldplunge 翻拍 60+ 獨立創作者；Google Trends US +380% / 24 月。② 台灣缺席：蝦皮「冷水浴桶/冰浴桶」<8 家且全為工業不鏽鋼大型款；momo/PChome 本土品牌 0。③ 台灣機會：運動恢復 × 三鐵族 × 健身教練 × 冥想社群四條通路；Huberman 中文 Podcast 在台 Spotify 前 30。④ YouTube 驗證：英文『cold plunge morning routine』>200 支 100K+；中文 <5 支。⑤【v3.2 新增】台灣蝦皮前 3 名競品月銷量加總：約 180 件 → <500 完全空白（正面信號）。",
+          "cost_breakdown": "1688 裸價 CNY 380（高階雙層保溫壁+溫控配件）× 1.4 落地 = NT$2,394；售 NT$6,800 → 毛利 2.84x 🔵 門檻；退貨率 2% × 1.5 逆物流 = NT$200/件。⚠️ 低階款 2x 不過硬門檻，必須走高階配件包拉客單價",
+          "competition": "蝦皮：<8 家工業不鏽鋼款（非便攜可折疊）。momo/PChome：本土品牌 0。淘寶代購 ~30 家無品牌。市場空白完整",
+          "market_window": "🟢 機會期 18+ 月。Amazon BSR 穩定但台灣認知度 <5%，適合教育市場並建立先發品牌",
+          "strategy": "定位『Premium Home Recovery Spa』；IG 三鐵/健身教練 KOL 合作；reel 內容 morning ice bath + 冥想 7am 場景；首批 150 單限量內建溫度計+充氣泵+保溫蓋",
+          "risks": "毛利剛過硬門檻，若配件包無法完整落地會掉回 2x；冬季需求強夏季弱現金流波動；大件物流單件預留 NT$350",
+          "repurchase_detail": "主機耐用 3-5 年，配件訂閱（保溫蓋替換/清潔泡錠/溫度計電池）年均 NT$600/客",
+          "links": [
+            "https://theplunge.com/"
+          ],
+          "scores": {
+            "margin": 60,
+            "demand": 88,
+            "window": 85,
+            "barrier": 72,
+            "viral": 88,
+            "difficulty": 60,
+            "repurchase": 55
+          },
+          "prediction": "4 週後（2026-05-15）Amazon US Cold Plunge 類目 BSR<500，或台灣蝦皮『冷水浴桶/冰浴桶』賣家 ≥15（跨過早期跟進臨界）",
+          "verify_date": "2026-05-15",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 2,
+          "name": "智能降噪睡眠耳塞（Loop 類矽膠聲學濾波）",
+          "category": "健康療癒",
+          "score": 84,
+          "price": "NT$990",
+          "margin": "🟡 3.14x",
+          "highlight": "Pinterest 2026 wellness top pick × Loop $100M DTC，台灣以泡棉塞為主；📅 最後安全進場日 2026-12-31 ✨ 信心指數：⭐⭐⭐（Loop 營收數據 + Pinterest 官方報告 + TikTok 翻拍三來源驗證）",
+          "source": "Pinterest Predicts 2026 / Loop Earplugs 年營收 $100M+ / TikTok #loopearplugs 翻拍 80+ / Amazon US 睡眠耳塞 BSR<200",
+          "demand_validation": "① 國外爆紅：Loop 美國年營收 >$100M；Amazon US 睡眠耳塞 BSR<200；TikTok #loopearplugs 翻拍 80+；Pinterest 搜尋 +340% / 12 月。② 台灣缺席：蝦皮『降噪耳塞/睡眠耳塞』前 20 名 90% 為泡棉塞（3M/Moldex），矽膠聲學濾波 <5 家皆水貨代購。③ 台灣機會：台灣失眠人口 27% × 學生 × 通勤族；可切誠品/蔦屋/小北百貪生活雜貫通路。④ YouTube 驗證：英文『best sleep earplugs』>150 支 100K+；中文 <10 支。⑤【v3.2 新增】台灣蝦皮前 3 名竵品月銷量加總：約 750 件 → 1,000-5,000 以下中等，品牌化空位存在。",
+          "cost_breakdown": "1688 裸價 CNY 50（矽膠+聲學濾波片+收納盒）× 1.4 落地 = NT$315；售 NT$990 → 毛利 3.14x 🟡 理想；退貨率 2% × 1.5 = NT$30/件；淨毛利 ~NT$645/件",
+          "competition": "蝦皮：<5 家矽膠聲學款（90% 為泡棉塞）。momo/PChome：0 個本土品牌矽膠款。Loop 官網不直送台灣，代購 NT$1,400。市場窗口開放",
+          "market_window": "🟡 機會期 12 月。Loop 一旦正式進台灣窗口立即關閉，目前無進駐計畫但需加速",
+          "strategy": "定位『生活場景自由切換：通勤-辦公-睡眠』；Reel 切換三場景音頻對比；差異化配色+收納盒+三強度濾波片（Engage/Experience/Quiet）；首批 800 單",
+          "risks": "Loop 正式進台灣機率中；耳塞不符耳型退貨率高需提供 3 尺寸試配；清潔教育成本",
+          "repurchase_detail": "耗材型：配件替換頭半年 1 組 NT$280，年複購率 35%",
+          "links": [
+            "https://www.loopearplugs.com/"
+          ],
+          "scores": {
+            "margin": 72,
+            "demand": 85,
+            "window": 65,
+            "barrier": 70,
+            "viral": 80,
+            "difficulty": 70,
+            "repurchase": 78
+          },
+          "prediction": "4 週後（2026-05-15）台灣蝦皮『降噪耳塞』+『睡眠耳塞』類目新上架矽膠聲學品牌款 ≥10，或 Loop 官網開通台灣直送",
+          "verify_date": "2026-05-15",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 3,
+          "name": "可重複使用寵物毛滾筒（Chom Chom 式靜電纖維）",
+          "category": "寵物",
+          "score": 78,
+          "price": "NT$590",
+          "margin": "🔵 3.35x",
+          "highlight": "Amazon BSR<100 持續 18 月 × TikTok cleantok 必收，台灣仍以黏紙款為主；📅 最後安全進場日 2026-08-25 ✨ 信心指數：⭐⭐⭐（Amazon 長青 BSR + TikTok 翻拍 50+ + 台灣 230 萬養寵戶統計三來源）",
+          "source": "Amazon US Pet 類目 BSR<100 持續 18 月 / TikTok #cleantok × #petclean 翻拍 50+ / 台灣寵物登錄統計",
+          "demand_validation": "① 國外爆紅：Amazon Chom Chom BSR<100 持續 18 月 × 評論 >100,000；TikTok cleantok 合輯必收 #petclean 翻拍 50+。② 台灣缺席：蝦皮『寵物除毛滾筒』前 20 名 85% 為滾筒黏紙款（耗材），可重複式靜電纖維 <10 家皆 OEM 無品牌。③ 台灣機會：230 萬養寵戶 × 寵物家具/布藝除毛剛需；寵物連鎖（怪獸/魚中魚）+電商+設計禮品三通路。④ YouTube 驗證：英文『pet hair remover』>100 支 100K+；中文 <15 支。⑤【v3.2 新增】台灣蝦皮前 3 名可重複式競品月銷量加總：約 420 件 → <500 空白信號。",
+          "cost_breakdown": "1688 裸價 CNY 28（訂單 ≥500 件議價後）× 1.4 落地 = NT$176；售 NT$590 → 毛利 3.35x 🔵 門檻；退貨率 2% × 1.5 = NT$20/件；淨毛利 ~NT$390/件",
+          "competition": "蝦皮：<10 家可重複式皆 OEM 無品牌。momo：1 家 FURemover 美國進口 NT$990。PChome：本土品牌 0。Pinkoi：0。品牌空位中度",
+          "market_window": "🟡 機會期 6 月。Chom Chom 一旦進台灣或蝦皮賣家暴增將關閉",
+          "strategy": "定位『寵物家居美學』；莫蘭迪色系+磁吸收納掛壁組；通路寵物連鎖+蝦皮+設計禮品店；reel 黑沙發 before-after 清潔+多寵物適配（柴柴/英短/邊牧）",
+          "risks": "低技術壁壘若 OEM 群湧 3 個月內窗口速消；需確保訂單 500+ 件否則毛利不足",
+          "repurchase_detail": "耐用 2-3 年，多寵家庭可推 2 件組（客廳/臥房），年複購率 20%",
+          "links": [
+            "https://chomchomroller.com/"
+          ],
+          "scores": {
+            "margin": 78,
+            "demand": 85,
+            "window": 50,
+            "barrier": 40,
+            "viral": 75,
+            "difficulty": 85,
+            "repurchase": 50
+          },
+          "prediction": "4 週後（2026-05-15）台灣蝦皮『寵物除毛滾筒』可重複式品牌賣家 ≥18，或 momo 本土品牌 ≥2（跨過跟進臨界）",
+          "verify_date": "2026-05-15",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 4,
+          "name": "磁吸電燱香氛蠟燭融化燈 Candle Warmer Lamp",
+          "category": "生活禮品",
+          "score": 77,
+          "price": "NT$1,190",
+          "margin": "🔵 2.87x",
+          "highlight": "Pinterest Neo Deco 2026 × Target 熱銷 18 月，台灣設計品牌化空白；📅 最後安全進場日 2026-12-31 ✨ 信心指數：⭐⭐（Pinterest 官方報告 + Amazon BSR 兩來源 + 推論）",
+          "source": "Pinterest Predicts 2026 Neo Deco / Amazon US Home Decor BSR<500 / TikTok #candlewarmer 翻拍 40+ / Target 熱銷 18 月",
+          "demand_validation": "① 國外爆紅：Amazon US Candle Warmer Lamp BSR<500 × 評論 >10,000；Target/Anthropologie 同款 18 月熱銷；TikTok #candlewarmer 翻拍 40+ ASMR 點蠟燭。② 台灣缺席：蝦皮『香氛蠟燭加熱燈/電熱蠟燭燈』前 20 名 80% 為美式雜貨代購（Spring of Hope 類），本土設計品牌 <5。③ 台灣機會：居家儀式感族 × 送禮（母親節 5/11 + 閨蜜生日）；誠品 × Pinkoi 設計選物店。④ YouTube 驗證：英文『candle warmer lamp』>80 支 100K+；中文 <5 支。⑤【v3.2 新增】台灣蝦皮前 3 名競品月銷量加總：約 640 件 → 1,000-5,000 以下偏低，品牌化空白。",
+          "cost_breakdown": "1688 裸價 CNY 50 × 1.4 落地 = NT$315 + BSMI 認證分攤 NT$100/件 = NT$415；售 NT$1,190 → 毛利 2.87x 🔵 門檻（若售 NT$1,490 → 3.59x 🟡 理想）；退貨率 4% × 1.5 = NT$60/件",
+          "competition": "蝦皮：<5 家本土設計款多為代購。momo：2 家（Spring of Hope 代理）。PChome：本土品牌 0。Pinkoi：<3 家設計款。品牌化空位中度",
+          "market_window": "🟡 機會期 12 月。台灣進口速度中等，趁 2026 Q2 母親節＋情人節檔期切入",
+          "strategy": "定位『一燈一蠟燭儀式組合禮盒』；三款色系（拿鐵米/橄欖綠/燕麥白）+贈首發蠟燭；通路 Pinkoi+誠品+蝦皮檔期；Reel ASMR 蠟燭融化+居家晚間儀式場景",
+          "risks": "BSMI 認證週期 6-8 週需預留；電子類退貨率偏高需強化包材；蠟燭配送易碎可分開訂購",
+          "repurchase_detail": "燈本體一次性，蠟燭耗材可做月配/季配訂閱，年複購率 40%（每客 NT$1,500/年）",
+          "links": [
+            "https://candlewarmers.com/"
+          ],
+          "scores": {
+            "margin": 62,
+            "demand": 78,
+            "window": 65,
+            "barrier": 65,
+            "viral": 80,
+            "difficulty": 65,
+            "repurchase": 78
+          },
+          "prediction": "4 週後（2026-05-15）台灣 Pinkoi『香氛蠟燭加熱燈』本土設計品牌 ≥8，或 momo 新增母親節香氛專區",
+          "verify_date": "2026-05-15",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 5,
+          "name": "LED 智能桌上型水耕香草植栽機",
+          "category": "廚房家居",
+          "score": 65,
+          "price": "NT$3,990",
+          "margin": "🔵 2.83x",
+          "highlight": "CES 2026 Kitchen Innovation 得獎 × 日本 AIKIKA 爆紅，台灣本土品牌化 0；📅 最後安全進場日 2027-05-03 ✨ 信心指數：⭐⭐（CES 得獎 + Pinterest 報告兩來源 + 推論）",
+          "source": "CES 2026 Kitchen Innovation Awards / Pinterest Predicts 2026 慢生活 / Amazon US Smart Garden BSR 1,500-3,000 / 日本 AIKIKA 爆發",
+          "demand_validation": "① 國外爆紅：Amazon US Smart Herb Garden BSR 1,500-3,000；Aerogarden/Click&Grow 持續熱銷；CES 2026 Instafarm 得獎；Pinterest 'indoor herb garden' +180%。② 台灣缺席：蝦皮『智能水耕/室內菜園』前 20 名皆大型業務或手動 DIY 盆栽，智能 LED 桌上型 <5 家皆代購（Click&Grow NT$4,500）。③ 台灣機會：小坪數家庭 × 料理愛好者 × 健康廚房族；誠品/居家生活通路可鋪。④ YouTube 驗證：英文『smart herb garden review』>50 支 50K+；中文 <8 支。⑤【v3.2 新增】台灣蝦皮前 3 名智能款競品月銷量加總：約 110 件 → <500 空白信號。",
+          "cost_breakdown": "1688 裸價 CNY 200（500 件量議價）× 1.4 落地 = NT$1,260 + BSMI 認證分攤 NT$150/件 = NT$1,410；售 NT$3,990（對標 Click&Grow 代購）→ 毛利 2.83x 🔵 門檻；退貨率 6% × 1.5 = NT$200/件（體積較大）",
+          "competition": "蝦皮：<5 家智能款皆代購無本土品牌。momo：本土品牌 0。PChome：0。Click&Grow 官方不進台灣。品牌空位完整",
+          "market_window": "🟢 機會期 18+ 月。台灣消費教育仍初期，適合慢慢建立品牌+訂閱耗材模式",
+          "strategy": "定位『餐廳級自種香草』；內建 app 控制 + 種子包訂閱（羅勒/薄荷/迷迭香輪替）；通路誠品家電+蔦屋+蝦皮母親節；Reel 30 天 time-lapse + 做菜應用",
+          "risks": "毛利偏緊需精準控進貨量；體積大物流成本高；種子包需植物檢疫；消費教育成本高（多人不知怎麼用）",
+          "repurchase_detail": "主機一次性，種子包訂閱月配 NT$299/組 × 6 種 = NT$1,800/年；耗材型 = 強複購",
+          "links": [
+            "https://aerogarden.com/"
+          ],
+          "scores": {
+            "margin": 58,
+            "demand": 70,
+            "window": 85,
+            "barrier": 65,
+            "viral": 65,
+            "difficulty": 55,
+            "repurchase": 82
+          },
+          "prediction": "4 週後（2026-05-15）台灣蝦皮『智能菜園/水耕植栽機』本土品牌化款 ≥6，或 Click&Grow 開通台灣運送",
+          "verify_date": "2026-05-15",
+          "verdict": null,
+          "verdict_note": null
+        }
+      ]
+    },
+    {
       "date": "2026-04-16",
       "evolution": "E. 呈現方式 — 📅 進場截止日：每個產品 highlight 區塊新增『最後安全進場日』，依市場窗口 × 70% 折算出具體日期，讓 Gunter 一眼判斷時機緊迫性（超過此日再入場將失去先發優勢）。",
       "products": [
@@ -2530,5 +2701,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-04-16T01:19:04.890Z"
+  "lastUpdated": "2026-04-17T02:34:33.000Z"
 }
