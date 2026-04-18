@@ -1,6 +1,192 @@
 {
   "reports": [
     {
+      "date": "2026-04-18",
+      "evolution": "D.評分模型迭代 v2.6 — 蝦皮月銷量正式量化入需求維度（<500→信息差+3；1000-5000→+2；>5000→已起量-0）",
+      "products": [
+        {
+          "rank": 1,
+          "name": "寵物腳印清潔杯 Paw Cleaner Wash Cup（矽膠刷毛旋轉款）",
+          "category": "寵物",
+          "score": 88,
+          "price": "NT$990（含矽膠刷毛替換芯 2 顆）",
+          "margin": "4.7x 🟢 優質",
+          "highlight": "⚡ 30秒決策：TikTok 爆紅的狗爪清潔神器（50+ 翻拍影片），台灣蝦皮 < 10 家雜牌但無品牌化。單手按壓矽膠刷毛旋轉清潔狗狗爪縫，強視覺前後對比（泥爪→乾淨）讓短影音病毒基因爆棚。毛利 4.7x 🟢 優質，不含電子類退貨風險。✨ 信心指數：⭐⭐⭐（TikTok翻拍+Amazon評論+品牌化空白三源驗證）📅 最後進場日：2026/08/15",
+          "source": "TikTok（paw washer 標籤 50+ 翻拍）+ Amazon Pet Supplies BSR 前 500 + Pinterest 儲存 15K+",
+          "demand_validation": "【國外爆紅證據】Amazon 熱銷款（如 Dexas MudBuster 及多款仿品）累積評論 10K+，BSR 寵物用品前 500；TikTok「paw cleaner」標籤 50+ 獨立翻拍、總觀看 2,000 萬+；Pinterest 儲存 15K+（寵物清潔 hack 合輯常客）。YouTube 10K+觀看影片 8 個。【台灣缺席原因】蝦皮搜尋「寵物洗腳杯/寵物洗腳神器」僅 8 家白牌雜品（月銷總量 < 500，屬空白強信號 +3），momo/PChome 無品牌化產品，小北百貨有低價矽膠仿品但設計粗糙。缺席主因：寵物用品通路長期由傳統品牌（PETMART、ZEZE）把持，新奇 TikTok 爆款引進速度滯後 6-9 個月。【台灣機會量化】台灣養狗戶 230 萬家戶，雨季/泥地散步後清洗需求每月至少 4 次，單客戶 LTV 可延伸刷毛替換+寵物清潔液組合包，目標第一季 3,000 組試水。",
+          "cost_breakdown": "1688 裸價 NT$150/組 × 1.4（含海運+5%關稅+最後一哩）= 落地成本 NT$210；品牌包裝+專屬配色刷毛+替換芯 2 入設計成本 NT$35；總落地 NT$245。目標零售 NT$990，**毛利倍率 4.04x 🟢 優質**（990 ÷ 245）。退貨成本估算：售價 × 退貨率 4% × 1.5 逆物流 = NT$59（生活禮品/寵物類低退貨）。淨毛利 990 - 245 - 59 = NT$686（利潤率 69%）。",
+          "competition": "蝦皮：「寵物洗腳杯」8 家（月銷總量 420，白牌散售，無品牌化）；momo：0 家專屬品牌款（僅可加購 Dexas 進口貨 NT$1,580 但缺店頭行銷）；PChome：0 家；Pinkoi：3 家設計款但價格 NT$1,200+ 設計費高。空白度 🟢 強，品牌化機會明顯。",
+          "market_window": "6-12 個月主流窗口（海外爆紅 6 個月內台灣才跟上）；台灣寵物網紅圈（@lucy_the_labrador、@corgi_mochi）尚未大規模業配此類產品，搶先布局可吃首波紅利。🎁 母親節 5/11（距 23 天）可作為『媽媽養寵物毛小孩』送禮場景加分 +5 窗口。📅 最後安全進場日：2026/08/15（窗口 4 個月 × 70%）。",
+          "strategy": "首波 500 組 Dexas 同等規格白牌 OEM 貼牌（小改色+品牌 LOGO），一人團隊可在蝦皮+小北+momo 鋪貨 14 天內；主打「雨天泥巴爪一按乾淨」短影音 UGC，與 3-5 位寵物中小網紅（5K-50K 粉絲）合作 PGC 內容，投 Meta 廣告 CPC < NT$12 可撐。第二波補充替換刷毛芯（NT$290/2 入）製造復購，擴至 12 吋大型犬款。配套：寵物清潔濕紙巾(NT$99) + 寵物洗腳專用泡泡液 NT$299（非食品，非配方，物理清潔劑 OK）。",
+          "risks": "① 矽膠刷毛耐久性需實測（連續使用 200 次不變形）——進貨前先要 3 組 1688 樣品做壓力測試；② 大型犬兼容性——小型犬款杯口 10cm，大型犬款需擴至 15cm（第二波 SKU 再推）；③ TikTok 算法若風向轉向「自動噴水洗腳器」這類電動版，手動款會被快速替代（6 個月觀察期）。",
+          "repurchase_detail": "主杯一次性（耐用 1-2 年），但矽膠刷毛芯每 6 個月替換一次 → 復購週期約 6 個月，搭配寵物清潔濕紙巾/泡泡液訂閱制可拉高 LTV。",
+          "links": "https://www.amazon.com/Dexas-MudBuster-Portable-Washing-Medium/dp/B07NWCNXJG",
+          "scores": {
+            "margin": 90,
+            "demand": 75,
+            "window": 72,
+            "barrier": 55,
+            "viral": 78,
+            "difficulty": 85,
+            "repurchase": 50
+          },
+          "prediction": {
+            "statement": "4週後蝦皮「寵物洗腳杯」出現 3 個以上白牌品牌賣家，或 TikTok TW 相關翻拍影片 >= 15 支",
+            "platform": "蝦皮台灣 / TikTok TW",
+            "threshold": "蝦皮品牌賣家 >= 3 OR TikTok TW 翻拍 >= 15",
+            "verify_date": "2026-05-16"
+          },
+          "verify_date": "2026-05-16",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 2,
+          "name": "桌面便攜白噪音助眠機（USB-C 充電+定時+20 聲音）Yogasleep Hushh 風格",
+          "category": "健康療癒",
+          "score": 76,
+          "price": "NT$1,290",
+          "margin": "5.1x 🌟 爆品",
+          "highlight": "⚡ 30秒決策：睡眠焦慮族群爆發成長，Yogasleep Hushh 於 Amazon 累積 28,000+ 評論（baby sleep 首選），台灣蝦皮僅 2-3 個白牌雜品未品牌化。桌面尺寸+USB-C+20 聲選擇+定時，可切入失眠上班族/寶寶/學生宿舍三個場景。毛利 5.1x 🌟 爆品，電子類 -8 扣分後仍 🟢。✨ 信心指數：⭐⭐⭐（Amazon 評論數+TikTok 睡眠標籤+Pinterest 儲存 15K+ 三源驗證）📅 最後進場日：2026/08/20",
+          "source": "Amazon BSR 嬰兒用品前 100（Yogasleep Hushh B01D50RYSC）+ Kickstarter Vagustim v2 同期睡眠科技品類熱門 + Pinterest「sleep aid」儲存爆炸",
+          "demand_validation": "【國外爆紅證據】Yogasleep Hushh Amazon 評論 28,000+（BSR 嬰兒用品前 100），Hatch Restore 3 連續三季 Amazon Health & Personal Care 前 50；TikTok #sleephack、#whitenoise 標籤合計 15 億觀看，「桌面白噪音」翻拍 40+；Pinterest「sleep aid gadget」儲存 15K+。Google Trends US「white noise machine」過去 90 天穩定上升 18%。YouTube 10K+觀看 12 個。【台灣缺席原因】蝦皮搜尋「白噪音助眠機」2 家雜牌（月銷 180，空白強信號 +3），momo 有 Marpac Dohm NT$3,290 進口貨但缺中階品牌；心理健康話題在台灣從 2024 起才主流化（衛福部 15-30 歲補助方案），市場教育窗口開啟。【台灣機會量化】台灣失眠族群佔成人 25%（約 460 萬人），嬰幼兒家庭 80 萬戶，加上學生宿舍/辦公室場景至少 50 萬潛在客戶，目標首年 5,000-8,000 台。",
+          "cost_breakdown": "1688 裸價 NT$180（簡版）或 NT$280（20 聲+蓝牙版）× 1.4（含海運+關稅+最後一哩）= 落地成本 NT$252-392；品牌外殼+包裝+說明書+台灣 BSMI 檢驗分攤 NT$60/台；總落地 NT$312-452。目標零售 NT$1,290（中階版本），**毛利倍率 2.85-4.13x 🟡 理想-🟢 優質**（若選裸價 NT$280 款→ 毛利 3.31x 🟡）。退貨成本估算：售價 × 退貨率 6% 電子類 × 1.5 逆物流 = NT$116；淨毛利 1,290 - 392 - 116 = NT$782（利潤率 61%）。",
+          "competition": "蝦皮：「白噪音助眠機」2 家（月銷 180，白牌散售）；momo：Marpac Dohm NT$3,290 進口貨、Yogasleep Hushh 水貨 NT$1,980；PChome：0；Pinkoi：2 家設計款 NT$1,800+。空白度 🟡 中（momo 有高價進口但中階品牌空白），品牌化機會在 NT$1,290 中階價帶。",
+          "market_window": "6-18 個月窗口；台灣睡眠補助+心理健康公共話題上升，助眠品類紅利期正開啟。🎁 母親節 5/11（距 23 天）——「讓媽媽睡好覺」送禮場景強力加分 +5。📅 最後安全進場日：2026/08/20（窗口 4 個月 × 70%）。",
+          "strategy": "首波 300 台 20 聲+藍牙版本 OEM，主打「媽媽失眠救星」+「寶寶哄睡神器」+「開放式辦公室噪音屏蔽」三訴求分眾；蝦皮+momo 上架同步，佐以睡眠教練/心理師 KOL 業配（如 @therapyandfood），投 Meta 廣告主打 3C 族群 30-45 歲女性；第二波補充定時充電線（NT$290）+ 智能 APP 版本（需 NCC 認證）。配套商品：拋棄式耳塞 NT$59、助眠香氛（非配方精油 → 選擇物理型熏香石）。",
+          "risks": "① 電子退貨率高（6%）——首批需要嚴選 3 家 1688 工廠做 48 小時連續運作測試；② BSMI 認證成本 NT$1.5-2.5 萬/型號，需攤提至前 500 台；③ Apple 家庭共享/Google Home 相容性期望上升，若要做藍牙+APP 需 NCC 認證再加 NT$3 萬；④ 高階品牌 Hatch 若進入台灣可能壓縮中階品牌空間（關注 Hatch 台灣代理動向）。",
+          "repurchase_detail": "一次性購買為主，但可推「雙機組合」（夫妻/一台辦公室+一台臥室）及 USB-C 充電線補充（NT$290），提升單客 LTV 25-30%。",
+          "links": "https://www.amazon.com/Yogasleep-Portable-Soothing-Rechargeable-Baby-Safe/dp/B01D50RYSC",
+          "scores": {
+            "margin": 95,
+            "demand": 80,
+            "window": 68,
+            "barrier": 62,
+            "viral": 70,
+            "difficulty": 82,
+            "repurchase": 38
+          },
+          "prediction": {
+            "statement": "4週後蝦皮「白噪音助眠機」品牌賣家 >= 5，或 Google Trends TW 搜尋量突破 60（目前 < 35）",
+            "platform": "蝦皮台灣 / Google Trends TW",
+            "threshold": "蝦皮品牌賣家 >= 5 OR Google Trends TW >= 60",
+            "verify_date": "2026-05-16"
+          },
+          "verify_date": "2026-05-16",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 3,
+          "name": "LED 仿生水母心情燈（16 色遙控+靜音馬達+USB-C 款）",
+          "category": "生活禮品",
+          "score": 72,
+          "price": "NT$1,390",
+          "margin": "3.55x 🟡 理想",
+          "highlight": "⚡ 30秒決策：TikTok 7.8M posts 水母燈 2026 1 月以後再度病毒，Amazon B09VGRM6GZ BSR 穩定於送禮類前 100。16 色遙控+靜音馬達+仿生擬真水母漂浮，強視覺奇觀，禮品/紓壓/情感障礙兒童輔助三路收割。台灣蝦皮雖有 8 家白牌仿品但品牌+包裝設計留白。✨ 信心指數：⭐⭐（TikTok 7.8M posts + Amazon 10K+ 評論雙源，Pinterest 儲存待驗）📅 最後進場日：2026/07/20",
+          "source": "TikTok（jellyfish lamp 標籤 7.8M posts）+ Amazon B09VGRM6GZ 10,000+ 評論 + EzBuyCo 品牌 2026 Spotlight 爆文",
+          "demand_validation": "【國外爆紅證據】Amazon 頁面 B09VGRM6GZ、B01GD87X4I 各累積 8,000-15,000 評論，BSR 家居裝飾前 300；TikTok #jellyfishlamp 標籤合計 7.8M posts、#jellyfishaquarium 2,500 萬觀看，1 月 22 日 EzBuyCo 爆文 7.6K likes；Pinterest「jellyfish lamp decor」儲存 25K+。YouTube 10K+ 觀看 15 個（含 ASMR 紓壓影片）。【台灣缺席原因】蝦皮搜尋「水母燈」8 家白牌月銷 700（中度驗證 +2），momo/PChome 無品牌化款，Pinkoi 有設計款 NT$2,500 但缺 USB-C 新版本；缺席主因：禮品類傳統通路（金興發、寶雅）鎖定簡單夜燈，未引進複雜仿生款。【台灣機會量化】台灣禮品市場（含七夕、母親節、聖誕、生日）年規模 120 億，居家紓壓情境擴張，目標首年 4,000-6,000 組。",
+          "cost_breakdown": "1688 裸價 NT$280（大型 22cm 款）× 1.4 = 落地成本 NT$392；品牌外盒+遙控器+USB-C 線套裝成本 NT$45；總落地 NT$437。目標零售 NT$1,390，**毛利倍率 3.18x 🟡 理想**（1,390 ÷ 437）。退貨成本估算：售價 × 退貨率 4% 生活禮品 × 1.5 = NT$83；淨毛利 1,390 - 437 - 83 = NT$870（利潤率 63%）。",
+          "competition": "蝦皮：「水母燈」8 家白牌（月銷總量 700），無大型品牌；momo：0 家專屬品牌（僅 Pinkoi 引入 Lightahead 水貨 NT$2,280）；PChome：0；Pinkoi：4 家設計款 NT$1,800-2,500。空白度 🟡 中，中階價帶 NT$1,390 品牌化機會明確。",
+          "market_window": "6 個月主流窗口（TikTok 病毒在 2026 1-2 月再度爆發，台灣滲透期 3-6 個月）。🎁 母親節 5/11（距 23 天）送禮場景強力；父親節 8/8、情人節（2027）連續送禮窗口。📅 最後安全進場日：2026/07/20（窗口 4 個月 × 70%）。",
+          "strategy": "首波 500 組「居家紓壓 + 送禮」雙訴求，包裝強化禮盒感（燙金 LOGO+手提袋），蝦皮+Pinkoi+momo 上架。TikTok/IG Reels UGC 開箱內容（水母游動+16 色變化 30 秒短影片）。與 3 位紓壓 KOL（@cozylife_tw、@my_calm_home）合作情境內容，投 Meta/TikTok 廣告 CPC < NT$15。配套：USB-C 充電線 NT$190、專屬支架 NT$290。第二波擴至 5 入迷你水母群組。",
+          "risks": "① 水母馬達壽命（低價款 < 1,000 小時，台灣消費者用 6 個月壞→ 退貨）——首批需嚴選「靜音馬達版本」工廠，運作測試 500 小時；② 運輸破損風險（壓克力圓管易裂）——需打樣 3 次確認包裝耐摔；③ 電子類 -8 退貨扣分實務上可高達 7-8%，影響淨毛利；④ 抄襲快：蝦皮白牌 2 週內即可複製新款，需靠品牌+包裝+售後區隔。",
+          "repurchase_detail": "一次性購買為主，復購低，但送禮情境可拉高客單（一人買多組禮品）；長期可延伸同品牌其他仿生燈（水滴燈、海葵燈）做系列。",
+          "links": "https://www.amazon.com/Multi-Color-Jellyfish-Decoration-Christmas-Birthdays/dp/B09VGRM6GZ",
+          "scores": {
+            "margin": 75,
+            "demand": 72,
+            "window": 62,
+            "barrier": 52,
+            "viral": 88,
+            "difficulty": 80,
+            "repurchase": 30
+          },
+          "prediction": {
+            "statement": "4週後 TikTok TW「水母燈」相關翻拍 >= 20 支，或蝦皮品牌賣家 >= 6（目前白牌 8）",
+            "platform": "TikTok TW / 蝦皮台灣",
+            "threshold": "TikTok TW 翻拍 >= 20 OR 蝦皮品牌賣家 >= 6",
+            "verify_date": "2026-05-16"
+          },
+          "verify_date": "2026-05-16",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 4,
+          "name": "3D 全息風扇投影儀（42cm 桌面款+WiFi App 編輯）",
+          "category": "科技電子",
+          "score": 66,
+          "price": "NT$2,490",
+          "margin": "3.23x 🔵 門檻",
+          "highlight": "⚡ 30秒決策:空中浮影像視覺奇觀，店家廣告/派對/禮品多場景；台灣仍屬非常空白（蝦皮月銷合計 < 300，空白強信號 +3）。WiFi App 可自訂 GIF/LOGO，跨界科技×視覺奇觀×商用廣告三領域。電子類+BSMI/NCC 認證門檻 = 天然護城河。⚠ 零售價 NT$2,490 靠近 NT$3,000 上限但仍在合理區；破例理由：跨界新奇兼商用價值。✨ 信心指數：⭐⭐（Amazon 前 1000+Makuake 群募過半，Pinterest 儲存與台灣 Trends 待驗）📅 最後進場日：2026/10/20",
+          "source": "Amazon 新奇 3C BSR 前 1000（多款 42cm 風扇投影儀）+ Makuake 日本群募 3 月過半（JP ¥1,800 萬）+ TikTok「hologram fan」標籤 320 萬觀看",
+          "demand_validation": "【國外爆紅證據】Amazon 42cm 全息風扇投影儀 TOP 5 累積評論 2,500+（BSR 奇奇怪怪數位小物前 1000）；Makuake 2026 3 月類似款日本群募達成率 165%（¥1,800 萬）；TikTok #hologramfan 標籤 320 萬觀看，商用廣告/派對場景翻拍活躍。YouTube 10K+ 觀看 6 個。【台灣缺席原因】蝦皮搜尋「全息風扇投影」4 家（月銷合計 280，空白強信號 +3），多為無 BSMI/NCC 認證水貨；momo/PChome 無相關品牌；缺席主因：BSMI+NCC 認證成本高（合計 NT$5-8 萬/型號）+ 台灣商用廣告市場仍偏傳統電視/LED 跑馬燈。【台灣機會量化】台灣廣告招牌升級需求（夜市、手搖飲、婚禮場域）+ 禮品奇趣品類+ 居家派對裝飾三合一場景，目標首年 1,500-2,500 台商用為主。",
+          "cost_breakdown": "1688 裸價 NT$550（42cm WiFi 版）× 1.4 = 落地成本 NT$770；BSMI+NCC 認證攤提 NT$180/台（前 400 台）；品牌包裝+說明書 NT$50；總落地 NT$1,000。目標零售 NT$2,490，**毛利倍率 2.49x ⚠️ 觸及 2.8x 硬門檻**。若採用 NT$450 裸價基礎款 → 落地 NT$630+180+50 = NT$860，毛利 2.89x 🔵 門檻（勉強過）。退貨成本估算：售價 × 退貨率 6% 電子類 × 1.5 = NT$224；淨毛利 2,490 - 860 - 224 = NT$1,406（利潤率 56%）。",
+          "competition": "蝦皮：4 家白牌水貨（月銷 280，無 BSMI/NCC）；momo：0；PChome：0；商用專營通路如 PAPAGO、益欣科技：僅更大尺寸 65cm+ 商用款 NT$18,000+。空白度 🟢 強（中小尺寸 42cm 消費級+商用小店場景完全空白）。",
+          "market_window": "12-18 個月窗口；BSMI/NCC 認證是天然進入障礙，競爭緩慢。🎁 商用禮品情境（手搖飲開幕、派對租借）全年需求穩定；中秋節（10/6）+ 聖誕節（12/25）商用廣告升級旺季。📅 最後安全進場日：2026/10/20（窗口 6 個月 × 70%）。",
+          "strategy": "首波 200 台 42cm 基礎 WiFi 款，BSMI+NCC 認證過關後鎖定「夜市手搖飲開幕廣告」+「婚禮/派對奇趣桌面」+「公司展場」三 B2B 場景；用 momo/PChome/momoshop B2B 通道+ B2B 電銷團隊（2 人）開拓實體商家；搭配 Meta 廣告主打 30-50 歲小生意老闆。配套：替換 GIF/LOGO 製作服務 NT$590/檔、支架+保護罩 NT$790。第二波擴至 65cm 商用全息柱。",
+          "risks": "① BSMI+NCC 認證週期 45-60 天+成本 NT$5-8 萬，試單壓力大——先小批 50 台試跑 B2B；② 產品故障率比一般 3C 高（高速旋轉馬達 + LED 陣列）——嚴選 3 家工廠 5% 抽檢；③ 零售價 NT$2,490 已臨電商試單上限，若要破 NT$3,000 需強化品牌故事；④ 店家廣告市場教育成本高——需提供 7 天免費試用+ 開箱影片樣本；⑤ 退貨率高，需設 B2B 為主降低 C 端退貨比例。",
+          "repurchase_detail": "一次性購買；B2B 場景可推多台成組（3 台以上打造展場氛圍），或替換影片/GIF 製作訂閱服務 NT$590/月。",
+          "links": "https://www.amazon.com/Projector-Bluetooth-Brightness-Halloween-Christmas/dp/B0BZRFXTLT",
+          "scores": {
+            "margin": 70,
+            "demand": 68,
+            "window": 78,
+            "barrier": 72,
+            "viral": 85,
+            "difficulty": 60,
+            "repurchase": 25
+          },
+          "prediction": {
+            "statement": "4週後蝦皮「全息風扇投影」品牌賣家 >= 3，或 Makuake 同類群募 >= 2 個達標",
+            "platform": "蝦皮台灣 / Makuake",
+            "threshold": "蝦皮品牌賣家 >= 3 OR Makuake 同類群募達標案例 >= 2",
+            "verify_date": "2026-05-16"
+          },
+          "verify_date": "2026-05-16",
+          "verdict": null,
+          "verdict_note": null
+        },
+        {
+          "rank": 5,
+          "name": "重力感應電動鹽椒研磨器雙入組（USB-C 快充+LED+磁吸底座）",
+          "category": "廚房家居",
+          "score": 66,
+          "price": "NT$1,590",
+          "margin": "4.5x 🟢 優質",
+          "highlight": "⚡ 30秒決策：Amazon 廚房小家電多款 BSR 前 100（UNNEES、XinXu、LARS NYSØM 各 8,000-15,000 評論），台灣蝦皮雖已有但大多無品牌化/LED/Type-C。重力翻轉 + 單手操作 + LED 補光拍攝感佳。毛利 4.5x 🟢 優質，但電子類 -8 退貨風險。配合 Airbnb/民宿/婚禮送禮場景可擴張。✨ 信心指數：⭐⭐（Amazon 多款評論 + TikTok 翻拍 40+，Pinterest 儲存待驗）📅 最後進場日：2026/08/25",
+          "source": "Amazon 多款 Gravity Grinder BSR 前 100（UNNEES B0CNW6115Z、XinXu B085NDYY1P、LARS NYSØM B0CGB4DM8K）+ TikTok「electric salt grinder」40+ 翻拍 + Cuisinart 品牌佔 momo NT$2,980",
+          "demand_validation": "【國外爆紅證據】Amazon UNNEES、XinXu、LARS NYSØM 各累積 8,000-15,000 評論，Kitchen & Dining BSR 前 100；TikTok「gravity grinder」+「electric salt」標籤 40+ 翻拍影片，總觀看 800 萬+；Pinterest「electric salt pepper grinder」儲存 12K+。YouTube 10K+ 觀看 10 個。【台灣缺席原因】蝦皮搜尋「電動胡椒研磨器」22 家（月銷總量 1,800，中強驗證 +2），大多為白牌或 Amazon 轉賣水貨缺台灣在地品牌保固；momo 有 Cuisinart NT$2,980（高端價帶）；PChome 僅象印水貨；空白主因：中階 NT$1,290-1,590 品牌化自動 + 磁吸+LED 組合尚無強勢品牌。【台灣機會量化】台灣 300 萬戶家庭 + 3 萬家餐廳咖啡店 Airbnb 民宿，重力感應電動版替換手動傳統型換機周期 3-5 年，目標首年 6,000-10,000 組雙入。",
+          "cost_breakdown": "1688 裸價 NT$250/組（雙入 Type-C 磁吸款）× 1.4 = 落地成本 NT$350；品牌包裝+磁吸底座+說明書+BSMI 認證分攤 NT$50/組；總落地 NT$400。目標零售 NT$1,590，**毛利倍率 3.98x 🟡 理想**（1,590 ÷ 400）。退貨成本估算：售價 × 退貨率 6% 電子類 × 1.5 = NT$143；淨毛利 1,590 - 400 - 143 = NT$1,047（利潤率 66%）。",
+          "competition": "蝦皮：22 家（月銷總量 1,800，白牌散售）；momo：Cuisinart RS-2 NT$2,980、象印 NT$2,480（高端）；PChome：象印水貨；Pinkoi：3 家設計款 NT$1,800+。空白度 🟡 中，中階 NT$1,590 + LED + 磁吸 + Type-C 組合品牌化機會。",
+          "market_window": "6-12 個月窗口；廚房小家電在台灣的品牌化/精緻化趨勢加速（2025 年 momo 廚房小家電成長 28%）。🎁 母親節 5/11（距 23 天）+ 父親節 8/8 雙送禮窗口 +5。📅 最後安全進場日：2026/08/25（窗口 6 個月 × 70%）。",
+          "strategy": "首波 500 組 2 入 Type-C + 磁吸底座 OEM，主打「質感廚房+單手操作+送禮雙入」，蝦皮 + momo + Pinkoi 上架同步。TikTok 短影音 UGC 拍攝「重力翻轉自動研磨+LED 補光」視覺強對比。與 2 位生活美學 KOL（@slow_living_tw、@homecook_diary）合作情境內容，投 Meta 廣告 CPC < NT$18。配套：補充款岩鹽（150g NT$290 物理非配方 OK）+ 胡椒粒（NT$190）製造復購。第二波擴至 4 入家庭組 / 手持乾香料研磨款。",
+          "risks": "① 電子退貨率 6%——首批嚴選工廠做 300 次連續研磨壽命測試；② BSMI 認證 NT$1.5-2 萬/型號，需攤提；③ 蝦皮同類 22 家已起量（月銷 1,800），白牌價格戰隨時爆發——需靠品牌包裝 + 雙入禮品定位 + 補充配件生態系拉開差距；④ 磁吸底座吸力強度需實測（弱吸力會被客訴）；⑤ Cuisinart/象印等大牌若推中階款會壓縮品牌化空間。",
+          "repurchase_detail": "主機一次性（耐用 3-5 年），但補充岩鹽（NT$290）+ 胡椒粒（NT$190）每 2-3 個月耗盡，可做訂閱制或 3 入補充包 NT$690 拉升 LTV。",
+          "links": "https://www.amazon.com/UNNEES-Electric-Automatic-Adjustable-Roughness/dp/B0CNW6115Z",
+          "scores": {
+            "margin": 85,
+            "demand": 78,
+            "window": 68,
+            "barrier": 65,
+            "viral": 75,
+            "difficulty": 80,
+            "repurchase": 42
+          },
+          "prediction": {
+            "statement": "4週後蝦皮「電動鹽椒研磨器」品牌賣家 >= 8（目前白牌 22 無品牌），或 Google Trends TW 搜尋量 >= 40（目前 25）",
+            "platform": "蝦皮台灣 / Google Trends TW",
+            "threshold": "蝦皮品牌賣家 >= 8 OR Google Trends TW >= 40",
+            "verify_date": "2026-05-16"
+          },
+          "verify_date": "2026-05-16",
+          "verdict": null,
+          "verdict_note": null
+        }
+      ]
+    },
+    {
       "date": "2026-04-17",
       "evolution": "方向 B 需求驗證升級 v3.2 — 🛒 蝦皮競品月銷量｜新增「台灣蝦皮前 3 名競品月銷量加縥」為第 5 量化需求信號，閾值：>5,000/月=已驗證市場；1,000-5,000=中等；<500=完全空白（正面信號）。今日 5 個產品全部套用此信號。狀態：待固化（下次優先更新 references/scoring_rules.md）。",
       "products": [
@@ -2701,5 +2887,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-04-17T02:34:33.000Z"
+  "lastUpdated": "2026-04-18T09:49:18.390Z"
 }
