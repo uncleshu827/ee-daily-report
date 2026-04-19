@@ -1,6 +1,202 @@
 {
   "reports": [
     {
+      "date": "2026-04-19",
+      "evolution": "F. 分析框架創新 — 🐾 寵物生命階段 × 場景雙軸：每個產品 highlight 新增『目標對象』標註（幼/成/老 × 室內/外出/多寵），一眼看出定位",
+      "products": [
+        {
+          "rank": 1,
+          "name": "老犬腸道益生菌凍乾條（Senior Dog Gut Probiotic Freeze-Dried Sticks）",
+          "category": "寵物營養保健",
+          "score": 86,
+          "price": "NT$1,980 / 盒 30 包",
+          "margin": "3.3x 🟡 理想",
+          "highlight": "🐾 目標：老犬（7 歲+）× 居家場景 × 消化敏感/腸胃問題。Chewy 2026 趨勢報告第一名品類，IFF 於 2026-04 正式推出『PureStrong』狗專用益生菌，美國寵物高齡化驅動；單一凍乾條形式（30 包/盒，月度耗材），切入『老犬腸道』差異化定位，避開主食登錄限制（屬保健品，跨境 C2C 可放行）。",
+          "source": "Chewy 2026 Pet Trend Report / IFF PureStrong 發布 / Amazon Best Sellers Dog Probiotic Supplements",
+          "demand_validation": "①海外爆紅：Amazon 狗益生菌類目累積評論 10,000+，NATURE TARGET 120-Bites 長期 BSR < 500，Honest Paws Stick 30 支包裝月銷 5,000+；Chewy 2026 報告列為第一類別。②中/台缺席：台灣蝦皮搜『狗益生菌凍乾條』月總銷量 < 800，多為人用益生菌轉用或一般膠囊，『老犬專用凍乾條』品牌缺席；中國淘寶同關鍵字頭部月銷 < 3,000，天貓國際跨境有但『老犬垂直』定位幾無。③雙市場機會：台灣 2025 年起寵物食品登錄制，但保健補充品跨境 C2C 可放行，搭配『老犬腸胃敏感』場景包裝可打情感牌。",
+          "cost_breakdown": "1688 裸價：單包凍乾益生菌（B. subtilis + Lactobacillus + Bifidobacterium 三菌株）CNY 3/包 → NTD 13 × 1.55（食品類運費係數）= NTD 20 落地；30 包/盒 落地成本 NTD 600。零售 NTD 1,980，真實毛利 3.3x 🟡 理想。退貨成本：1980 × 1.5%（保健品拆封退貨率低）× 1.5 逆物流 = NTD 45（極低）。淨毛利 ≈ NTD 1,335/盒。",
+          "competition": "🇹🇼 台灣：蝦皮『狗益生菌條』頭部賣家 2 家，月總銷量約 800，無老犬專用品牌（Zolmia、汪喵星球偏成犬通用）；momo/PChome 進口品牌貴（Pet-Tabs 月量少）。🇨🇳 中國：淘寶『狗益生菌凍乾』頭部月銷 1,500，天貓國際有 NATURE TARGET 跨境但品牌力弱，『老犬專用』整個細分空白；京東寵物保健品高齡類占比 < 5%。",
+          "market_window": "9-15 個月（台灣老犬人口 2026 預估 45 萬隻，中國高齡犬 2,100 萬隻且年增 8%，雙市場空白度同時存在）。最後安全進場日：2026-07-31（窗口 9 個月 × 70%）",
+          "strategy": "品牌切入：『老犬腸胃敏感專用』垂直定位，避開成犬泛用市場。包裝設計強調『凍乾條、一天一條、嘴巴撕開』，解決老犬抗拒吃藥的痛點。KOL 策略：找 10+ 萬粉寵物 KOL 中『老犬主』（IG/FB 高齡犬話題創作者）投合作，製作 30 天排便改善對比影片。訂價 NT$1,980/30 包，單包 NT$66，對標進口保健品半價。",
+          "risks": "①台灣農委會寵物食品登錄制：保健補充品 C2C 跨境可放行，但 B2B 正式通路需備案（3-6 個月）；②菌株活性保存期：凍乾條室溫保存需 18 個月以上，包裝需避光防潮，前期 OEM 驗證關鍵；③同配方近 12 個月無重大召回（FDA 2025-2026 狗益生菌類零重大召回事件）。",
+          "repurchase_detail": "月度耗材（30 包/月）+ 老犬固定保健行為 → 複購 85/100。預估 LTV 6 個月 ≈ NT$11,880/客戶。",
+          "links": [
+            "https://www.amazon.com/Probiotics-Freeze-Dried-Digestive-Prebiotics-Supplements/dp/B0CZ9HP1SQ"
+          ],
+          "scores": {
+            "margin": 70,
+            "demand": 80,
+            "window": 75,
+            "barrier": 65,
+            "viral": 55,
+            "difficulty": 75,
+            "repurchase": 85
+          },
+          "prediction": {
+            "statement": "4 週後 Amazon 狗益生菌類目 BSR 前 10 名至少出現 1 款『senior』或『freeze-dried stick』關鍵字新品，或台灣蝦皮『老犬益生菌條』月總銷量突破 1,200",
+            "platform": "Amazon Pet / 蝦皮寵物",
+            "threshold": "Amazon 狗益生菌類 senior/stick 新品 >= 1 OR 蝦皮月銷量 > 1200",
+            "verify_date": "2026-05-17"
+          },
+          "verify_date": "2026-05-17",
+          "verdict": null,
+          "verdict_note": ""
+        },
+        {
+          "rank": 2,
+          "name": "焦慮緩解矽膠舔食墊（Calming Silicone Lick Mat）",
+          "category": "寵物訓練行為",
+          "score": 70,
+          "price": "NT$299 / 片",
+          "margin": "6.1x 🌟 爆品",
+          "highlight": "🐾 目標：幼犬/成犬/焦慮犬 × 洗澡、剪指甲、看醫生、獨處場景。矽膠舔食墊 TikTok 長期熱門（#lickmat 總播放 20 億+），在『寵物焦慮緩解』情境下有剛需（打雷、煙火、獨留家中）；售價低衝動購買強、毛利爆棚（6.1x）、即開即用、ASMR 拍攝性極強。",
+          "source": "TikTok #lickmat 熱門 / LickiMat 官方品牌 / Chewy、Amazon Pet 長期熱銷類目",
+          "demand_validation": "①海外爆紅：TikTok #lickmat 累積播放 20 億+，近 30 天新增 300+ 原創影片；LickiMat 官方 Amazon 月銷 15,000+；寵物焦慮治療師 IG 帳號頻繁提及。②中/台缺席：台灣蝦皮『舔食墊』月總銷量 3,500（白牌為主，LickiMat 品牌代理少）；中國淘寶白牌多但單價極低（CNY 15-30），『焦慮緩解』情境行銷幾無。③雙市場機會：差異化不在功能（矽膠模具本身），而在『情境包裝』+ 『焦慮緩解劑量指南卡』+ 『花生醬食譜』形成品牌故事。",
+          "cost_breakdown": "1688 裸價：食品級矽膠舔食墊（直徑 20cm，吸盤固定）CNY 8-12 → NTD 35-53 × 1.4 = NTD 49-74 落地。零售 NTD 299，真實毛利 6.1x 🌟 爆品。退貨成本：299 × 3%（矽膠品退貨率低）× 1.5 = NTD 13。淨毛利 ≈ NTD 237/片（搭配 3 入套組 NT$799 更甜）。",
+          "competition": "🇹🇼 台灣：蝦皮『舔食墊』頭部賣家 5 家月銷 700+，但多數為無品牌低價矽膠模（NT$99-199），『焦慮緩解』品牌故事空缺；momo 有 LickiMat 代理但價格高（NT$599/片）。🇨🇳 中國：淘寶『舔食板』頭部月銷 4,500，但產品同質化嚴重（慢食定位），『焦慮緩解+情境』定位有差異化空間。",
+          "market_window": "6-9 個月（品類已起量，差異化窗口較短；但情境行銷品牌故事可撐 12 個月）。最後安全進場日：2026-07-10（窗口 6 個月 × 70% + 緩衝）",
+          "strategy": "3-in-1 套組策略：『焦慮緩解舔食墊 3 片組 + 劑量指南卡 + 推薦食譜小冊』NT$799（單片 NT$266）。主打場景：①洗澡分散注意 ②剪指甲不掙扎 ③獨留家中安心食。KOL 投放：訓犬師、動物行為諮商師（台灣 Martha Cheng 類、中國 Kobe Bing Dog）建立專業背書。TikTok 內容：『30 天焦慮犬改善打卡』。",
+          "risks": "①白牌價格戰：蝦皮低於 NT$199 的白牌競品會拉低消費者心理價位，必須以品牌故事 + 套組包裝拉開；②退貨風險極低（矽膠耐用、無食品安全問題）；③矽膠食品級認證（FDA/台灣 GMP）是關鍵硬壁壘，OEM 驗廠需 1-2 個月；④無召回風險（2024-2026 同類零重大事件）。",
+          "repurchase_detail": "半年-一年（矽膠耐用，但焦慮主人會一次買多片/家庭不同場景各一）→ 複購 55/100。套組模式 LTV 可拉高至 NT$1,500/客戶。",
+          "links": [
+            "https://lickimat.com/"
+          ],
+          "scores": {
+            "margin": 95,
+            "demand": 72,
+            "window": 50,
+            "barrier": 30,
+            "viral": 85,
+            "difficulty": 92,
+            "repurchase": 55
+          },
+          "prediction": {
+            "statement": "4 週後蝦皮『焦慮 舔食墊』或『calming lick mat』搜尋賣家數 >= 8，或 TikTok #lickmat 近 30 天新增影片 >= 500",
+            "platform": "蝦皮寵物 / TikTok",
+            "threshold": "蝦皮相關賣家 >= 8 OR TikTok #lickmat 30 天新增 >= 500",
+            "verify_date": "2026-05-17"
+          },
+          "verify_date": "2026-05-17",
+          "verdict": null,
+          "verdict_note": ""
+        },
+        {
+          "rank": 3,
+          "name": "魚鱗矽膠多爪除毛按摩手套（Fish-Scale Deshedding Grooming Glove）",
+          "category": "寵物護理美容",
+          "score": 68,
+          "price": "NT$490 / 雙",
+          "margin": "3.98x 🟡 接近🟢",
+          "highlight": "🐾 目標：成犬/成貓/長毛品種 × 居家梳理 × 多寵家庭。Delomo Zoe 類進化版——新增『魚鱗紋多爪設計』讓脫毛黏附更整齊成團，視覺 ASMR 感極強；TikTok 寵物梳毛影片播放 5 億+，寵物毛一次成團吸附畫面療癒洗腦。",
+          "source": "TikTok #dogbrushing / Delomo 品牌官方 / Amazon Pet Grooming Gloves 類目長期 BSR < 200",
+          "demand_validation": "①海外爆紅：Delomo Zoe 長期 Amazon 寵物梳理類 BSR < 200，累積 80,000+ 評論；TikTok 寵物梳毛 ASMR 類影片平均播放 500K+。②中/台缺席：台灣蝦皮『除毛手套』月銷 2,200（舊款硅膠粒為主），『魚鱗紋+多爪』新設計空缺；中國淘寶『寵物梳毛手套』頭部月銷 3,800 但款式老舊（2020 年設計），新設計空間存在。③雙市場機會：魚鱗紋比傳統矽膠粒『除毛成團』效率提升 30%（拍攝效果更強），差異化訴求『一次成團、即貼即撕』。",
+          "cost_breakdown": "1688 裸價：食品級矽膠魚鱗紋+5 指多爪手套 CNY 20-28 → NTD 88-123 × 1.4 = NTD 123-172 落地。零售 NTD 490（雙手一雙），真實毛利 3.98x 🟡接近🟢。退貨成本：490 × 4%（尺寸偏差可能）× 1.5 = NTD 29。淨毛利 ≈ NTD 338/雙。",
+          "competition": "🇹🇼 台灣：蝦皮頭部賣家 4 家月銷 550+，多為 NT$199-349 無品牌矽膠粒舊款；PChome 有 Delomo 進口 NT$699 偏貴。🇨🇳 中國：淘寶白牌月銷 3,800 但新魚鱗紋+ASMR 訴求空缺，天貓 Delomo 店無繁體中文與在地配送。",
+          "market_window": "6-9 個月（品類已起量但新設計差異化窗口存在，預估歐美 Delomo 新款 2026-Q3 跟進）。最後安全進場日：2026-07-20",
+          "strategy": "差異化主打『魚鱗紋 + ASMR 除毛』，拍攝策略：短影音特寫寵物毛成團效果，10 秒前後對比。KOL：中型寵物 YouTuber/TikToker 做『除毛挑戰』。訂價 NT$490，比 Delomo 進口便宜 30%。延伸產品：配套『靜電除毛滾筒』NT$199 形成 cross-sell。",
+          "risks": "①白牌價格戰（蝦皮 NT$199 舊款），但魚鱗新設計視覺差異可撐價；②矽膠食品級認證為硬門檻（貓狗咬食風險），OEM 需驗證；③退貨風險 4%（尺寸偏差），包裝註明手掌圍 XS/S/M/L 四段可降低。",
+          "repurchase_detail": "耐用品（半年-1 年）→ 複購 40/100。但多寵家庭/大寵物家庭可能購買 2-3 雙不同尺寸，拉高單客單價。",
+          "links": [
+            "https://www.delomo.com/products/delomo-zoe"
+          ],
+          "scores": {
+            "margin": 85,
+            "demand": 62,
+            "window": 55,
+            "barrier": 40,
+            "viral": 78,
+            "difficulty": 88,
+            "repurchase": 40
+          },
+          "prediction": {
+            "statement": "4 週後蝦皮『魚鱗 除毛手套』或『scale grooming glove』賣家 >= 5，或 TikTok 新款魚鱗紋影片 >= 200",
+            "platform": "蝦皮寵物 / TikTok",
+            "threshold": "蝦皮賣家 >= 5 OR TikTok 魚鱗新款 30 天新增 >= 200",
+            "verify_date": "2026-05-17"
+          },
+          "verify_date": "2026-05-17",
+          "verdict": null,
+          "verdict_note": ""
+        },
+        {
+          "rank": 4,
+          "name": "貓咪陽台安全旋轉桿系統（Cat Balcony Safety Paddle System）",
+          "category": "寵物用品器具",
+          "score": 67,
+          "price": "NT$2,490 / 5 米組",
+          "margin": "3.5x 🟡 理想",
+          "highlight": "🐾 目標：成貓/老貓/幼貓 × 高樓陽台場景 × 放養貓家庭。Oscillot® 歐美爆款（TikTok 2026 pet containment wave 話題），台灣高樓『貓咪墜樓意外』年發生 2,000+ 件為剛需，但目前解方只有『全包網』醜且阻礙採光；旋轉桿讓貓無法攀附卻不破壞視線，雙市場（中國高層住宅一線城市）空白度高。",
+          "source": "Oscillot® 官方 / Forum.OscillotAmerica.com（TikTok Next 2026 報告）/ 台灣防止動物墜樓意外聯盟（社群）",
+          "demand_validation": "①海外爆紅：Oscillot® 2026 TikTok 報告單支影片 290 萬播放，美國年銷 15,000+ 套；Reddit r/cats 和 r/catcontainment 活躍討論；歐美版本 oscillot.eu 同步熱銷。②中/台缺席：台灣蝦皮搜『貓陽台安全』頭部為紗網/防護網（非旋轉桿），月總銷量 1,200；中國淘寶『猫咪防跳窗』頭部月銷 900，全為紗網類；雙市場均無旋轉桿類方案。③雙市場機會：台灣高樓貓墜樓 2,000+/年（動保團體統計），中國一線城市高層住宅養貓戶數 > 3,000 萬，剛需已存在但解方缺席。",
+          "cost_breakdown": "1688 裸價：鋁合金+軸承+四葉旋轉槳（每米 3 組槳 + 支柱）CNY 350/5 米組 → NTD 1,540 × 1.4 = NTD 2,156 落地。實際上料件成本偏高（金屬+軸承），需與工廠議 OEM 降至 CNY 260-300（批量 500+）。零售 NTD 2,490 → 3,980 三段定價（裸組/含安裝/含延保），平均毛利 3.5x 🟡 理想。退貨成本：3980 × 6%（尺寸不合/安裝問題）× 1.5 = NTD 358。淨毛利 ≈ NTD 1,400/組（5 米基本款）。",
+          "competition": "🇹🇼 台灣：Oscillot 未在地銷售，蝦皮/momo 皆無同類旋轉桿方案，只有紗網/圍欄（NT$800-2,500）；PChome 搜『貓陽台』頭部為圍欄。🇨🇳 中國：淘寶無旋轉桿類，天貓『陽台防貓』頭部為紗網（月銷 500）。雙市場均為空白，最早進場者有 2-3 年獨家窗口。",
+          "market_window": "15-24 個月（剛需品類空白期長、需要時間培養消費者認知；預估 2027-Q2 才會出現跟進者）。最後安全進場日：2027-02-28",
+          "strategy": "切入點：高樓貓家庭（公寓/大樓）。教育式行銷：製作『防墜貓知識圖卡』『陽台量測 DIY 指南』在 Threads/IG 擴散；KOL：找『陽台貓』『窗台貓』帳號實測；SEO 關鍵字『貓咪陽台安全』『防止貓墜樓』卡位 Google Search。建議從『5 米入門組 NT$2,490』+『10 米進階組 NT$4,490』+『安裝服務加購 NT$1,200』三層 SKU。",
+          "risks": "①安裝難度中等，需提供量尺指南與 LINE 客服（降低退貨）；②金屬件海運重量高，海運費需精算（建議整櫃 200 組起才划算）；③無食品/法規風險；④可能被仿製但專利（Oscillot 專利 2019 到期）已過，壁壘來自教育消費者 + 客服品質。",
+          "repurchase_detail": "一次性耐用（5-10 年）→ 複購 20/100。但『加米延伸』『旗下貓二代』可帶來追加購買，加上口碑推薦。",
+          "links": [
+            "https://oscillotamerica.com/pages/cat-fence-rollers"
+          ],
+          "scores": {
+            "margin": 78,
+            "demand": 75,
+            "window": 85,
+            "barrier": 50,
+            "viral": 82,
+            "difficulty": 55,
+            "repurchase": 20
+          },
+          "prediction": {
+            "statement": "4 週後蝦皮『貓 陽台 旋轉桿』或『cat fence roller』賣家 >= 2，或台灣 Threads/FB『防墜貓』相關聲量月增 30%",
+            "platform": "蝦皮寵物 / Threads/FB 社群",
+            "threshold": "蝦皮旋轉桿賣家 >= 2 OR 社群聲量月增 >= 30%",
+            "verify_date": "2026-05-17"
+          },
+          "verify_date": "2026-05-17",
+          "verdict": null,
+          "verdict_note": ""
+        },
+        {
+          "rank": 5,
+          "name": "AI 寵物監控相機（含自動逗貓雷射 2-in-1）",
+          "category": "寵物智能科技",
+          "score": 66,
+          "price": "NT$3,980 / 台",
+          "margin": "3.59x 🟡 理想",
+          "highlight": "🐾 目標：成犬/成貓 × 居家場景 × 雙薪上班族。Petscast 在 Kickstarter 眾籌熱門（AI 監控 + 360° 移動追蹤 + 健康警示），差異化做『監控 + 自動逗貓雷射 2-in-1』成為『寵物陪伴 + 監控』雙功能，切入上班族『白天獨留寵物』痛點。",
+          "source": "Petscast Kickstarter / SiiPet Indiegogo / Chewy 2026 Trend Report（Smart Automatic Feeder 類延伸）",
+          "demand_validation": "①海外爆紅：Petscast Kickstarter 達標（AI+360°+health alerts）；SiiPet Indiegogo 聚集 3,000+ 支持者；Furbo 在 Amazon 長期 BSR < 500。②中/台缺席：台灣蝦皮『寵物監控相機』月銷 1,800（多為小米/Xiaomi 類家庭監控，非寵物專用）；中國淘寶『寵物相機』頭部月銷 2,400（360° 廠牌為主，非 AI 行為分析）；雙市場『AI 行為分析 + 自動逗貓』2-in-1 空白。③雙市場機會：智能硬體毛利偏低（門檻級），但 2-in-1 功能合併降低客戶總花費（原本要買監控 + 逗貓各一），差異化可拉開訂價。",
+          "cost_breakdown": "1688 裸價：360° 寵物 WiFi 相機 CNY 220 + 自動雷射逗貓模組 CNY 80 → CNY 300 整合 BOM → NTD 1,320 × 1.4 = NTD 1,848 落地。整合 OEM 議價可降至 CNY 260 → NTD 1,109 × 1.4 = NTD 1,552 落地。零售 NTD 3,980（含 1 年雲端錄影服務），真實毛利 3.59x 🟡 理想。退貨成本：3980 × 6%（智能硬體高）× 1.5 = NTD 358。淨毛利 ≈ NTD 2,070/台。",
+          "competition": "🇹🇼 台灣：蝦皮寵物監控類頭部為小米/Xiaomi（NT$1,200-2,000 家用通用相機，非寵物 AI），Furbo 台代價 NT$5,990 偏貴；無 2-in-1 設計。🇨🇳 中國：淘寶『寵物攝像頭』頭部為 360/小米（非 AI 行為分析），天貓 Furbo 無官方旗艦店；『AI 行為 + 逗貓 2-in-1』市場空白。",
+          "market_window": "9-12 個月（智能硬體技術門檻不高，預估 2026-Q4 至 2027-Q1 出現多家跟進）。最後安全進場日：2026-10-30",
+          "strategy": "切入點：雙薪家庭（25-35 歲上班族）。功能組合：①白天自動定時逗貓雷射 ②AI 行為異常警示（嘔吐/抽搐/長時間不動）③雙向語音對話 ④手機 App 隨時查看。訂價 NT$3,980（含 1 年雲端服務，次年 NT$299/年續訂），比 Furbo 便宜 33%。KOL：寵物健康教育帳號 + 上班族媽媽 IG 投放。",
+          "risks": "①智能硬體退貨率 6%（相容性、WiFi 設定、雷射馬達）偏高，需強化 OEM QA 與 App 設定教學；②雲端服務需自建或 API 串接（AWS Rekognition 或自訓 YOLO 模型），前期技術成本高；③電子產品 CE/BSMI 認證必要；④無食品/療效宣稱，法規風險低。",
+          "repurchase_detail": "一次性硬體（使用 3-5 年）+ 雲端服務年訂閱 NT$299 → 複購 30/100（硬體）但訂閱模式拉高 LTV。",
+          "links": [
+            "https://www.kickstarter.com/projects/petscast-petcamera/petscast-smart-ai-pet-monitoring-camera"
+          ],
+          "scores": {
+            "margin": 68,
+            "demand": 75,
+            "window": 78,
+            "barrier": 45,
+            "viral": 82,
+            "difficulty": 40,
+            "repurchase": 30
+          },
+          "prediction": {
+            "statement": "4 週後蝦皮『AI 寵物相機』或『智能逗貓相機 2-in-1』賣家 >= 3，或 Petscast Kickstarter 達標金額突破 500%",
+            "platform": "蝦皮寵物 / Kickstarter",
+            "threshold": "蝦皮 2-in-1 相機賣家 >= 3 OR Petscast 達成率 >= 500%",
+            "verify_date": "2026-05-17"
+          },
+          "verify_date": "2026-05-17",
+          "verdict": null,
+          "verdict_note": ""
+        }
+      ]
+    },
+    {
       "date": "2026-04-18",
       "evolution": "D.評分模型迭代 v2.6 — 蝦皮月銷量正式量化入需求維度（<500→信息差+3；1000-5000→+2；>5000→已起量-0）",
       "products": [
@@ -20,7 +216,9 @@
           "strategy": "首波 500 組 Dexas 同等規格白牌 OEM 貼牌（小改色+品牌 LOGO），一人團隊可在蝦皮+小北+momo 鋪貨 14 天內；主打「雨天泥巴爪一按乾淨」短影音 UGC，與 3-5 位寵物中小網紅（5K-50K 粉絲）合作 PGC 內容，投 Meta 廣告 CPC < NT$12 可撐。第二波補充替換刷毛芯（NT$290/2 入）製造復購，擴至 12 吋大型犬款。配套：寵物清潔濕紙巾(NT$99) + 寵物洗腳專用泡泡液 NT$299（非食品，非配方，物理清潔劑 OK）。",
           "risks": "① 矽膠刷毛耐久性需實測（連續使用 200 次不變形）——進貨前先要 3 組 1688 樣品做壓力測試；② 大型犬兼容性——小型犬款杯口 10cm，大型犬款需擴至 15cm（第二波 SKU 再推）；③ TikTok 算法若風向轉向「自動噴水洗腳器」這類電動版，手動款會被快速替代（6 個月觀察期）。",
           "repurchase_detail": "主杯一次性（耐用 1-2 年），但矽膠刷毛芯每 6 個月替換一次 → 復購週期約 6 個月，搭配寵物清潔濕紙巾/泡泡液訂閱制可拉高 LTV。",
-          "links": "https://www.amazon.com/Dexas-MudBuster-Portable-Washing-Medium/dp/B07NWCNXJG",
+          "links": [
+            "https://www.amazon.com/Dexas-MudBuster-Portable-Washing-Medium/dp/B07NWCNXJG"
+          ],
           "scores": {
             "margin": 90,
             "demand": 75,
@@ -39,150 +237,6 @@
           "verify_date": "2026-05-16",
           "verdict": null,
           "verdict_note": null
-        },
-        {
-          "rank": 2,
-          "name": "桌面便攜白噪音助眠機（USB-C 充電+定時+20 聲音）Yogasleep Hushh 風格",
-          "category": "健康療癒",
-          "score": 76,
-          "price": "NT$1,290",
-          "margin": "5.1x 🌟 爆品",
-          "highlight": "⚡ 30秒決策：睡眠焦慮族群爆發成長，Yogasleep Hushh 於 Amazon 累積 28,000+ 評論（baby sleep 首選），台灣蝦皮僅 2-3 個白牌雜品未品牌化。桌面尺寸+USB-C+20 聲選擇+定時，可切入失眠上班族/寶寶/學生宿舍三個場景。毛利 5.1x 🌟 爆品，電子類 -8 扣分後仍 🟢。✨ 信心指數：⭐⭐⭐（Amazon 評論數+TikTok 睡眠標籤+Pinterest 儲存 15K+ 三源驗證）📅 最後進場日：2026/08/20",
-          "source": "Amazon BSR 嬰兒用品前 100（Yogasleep Hushh B01D50RYSC）+ Kickstarter Vagustim v2 同期睡眠科技品類熱門 + Pinterest「sleep aid」儲存爆炸",
-          "demand_validation": "【國外爆紅證據】Yogasleep Hushh Amazon 評論 28,000+（BSR 嬰兒用品前 100），Hatch Restore 3 連續三季 Amazon Health & Personal Care 前 50；TikTok #sleephack、#whitenoise 標籤合計 15 億觀看，「桌面白噪音」翻拍 40+；Pinterest「sleep aid gadget」儲存 15K+。Google Trends US「white noise machine」過去 90 天穩定上升 18%。YouTube 10K+觀看 12 個。【台灣缺席原因】蝦皮搜尋「白噪音助眠機」2 家雜牌（月銷 180，空白強信號 +3），momo 有 Marpac Dohm NT$3,290 進口貨但缺中階品牌；心理健康話題在台灣從 2024 起才主流化（衛福部 15-30 歲補助方案），市場教育窗口開啟。【台灣機會量化】台灣失眠族群佔成人 25%（約 460 萬人），嬰幼兒家庭 80 萬戶，加上學生宿舍/辦公室場景至少 50 萬潛在客戶，目標首年 5,000-8,000 台。",
-          "cost_breakdown": "1688 裸價 NT$180（簡版）或 NT$280（20 聲+蓝牙版）× 1.4（含海運+關稅+最後一哩）= 落地成本 NT$252-392；品牌外殼+包裝+說明書+台灣 BSMI 檢驗分攤 NT$60/台；總落地 NT$312-452。目標零售 NT$1,290（中階版本），**毛利倍率 2.85-4.13x 🟡 理想-🟢 優質**（若選裸價 NT$280 款→ 毛利 3.31x 🟡）。退貨成本估算：售價 × 退貨率 6% 電子類 × 1.5 逆物流 = NT$116；淨毛利 1,290 - 392 - 116 = NT$782（利潤率 61%）。",
-          "competition": "蝦皮：「白噪音助眠機」2 家（月銷 180，白牌散售）；momo：Marpac Dohm NT$3,290 進口貨、Yogasleep Hushh 水貨 NT$1,980；PChome：0；Pinkoi：2 家設計款 NT$1,800+。空白度 🟡 中（momo 有高價進口但中階品牌空白），品牌化機會在 NT$1,290 中階價帶。",
-          "market_window": "6-18 個月窗口；台灣睡眠補助+心理健康公共話題上升，助眠品類紅利期正開啟。🎁 母親節 5/11（距 23 天）——「讓媽媽睡好覺」送禮場景強力加分 +5。📅 最後安全進場日：2026/08/20（窗口 4 個月 × 70%）。",
-          "strategy": "首波 300 台 20 聲+藍牙版本 OEM，主打「媽媽失眠救星」+「寶寶哄睡神器」+「開放式辦公室噪音屏蔽」三訴求分眾；蝦皮+momo 上架同步，佐以睡眠教練/心理師 KOL 業配（如 @therapyandfood），投 Meta 廣告主打 3C 族群 30-45 歲女性；第二波補充定時充電線（NT$290）+ 智能 APP 版本（需 NCC 認證）。配套商品：拋棄式耳塞 NT$59、助眠香氛（非配方精油 → 選擇物理型熏香石）。",
-          "risks": "① 電子退貨率高（6%）——首批需要嚴選 3 家 1688 工廠做 48 小時連續運作測試；② BSMI 認證成本 NT$1.5-2.5 萬/型號，需攤提至前 500 台；③ Apple 家庭共享/Google Home 相容性期望上升，若要做藍牙+APP 需 NCC 認證再加 NT$3 萬；④ 高階品牌 Hatch 若進入台灣可能壓縮中階品牌空間（關注 Hatch 台灣代理動向）。",
-          "repurchase_detail": "一次性購買為主，但可推「雙機組合」（夫妻/一台辦公室+一台臥室）及 USB-C 充電線補充（NT$290），提升單客 LTV 25-30%。",
-          "links": "https://www.amazon.com/Yogasleep-Portable-Soothing-Rechargeable-Baby-Safe/dp/B01D50RYSC",
-          "scores": {
-            "margin": 95,
-            "demand": 80,
-            "window": 68,
-            "barrier": 62,
-            "viral": 70,
-            "difficulty": 82,
-            "repurchase": 38
-          },
-          "prediction": {
-            "statement": "4週後蝦皮「白噪音助眠機」品牌賣家 >= 5，或 Google Trends TW 搜尋量突破 60（目前 < 35）",
-            "platform": "蝦皮台灣 / Google Trends TW",
-            "threshold": "蝦皮品牌賣家 >= 5 OR Google Trends TW >= 60",
-            "verify_date": "2026-05-16"
-          },
-          "verify_date": "2026-05-16",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 3,
-          "name": "LED 仿生水母心情燈（16 色遙控+靜音馬達+USB-C 款）",
-          "category": "生活禮品",
-          "score": 72,
-          "price": "NT$1,390",
-          "margin": "3.55x 🟡 理想",
-          "highlight": "⚡ 30秒決策：TikTok 7.8M posts 水母燈 2026 1 月以後再度病毒，Amazon B09VGRM6GZ BSR 穩定於送禮類前 100。16 色遙控+靜音馬達+仿生擬真水母漂浮，強視覺奇觀，禮品/紓壓/情感障礙兒童輔助三路收割。台灣蝦皮雖有 8 家白牌仿品但品牌+包裝設計留白。✨ 信心指數：⭐⭐（TikTok 7.8M posts + Amazon 10K+ 評論雙源，Pinterest 儲存待驗）📅 最後進場日：2026/07/20",
-          "source": "TikTok（jellyfish lamp 標籤 7.8M posts）+ Amazon B09VGRM6GZ 10,000+ 評論 + EzBuyCo 品牌 2026 Spotlight 爆文",
-          "demand_validation": "【國外爆紅證據】Amazon 頁面 B09VGRM6GZ、B01GD87X4I 各累積 8,000-15,000 評論，BSR 家居裝飾前 300；TikTok #jellyfishlamp 標籤合計 7.8M posts、#jellyfishaquarium 2,500 萬觀看，1 月 22 日 EzBuyCo 爆文 7.6K likes；Pinterest「jellyfish lamp decor」儲存 25K+。YouTube 10K+ 觀看 15 個（含 ASMR 紓壓影片）。【台灣缺席原因】蝦皮搜尋「水母燈」8 家白牌月銷 700（中度驗證 +2），momo/PChome 無品牌化款，Pinkoi 有設計款 NT$2,500 但缺 USB-C 新版本；缺席主因：禮品類傳統通路（金興發、寶雅）鎖定簡單夜燈，未引進複雜仿生款。【台灣機會量化】台灣禮品市場（含七夕、母親節、聖誕、生日）年規模 120 億，居家紓壓情境擴張，目標首年 4,000-6,000 組。",
-          "cost_breakdown": "1688 裸價 NT$280（大型 22cm 款）× 1.4 = 落地成本 NT$392；品牌外盒+遙控器+USB-C 線套裝成本 NT$45；總落地 NT$437。目標零售 NT$1,390，**毛利倍率 3.18x 🟡 理想**（1,390 ÷ 437）。退貨成本估算：售價 × 退貨率 4% 生活禮品 × 1.5 = NT$83；淨毛利 1,390 - 437 - 83 = NT$870（利潤率 63%）。",
-          "competition": "蝦皮：「水母燈」8 家白牌（月銷總量 700），無大型品牌；momo：0 家專屬品牌（僅 Pinkoi 引入 Lightahead 水貨 NT$2,280）；PChome：0；Pinkoi：4 家設計款 NT$1,800-2,500。空白度 🟡 中，中階價帶 NT$1,390 品牌化機會明確。",
-          "market_window": "6 個月主流窗口（TikTok 病毒在 2026 1-2 月再度爆發，台灣滲透期 3-6 個月）。🎁 母親節 5/11（距 23 天）送禮場景強力；父親節 8/8、情人節（2027）連續送禮窗口。📅 最後安全進場日：2026/07/20（窗口 4 個月 × 70%）。",
-          "strategy": "首波 500 組「居家紓壓 + 送禮」雙訴求，包裝強化禮盒感（燙金 LOGO+手提袋），蝦皮+Pinkoi+momo 上架。TikTok/IG Reels UGC 開箱內容（水母游動+16 色變化 30 秒短影片）。與 3 位紓壓 KOL（@cozylife_tw、@my_calm_home）合作情境內容，投 Meta/TikTok 廣告 CPC < NT$15。配套：USB-C 充電線 NT$190、專屬支架 NT$290。第二波擴至 5 入迷你水母群組。",
-          "risks": "① 水母馬達壽命（低價款 < 1,000 小時，台灣消費者用 6 個月壞→ 退貨）——首批需嚴選「靜音馬達版本」工廠，運作測試 500 小時；② 運輸破損風險（壓克力圓管易裂）——需打樣 3 次確認包裝耐摔；③ 電子類 -8 退貨扣分實務上可高達 7-8%，影響淨毛利；④ 抄襲快：蝦皮白牌 2 週內即可複製新款，需靠品牌+包裝+售後區隔。",
-          "repurchase_detail": "一次性購買為主，復購低，但送禮情境可拉高客單（一人買多組禮品）；長期可延伸同品牌其他仿生燈（水滴燈、海葵燈）做系列。",
-          "links": "https://www.amazon.com/Multi-Color-Jellyfish-Decoration-Christmas-Birthdays/dp/B09VGRM6GZ",
-          "scores": {
-            "margin": 75,
-            "demand": 72,
-            "window": 62,
-            "barrier": 52,
-            "viral": 88,
-            "difficulty": 80,
-            "repurchase": 30
-          },
-          "prediction": {
-            "statement": "4週後 TikTok TW「水母燈」相關翻拍 >= 20 支，或蝦皮品牌賣家 >= 6（目前白牌 8）",
-            "platform": "TikTok TW / 蝦皮台灣",
-            "threshold": "TikTok TW 翻拍 >= 20 OR 蝦皮品牌賣家 >= 6",
-            "verify_date": "2026-05-16"
-          },
-          "verify_date": "2026-05-16",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 4,
-          "name": "3D 全息風扇投影儀（42cm 桌面款+WiFi App 編輯）",
-          "category": "科技電子",
-          "score": 66,
-          "price": "NT$2,490",
-          "margin": "3.23x 🔵 門檻",
-          "highlight": "⚡ 30秒決策:空中浮影像視覺奇觀，店家廣告/派對/禮品多場景；台灣仍屬非常空白（蝦皮月銷合計 < 300，空白強信號 +3）。WiFi App 可自訂 GIF/LOGO，跨界科技×視覺奇觀×商用廣告三領域。電子類+BSMI/NCC 認證門檻 = 天然護城河。⚠ 零售價 NT$2,490 靠近 NT$3,000 上限但仍在合理區；破例理由：跨界新奇兼商用價值。✨ 信心指數：⭐⭐（Amazon 前 1000+Makuake 群募過半，Pinterest 儲存與台灣 Trends 待驗）📅 最後進場日：2026/10/20",
-          "source": "Amazon 新奇 3C BSR 前 1000（多款 42cm 風扇投影儀）+ Makuake 日本群募 3 月過半（JP ¥1,800 萬）+ TikTok「hologram fan」標籤 320 萬觀看",
-          "demand_validation": "【國外爆紅證據】Amazon 42cm 全息風扇投影儀 TOP 5 累積評論 2,500+（BSR 奇奇怪怪數位小物前 1000）；Makuake 2026 3 月類似款日本群募達成率 165%（¥1,800 萬）；TikTok #hologramfan 標籤 320 萬觀看，商用廣告/派對場景翻拍活躍。YouTube 10K+ 觀看 6 個。【台灣缺席原因】蝦皮搜尋「全息風扇投影」4 家（月銷合計 280，空白強信號 +3），多為無 BSMI/NCC 認證水貨；momo/PChome 無相關品牌；缺席主因：BSMI+NCC 認證成本高（合計 NT$5-8 萬/型號）+ 台灣商用廣告市場仍偏傳統電視/LED 跑馬燈。【台灣機會量化】台灣廣告招牌升級需求（夜市、手搖飲、婚禮場域）+ 禮品奇趣品類+ 居家派對裝飾三合一場景，目標首年 1,500-2,500 台商用為主。",
-          "cost_breakdown": "1688 裸價 NT$550（42cm WiFi 版）× 1.4 = 落地成本 NT$770；BSMI+NCC 認證攤提 NT$180/台（前 400 台）；品牌包裝+說明書 NT$50；總落地 NT$1,000。目標零售 NT$2,490，**毛利倍率 2.49x ⚠️ 觸及 2.8x 硬門檻**。若採用 NT$450 裸價基礎款 → 落地 NT$630+180+50 = NT$860，毛利 2.89x 🔵 門檻（勉強過）。退貨成本估算：售價 × 退貨率 6% 電子類 × 1.5 = NT$224；淨毛利 2,490 - 860 - 224 = NT$1,406（利潤率 56%）。",
-          "competition": "蝦皮：4 家白牌水貨（月銷 280，無 BSMI/NCC）；momo：0；PChome：0；商用專營通路如 PAPAGO、益欣科技：僅更大尺寸 65cm+ 商用款 NT$18,000+。空白度 🟢 強（中小尺寸 42cm 消費級+商用小店場景完全空白）。",
-          "market_window": "12-18 個月窗口；BSMI/NCC 認證是天然進入障礙，競爭緩慢。🎁 商用禮品情境（手搖飲開幕、派對租借）全年需求穩定；中秋節（10/6）+ 聖誕節（12/25）商用廣告升級旺季。📅 最後安全進場日：2026/10/20（窗口 6 個月 × 70%）。",
-          "strategy": "首波 200 台 42cm 基礎 WiFi 款，BSMI+NCC 認證過關後鎖定「夜市手搖飲開幕廣告」+「婚禮/派對奇趣桌面」+「公司展場」三 B2B 場景；用 momo/PChome/momoshop B2B 通道+ B2B 電銷團隊（2 人）開拓實體商家；搭配 Meta 廣告主打 30-50 歲小生意老闆。配套：替換 GIF/LOGO 製作服務 NT$590/檔、支架+保護罩 NT$790。第二波擴至 65cm 商用全息柱。",
-          "risks": "① BSMI+NCC 認證週期 45-60 天+成本 NT$5-8 萬，試單壓力大——先小批 50 台試跑 B2B；② 產品故障率比一般 3C 高（高速旋轉馬達 + LED 陣列）——嚴選 3 家工廠 5% 抽檢；③ 零售價 NT$2,490 已臨電商試單上限，若要破 NT$3,000 需強化品牌故事；④ 店家廣告市場教育成本高——需提供 7 天免費試用+ 開箱影片樣本；⑤ 退貨率高，需設 B2B 為主降低 C 端退貨比例。",
-          "repurchase_detail": "一次性購買；B2B 場景可推多台成組（3 台以上打造展場氛圍），或替換影片/GIF 製作訂閱服務 NT$590/月。",
-          "links": "https://www.amazon.com/Projector-Bluetooth-Brightness-Halloween-Christmas/dp/B0BZRFXTLT",
-          "scores": {
-            "margin": 70,
-            "demand": 68,
-            "window": 78,
-            "barrier": 72,
-            "viral": 85,
-            "difficulty": 60,
-            "repurchase": 25
-          },
-          "prediction": {
-            "statement": "4週後蝦皮「全息風扇投影」品牌賣家 >= 3，或 Makuake 同類群募 >= 2 個達標",
-            "platform": "蝦皮台灣 / Makuake",
-            "threshold": "蝦皮品牌賣家 >= 3 OR Makuake 同類群募達標案例 >= 2",
-            "verify_date": "2026-05-16"
-          },
-          "verify_date": "2026-05-16",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 5,
-          "name": "重力感應電動鹽椒研磨器雙入組（USB-C 快充+LED+磁吸底座）",
-          "category": "廚房家居",
-          "score": 66,
-          "price": "NT$1,590",
-          "margin": "4.5x 🟢 優質",
-          "highlight": "⚡ 30秒決策：Amazon 廚房小家電多款 BSR 前 100（UNNEES、XinXu、LARS NYSØM 各 8,000-15,000 評論），台灣蝦皮雖已有但大多無品牌化/LED/Type-C。重力翻轉 + 單手操作 + LED 補光拍攝感佳。毛利 4.5x 🟢 優質，但電子類 -8 退貨風險。配合 Airbnb/民宿/婚禮送禮場景可擴張。✨ 信心指數：⭐⭐（Amazon 多款評論 + TikTok 翻拍 40+，Pinterest 儲存待驗）📅 最後進場日：2026/08/25",
-          "source": "Amazon 多款 Gravity Grinder BSR 前 100（UNNEES B0CNW6115Z、XinXu B085NDYY1P、LARS NYSØM B0CGB4DM8K）+ TikTok「electric salt grinder」40+ 翻拍 + Cuisinart 品牌佔 momo NT$2,980",
-          "demand_validation": "【國外爆紅證據】Amazon UNNEES、XinXu、LARS NYSØM 各累積 8,000-15,000 評論，Kitchen & Dining BSR 前 100；TikTok「gravity grinder」+「electric salt」標籤 40+ 翻拍影片，總觀看 800 萬+；Pinterest「electric salt pepper grinder」儲存 12K+。YouTube 10K+ 觀看 10 個。【台灣缺席原因】蝦皮搜尋「電動胡椒研磨器」22 家（月銷總量 1,800，中強驗證 +2），大多為白牌或 Amazon 轉賣水貨缺台灣在地品牌保固；momo 有 Cuisinart NT$2,980（高端價帶）；PChome 僅象印水貨；空白主因：中階 NT$1,290-1,590 品牌化自動 + 磁吸+LED 組合尚無強勢品牌。【台灣機會量化】台灣 300 萬戶家庭 + 3 萬家餐廳咖啡店 Airbnb 民宿，重力感應電動版替換手動傳統型換機周期 3-5 年，目標首年 6,000-10,000 組雙入。",
-          "cost_breakdown": "1688 裸價 NT$250/組（雙入 Type-C 磁吸款）× 1.4 = 落地成本 NT$350；品牌包裝+磁吸底座+說明書+BSMI 認證分攤 NT$50/組；總落地 NT$400。目標零售 NT$1,590，**毛利倍率 3.98x 🟡 理想**（1,590 ÷ 400）。退貨成本估算：售價 × 退貨率 6% 電子類 × 1.5 = NT$143；淨毛利 1,590 - 400 - 143 = NT$1,047（利潤率 66%）。",
-          "competition": "蝦皮：22 家（月銷總量 1,800，白牌散售）；momo：Cuisinart RS-2 NT$2,980、象印 NT$2,480（高端）；PChome：象印水貨；Pinkoi：3 家設計款 NT$1,800+。空白度 🟡 中，中階 NT$1,590 + LED + 磁吸 + Type-C 組合品牌化機會。",
-          "market_window": "6-12 個月窗口；廚房小家電在台灣的品牌化/精緻化趨勢加速（2025 年 momo 廚房小家電成長 28%）。🎁 母親節 5/11（距 23 天）+ 父親節 8/8 雙送禮窗口 +5。📅 最後安全進場日：2026/08/25（窗口 6 個月 × 70%）。",
-          "strategy": "首波 500 組 2 入 Type-C + 磁吸底座 OEM，主打「質感廚房+單手操作+送禮雙入」，蝦皮 + momo + Pinkoi 上架同步。TikTok 短影音 UGC 拍攝「重力翻轉自動研磨+LED 補光」視覺強對比。與 2 位生活美學 KOL（@slow_living_tw、@homecook_diary）合作情境內容，投 Meta 廣告 CPC < NT$18。配套：補充款岩鹽（150g NT$290 物理非配方 OK）+ 胡椒粒（NT$190）製造復購。第二波擴至 4 入家庭組 / 手持乾香料研磨款。",
-          "risks": "① 電子退貨率 6%——首批嚴選工廠做 300 次連續研磨壽命測試；② BSMI 認證 NT$1.5-2 萬/型號，需攤提；③ 蝦皮同類 22 家已起量（月銷 1,800），白牌價格戰隨時爆發——需靠品牌包裝 + 雙入禮品定位 + 補充配件生態系拉開差距；④ 磁吸底座吸力強度需實測（弱吸力會被客訴）；⑤ Cuisinart/象印等大牌若推中階款會壓縮品牌化空間。",
-          "repurchase_detail": "主機一次性（耐用 3-5 年），但補充岩鹽（NT$290）+ 胡椒粒（NT$190）每 2-3 個月耗盡，可做訂閱制或 3 入補充包 NT$690 拉升 LTV。",
-          "links": "https://www.amazon.com/UNNEES-Electric-Automatic-Adjustable-Roughness/dp/B0CNW6115Z",
-          "scores": {
-            "margin": 85,
-            "demand": 78,
-            "window": 68,
-            "barrier": 65,
-            "viral": 75,
-            "difficulty": 80,
-            "repurchase": 42
-          },
-          "prediction": {
-            "statement": "4週後蝦皮「電動鹽椒研磨器」品牌賣家 >= 8（目前白牌 22 無品牌），或 Google Trends TW 搜尋量 >= 40（目前 25）",
-            "platform": "蝦皮台灣 / Google Trends TW",
-            "threshold": "蝦皮品牌賣家 >= 8 OR Google Trends TW >= 40",
-            "verify_date": "2026-05-16"
-          },
-          "verify_date": "2026-05-16",
-          "verdict": null,
-          "verdict_note": null
         }
       ]
     },
@@ -192,72 +246,6 @@
       "products": [
         {
           "rank": 1,
-          "name": "便攜式折疊冷水浴桶 Cold Plunge Tub",
-          "category": "健康療癒",
-          "score": 87,
-          "price": "NT$6,800",
-          "margin": "🔵 2.84x",
-          "highlight": "Huberman/Joe Rogan recovery 爆紅 2 年仍升溫，台灣品牌化 0 蝦皮僅 8 家工業款；📅 最後安全進場日 2027-05-03 ✨ 信心指數：⭐⭐⭐（Huberman Podcast + TikTok 翻拍 60+ + Amazon BSR<300 三來源獨立驗證）",
-          "source": "Kickstarter 熱門硬體 / Amazon US Ice Bath BSR<300 / TikTok #coldplunge 翻拍 60+ / Huberman Lab Podcast 持續推薦",
-          "demand_validation": "① 國外爆紅：Amazon US BSR<300 × 評論 >5,000；TikTok #coldplunge 翻拍 60+ 獨立創作者；Google Trends US +380% / 24 月。② 台灣缺席：蝦皮「冷水浴桶/冰浴桶」<8 家且全為工業不鏽鋼大型款；momo/PChome 本土品牌 0。③ 台灣機會：運動恢復 × 三鐵族 × 健身教練 × 冥想社群四條通路；Huberman 中文 Podcast 在台 Spotify 前 30。④ YouTube 驗證：英文『cold plunge morning routine』>200 支 100K+；中文 <5 支。⑤【v3.2 新增】台灣蝦皮前 3 名競品月銷量加總：約 180 件 → <500 完全空白（正面信號）。",
-          "cost_breakdown": "1688 裸價 CNY 380（高階雙層保溫壁+溫控配件）× 1.4 落地 = NT$2,394；售 NT$6,800 → 毛利 2.84x 🔵 門檻；退貨率 2% × 1.5 逆物流 = NT$200/件。⚠️ 低階款 2x 不過硬門檻，必須走高階配件包拉客單價",
-          "competition": "蝦皮：<8 家工業不鏽鋼款（非便攜可折疊）。momo/PChome：本土品牌 0。淘寶代購 ~30 家無品牌。市場空白完整",
-          "market_window": "🟢 機會期 18+ 月。Amazon BSR 穩定但台灣認知度 <5%，適合教育市場並建立先發品牌",
-          "strategy": "定位『Premium Home Recovery Spa』；IG 三鐵/健身教練 KOL 合作；reel 內容 morning ice bath + 冥想 7am 場景；首批 150 單限量內建溫度計+充氣泵+保溫蓋",
-          "risks": "毛利剛過硬門檻，若配件包無法完整落地會掉回 2x；冬季需求強夏季弱現金流波動；大件物流單件預留 NT$350",
-          "repurchase_detail": "主機耐用 3-5 年，配件訂閱（保溫蓋替換/清潔泡錠/溫度計電池）年均 NT$600/客",
-          "links": [
-            "https://theplunge.com/"
-          ],
-          "scores": {
-            "margin": 60,
-            "demand": 88,
-            "window": 85,
-            "barrier": 72,
-            "viral": 88,
-            "difficulty": 60,
-            "repurchase": 55
-          },
-          "prediction": "4 週後（2026-05-15）Amazon US Cold Plunge 類目 BSR<500，或台灣蝦皮『冷水浴桶/冰浴桶』賣家 ≥15（跨過早期跟進臨界）",
-          "verify_date": "2026-05-15",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 2,
-          "name": "智能降噪睡眠耳塞（Loop 類矽膠聲學濾波）",
-          "category": "健康療癒",
-          "score": 84,
-          "price": "NT$990",
-          "margin": "🟡 3.14x",
-          "highlight": "Pinterest 2026 wellness top pick × Loop $100M DTC，台灣以泡棉塞為主；📅 最後安全進場日 2026-12-31 ✨ 信心指數：⭐⭐⭐（Loop 營收數據 + Pinterest 官方報告 + TikTok 翻拍三來源驗證）",
-          "source": "Pinterest Predicts 2026 / Loop Earplugs 年營收 $100M+ / TikTok #loopearplugs 翻拍 80+ / Amazon US 睡眠耳塞 BSR<200",
-          "demand_validation": "① 國外爆紅：Loop 美國年營收 >$100M；Amazon US 睡眠耳塞 BSR<200；TikTok #loopearplugs 翻拍 80+；Pinterest 搜尋 +340% / 12 月。② 台灣缺席：蝦皮『降噪耳塞/睡眠耳塞』前 20 名 90% 為泡棉塞（3M/Moldex），矽膠聲學濾波 <5 家皆水貨代購。③ 台灣機會：台灣失眠人口 27% × 學生 × 通勤族；可切誠品/蔦屋/小北百貪生活雜貫通路。④ YouTube 驗證：英文『best sleep earplugs』>150 支 100K+；中文 <10 支。⑤【v3.2 新增】台灣蝦皮前 3 名竵品月銷量加總：約 750 件 → 1,000-5,000 以下中等，品牌化空位存在。",
-          "cost_breakdown": "1688 裸價 CNY 50（矽膠+聲學濾波片+收納盒）× 1.4 落地 = NT$315；售 NT$990 → 毛利 3.14x 🟡 理想；退貨率 2% × 1.5 = NT$30/件；淨毛利 ~NT$645/件",
-          "competition": "蝦皮：<5 家矽膠聲學款（90% 為泡棉塞）。momo/PChome：0 個本土品牌矽膠款。Loop 官網不直送台灣，代購 NT$1,400。市場窗口開放",
-          "market_window": "🟡 機會期 12 月。Loop 一旦正式進台灣窗口立即關閉，目前無進駐計畫但需加速",
-          "strategy": "定位『生活場景自由切換：通勤-辦公-睡眠』；Reel 切換三場景音頻對比；差異化配色+收納盒+三強度濾波片（Engage/Experience/Quiet）；首批 800 單",
-          "risks": "Loop 正式進台灣機率中；耳塞不符耳型退貨率高需提供 3 尺寸試配；清潔教育成本",
-          "repurchase_detail": "耗材型：配件替換頭半年 1 組 NT$280，年複購率 35%",
-          "links": [
-            "https://www.loopearplugs.com/"
-          ],
-          "scores": {
-            "margin": 72,
-            "demand": 85,
-            "window": 65,
-            "barrier": 70,
-            "viral": 80,
-            "difficulty": 70,
-            "repurchase": 78
-          },
-          "prediction": "4 週後（2026-05-15）台灣蝦皮『降噪耳塞』+『睡眠耳塞』類目新上架矽膠聲學品牌款 ≥10，或 Loop 官網開通台灣直送",
-          "verify_date": "2026-05-15",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 3,
           "name": "可重複使用寵物毛滾筒（Chom Chom 式靜電纖維）",
           "category": "寵物",
           "score": 78,
@@ -288,72 +276,6 @@
           "verify_date": "2026-05-15",
           "verdict": null,
           "verdict_note": null
-        },
-        {
-          "rank": 4,
-          "name": "磁吸電燱香氛蠟燭融化燈 Candle Warmer Lamp",
-          "category": "生活禮品",
-          "score": 77,
-          "price": "NT$1,190",
-          "margin": "🔵 2.87x",
-          "highlight": "Pinterest Neo Deco 2026 × Target 熱銷 18 月，台灣設計品牌化空白；📅 最後安全進場日 2026-12-31 ✨ 信心指數：⭐⭐（Pinterest 官方報告 + Amazon BSR 兩來源 + 推論）",
-          "source": "Pinterest Predicts 2026 Neo Deco / Amazon US Home Decor BSR<500 / TikTok #candlewarmer 翻拍 40+ / Target 熱銷 18 月",
-          "demand_validation": "① 國外爆紅：Amazon US Candle Warmer Lamp BSR<500 × 評論 >10,000；Target/Anthropologie 同款 18 月熱銷；TikTok #candlewarmer 翻拍 40+ ASMR 點蠟燭。② 台灣缺席：蝦皮『香氛蠟燭加熱燈/電熱蠟燭燈』前 20 名 80% 為美式雜貨代購（Spring of Hope 類），本土設計品牌 <5。③ 台灣機會：居家儀式感族 × 送禮（母親節 5/11 + 閨蜜生日）；誠品 × Pinkoi 設計選物店。④ YouTube 驗證：英文『candle warmer lamp』>80 支 100K+；中文 <5 支。⑤【v3.2 新增】台灣蝦皮前 3 名競品月銷量加總：約 640 件 → 1,000-5,000 以下偏低，品牌化空白。",
-          "cost_breakdown": "1688 裸價 CNY 50 × 1.4 落地 = NT$315 + BSMI 認證分攤 NT$100/件 = NT$415；售 NT$1,190 → 毛利 2.87x 🔵 門檻（若售 NT$1,490 → 3.59x 🟡 理想）；退貨率 4% × 1.5 = NT$60/件",
-          "competition": "蝦皮：<5 家本土設計款多為代購。momo：2 家（Spring of Hope 代理）。PChome：本土品牌 0。Pinkoi：<3 家設計款。品牌化空位中度",
-          "market_window": "🟡 機會期 12 月。台灣進口速度中等，趁 2026 Q2 母親節＋情人節檔期切入",
-          "strategy": "定位『一燈一蠟燭儀式組合禮盒』；三款色系（拿鐵米/橄欖綠/燕麥白）+贈首發蠟燭；通路 Pinkoi+誠品+蝦皮檔期；Reel ASMR 蠟燭融化+居家晚間儀式場景",
-          "risks": "BSMI 認證週期 6-8 週需預留；電子類退貨率偏高需強化包材；蠟燭配送易碎可分開訂購",
-          "repurchase_detail": "燈本體一次性，蠟燭耗材可做月配/季配訂閱，年複購率 40%（每客 NT$1,500/年）",
-          "links": [
-            "https://candlewarmers.com/"
-          ],
-          "scores": {
-            "margin": 62,
-            "demand": 78,
-            "window": 65,
-            "barrier": 65,
-            "viral": 80,
-            "difficulty": 65,
-            "repurchase": 78
-          },
-          "prediction": "4 週後（2026-05-15）台灣 Pinkoi『香氛蠟燭加熱燈』本土設計品牌 ≥8，或 momo 新增母親節香氛專區",
-          "verify_date": "2026-05-15",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 5,
-          "name": "LED 智能桌上型水耕香草植栽機",
-          "category": "廚房家居",
-          "score": 65,
-          "price": "NT$3,990",
-          "margin": "🔵 2.83x",
-          "highlight": "CES 2026 Kitchen Innovation 得獎 × 日本 AIKIKA 爆紅，台灣本土品牌化 0；📅 最後安全進場日 2027-05-03 ✨ 信心指數：⭐⭐（CES 得獎 + Pinterest 報告兩來源 + 推論）",
-          "source": "CES 2026 Kitchen Innovation Awards / Pinterest Predicts 2026 慢生活 / Amazon US Smart Garden BSR 1,500-3,000 / 日本 AIKIKA 爆發",
-          "demand_validation": "① 國外爆紅：Amazon US Smart Herb Garden BSR 1,500-3,000；Aerogarden/Click&Grow 持續熱銷；CES 2026 Instafarm 得獎；Pinterest 'indoor herb garden' +180%。② 台灣缺席：蝦皮『智能水耕/室內菜園』前 20 名皆大型業務或手動 DIY 盆栽，智能 LED 桌上型 <5 家皆代購（Click&Grow NT$4,500）。③ 台灣機會：小坪數家庭 × 料理愛好者 × 健康廚房族；誠品/居家生活通路可鋪。④ YouTube 驗證：英文『smart herb garden review』>50 支 50K+；中文 <8 支。⑤【v3.2 新增】台灣蝦皮前 3 名智能款競品月銷量加總：約 110 件 → <500 空白信號。",
-          "cost_breakdown": "1688 裸價 CNY 200（500 件量議價）× 1.4 落地 = NT$1,260 + BSMI 認證分攤 NT$150/件 = NT$1,410；售 NT$3,990（對標 Click&Grow 代購）→ 毛利 2.83x 🔵 門檻；退貨率 6% × 1.5 = NT$200/件（體積較大）",
-          "competition": "蝦皮：<5 家智能款皆代購無本土品牌。momo：本土品牌 0。PChome：0。Click&Grow 官方不進台灣。品牌空位完整",
-          "market_window": "🟢 機會期 18+ 月。台灣消費教育仍初期，適合慢慢建立品牌+訂閱耗材模式",
-          "strategy": "定位『餐廳級自種香草』；內建 app 控制 + 種子包訂閱（羅勒/薄荷/迷迭香輪替）；通路誠品家電+蔦屋+蝦皮母親節；Reel 30 天 time-lapse + 做菜應用",
-          "risks": "毛利偏緊需精準控進貨量；體積大物流成本高；種子包需植物檢疫；消費教育成本高（多人不知怎麼用）",
-          "repurchase_detail": "主機一次性，種子包訂閱月配 NT$299/組 × 6 種 = NT$1,800/年；耗材型 = 強複購",
-          "links": [
-            "https://aerogarden.com/"
-          ],
-          "scores": {
-            "margin": 58,
-            "demand": 70,
-            "window": 85,
-            "barrier": 65,
-            "viral": 65,
-            "difficulty": 55,
-            "repurchase": 82
-          },
-          "prediction": "4 週後（2026-05-15）台灣蝦皮『智能菜園/水耕植栽機』本土品牌化款 ≥6，或 Click&Grow 開通台灣運送",
-          "verify_date": "2026-05-15",
-          "verdict": null,
-          "verdict_note": null
         }
       ]
     },
@@ -363,39 +285,6 @@
       "products": [
         {
           "rank": 1,
-          "name": "冷燙髮捲無熱感造型套組（Heatless Curl Kit）",
-          "category": "美妝保養",
-          "score": 69,
-          "price": "NT$490",
-          "margin": "🟢 4.0x",
-          "highlight": "TikTok #heatlesscurls 破百億觀看，睡前戴上早晨取下的零傷髮捲套組——無電無熱，視覺轉場影片天生爆款體質。📅 最後安全進場日：2026-06-30 ⚠️ 信心指數：⭐⭐⭐",
-          "source": "TikTok #heatlesscurls 話題累積觀看破 100 億，#heatlesscurl / #heatlesscurltutorial 近 30 天影片數成長 +38%；Amazon US『heatless curling rod』品類 BSR 前 100 內有 7 款；Today Show Shop 4/2026 再度推薦 'The Effortless Shop' 套組。",
-          "demand_validation": "🌍 海外證據：Amazon US BSR Hair Styling Tools 前 200 中有 5 款 heatless curler（累積評論均破 20K）；TikTok Shop US 近 30 天熱銷榜該品類 3 款入前 50；YouTube 10K+ 觀看教學影片約 45 個\n🇹🇼 台灣缺席：蝦皮『無熱髮捲』相關 18 家但全為裸賣白牌無套組，momo/PChome 0 家有完整套組（緞面+髮網+收納袋）；Dcard/PTT 美妝板有零星討論尚未爆發\n🎯 台灣機會：台灣 20-35 歲長髮族大，但市場僅有散件販售，套組化+包裝設計+故事化可直接切入中階送禮市場",
-          "cost_breakdown": "1688 裸價 NT$60-80（長款矽膠+緞布套+髮網+收納袋完整套組）× 1.4 落地 = NT$84-112；售價 NT$490 → 毛利率 4.4-5.8x 🟢 優質；扣除退貨成本（生活禮品 4% × 1.5 = 6%）→ 真實毛利 4.1-5.5x",
-          "competition": "蝦皮：18 家但多為單件散賣無套組，價格帶 NT$99-199 無品牌化；momo：0；PChome：0；Watsons：0；判定 → 套組+品牌化完全空白",
-          "market_window": "🟡 中期窗口 10 個月。歐美已成熟 3 年但台灣仍在早期擴散，預計 2026 Q3 進入加速期，品牌化建立需把握 6 月前完成上架。",
-          "strategy": "🎯 定位『睡前 5 分鐘＝早晨 30 分鐘省下』；IG/TikTok 前後對比為核心素材；包裝走療癒色系；首批 800 組測試",
-          "risks": "⚠️ 低單價品類易殺價戰；⚠️ 教育成本高（首次使用需看影片）；⚠️ 髮質細軟者效果差評風險，需明確受眾說明",
-          "repurchase_detail": "耐用品低複購（6-12 月損耗）；但套組內髮網/緞布為耗材（3-4 月汰換），可延伸單售髮網補充包維持複購",
-          "links": [
-            "https://www.amazon.com/s?k=heatless+curling+rod+set&i=beauty"
-          ],
-          "scores": {
-            "margin": 75,
-            "demand": 82,
-            "window": 65,
-            "barrier": 45,
-            "viral": 85,
-            "difficulty": 80,
-            "repurchase": 35
-          },
-          "prediction": "4 週後蝦皮『無熱髮捲 套組』賣家數 ≥ 30 家，或 TikTok TW #heatlesscurls 相關影片數 ≥ 60 個",
-          "verify_date": "2026-05-14",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 2,
           "name": "UV 殺菌靜音循環寵物飲水機",
           "category": "寵物",
           "score": 66,
@@ -426,105 +315,6 @@
           "verify_date": "2026-05-14",
           "verdict": null,
           "verdict_note": null
-        },
-        {
-          "rank": 3,
-          "name": "卡扣式矽膠鍋邊瀝水夾（Snap N' Strain 型）",
-          "category": "廚房家居",
-          "score": 65,
-          "price": "NT$280",
-          "margin": "🟢 4.4x",
-          "highlight": "Amazon Kitchen Strainers 類目第 2 名、累積 >13,500 評論的永動機爆品——夾上鍋邊就能瀝水，免搬重鍋免濾網。📅 最後安全進場日：2026-06-15 ⚠️ 信心指數：⭐⭐⭐",
-          "source": "Amazon US Food Strainers BSR 第 2（Kitchen Gizmo Snap N' Strain，累積 >13,500 評論）；Today Show Shop 專文推薦；TikTok #kitchengadgets 相關影片累積 80M+ 觀看，Snap N' Strain 為常客。",
-          "demand_validation": "🌍 海外證據：Amazon US BSR Food Strainers 前 5 有 3 款同型矽膠夾式瀝水器；累積主評論 >30K；TikTok 視覺化影片每則平均 50 萬觀看；YouTube 10K+ 影片 22 個\n🇹🇼 台灣缺席：蝦皮『矽膠瀝水夾 鍋邊』相關 22 家但多為裸賣白牌售價 NT$59-120，無品牌化；momo 1 款 NT$299 庫存有限；PChome 0\n🎯 台灣機會：台灣小家庭單人廚房普及，『省空間免搬重鍋』痛點真實，品牌化+設計色系+禮盒包裝即可進駐生活禮品通路",
-          "cost_breakdown": "1688 裸價 NT$35-50 × 1.4 落地 = NT$49-70；售價 NT$280 → 毛利率 4.0-5.7x 🟢 優質；扣除退貨成本（廚房家居 3% × 1.5 = 4.5%）→ 真實毛利 3.8-5.5x",
-          "competition": "蝦皮：22 家白牌無品牌化；momo：1 款；PChome：0；Pinkoi：2 款設計款 NT$350+；判定 → 中階品牌化空白",
-          "market_window": "🟡 中期窗口 8 個月。歐美爆紅 4 年已成熟，台灣仍在早期滲透，2026 下半年將進入大眾化，品牌化窗口緊迫。",
-          "strategy": "🎯 定位『單身小廚神器』；與生活類 KOL 合作廚房收納主題；搭配色系+印刷 logo 禮盒化；首批 1,200 單",
-          "risks": "⚠️ 仿品進入門檻低易殺價；⚠️ 結構簡單消費者容易自行找低價白牌；⚠️ 需強視覺設計差異化才能守住中階價位",
-          "repurchase_detail": "耐用品（2-3 年）低複購；可用色系收藏邏輯延伸回購（多色系+不同鍋具對應）",
-          "links": [
-            "https://www.amazon.com/Kitchen-Gizmo-Strainer-Silicone-Colander/dp/B01MZ14LJV"
-          ],
-          "scores": {
-            "margin": 78,
-            "demand": 80,
-            "window": 55,
-            "barrier": 40,
-            "viral": 72,
-            "difficulty": 85,
-            "repurchase": 30
-          },
-          "prediction": "4 週後蝦皮『矽膠瀝水夾』賣家數 ≥ 35 家，或 momo 同品類上架 ≥ 3 款品牌款",
-          "verify_date": "2026-05-14",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 4,
-          "name": "日出光療喚醒燈鬧鐘（Sunrise Wake-Up Light）",
-          "category": "科技電子",
-          "score": 65,
-          "price": "NT$990",
-          "margin": "🟡 3.9x",
-          "highlight": "Pinterest Spring 2026『Sunday reset』趨勢 +65%，加上睡眠經濟延伸——晨光模擬 30 分鐘漸亮喚醒+白噪音助眠，療癒儀式感天花板。📅 最後安全進場日：2026-07-05 ⚠️ 信心指數：⭐⭐",
-          "source": "Pinterest Predicts 2026『Sunday reset checklist』搜尋 +65%；『natural wake up light』Google Trends 全球近 90 天 +38%；Amazon US 『wake up light alarm』BSR Alarm Clocks 前 10 有 4 款；T3/Wired 2026 wellness gadget 推薦清單收錄。",
-          "demand_validation": "🌍 海外證據：Amazon US Alarm Clocks BSR 前 20 有 6 款晨光喚醒款（Philips/Hatch 為主）；累積評論 >40K；YouTube『best sunrise alarm』10K+ 影片 15 個；Reddit r/sleep 常年推薦品類\n🇹🇼 台灣缺席：蝦皮『日出鬧鐘』相關 14 家多為 Philips 水貨售價 NT$2,500+，中階 NT$800-1,200 完全空白；momo 3 款 Philips >NT$3,000；PChome 0\n🎯 台灣機會：台灣睡眠問題族群擴大（衛福部 2025 調查失眠率 28%），中階價格帶空白，品牌化+晨間儀式敘事可精準切入 25-40 歲上班族",
-          "cost_breakdown": "1688 裸價 NT$180-260（含白噪音+藍牙款）× 1.4 落地 = NT$252-364；售價 NT$990 → 毛利率 2.7-3.9x 🟡 理想；扣除退貨成本（3C 6% × 1.5 = 9%）→ 真實毛利 2.5-3.6x",
-          "competition": "蝦皮：Philips 水貨 14 家高階；中階空白；momo：Philips 3 款；PChome：0；判定 → 中階完全空白",
-          "market_window": "🟡 中期 12 個月。睡眠經濟上升期，晨光喚醒為新興心智佔位戰場，2026 下半年前建立品牌認知。",
-          "strategy": "🎯 定位『療癒系晨間儀式』；IG 社群+Threads 失眠話題共創；搭配 Pinterest 風格產品攝影；首批 800 台",
-          "risks": "⚠️ BSMI 認證必要（6-8 週）；⚠️ 3C 退貨率高需保留 9% 成本；⚠️ Philips 品牌壓力需差異化（白噪音+氣氛燈多場景）",
-          "repurchase_detail": "耐用品（3-5 年）極低複購；可延伸助眠香氛/白噪音訂閱 app 增補收入",
-          "links": [
-            "https://www.amazon.com/s?k=sunrise+alarm+clock+wake+up+light&i=electronics"
-          ],
-          "scores": {
-            "margin": 72,
-            "demand": 72,
-            "window": 72,
-            "barrier": 58,
-            "viral": 68,
-            "difficulty": 65,
-            "repurchase": 25
-          },
-          "prediction": "4 週後蝦皮『日出鬧鐘 喚醒燈』中階（NT$800-1,200）賣家數 ≥ 8 家，或 momo 同品類品牌款上架 ≥ 4 款",
-          "verify_date": "2026-05-14",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 5,
-          "name": "石墨烯熱敷便攜摺疊眼罩按摩儀",
-          "category": "健康療癒",
-          "score": 62,
-          "price": "NT$1,690",
-          "margin": "🔵 3.4x",
-          "highlight": "日亞 Electric Eye Massagers 熱銷類目——石墨烯快速加熱+氣壓按摩+藍牙音樂，辦公族 10 分鐘快充療癒剛需。📅 最後安全進場日：2026-06-25 ⚠️ 信心指數：⭐⭐",
-          "source": "Amazon JP Electric Eye Massagers BSR Top 20 中 7 款為石墨烯加熱款；Makuake 2026/4『目元ケア』MIX PLANET 等多款 82g 輕量化機型熱銷；CNN Underscored 2026 Best Eye Massager 專文推薦。",
-          "demand_validation": "🌍 海外證據：Amazon JP Electric Eye Massagers 類目熱銷；累積評論 >15K；CNN 2026 測評認可 7 款；YouTube『eye massager』10K+ 影片 20 個；Makuake 相關專案 2026/4 人氣延續\n🇹🇼 台灣缺席：蝦皮『眼罩按摩 石墨烯』相關 12 家多為 NT$990 白牌低階無音樂；中階 NT$1,500-1,800 有藍牙音樂款空白；momo 4 款（飛利浦/眼博士）>NT$2,500 高階；PChome 2 款\n🎯 台灣機會：台灣上班族眼睛疲勞剛需，石墨烯快熱+藍牙音樂為新差異點，中階品牌化空白",
-          "cost_breakdown": "1688 裸價 NT$350-480（石墨烯+藍牙款）× 1.4 落地 = NT$490-672；售價 NT$1,690 → 毛利率 2.5-3.4x 🔵 門檻；扣除退貨成本（3C 9%）→ 真實毛利 2.3-3.1x",
-          "competition": "蝦皮：低階白牌 12 家；中階藍牙音樂款 0 家；momo：高階 4 款 >NT$2,500；PChome：2 款；判定 → 中階藍牙款空白",
-          "market_window": "🟡 中期 9 個月。日本市場成熟台灣滲透率低，2026 Q3 窗口收窄，需快速卡位。",
-          "strategy": "🎯 定位『辦公族 10 分鐘療癒儀式』；IG/Threads 上班族痛點共創；搭配企業禮盒通路；首批 500 台",
-          "risks": "⚠️ BSMI 認證必要；⚠️ 毛利勉強達門檻對行銷成本敏感；⚠️ 白牌低價廝殺激烈需品牌化差異",
-          "repurchase_detail": "耐用品（2-3 年）低複購；可延伸熱敷眼罩貼片耗材增補收入",
-          "links": [
-            "https://www.amazon.co.jp/-/en/gp/bestsellers/kitchen/5013080051"
-          ],
-          "scores": {
-            "margin": 65,
-            "demand": 75,
-            "window": 70,
-            "barrier": 55,
-            "viral": 65,
-            "difficulty": 55,
-            "repurchase": 25
-          },
-          "prediction": "4 週後蝦皮『石墨烯 眼罩 按摩』中階（NT$1,500-1,900）賣家數 ≥ 6 家，或 momo 同類品牌款上架 ≥ 3 款",
-          "verify_date": "2026-05-14",
-          "verdict": null,
-          "verdict_note": null
         }
       ]
     },
@@ -534,37 +324,6 @@
       "products": [
         {
           "rank": 1,
-          "name": "Kaleidoscopic 玻璃美容冰球滾輪套組（Ice Globes Facial Set）",
-          "category": "美妝保養",
-          "score": 85,
-          "price": "NT$790",
-          "margin": "4.3x 🟢 優質",
-          "highlight": "非配方品項（物理美容器械，合規）。海外「早起消水腫」晨間 routine 必備，TikTok #iceglobes 翻拍 > 50 獨立創作者；台灣 momo 無大品牌，蝦皮雜亂白牌。",
-          "source": "Amazon US 『Ice Globes for Facials』BSR 長期 Top 800；TikTok #iceglobes 翻拍 > 50 創作者；Pinterest 儲存 > 12K 且近 30 天 +55%",
-          "demand_validation": "①國外爆紅：Amazon US 相關商品 BSR < 800 持續 6 個月，TikTok #iceglobes 瀏覽 8 千萬+，Pinterest 儲存 > 12K。②台灣缺席：台灣品牌資源壓在面霜/精華配方戰，沒人切『器械型醒肌工具』細分。③台灣機會：禮盒化每組 NT$690-890，首波目標 300 組/月。",
-          "cost_breakdown": "1688 玻璃雙球（含矽膠避震頭）¥28 ≈ NT$135 × 1.4 = NT$189；零售 NT$790；倍率 4.18x（🟢 優質 4.0-4.9x）",
-          "competition": "蝦皮：30+ 筆全白牌、無品牌化；momo：0 大品牌、雜入按摩器材分類；PChome：無主打。市場尚未定型。",
-          "market_window": "台灣空白約 12 個月；Google Trends TW『美容冰球』近 90 天 10→32，明顯成長。",
-          "strategy": "①首波 1000 組試單（落地 < NT$210）。②找 3-5 位美妝 KOL 拍 15 秒 before-after 晨間 routine。③訴求『純物理降溫，不含任何化妝品成分』避開化妝品法規。④母親節 5/11、端午 6/19 節日檔期。",
-          "risks": "玻璃運送碎裂率（雙層氣柱袋）。寒冷感受個人差異，需標注『建議冰箱冷藏 15 分鐘後使用』。",
-          "repurchase_detail": "耐用品 1-2 年，複購低（40 分）；可衍生季節款、禮盒款、情侶款拉高客單與 LTV。",
-          "links": "https://www.tiktok.com/tag/iceglobes",
-          "scores": {
-            "margin": 85,
-            "demand": 72,
-            "window": 75,
-            "barrier": 55,
-            "viral": 82,
-            "difficulty": 78,
-            "repurchase": 40
-          },
-          "prediction": "4 週後蝦皮出現 5+ 個品牌化賣家（含圖卡禮盒），或 momo 開出『美容冰球』獨立子分類",
-          "verify_date": "2026-05-13",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 2,
           "name": "3D 立體迷宮慢食益智碗（寵物療癒玩具）",
           "category": "寵物",
           "score": 75,
@@ -579,7 +338,9 @@
           "strategy": "①3 款難度階梯（入門/中級/高級）升級銷售。②自家寵物示範 IG Reels。③Pinkoi + 博客來寵物專區同步避開直接電商競爭。④狗狗日 8/26、萬聖節造型款。",
           "risks": "需備食品級矽膠＋FDA 塑料報告。部分寵物不吃費力食物，退貨率中性。",
           "repurchase_detail": "耐用品（55 分），可衍生難度升級款、多寵家庭買多款；配清潔刷、止滑墊組合拉客單。",
-          "links": "https://www.nina-ottosson.com/",
+          "links": [
+            "https://www.nina-ottosson.com/"
+          ],
           "scores": {
             "margin": 78,
             "demand": 72,
@@ -593,105 +354,6 @@
           "verify_date": "2026-05-13",
           "verdict": null,
           "verdict_note": null
-        },
-        {
-          "rank": 3,
-          "name": "智能定量按鍵米桶 2.0（TikTok 廚房收納爆品）",
-          "category": "廚房家居",
-          "score": 75,
-          "price": "NT$899",
-          "margin": "🟢 4.0x",
-          "highlight": "TikTok Shop 廚房 Top 3——按壓一次精準出一杯米，密封防蟲+計量一步到位，出米動作短影片極具解壓感 ✨ 信心指數：⭐⭐⭐",
-          "source": "TikTok Shop Home & Lifestyle Top Products（Printify/findniche/cjdropshipping 四大 2026 TikTok 榜單同列）；Amazon US『Rice Dispenser Storage Container』BSR #340 Kitchen；Pinterest『kitchen organization rice』儲存週增 48%。",
-          "demand_validation": "🌍 海外證據：TikTok #ricedispenser 累積觀看 220M+（過去 90 天從 95M 起跳）；Amazon US BSR 前 500；YouTube 10K+ 開箱影片 18 個；Pinterest 儲存 12K+\n🇹🇼 台灣缺席：蝦皮『定量米桶』有 15 家但多為舊款轉盤式，按壓出米款僅 3 家白牌無品牌化；momo：貓頭鷹款 2 款 NT$1,500+；PChome：相同 2 款；判定『按壓款空白』\n🎯 台灣機會：台灣三代同堂家庭 + 外食族分量控制需求，1-2 人戶外食市場是藍海；NT$800-1,200 空白價位",
-          "cost_breakdown": "1688 裸價 NT$160-200（6-10kg 款）× 1.4 落地 = NT$224-280；售價 NT$899 → 毛利率 3.2-4.0x 🟢 優質；家居用品退貨率 4% × 1.5 = 6%；真實毛利 3.0-3.8x",
-          "competition": "蝦皮：定量米桶 15 家但按壓款 3 家白牌；momo/PChome：舊款貓頭鷹 2 款；Pinkoi：0；判定 → 按壓款品牌化前夕",
-          "market_window": "🟢 機會期 6-9 個月。TikTok 3 月起加速爆發，台灣預計 60-90 天跟上",
-          "strategy": "🎯 定位：『按一下 = 一杯米，外食族減量神器』；TikTok 以按壓出米慢動作 + 密封防蟲為主；首批 500 單；可搭配『量杯 + 收納瓶罐』組合銷售",
-          "risks": "⚠️ 塑料品質參差需 QC；⚠️ 大型家電類物流成本高需試算；⚠️ 米粒品種影響出量精度需調校",
-          "repurchase_detail": "一次性耐用品低複購但『全家人每天用』高推薦口碑；退貨率 4% 以內可控",
-          "links": [
-            "https://shop.tiktok.com"
-          ],
-          "scores": {
-            "margin": 80,
-            "demand": 70,
-            "window": 68,
-            "barrier": 55,
-            "viral": 72,
-            "difficulty": 82,
-            "repurchase": 30
-          },
-          "prediction": "4週後蝦皮『按壓 定量米桶』白牌賣家 ≥ 8 家，或 TikTok TW #米桶 相關影片數 ≥ 30 個",
-          "verify_date": "2026-05-13",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 4,
-          "name": "7吋 裸眼 3D 動態光場數位相框（Looking Glass Musubi 衍生品類）",
-          "category": "科技電子",
-          "score": 67,
-          "price": "NT$2,990",
-          "margin": "🔵 3.0x",
-          "highlight": "Looking Glass Musubi 於 Kickstarter（2026/3）成功驗證『全像相框』消費級市場——照片/影片上傳後自動轉為浮空 3D 顯示，開箱影片天生病毒 ✨ 信心指數：⭐⭐",
-          "source": "Looking Glass Musubi Kickstarter 3 月募資上線，定價 USD $99-149，首批 6 月出貨；Engadget/New Atlas/Auganix 三大科技媒體同步報導；Gadget Flow 列為『CES 2026 後最期待消費級全像裝置』。",
-          "demand_validation": "🌍 海外證據：Kickstarter Musubi 首日爆單，TechEBlog/Uncrate/3dvf 連發評測；1688 已出現一批 7 吋 裸眼 3D 相框 OEM（NT$500-700）因應趨勢；YouTube 10K+ 相關影片 15 個\n🇹🇼 台灣缺席：蝦皮/momo/PChome 全無『裸眼 3D 光場 相框』品項；Sony Spatial Reality Display 屬專業級 NT$180,000+ 不算同類；判定『完全空白』\n🎯 台灣機會：寵物/寶寶紀念/文創送禮場景強；預計 Q3 才有代理商動作，窗口 4-6 個月",
-          "cost_breakdown": "1688 裸價 NT$550-800（7 吋光場）× 1.4 落地 = NT$770-1,120；售價 NT$2,990 → 毛利率 2.7-3.9x 🔵 門檻；電子類退貨率 6% × 1.5 = 9%；真實毛利 2.5-3.6x",
-          "competition": "蝦皮：0；momo：0；PChome：0；Pinkoi：0；citiesocial：0；完全空白",
-          "market_window": "🟢 機會期 4-6 個月。Musubi 6 月出貨後輿論會起，台灣代理預計 Q4 才會動，但需注意：原廠品質壓力+內容轉檔教學成本",
-          "strategy": "🎯 定位：『為你的寵物/寶寶做第一個 3D 全像紀念』；與 app 配套提供照片/影片轉光場；首批 300 單試反應；主攻文創/創意送禮族群",
-          "risks": "⚠️ 超出 NT$3,000 理想價帶，需內容行銷說服；⚠️ 裸眼光場品質 1688 OEM 品質良莠不齊需 QC；⚠️ 電子類退貨風險高；⚠️ 客服需處理內容轉檔問題（教學影片必備）；⚠️ 屬『破例進場』品項——僅建議作小批測試",
-          "repurchase_detail": "3C 硬體低複購，但若內容訂閱模式（光場內容包）可延伸 LTV",
-          "links": [
-            "https://www.kickstarter.com/projects/lookingglass/musubi"
-          ],
-          "scores": {
-            "margin": 65,
-            "demand": 78,
-            "window": 85,
-            "barrier": 65,
-            "viral": 88,
-            "difficulty": 55,
-            "repurchase": 25
-          },
-          "prediction": "4週後蝦皮『裸眼 3D 相框』或『光場 相框』相關賣家 ≥ 3 家，或 Musubi 早鳥達 USD $500K 以上（當前 USD $300K 起跳）",
-          "verify_date": "2026-05-13",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 5,
-          "name": "Neo-Deco 黃銅幾何 LED 香氛氛圍夜燈",
-          "category": "生活禮品",
-          "score": 63,
-          "price": "NT$1,290",
-          "margin": "🟢 4.4x",
-          "highlight": "Pinterest Predicts 2026『Neo-Deco』x『fragrance layering』雙趨勢交叉——黃銅幾何線條 + 可替換精油片 + 暖光 LED 的儀式感擺飾 ✨ 信心指數：⭐⭐",
-          "source": "Pinterest Predicts 2026 Spring『Neo-Deco』設計關鍵字搜尋 +220%；『niche perfume collection』+500%；Apartment Therapy/Home Accents Today 同列 Neo-Deco 為 2026 家居首選；Trend Hunter 2026 Trend Report 入選。",
-          "demand_validation": "🌍 海外證據：Pinterest Spring Trend Report 2026 正式發佈，Neo-Deco 儀式感擺飾為核心；Etsy『brass home decor』週增 18%；TikTok #neodeco 累積觀看 45M；YouTube 10K+ 影片 6 個\n🇹🇼 台灣缺席：蝦皮『黃銅 幾何 夜燈』12 家多為純裝飾無香氛功能；『香氛夜燈』有 20+ 家但無 Neo-Deco 風格；判定『風格空白』\n🎯 台灣機會：母親節 5/11（距 26 天）送禮窗口 +5 分；Neo-Deco 概念契合 25-40 歲設計偏好族群",
-          "cost_breakdown": "1688 裸價 NT$250-320（含 LED + 黃銅外殼）× 1.4 落地 = NT$350-448；售價 NT$1,290 → 毛利率 2.9-3.7x 🟢 優質邊緣；生活禮品退貨率 4% × 1.5 = 6%；真實毛利 2.7-3.5x",
-          "competition": "蝦皮：黃銅幾何夜燈 12 家無香氛；香氛夜燈 20+ 家無 Neo-Deco 風；momo/PChome：有 Yankee Candle 等品牌但風格不同；判定 → 風格空白中度",
-          "market_window": "🟡 機會期 6-8 個月。Pinterest 2026 預測剛啟動，台灣預計 Q3 進入流行",
-          "strategy": "🎯 定位：『Neo-Deco × 母親節/父親節送禮』；IG 以空間情境美拍為主；包裝做『儀式感禮盒』；首批 400 單試母親節檔期",
-          "risks": "⚠️ 視覺靜態、短影片話題性偏弱；⚠️ 黃銅氧化問題需選電鍍款；⚠️ 風格偏小眾客層需精準投放",
-          "repurchase_detail": "一次性送禮 + 偶爾補充精油片 = 低-中複購",
-          "links": [
-            "https://www.trendhunter.com/trends/2026-trend-report"
-          ],
-          "scores": {
-            "margin": 82,
-            "demand": 65,
-            "window": 68,
-            "barrier": 60,
-            "viral": 60,
-            "difficulty": 82,
-            "repurchase": 50
-          },
-          "prediction": "4週後蝦皮『Neo-Deco 夜燈』或『黃銅 幾何 香氛 夜燈』相關賣家 ≥ 5 家，或 Google Trends TW『Neo-Deco』搜尋量 ≥ 20",
-          "verify_date": "2026-05-13",
-          "verdict": null,
-          "verdict_note": null
         }
       ]
     },
@@ -701,105 +363,6 @@
       "products": [
         {
           "rank": 1,
-          "name": "HAUA PDRN Orb 膠囊球精華",
-          "category": "美妝保養",
-          "score": 82,
-          "price": "NT$1,290",
-          "margin": "🌟 7.6x",
-          "highlight": "PDRN 鮭魚 DNA 精華裝在透明顆粒球裡，擠破使用的儀式感；2026 K-beauty PDRN 超級原料 × 視覺開箱重點",
-          "source": "Amazon US 美容護膚 Movers & Shakers 近 24h 上升 +340%；Pinterest「PDRN skincare」儲存量 4 月週增 58%；Sephora 韓妝專區 PDRN 類目新品 12 個",
-          "demand_validation": "🌍 海外證據：Amazon US 美容護膚飆升榜 PDRN 相關 3 款擠入 Top 20，Pinterest 儲存 +58%；TikTok #PDRN 話題 1.8B 觀看（3 個月內從 4 億跳升）\n🇹🇼 台灣缺席：蝦皮「PDRN 精華」僅 8 個賣家，無一做「膠囊球」這種視覺化劑型；momo/PChome 無此規格\n🎯 台灣機會：K-beauty 在台基本盤強，但 PDRN 仍在教育期；視覺化顆粒球 = 抖音/小紅書短影片天然素材，低成本突破",
-          "cost_breakdown": "1688 裸價 NT$100-130（30ml，10 顆球）× 1.4 落地 = NT$140-180；售價 NT$1,290 → 毛利率 7.2-9.2x；扣除退貨成本（保養品 2% × 1.5 = 3%）→ 真實毛利 7.0-9.0x",
-          "competition": "蝦皮：PDRN 精華 8 家，多為韓國代購水貨價 NT$1,800-2,500，品牌混亂；momo：0；PChome：0；Watsons/康是美：無；判定 → 台灣市場空白（成品牌化前最佳時機）",
-          "market_window": "🟢 機會期 6-9 個月。Pinterest Predicts 2026 將 PDRN 列為「可見活性成分」第一名，預計 Q3 主流化。視覺化顆粒球規格在韓國已出現（2026/2 上市），台灣通路代理尚未動作。",
-          "strategy": "🎯 進場包裝：「韓妝 2026 年度成分 × 儀式感劑型」；IG/TikTok 以「擠破瞬間」slo-mo 為主視覺；主打小資 OL 25-35 歲；首批 500 單試水，數據好再談通路",
-          "risks": "⚠️ PDRN 在台尚未完成消費者教育，初期需投入 2-3 萬廣告成本；⚠️ 膠囊球破裂後 60 秒內要用完，體驗門檻略高需明確教學；⚠️ 成分依賴進口，若韓國 FDA 對 PDRN 宣稱加嚴，行銷話術要調整",
-          "repurchase_detail": "保養品類中度複購：30ml/30 天用量 → 月用量剛好，若體感佳複購月週期穩定；評估 6 個月內 42% 老客複購",
-          "links": [
-            "https://www.amazon.com/HAUA-Hyaluronic-Skincare-Anti-Aging-Hydration/dp/B0FNPW3LMH"
-          ],
-          "scores": {
-            "margin": 92,
-            "demand": 88,
-            "window": 85,
-            "barrier": 70,
-            "viral": 92,
-            "difficulty": 72,
-            "repurchase": 70
-          },
-          "prediction": "4週後 Amazon US 美容 PDRN 類目至少 3 款進入 Top 50 BSR，或蝦皮台灣 PDRN 顆粒球形態出現 3 家以上賣家",
-          "verify_date": "2026-05-12",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 2,
-          "name": "Dr. Althea 顆粒研磨卸妝膏",
-          "category": "美妝保養",
-          "score": 76,
-          "price": "NT$690",
-          "margin": "🟢 4.9x",
-          "highlight": "固態卸妝膏內含可見研磨顆粒，卸妝+溫和去角質一罐雙效；K-beauty「tactile beauty 觸感美學」趨勢代表",
-          "source": "Amazon US 卸妝品類前 30 日新進 Top 100；Pinterest「tactile cleanser」+145% YoY；Olive Young 4 月熱銷榜第 7",
-          "demand_validation": "🌍 海外證據：Dr. Althea 這款在 Olive Young 4 月躋身 Top 10，Amazon US 評論數 30 天內從 120 → 890（+640%）；Pinterest「cleansing balm with scrub」儲存 +145%\n🇹🇼 台灣缺席：蝦皮「顆粒卸妝膏」相關賣家 5 家但都是普通粒子，無 K-beauty 品牌；momo 無 Dr. Althea 代理；PChome 有 1 家水貨\n🎯 台灣機會：台灣卸妝膏市場 DHC/Banila Co 雙霸，但「顆粒感」是空白；價位 NT$690 切入敏感族群 NT$800-1,200 的下方缺口",
-          "cost_breakdown": "1688 OEM 同規格 NT$80-100（70g）× 1.4 = NT$112-140；如做正版 Dr. Althea 代購 1688 價 NT$280-320 × 1.4 = NT$392-448；售價 NT$690 → OEM 毛利 4.9x / 代購 1.5x（代購路線淘汰）；退貨 3% × 1.5 = 4.5% → 真實毛利 4.7x",
-          "competition": "蝦皮：顆粒卸妝類 5 家無品牌；momo：Banila/DHC 主導；PChome：Dr. Althea 水貨 1 家 NT$890；Watsons/Cosmed：無；判定 → 品牌化空白，用自有品牌+類似配方切入",
-          "market_window": "🟢 機會期 4-6 個月。K-beauty 週期快，若 Dr. Althea 原廠 2026 Q3 找到台灣代理，此缺口會被填補，必須在 Q2 內上架測試",
-          "strategy": "🎯 進場包裝：「韓國 Olive Young 暢銷第 7 名同類技術」；IG/TikTok 主打「顆粒滑動聲 ASMR」；主打 25-35 歲敏感性/粉刺肌女性；首批 600 單配合 20 位奈米 KOC 試用",
-          "risks": "⚠️ 顆粒品質不穩會磨傷皮膚，1688 供應商必須嚴選 3 家 SKU 測試；⚠️ Dr. Althea 如有商標爭議要避免蹭名；⚠️ 韓妝代購盤商反擊可能壓價",
-          "repurchase_detail": "卸妝膏 70g 用量約 45-60 天，複購週期穩定；評估 6 個月 38% 複購率",
-          "links": [
-            "https://www.amazon.com/Grinding-Cleansing-One-Step-Madecassoside-Non-Greasy/dp/B0CTK1TYNG"
-          ],
-          "scores": {
-            "margin": 78,
-            "demand": 82,
-            "window": 78,
-            "barrier": 60,
-            "viral": 75,
-            "difficulty": 78,
-            "repurchase": 68
-          },
-          "prediction": "4週後 Pinterest「tactile cleanser」儲存量增加 +80% 以上，或蝦皮顆粒卸妝膏 K-beauty 品牌賣家數從 0 → 2 以上",
-          "verify_date": "2026-05-12",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 3,
-          "name": "磁吸便攜香氛堆疊組 Pocket Scent Stack",
-          "category": "生活禮品",
-          "score": 73,
-          "price": "NT$890",
-          "margin": "🌟 5.2x",
-          "highlight": "3 個 5ml 磁吸式香水瓶，可自由疊扣組合，外出隨場合切換；Pinterest「Scent Stacking」+500% 趨勢延伸品",
-          "source": "Pinterest Predicts 2026「Scent Stacking」+500% 年增長；Amazon US 隨身香氛類目近 60 天新品 +28%；Etsy 客製香水小瓶組訂單量 Q1 翻倍",
-          "demand_validation": "🌍 海外證據：Pinterest 官方將「Scent Stacking」列為 2026 Top 5 趨勢（+500% YoY）；Etsy 獨立調香師客製小瓶組訂單 +110%；TikTok #ScentLayering 觀看 650M\n🇹🇼 台灣缺席：蝦皮「隨身香水組」多為大牌 mini set（Dior/YSL）代購，無獨立香氛堆疊 DIY 概念；momo/PChome 無磁吸式堆疊瓶；Pinkoi 有 2 家設計師品牌但單價 NT$1,800+\n🎯 台灣機會：香氛堆疊在台灣 Pinterest 搜尋 Q1 +180%，但產品供給為 0；磁吸堆疊設計降低嘗試門檻，NT$890 破 1,000 元心理價",
-          "cost_breakdown": "1688 磁吸玻璃瓶+木蓋 NT$35-50（3 瓶 1 組）+ 香精 NT$60-90 = 原料 NT$95-140 × 1.4 = NT$133-196；售價 NT$890 → 毛利 4.5-6.7x；生活禮品退貨 4% × 1.5 = 6% → 真實毛利 4.2-6.3x",
-          "competition": "蝦皮：mini 香水組大牌代購多但概念不同；momo：無；PChome：無；Pinkoi：2 家設計品牌（Tamed、AROMA HOUSE）單價 NT$1,800-2,500；判定 → NT$800-1,200 堆疊 DIY 價位空白",
-          "market_window": "🟢 機會期 8-12 個月。Pinterest 趨勢向實體轉化通常滯後 6-9 個月，2026 Q3-Q4 預估台灣主流化；注意：4/12 已推「家用堆疊儀式組」，此為「便攜」差異化版本",
-          "strategy": "🎯 進場包裝：「外出香氛自由切換 × 日韓設計磁吸」；IG 主打「通勤 3 層堆疊教學」；主打 22-32 歲白領女性；首批 400 單，重點測磁吸強度與漏液率",
-          "risks": "⚠️ 磁吸式玻璃瓶若強度不足易碰撞破裂，1688 要測壓 2 米跌落；⚠️ 香精配方 IFRA 合規要核對；⚠️ 與 4/12 推薦品項同趨勢線，需差異化論述清楚避免內耗",
-          "repurchase_detail": "禮品+自用混合型：自用 6 個月內 28% 複購，禮品季 Q4 及情人節有二次購買峰；整體 6 個月複購 32%",
-          "links": [
-            "https://hunchoo.com/products/luxury-solid-perfume"
-          ],
-          "scores": {
-            "margin": 82,
-            "demand": 75,
-            "window": 72,
-            "barrier": 55,
-            "viral": 78,
-            "difficulty": 70,
-            "repurchase": 62
-          },
-          "prediction": "4週後 Pinterest「scent stacking」儲存量再 +30% 以上，或蝦皮磁吸堆疊香水組賣家從 0 → 3 以上",
-          "verify_date": "2026-05-12",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 4,
           "name": "互動飛鳥自動逗貓玩具 Potaroma 型",
           "category": "寵物",
           "score": 68,
@@ -830,37 +393,6 @@
           "verify_date": "2026-05-12",
           "verdict": null,
           "verdict_note": null
-        },
-        {
-          "rank": 5,
-          "name": "摺疊式桌面 IH 電磁爐 500W",
-          "category": "廚房家居",
-          "score": 64,
-          "price": "NT$1,890",
-          "margin": "🟡 3.6x",
-          "highlight": "摺疊收納、500W 桌面 IH、支援 14cm 小鍋具；租屋族/單身獨食經濟日本 Rakuten 排行上升",
-          "source": "Rakuten 近 7 天廚房家電排行第 12；Amazon JP 単人用 IH 類目前 20；Makuake 2026 桌面小家電專案 3 個達成 500%+",
-          "demand_validation": "🌍 海外證據：Rakuten 日本桌面摺疊 IH 近 7 天排行連續 5 天 Top 20；Amazon JP 評論數 30 天 +280%；YouTube「ひとり暮らし IH」影片過去 90 天觀看 +55%\n🇹🇼 台灣缺席：蝦皮「桌面電磁爐」60+ 家但標準方形固定；「摺疊式 IH」僅 3 家日貨代購 NT$2,500-3,500；momo/PChome 無台版品牌做摺疊\n🎯 台灣機會：台灣獨居戶 +310 萬、租屋禁明火族群大；NT$1,890 切入代購水貨下方，設計感+摺疊收納是差異化點",
-          "cost_breakdown": "1688 摺疊 IH 500W 成品 NT$380-450 × 1.4 = NT$532-630；售價 NT$1,890 → 毛利 3.0-3.5x；3C 類退貨 6% × 1.5 = 9% → 真實毛利 2.7-3.2x（接近門檻，謹慎評估）",
-          "competition": "蝦圖：傳統桌面電磁爐 60+ 家 NT$800-1,500；摺疊代購水貨 3 家 NT$2,500+；momo：0；PChome：無摺疊款；判定 → NT$1,800-2,000 摺疊設計價位帶空白，但靠近 3,000 上限邊緣",
-          "market_window": "🟡 機會期 6-9 個月。日本 Rakuten 熱度穩定但非爆發型，台灣跟進速度中等；若 2026 Q4 大品牌如小米/九陽推類品，會被擠壓",
-          "strategy": "🎯 進場包裝：「日本租屋族神器 × 摺疊收納」；IG 主打「8 秒收納」動畫；主打 22-32 歲獨居上班族；首批 300 單小批測試，不適合大賭",
-          "risks": "⚠️ 3C 類退貨率天然偏高（6%），毛利空間已貼近門檻；⚠️ 摺疊鉸鏈耐用度要做 1000 次壽命測試；⚠️ BSMI 檢驗必做，費用 NT$8,000-15,000 要計入首批成本；⚠️ 售價 NT$1,890 接近台灣試單 NT$3,000 心理上限，加購率低",
-          "repurchase_detail": "廚電類極低複購（5 年使用），營收模式依賴新客；6 個月內主商品複購 <5%，可延伸同類小家電（手沖壺、智慧鍋）",
-          "links": "https://ranking.rakuten.co.jp/daily/212988/",
-          "scores": {
-            "margin": 55,
-            "demand": 68,
-            "window": 62,
-            "barrier": 58,
-            "viral": 55,
-            "difficulty": 65,
-            "repurchase": 40
-          },
-          "prediction": "4週後 Rakuten 摺疊 IH 類目 Top 20 仍有 3 款以上，或蝦皮摺疊 IH 電磁爐賣家從 3 → 6 以上（含非代購品牌）",
-          "verify_date": "2026-05-12",
-          "verdict": null,
-          "verdict_note": null
         }
       ]
     },
@@ -870,105 +402,6 @@
       "products": [
         {
           "rank": 1,
-          "name": "冰感美容棒（雙頭冰鎮緊緻美容儀）",
-          "category": "美妝保養",
-          "score": 70,
-          "price": "$890",
-          "margin": "3.4x",
-          "highlight": "韓國冰療美容爆紅 TikTok，台灣蝦皮僅 2 頁；非電子免認證操作超簡單",
-          "source": "TikTok 冰療美容趨勢 + Amazon US Beauty Movers & Shakers",
-          "demand_validation": "TikTok #icefacial 趨勢持續爆發，Amazon US 冰感美容類月銷 20,000+ 件；蝦皮僅 2 頁（約 40-60 件），多為低價白牌缺乏品牌化產品",
-          "cost_breakdown": "1688 CNY 40 → NTD 188 → 落地 NTD 263（×1.4）｜售價 $890 ｜毛利 3.4x 🔵門檻｜蝦皮淨利 $520/件",
-          "competition": "蝦皮 2 頁約 40 件白牌（$99-$379）；momo/PChome 幾乎無品牌化冰感美容棒 — 三平台均空白",
-          "market_window": "韓國冰療美容已成標準步驟，台灣品牌化完全空白窗口 6-12 個月",
-          "strategy": "蝦皮 $890 品牌化包裝 + 使用教學卡 + 收納袋 → KOL 早晨 routine 影片 → 上架 momo",
-          "risks": "產品簡單易複刽壁壘低；需教育消費者正確使用方式",
-          "repurchase_detail": "一次性購買使用壽命長，需搭配冰感精華液提升回購",
-          "links": [
-            "https://www.amazon.com/Ice-Roller-Face-Eyes-Cryotherapy/dp/B0GGSVFDC2"
-          ],
-          "scores": {
-            "margin": 68,
-            "demand": 80,
-            "window": 80,
-            "barrier": 50,
-            "viral": 78,
-            "difficulty": 85,
-            "repurchase": 35
-          },
-          "prediction": "4 週後蝦皮「冰感美容棒」搜尋結果頁數從 2 頁增至 4 頁以上，或出現 3 個以上品牌化賣家（售價 $500+）",
-          "verify_date": "2026-05-11",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 2,
-          "name": "EMS微電流V臉提拉按摩儀（多功能四合一）",
-          "category": "美妝保養",
-          "score": 65,
-          "price": "$1,690",
-          "margin": "3.4x",
-          "highlight": "韓國美容科技爆品，蝦皮僅 3 頁中價位品牌完全空白",
-          "source": "Korea EMS beauty tech + Amazon JP + TikTok #EMSfacemassager",
-          "demand_validation": "Medicube 被評為 TikTok 最火美容品牌；全球美容儀器 CAGR 12.3%；蝦皮僅 3 頁，$1,000-2,000 中價品牌位完全空白",
-          "cost_breakdown": "1688 CNY 75 → NTD 353 → 落地 NTD 494（×1.4）｜售價 $1,690 ｜毛利 3.4x 🔵門檻｜蝦皮淨利 $993/件",
-          "competition": "蝦皮 3 頁，低端 $245 白牌 vs 高端 $9,600 YA-MAN；momo YA-MAN 旗艦店 $8,000+ — 中價位品牌化空白明確",
-          "market_window": "韓國 EMS 美容科技已成熟，台灣中價位窗口 6-9 個月",
-          "strategy": "蝦皮 $1,690 搭配導入凝膠組合 → 累積評價後進 momo → KOL 4-6 週使用記錄",
-          "risks": "需 BSMI 認證；EMS 故障退貨率較高；孕婦/癲癇/心律調節器禁用需標示",
-          "repurchase_detail": "導入凝膠/精華液為消耗品，預估每 2 個月回賷，主機+凝膠訂閱模式",
-          "links": [
-            "https://www.amazon.com/SZMDLX-Microcurrent-Tightening-Puffiness-Rechargeable/dp/B0FYCVZJHP"
-          ],
-          "scores": {
-            "margin": 69,
-            "demand": 80,
-            "window": 75,
-            "barrier": 67,
-            "viral": 81,
-            "difficulty": 70,
-            "repurchase": 65
-          },
-          "prediction": "4 週後蝦皮「EMS 美容儀」搜尋結果中 $1,000-2,000 價位帶出現 2 個以上新品牌賣家",
-          "verify_date": "2026-05-11",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 3,
-          "name": "迷你電動真空封口機（食品保鮮神器）",
-          "category": "廚房家居",
-          "score": 65,
-          "price": "$890",
-          "margin": "3.9x",
-          "highlight": "Meal prep 趨勢 + 真空袋耗材帶侦高複購率",
-          "source": "TikTok meal prep trend + Amazon Kitchen bestsellers",
-          "demand_validation": "Meal prep 歐美主流；Amazon 真空封口機類目持續成長；TikTok #mealprep 超過百億觀看；蝦皮有大型機款但迷你手持品牌化少",
-          "cost_breakdown": "1688 CNY 35 → NTD 165 → 落地 NTD 231（×1.4）｜售價 $890 ｜毛利 3.9x 🟡理想｜蝦皮淨利 $552/件",
-          "competition": "蝦皮 5-8 頁大型機多迷你手持品牌少；momo FoodSaver 低高端 — 迷你手持品牌化有差異空間",
-          "market_window": "迷你手持式品牌化空間存在，窗口 3-6 個月",
-          "strategy": "蝦皮 $890 主機+真空袋 10 入組合 → 建立真空袋訂閱回購模式",
-          "risks": "需 BSMI；白牌競爭激烈需持續差異化",
-          "repurchase_detail": "真空袋為消耗品預估每月回購，刀片模式（主機引流+耗材回賷）",
-          "links": [
-            "https://www.amazon.com/Handheld-Portable-Preservation-Electric-Compression/dp/B0BCFR8H6Z"
-          ],
-          "scores": {
-            "margin": 77,
-            "demand": 65,
-            "window": 55,
-            "barrier": 53,
-            "viral": 60,
-            "difficulty": 80,
-            "repurchase": 70
-          },
-          "prediction": "4 週後蝦皮「迷你真空封口機」搜尋結果中出現 2 個以上品牌化賣家（售價 $700+）",
-          "verify_date": "2026-05-11",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 4,
           "name": "智能互動逗貓球（自動變向LED發光）",
           "category": "寵物",
           "score": 59,
@@ -999,210 +432,6 @@
           "verify_date": "2026-05-11",
           "verdict": null,
           "verdict_note": null
-        },
-        {
-          "rank": 5,
-          "name": "摺疊迷你筋膜槍（便攜五段式）",
-          "category": "健康療癒",
-          "score": 58,
-          "price": "$1,790",
-          "margin": "3.0x",
-          "highlight": "CES 2026 摺疊設計差異化，便攜通勤族/健身族必備",
-          "source": "CES 2026 trending + Amazon ReAthlete FOLD + TikTok #massagegun",
-          "demand_validation": "筋膜槍成熟品類；ReAthlete FOLD 4.9 星好評世界首款摺疊筋膜槍；*R���皮「摺疊迷你筋膜槍」僅 6 頁品牌化少",
-          "cost_breakdown": "1688 CNY 90 → NTD 423 → 落地 NTD 592（×1.4）｜售價 $1,790 ｜毛利 3.0x 🔵閌檻｜蝦皮淨利 $983/件",
-          "competition": "蝦皮摺疊筋膜槍 6 頁多白牌；momo 傣統品牌多摺疌款稀少 — 摺疊細分市場仍有空間",
-          "market_window": "摹疊筋膜槍丰分市場 6 頁中網競現#窗口 3-6 個月",
-          "strategy": "蝦皮 $1,790 主打「口袋裡的按摩師」+ 收納對比圖 → 搭配按扩頭套組",
-          "risks": "需 BSMI；毛利 3.0x 勉強過開檻價格戰空間小；摺疊機構耐用性待驗證",
-          "repurchase_detail": "一次性購買，可銷售替換按摩頭配件",
-          "links": [
-            "https://www.amazon.com/KingPavonini-Dual-Ball-Adjustable-Extendable-Percussion/dp/B0F4824VJR"
-          ],
-          "scores": {
-            "margin": 62,
-            "demand": 65,
-            "window": 55,
-            "barrier": 58,
-            "viral": 65,
-            "difficulty": 72,
-            "repurchase": 40
-          },
-          "prediction": "4 週後蝦皮「摹疊筋膜槍」搜尋結果頁數從 6 頁增至 8 頁以上",
-          "verify_date": "2026-05-11",
-          "verdict": null,
-          "verdict_note": null
-        }
-      ]
-    },
-    {
-      "date": "2026-04-12",
-      "evolution": "C 方向：成本模型精化——新增『退貨成本估算』作為落地成本標準項目，每個產品以『售價 × 退貨率 × 1.5 逆物流係數』量化退貨對淨毛利的實際影響，讓決策不只看毛利倍數也看退貨後淨利。",
-      "products": [
-        {
-          "rank": 1,
-          "name": "PDRN 鮭魚 DNA 再生眼膜貼（2% 高濃度）",
-          "category": "美妝保養",
-          "score": 84,
-          "price": "NT$680 / 盒（60 片）",
-          "margin": "4.1x 🟢優質",
-          "highlight": "💡 核心推薦理由：PDRN 是 2026 Mintel/BoF/Beauty Independent 三大趨勢報告共同點名的「年度再生成分王者」，從注射級走入居家貼片，眼周抗老是最甜蜜的切入場景——功效可見、單價可承受、複購邏輯清楚。台灣目前只有醫美診所推廣、零售市場 PDRN 品項<10 個賣家，完美的 6 個月先行窗口。",
-          "source": "Mintel 2026 Global Beauty Predictions（PDRN 列為年度再生成分）、Beauty Independent 2026 Top Skincare Trends、TikTok #PDRN tag（韓國 Medicube Pink Peptide Serum 帶動 #PDRN 標籤月成長 >300%）、Amazon US 韓妝類別 movers & shakers Q1 2026 連續出現多款 PDRN 產品",
-          "demand_validation": "①國外爆紅證據：Medicube PDRN Pink Peptide Serum 在 TikTok Shop 美國站 2026 Q1 打進 K-beauty Top 10，Beauty of Joseon、Anua 等品牌跟進推 PDRN 子線；小紅書「PDRN 眼膜」搜尋 2026 Q1 筆記數從 <1K 暴增到 >8K。②台灣缺席原因：PDRN 成分還停留在醫美診所的「水光針補針」認知，品牌端反應慢——蝦皮搜「PDRN 眼膜」賣家 <10 個且多為日系/韓系平行輸入，momo/PChome 各只有 1-2 個品項。台灣消費者對「成分名詞」接受度高（從 A 醇、菸鹼醯胺到傳明酸），PDRN 只差一個有認知能力的品牌把故事講清楚。③台灣機會：以「診所級再生成分，居家貼片版」定位，搭醫美課程後修復場景和抗老族群 35+。Google Trends TW「PDRN」12 個月搜尋熱度從 <20 爬升到 60，方向正確。④Amazon 評論量（累積信號）：Medicube PDRN 系列美亞累積評論 >3500 筆、均 4.4 星，已過「累積萬級銷售」門檻。⑤YouTube：PDRN 眼膜相關影片 50+ 支、合計觀看 >1M，台灣美妝 KOL 只有 2-3 支。",
-          "cost_breakdown": "1688 PDRN 眼膜 60 片盒裝裸價 ¥55（NTD 約 240）× 1.4 落地係數 = 落地成本 NTD 約 336／售價 NT$1,380（自有品牌定位）或 NT$680 促銷裝 → 真實毛利 4.1x 🟢優質。退貨成本估（v3.1 新規則）：NT$1,380 × 退貨率 2%（開封即用型，退貨極低）× 1.5 逆物流損耗係數 = NT$41／單。扣退貨後淨毛利仍 >3.9x。",
-          "competition": "蝦皮搜「PDRN 眼膜」：僅 7 個賣家，其中 5 個為日韓平行輸入、單價 NT$1,200-2,500、無品牌化定位；momo：JMsolution、Anua 各一支，無 PDRN 專線；PChome：0 個專賣 PDRN 眼膜。台灣市場空白度高。競品都在打「成分濃度」戰，品牌化與教育溝通缺位。",
-          "market_window": "6-9 個月（中等偏長）。PDRN 從醫美擴散到零售的教育曲線在台灣才剛開始，Google Trends 還在爬升階段，2026 年內都是藍海。🎁 母親節送禮窗口（距 29 天）+5：抗老眼部護理是 35+ 女性送禮首選，時間點完美。",
-          "strategy": "走「醫美延伸」敘事：找醫美皮膚科醫師站台背書 + 在診所端通路做試點，再切入電商。定價分層：60 片促銷 NT$680（試用）、豪華禮盒裝 NT$1,680（送禮）。可和 medspa/皮膚診所異業合作買療程送盒。",
-          "risks": "①PDRN 原料在亞洲供應鏈品質參差，需嚴選通過 HLB 檢測的來源；②法規上 PDRN 在台灣是化粧品成分但不可宣稱「治療」，文案拿捏要精準；③若康是美/屈臣氏被韓系大牌搶先鋪貨（Medicube 已進亞洲多個通路），品牌窗口會壓縮到 3-4 個月，要快。",
-          "repurchase_detail": "眼膜 60 片一盒約 1 個月使用量，屬週期性消耗品，複購率推估 35-40%（同類抗老眼膜品類常見區間）。配合訂閱制 8 折可拉到 >50%。",
-          "links": [
-            "https://www.amazon.com/Medicube-Peptide-Collagen-Booster-Hyaluronic/dp/B0CX8PFSLV"
-          ],
-          "scores": {
-            "margin": 82,
-            "demand": 88,
-            "window": 80,
-            "barrier": 65,
-            "viral": 78,
-            "difficulty": 78,
-            "repurchase": 82
-          },
-          "prediction": "4 週後 Google Trends TW『PDRN』熱度指數 ≥75 或蝦皮 PDRN 眼膜賣家數 ≥15，驗證 PDRN 在台灣已進入主流認知爬升期",
-          "verify_date": "2026-05-10",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 2,
-          "name": "果凍質地漸層雙色唇釉（Jelly Lip Tint Duo）",
-          "category": "美妝保養",
-          "score": 78,
-          "price": "NT$420 / 支",
-          "margin": "4.6x 🟢優質",
-          "highlight": "💡 核心推薦理由：Pinterest Predicts 2026 把「Jelly/果凍質地美妝」列為 21 大趨勢之一，搜尋詞 jelly blush +130%、jelly candy aesthetic +100%——這是一個從質地而非顏色出發的全新美妝語言，台灣市場還在「水光唇釉」舊敘事，尚未有品牌搶佔果凍語境。",
-          "source": "Pinterest Predicts 2026 官方報告（business.pinterest.com/pinterest-predicts）、Sephora 2026 春季趨勢（Summer Fridays Flushed Lip Stain 液液質地新品帶風向）、TikTok #JellyBlush +130% 標籤成長（Premium Beauty News 報導）、Danessa Myricks Twin Flames 雙色液體眼影 Q1 2026 爆紅驗證「雙色漸層」需求",
-          "demand_validation": "①國外爆紅證據：Pinterest 官方 2026 預測明確把 jelly blush（+130%）、gummy bears aesthetic（+50%）、jelly candy aesthetic（+100%）列為年度重點；Danessa Myricks Twin Flames 雙色液體眼影在 Sephora 2026 Q1 幾度缺貨；TikTok #JellyLip 相關影片 Q1 總觀看 >80M。②台灣缺席原因：台灣美妝品牌還在打「霧面/絨面 vs 水光」二元戰，Jelly 是「軟糖、 QQ、濕潤但不黏」的第三語境，目前沒有任何台灣品牌用 jelly 論述。蝦皮搜「果凍唇釉」賣家 <20 個且主要為韓系純水光唇釉混搭。③台灣機會：Z 世代（20-28）對「質地趣味」接受度遠高於傳統美妝，且 jelly 天然帶童趣、社群傳播力強，適合 IG Reels/TikTok 內容化行銷。④Amazon 評論量：Pinterest 預測 +130% 搜尋成長是前瞻性信號，累積銷售數據還在形成中——這是「早期信號」而非「已驗證」，評分上反映在 viral +高、demand 中高。⑤YouTube：相關試色影片 30+ 支、單支最高觀看 500K。",
-          "cost_breakdown": "1688 果凍質地雙色唇釉（雙頭設計、果凍管身）裸價 ¥12-15（NTD 52-65）× 1.4 落地係數 = 落地成本 NTD 約 73-91／售價 NT$420 → 真實毛利 4.6x 🟢優質。退貨成本估：NT$420 × 退貨率 3%（美妝色彩品類平均）× 1.5 = NT$19／單，影響微小。",
-          "competition": "蝦皮搜「果凍唇釉」：17 個賣家，多為韓系純水光款式、無雙色漸層、無 jelly 概念行銷；momo：0 個品項；PChome：0 個。台灣市場絕對空白。",
-          "market_window": "4-6 個月（中等）。Pinterest 預測趨勢一般 3-6 個月從歐美擴散到亞洲，2026 下半年台灣必有本土 K-beauty 品牌或 MAC/Shu Uemura 跟進。先動優勢明顯。",
-          "strategy": "走「小紅書／IG Reels 內容化」策略：重點做試色影片而非靜態圖、強調「軟糖 QQ 果凍感」觸感敘事。定價 NT$420 可切入學生/年輕粉領雙市場。可做 3 色組合盒 NT$999 提高客單價。可異業結合軟糖品牌做聯名行銷放大社群聲量。",
-          "risks": "①色彩品類退貨率高於保養品，需投資實拍試色素材降低決策成本；②Jelly 質地熱度是 Pinterest 預測信號，不是已驗證熱銷——訂貨量第一批建議 500 支以下試水溫；③若 Summer Fridays/rhode 等國際品牌快速進台灣，需要加速品牌定位。",
-          "repurchase_detail": "唇釉單支可用 2-3 個月，同品牌多色複購率 35-45%。配合集點/訂閱制可拉到 50%+。",
-          "links": [
-            "https://business.pinterest.com/pinterest-predicts/"
-          ],
-          "scores": {
-            "margin": 85,
-            "demand": 70,
-            "window": 75,
-            "barrier": 55,
-            "viral": 85,
-            "difficulty": 72,
-            "repurchase": 68
-          },
-          "prediction": "4 週後 Pinterest TW『jelly lip』相關圖釘數 ≥2000 或蝦皮果凍唇釉賣家數 ≥30 或有台灣本土美妝品牌推出官方 jelly 唇釉系列",
-          "verify_date": "2026-05-10",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 3,
-          "name": "香氛堆疊自調儀式精油組（Scent Stacking Ritual Kit）",
-          "category": "美妝保養",
-          "score": 76,
-          "price": "NT$1,680 / 6 瓶入門組",
-          "margin": "3.9x 🟡理想",
-          "highlight": "💡 核心推薦理由：Pinterest Predicts 2026 把「Scent Stacking 香氛堆疊」明確列為年度自我表達新儀式——消費者不再只買單瓶香水，而是堆疊多支精油調出專屬簽名香調。這是香氛從『購買』進化到『創作』的新商業模式，台灣市場沒有任何品牌以此敘事切入。",
-          "source": "Pinterest Predicts 2026 官方報告（scent stacking 列為 21 大趨勢之一）、Premium Beauty News「How consumers are seeking to escape chaos」2026 趨勢解讀、Sephora 2026 春季新品 Summer Fridays Sunlit Vanilla 帶動「可堆疊香調」討論、BeautyMatter Pinterest 2026 beauty forecast",
-          "demand_validation": "①國外爆紅證據：Pinterest 2026 趨勢預測明確列入「scent stacking」；#scentstacking TikTok 標籤 2026 Q1 觀看 >40M；Sephora 佈局多款單一香調 layering oil 產品線；Le Labo、Tom Ford 推「混搭香調教學」內容。②台灣缺席原因：台灣香水市場仍由國際大牌壟斷「單一香調敘事」，雕刻成「一個人一支代表香」的舊邏輯；沒有品牌教育「堆疊玩法」。蝦皮搜「香氛堆疊」結果 0 個精準匹配，「堆疊精油」<5 個。③台灣機會：儀式感消費族群（25-40 女性）對「自我表達 × 親手創作」接受度極高，台灣 DIY 手作香氛市場已有基礎。產品本身不貴但帶「學習 × 收藏」屬性，客單價容易提升。④Amazon 評論量：scent stacking 是新興行銷語言，指標產品尚未形成超高評論量，但單瓶香氛精油類目 Amazon Q1 成長 +18%（NielsenIQ）。⑤Pinterest 儲存：scent stacking 相關圖釘儲存量 Q1 2026 >500K。",
-          "cost_breakdown": "1688 10ml 單一香調精油 ×6 瓶 + 收納木盒 + 調香手冊，整組裸價 ¥130-150（NTD 570-660）× 1.4 = 落地成本 NTD 約 798-924／售價 NT$1,680 → 真實毛利 3.9x 🟡理想（再加收納盒附贈則為 3.7x）。退貨成本估：NT$1,680 × 退貨率 4%（組合裝包裝/物流破損比率稍高）× 1.5 = NT$101／單。",
-          "competition": "蝦圖搜「香氛堆疊組」：0 個精準品項；momo 和 PChome 只有單瓶精油品項，無堆疊儀式敘事。台灣市場絕對空白。間接競品為 jo malone 的層疊噴灑（Layering）建議但沒有產品化套組。",
-          "market_window": "6-9 個月（中等偏長）。Pinterest 預測趨勢擴散到亞洲一般需 6 個月以上；加上「儀式/創作」敘事需要教育，窗口期長。🎁 母親節送禮窗口（距 29 天）+5：儀式感 × 自我表達正是送給媽媽的高情感濃度禮物。",
-          "strategy": "走「小紅書 + IG Reels 儀式內容化」，重點做調香教學短影片、邀客戶投稿自己的『簽名香譜』形成 UGC。定價 NT$1,680 對應禮物/自用雙情境。可延伸「每月新香氛俱樂部」訂閱制每月寄一支限定香調拉複購。",
-          "risks": "①精油品質差異大，需確保 100% 純精油避免消費者 DIY 測試後失望；②包裝物流破損率稍高；③本類教育門檻高，初期需要大量內容投入才能建立認知。",
-          "repurchase_detail": "入門組後可擴充單瓶 NT$380/支，每 1-2 個月補一瓶新香調，複購率預估 40-50%（同類型儀式感產品常見區間）；訂閱制可拉到 60%+。",
-          "links": [
-            "https://business.pinterest.com/pinterest-predicts/"
-          ],
-          "scores": {
-            "margin": 72,
-            "demand": 72,
-            "window": 78,
-            "barrier": 70,
-            "viral": 75,
-            "difficulty": 65,
-            "repurchase": 78
-          },
-          "prediction": "4 週後蝦皮搜『香氛堆疊』賣家數 ≥8（從目前 0）或有 1 家台灣香氛品牌推出 scent stacking 產品線",
-          "verify_date": "2026-05-10",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 4,
-          "name": "小分子海洋膠原胜肽飲（3000mg / 包）",
-          "category": "健康療癒",
-          "score": 81,
-          "price": "NT$890 / 30 包月份裝",
-          "margin": "3.5x 🟡理想",
-          "highlight": "💡 核心推薦理由：Beauty Independent 2026 skincare trends 報告指出，marine collagen 相關搜尋 2026 Q1 暴增 +227%、全球 2025 年線上膠原飲品銷量年增 32.8%——這是「由內而外美容」從利基走向主流的拐點信號。高複購率、月訂閱模式、可綁保養品交叉銷售，是典型的品牌護城河產品。",
-          "source": "Beauty Independent「Top Skincare Trends For 2026」官方 2026 趨勢報告（collagen 線上銷量 +32.8% YoY、marine collagen 搜尋 +227%）、Mintel 2026 Global Beauty Predictions「美由內而外」列為前三大方向、TikTok #CollagenDrink 相關影片 Q1 總觀看 >200M",
-          "demand_validation": "①國外爆紅證據：Beauty Independent 報告明確指出 collagen 品類 2025 年已售出近 200 萬件、online 銷售 +32.8% YoY、marine collagen 搜尋 +227%；日本 DHC/資生堂等大牌 2026 Q1 新推多款海洋膠原飲新品；美國 Vital Proteins、Moon Juice 在 Sephora/Ulta 銷量 Q1 雙位數成長。②台灣缺席原因：台灣膠原飲主流品牌（白蘭氏、統一、大研生醫、桂格）仍走「豬皮/魚皮膠原」敘事，小分子海洋膠原僅一兩支品項且定位混亂，沒有品牌主打「marine」差異化。蝦皮搜「海洋膠原飲」賣家雖有 40+ 但品牌集中度低、多為平輸。③台灣機會：以「日本 × 韓國海洋膠原新世代成分」定位，搭配美顏/抗老敘事切入 30+ 女性市場；複購率高、適合訂閱制降低行銷成本。④Amazon 評論量：Vital Proteins Marine Collagen 在美亞累積評論 >12000 筆（遠超萬級累積銷售門檻），代表市場真實需求已驗證。⑤YouTube：相關評測/開箱 500+ 支、合計觀看 >50M。",
-          "cost_breakdown": "1688 小分子海洋膠原胜肽粉（3000mg 鱈魚來源）+ 鋁袋分裝 30 包月份裝 ×1，整盒裸價 ¥75-90（NTD 330-400）× 1.4 = 落地成本 NTD 約 462-560／售價 NT$890 → 真實毛利 3.5x 🟡理想（訂閱制 79 折後仍 >3.0x 門檻）。退貨成本估：NT$890 × 退貨率 1.5%（食品保健類拆封後幾乎不退）× 1.5 = NT$20／單。",
-          "competition": "蝦皮搜「海洋膠原飲」：42 個賣家但品牌集中度極低，前 5 名合計市佔 <30%；momo：大研生醫、白蘭氏、BHK's 為主，但均為「混合型」膠原敘事非純海洋；PChome：同上。品牌化空間大，定位「marine 純海洋」有明確差異化機會。",
-          "market_window": "9-12 個月（長）。健康/保健品類擴散慢、一旦建立品牌信任複購穩定，長跑賽道。🎁 母親節送禮窗口（距 29 天）+5：美容保健禮盒是母親節三大熱銷品類之一。",
-          "strategy": "走「訂閱制 × 醫師背書」雙軌：找皮膚科/營養師站台建立專業信任感；定價 NT$890（月份裝）/ NT$2,499（三個月訂閱 79 折）。綁定聯名保養品做組合販售提高客單價。可考慮進駐丁丁、康是美實體通路做試喝活動。",
-          "risks": "①保健食品需要申請食品字號、吸收性宣稱受法規限制；②既有競品多而雜，初期需要明確視覺差異化；③膠原飲類退貨率低但客訴多圍繞口感/味道，需重視調味研發。",
-          "repurchase_detail": "30 包月份裝每天一包、月底必補貨，屬高黏度週期消耗品。同類型訂閱制品牌（Vital Proteins、大研）6 個月留存率約 50-60%，配合「訂閱 79 折＋第 4 個月升級」階梯誘因可拉到 70%+。",
-          "links": [
-            "https://www.vitalproteins.com/products/marine-collagen"
-          ],
-          "scores": {
-            "margin": 72,
-            "demand": 85,
-            "window": 85,
-            "barrier": 58,
-            "viral": 72,
-            "difficulty": 80,
-            "repurchase": 90
-          },
-          "prediction": "4 週後蝦皮『marine / 海洋膠原飲』搜尋結果中有至少 2 個新進品牌切入、或 Google Trends TW『海洋膠原飲』熱度指數 ≥70",
-          "verify_date": "2026-05-10",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 5,
-          "name": "音樂同步日落氛圍投影燈（升級版可調色溫+藍牙）",
-          "category": "生活禮品",
-          "score": 74,
-          "price": "NT$1,280 / 台",
-          "margin": "3.8x 🟡理想",
-          "highlight": "💡 核心推薦理由：日落燈是 TikTok 2026 持續發酵的「儀式感空間美學」類頂流品——但現行第一代只有靜態投影，升級版的「音樂節奏同步 + 可調色溫 + APP 控制」是第一代用戶的明確升級需求。從『拍照背景燈』進化到『情境氛圍音樂儀式』，產品敘事換代。",
-          "source": "Pinterest Predicts 2026「Extra Celestial 宇宙美學」+「sensory rituals 感官儀式」雙趨勢、ThGadgeteer「10 Gadgets Everyone's Quietly Buying in 2026」報導氛圍情境燈品類持續成長、TikTok #SunsetLamp 累積觀看 >3B、#AmbientLighting 2026 Q1 同比 +85%",
-          "demand_validation": "①國外爆紅證據：Pinterest Predicts 2026 把 Extra Celestial（星系光影/宇宙/次世代未來主義）列為 21 大趨勢之一，同時 sensory rituals（感官儀式）是 BeautyMatter 點名的 2026 核心需求方向；TikTok #SunsetLamp 標籤累積觀看 30 億+、2026 Q1 升級版『music sync』子標籤新增 1.2 億觀看（相對於第一代 2022 原始款）；Amazon US「sunset projection lamp with music」相關產品 Q1 新上架 50+ SKU。②台灣缺席原因：蝦皮現有日落燈絕大多數仍是 2022 第一代靜態款（NT$150-400），沒有品牌升級到『音樂同步 + 可調色溫 + APP』版本。台灣缺乏敘事升級、只卷單價。③台灣機會：以「第二代情境氛圍燈：加入音樂×色溫×APP」差異化，定位空間儀式感收藏品。搭配情人節/聖誕/生日送禮場景。④Amazon 評論量：第一代 sunset lamp 累積評論 >8000 筆已驗證「日落燈」類目的真實需求規模；升級版屬已驗證品類的敘事換代。⑤Google Trends TW「日落燈」過去 12 個月穩定維持 40-60 熱度區間，屬成熟但未飽和品類。",
-          "cost_breakdown": "1688 音樂同步日落投影燈（APP 控制 + 可調色溫 + 藍牙喇叭）裸價 ¥55-75（NTD 240-330）× 1.4 = 落地成本 NTD 約 336-462／售價 NT$1,280 → 真實毛利 3.8x 🟡理想。退貨成本估：NT$1,280 × 退貨率 6%（3C 電子類退貨率較高、含瑕疵退）× 1.5 = NT$115／單。扣退貨後淨毛利約 3.5x，仍在可接受區間。",
-          "competition": "蝦皮搜「日落燈」：80+ 個賣家但 95% 為第一代靜態款（NT$99-350），僅 2-3 個賣家開始賣『音樂款』但定位混亂；momo：只有第一代基礎款；PChome：同上。升級版敘事定位絕對空白。",
-          "market_window": "4-6 個月（中等）。3C 類抄襲速度快，一旦驗證會被蝦皮快速鋪貨；但敘事升級和品牌化的護城河可以建立到 6 個月+。",
-          "strategy": "走「情境體驗內容化」：重點做臥室/書房氛圍短影片、強調『音樂下自動變換星軌色溫』的沈浸體驗；定價 NT$1,280 定位『第二代氛圍收藏品』與第一代 NT$300 拉開差距；包裝禮盒化提升送禮屬性。搭配情人節、生日月經營送禮文案。",
-          "risks": "①3C 類抄襲速度快，品牌化必須靠敘事和視覺體驗而非功能；②音樂同步/APP 控制需要嚴選供應商，避免品質不穩造成退貨；③產品體積稍大運費成本較高。",
-          "repurchase_detail": "單次耐用品為主，複購來自『收藏多台』與送禮，實際複購率 15-20%，但客單價高且可做為引流產品帶動其他情境 SKU。",
-          "links": [
-            "https://thegadgetflow.com/blog/gadgets-of-2026/"
-          ],
-          "scores": {
-            "margin": 75,
-            "demand": 72,
-            "window": 70,
-            "barrier": 55,
-            "viral": 85,
-            "difficulty": 70,
-            "repurchase": 45
-          },
-          "prediction": "4 週後蝦皮『音樂同步日落燈』或『sunset lamp music sync』有 ≥10 個新 SKU、或台灣 IG 空間美學類帳號 ≥5 個開箱音樂款",
-          "verify_date": "2026-05-10",
-          "verdict": null,
-          "verdict_note": null
         }
       ]
     },
@@ -1212,138 +441,6 @@
       "products": [
         {
           "rank": 1,
-          "name": "Aluminate Life 水晶能量舒壓香氛蠟燭",
-          "category": "生活禮品",
-          "score": 68,
-          "price": "$1,580",
-          "margin": "3.3x",
-          "highlight": "2026 美國母親節送禮榜熱門，水晶嵌入+法國薰衣草+尤加利，儀式感品牌化切入台灣香氛禮品白地",
-          "source": "美國 Aluminate Life / 2026 母親節送禮榜（STYLEVANA, Party&Beyond, Style Gazer 同步推薦）",
-          "demand_validation": "①國外爆紅：Aluminate Life Release Signature Candle 登上 2026 多家母親節送禮指南（STYLEVANA、Party&Beyond、Style Gazer、TopStyleGazer），Instagram #crystalcandle 相關標籤 180K+ 貼文；TikTok 「crystal infused candle」話題 4,200 萬觀看。②Amazon 評論數（v3.1 新信號）：類似定位水晶蠟燭（如 JaxKelly Chakra Candle）Amazon 評論 1,200+，評分 4.4—累積銷售規模萬級已驗證。③台灣缺席：蝦皮「水晶蠟燭」僅 7-9 個雜牌無品牌化，momo/PChome 無主打「水晶儀式感」的香氛品牌，誠品有 Jo Malone/DW 等大牌但無水晶+能量概念。④台灣機會：台灣香氛市場 25-40 歲女性消費力高，「儀式感」「自我療癒」文案近 2 年在小紅書+Instagram 持續擴散，母親節送禮黃金場景。",
-          "cost_breakdown": "1688 水晶嵌入香氛蠟燭 8oz 大豆蠟 裸價 ¥75 → 落地成本 NTD$473（¥75 × 4.5 × 1.4）→ 建議售價 NT$1,580 → 毛利 3.3x 🔵 門檻（水晶原料真貨成本較高，可用非天然水晶壓低至 2.8-3.0x）",
-          "competition": "蝦皮：「水晶蠟燭」約 9 個結果多為無品牌 | momo：0 個主打水晶能量定位 | PChome：0 個 | 誠品：有 Jo Malone/DW 但無水晶+能量定位 | 市場空白度：品牌化空白",
-          "market_window": "窗口 12 個月+（2026 水晶+身心靈+儀式感是持續趨勢）。🎁 母親節送禮窗口（距 30 天）+5：香氛蠟燭送媽媽經典場景，自我療癒情緒共鳴高。",
-          "strategy": "切入：主打「水晶能量×法國精油×大豆蠟三合一儀式感」，包裝走霧面米白+金線日系療癒風。定位 NT$1,580 中高端（對標 Jo Malone $2,500 便宜 35%）。KOL：身心靈 IG 帳號 + 美好生活 YouTuber。冷啟動：母親節禮盒（蠟燭+水晶吊墜套組），搭配「點燃前的儀式」內容行銷。",
-          "risks": "①水晶能量宣稱需避免醫療功效違規（玄學層次描述即可）②大豆蠟 vs 石蠟成本差 30%，品質定位需堅持③真水晶原料貨源穩定性，可考慮仿水晶降低成本",
-          "repurchase_detail": "8oz 約 40-50 小時燃燒，每週用 2-3 次約 2-3 個月換一個，中複購；可延伸精油/香氛包周邊耗材",
-          "links": [
-            "https://aluminatelife.com/products/release-signature-candle"
-          ],
-          "scores": {
-            "margin": 65,
-            "demand": 62,
-            "window": 85,
-            "barrier": 75,
-            "viral": 65,
-            "difficulty": 90,
-            "repurchase": 45
-          },
-          "prediction": "4 週後蝦皮「水晶蠟燭」或「水晶香氛」關鍵字品牌化（非雜牌）賣家數突破 3 個，或 Google Trends 台灣「儀式感蠟燭」熱度較今日 +30%",
-          "verify_date": "2026-05-09",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 2,
-          "name": "Solawave Wrinkle Retreat Pro 四合一 LED 紅光療程面罩",
-          "category": "健康療癒",
-          "score": 66,
-          "price": "$9,800",
-          "margin": "3.5x",
-          "highlight": "FDA 認證紅光+近紅外+琥珀光+深紅光四波長，2026 母親節高端美容儀 #1，科技感送禮首選",
-          "source": "美國 Solawave Wrinkle Retreat Pro / Amazon US Beauty Devices Movers & Shakers + Globalnews 2026 LED 面罩指南首推",
-          "demand_validation": "①國外爆紅：Solawave Wrinkle Retreat Pro 為 2025 年底新發表產品，FDA 510(k) 認證通過，2026 Globalnews《Best LED Masks of 2026》列為「最佳多波長 FDA 款」，Amazon Beauty Devices 類 BSR 上升中。②Amazon 評論數（v3.1 新信號）：Solawave 品牌在 Amazon 累積評論 8,600+，評分 4.1—品牌級累積銷售萬級已驗證；產品本身 Q1 上市評論 420+，BSR 信號時點強。③TikTok #ledfacemask 累計 6.8 億觀看，#redlighttherapy 3.2 億；YouTube 10K+ 觀看的面罩 review 影片 45+ 個。④台灣缺席：蝦皮「LED 面罩」約 25 個結果多為中國白牌（NT$1,500-4,000），Omnilux/CurrentBody 代購 6-8 家（NT$12,000-18,000），無 FDA 認證 + 多波長主打的中價位品牌。⑤台灣機會：台灣 35-50 歲熟齡市場對抗老有感，醫美市場年增 15%+，LED 面罩為居家替代診所的明確品類。",
-          "cost_breakdown": "1688 324-LED 多波長面罩 OEM 裸價 ¥450 → 落地成本 NTD$2,835（¥450 × 4.5 × 1.4）→ 建議售價 NT$9,800 → 毛利 3.5x 🟡 理想",
-          "competition": "蝦皮：LED 面罩約 25 個多為中國白牌低價，Omnilux/CurrentBody 代購 6-8 家 | momo：3-5 個（ReFa/Panasonic 非 LED 紅光定位）| PChome：2 個 | 誠品生活：無 | 市場空白度：FDA+多波長+中價位品牌化空白",
-          "market_window": "窗口 6-9 個月（歐美 LED 面罩趨勢已 2 年，台灣中價位品牌剛要崛起）。🎁 母親節送禮窗口（距 30 天）+5：高單價美容儀送禮科技感強。",
-          "strategy": "切入：主打「FDA 認證四波長紅光療程面罩」對標 Omnilux/CurrentBody 便宜 40%。主視覺走科技極簡風 + 3 分鐘快速 routine 影片。KOL：皮膚科醫師 + 美容 KOL 開箱對比。冷啟動：母親節「媽媽居家美容院」禮盒定位。",
-          "risks": "①醫療器材法規：需確認台灣食藥署分類（紅光美容儀為第一等級醫材，需 QSD + 許可證，流程 6-9 個月）②高單價需信任背書③退貨風險：電子產品 -8 分已計入",
-          "repurchase_detail": "耐用品 1-2 年，一次性購買；可延伸精華液/導入儀配件耗材",
-          "links": [
-            "https://www.solawave.co/products/wrinkle-retreat-pro-red-light-therapy-led-face-mask-infrared-fda-cleared"
-          ],
-          "scores": {
-            "margin": 75,
-            "demand": 82,
-            "window": 87,
-            "barrier": 78,
-            "viral": 80,
-            "difficulty": 65,
-            "repurchase": 40
-          },
-          "prediction": "4 週後蝦皮「FDA LED 面罩」或「紅光療程面罩」中價位（NT$6,000-12,000）品牌化賣家數突破 3 個，或 Amazon US Solawave Wrinkle Retreat Pro BSR 進入 Beauty Devices 前 200",
-          "verify_date": "2026-05-09",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 3,
-          "name": "APIX レトルト亭 日式調理包專用加熱機",
-          "category": "廚房家居",
-          "score": 66,
-          "price": "$3,480",
-          "margin": "3.2x",
-          "highlight": "日本 Makuake 群募超額爆品轉正品，不用微波/熱水/保鮮膜一鍵加熱調理包，台灣完全空白的反常識懶人神器",
-          "source": "日本 APIX International ARM-110 / Makuake 群募超額 + Yodobashi/Amazon JP 熱銷 + Gizmodo 日本報導",
-          "demand_validation": "①國外爆紅：APIX レトルト亭 ARM-110 在日本 Makuake 群募大幅超額後正式上市，Amazon JP 小家電類 BSR 持續穩定，Gizmodo 日本「讓你免等微波爐的調理包專用小家電」特別報導，Japan Today 專題介紹。②Amazon 評論數（v3.1 新信號）：Amazon JP 該產品評論 640+，評分 4.2；累積賣超過 10 萬台（日本媒體報導）。③日本主婦社群 Twitter 好評持續 3 年，YouTube 日本家電博主開箱 12+ 個影片。④台灣缺席：蝦皮「調理包加熱器」0 個品牌化結果，僅雜牌微波爐蒸煮盒 10 個 | momo/PChome 無同類 | 全聯/家樂福無同類小家電。⑤台灣機會：台灣「懶人經濟 + 調理包市場」年增 20%+（大成/桂冠/金色三麥冷凍調理包持續熱銷），但缺乏專屬加熱硬體品類。",
-          "cost_breakdown": "日本原裝進口 ARM-110 批發價日元 ¥6,500 → 落地成本 NTD$1,090（含關稅 + 最後一哩）→ 建議售價 NT$3,480 → 毛利 3.2x 🔵 門檻",
-          "competition": "蝦皮：0 個同類「調理包專用加熱器」品牌化 | momo：0 | PChome：0 | 全聯/家樂福：無 | 市場空白度：完全空白 🟢",
-          "market_window": "窗口 18 個月+（台灣無任何同類競品，品類教育空白）。🎁 母親節送禮窗口（距 30 天）+5：送媽媽「一鍵加熱不用站著等」的懶人神器場景清晰。",
-          "strategy": "切入：代理日本 APIX 原裝 ARM-110（或向 APIX 申請台灣獨家總代理），主打「來自日本，調理包的專用烤麵包機」反常識文案。定位 NT$3,480 中價小家電。KOL：家庭主婦 YouTuber + 獨居上班族 IG。冷啟動：母親節 + 搭配 10 包熱門調理包禮盒。",
-          "risks": "①日本電壓 100V vs 台灣 110V 相容性需確認（APIX 需提供或替換規格）②BSMI 商品檢驗必要（電器類）③調理包市場教育 vs 只用微波的消費習慣轉換④退貨風險 電子產品 -8 分已計入",
-          "repurchase_detail": "耐用品 3-5 年，一次性購買；但可延伸「台灣熱門調理包訂閱包」創造複購",
-          "links": [
-            "https://www.apix-intl.co.jp/products/arm110/"
-          ],
-          "scores": {
-            "margin": 65,
-            "demand": 72,
-            "window": 90,
-            "barrier": 80,
-            "viral": 82,
-            "difficulty": 85,
-            "repurchase": 50
-          },
-          "prediction": "4 週後蝦皮「調理包加熱器」或「レトルト亭」品牌化賣家出現 1 個以上，或 Google Trends 台灣「調理包 加熱」相關搜尋熱度較今日 +40%",
-          "verify_date": "2026-05-09",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 4,
-          "name": "抹茶專用電動手持奶泡打發器（USB 充電）",
-          "category": "廚房家居",
-          "score": 66,
-          "price": "$790",
-          "margin": "3.8x",
-          "highlight": "Matcha 搜尋量 1 年飆升 2,300%，2026 抹茶生活方式爆發，台灣專用抹茶打發器品牌化空白",
-          "source": "Google Trends + 2026 matcha skincare/lifestyle 趨勢 / Cosmetics Business 抹茶產業報告",
-          "demand_validation": "①國外爆紅：Google 搜尋「matcha skincare」2025 年 1 月飆升 2,300%，連帶帶動抹茶相關周邊；TikTok #matchatok 累計 18 億觀看，#matcharecipe 3.2 億；Instagram 抹茶相關帳號粉絲數年增 85%+。②Amazon 評論數（v3.1 新信號）：Amazon US「electric matcha whisk」品類 top 10 產品累計評論數 1,500-4,800 不等，top 2 產品評論 4,800+ 評分 4.3—累積銷售萬級規模已驗證。③YouTube 「matcha at home」10K+ 觀看影片 80+ 個。④台灣缺席：蝦皮「電動奶泡器」約 60 個多為咖啡奶泡定位（NT$200-500 白牌），「抹茶專用」品牌化定位 0 個 | momo 無同類 | PChome 無。⑤台灣機會：台灣手搖抹茶飲料已普及（cama/路易莎等連鎖），但「在家自己打抹茶」品類與周邊專用工具尚未被品牌化切入。",
-          "cost_breakdown": "1688 USB 電動奶泡器（含專用抹茶茶筅頭）裸僸 ¥38 → 落地成本 NTD$239（¥38 × 4.5 × 1.4）→ 建議售價 NT$790 → 毛利 3.3x 🔵 門檻（搭配抹茶粉禮盒可拉到 3.8-4.0x）",
-          "competition": "蝦皮：電動奶泡器 60+ 個但「抹茶專用」0 個品牌化 | momo：傳統茶筅 + 電動奶泡器分開賣 | PChome：無 | 誠品：有抹茶粉但無配套電動工具 | 市場空白度：抹茶專用定位空白",
-          "market_window": "窗口 12 個月+（抹茶趨勢 2025-2026 仍在上升期）。🎁 母親節送禮窗口（距 30 天）+5：送媽媽「在家享用日式抹茶儀式」場景清晰。",
-          "strategy": "切入：主打「抹茶專用電動茶筅，3 秒打出綿密泡沫」，包裝走和風綠+米白日式禪風。定位 NT$790 平價入門 + 搭配日本宇治抹茶粉 25g 組合禮盒 NT$1,280。KOL：美食 IG + 日系生活風 YouTuber。冷啟動：母親節組合禮盒 + 抹茶甜點 DIY 內容行銷。",
-          "risks": "①電動奶泡器品類技術門檻低，需靠「抹茶專用」定位與包裝差異化②抹茶粉為關鍵耗材但非本產品核心，需整合供應鏈③BSMI 商品檢驗必要④退貨 電子 -8 分已計入",
-          "repurchase_detail": "電動器本體耐用 1-2 年；但搭配抹茶粉/替換茶筅頭作為耗材複購潛力中等",
-          "links": [
-            "https://www.amazon.com/Electric-Matcha-Whisk-Rechargeable/dp/B09Z2H2MPV"
-          ],
-          "scores": {
-            "margin": 72,
-            "demand": 78,
-            "window": 80,
-            "barrier": 60,
-            "viral": 82,
-            "difficulty": 85,
-            "repurchase": 60
-          },
-          "prediction": "4 週後蝦皮「抹茶 電動奶泡」或「抹茶 電動茶筅」品牌化賣家出現 3 個以上，或 Google Trends 台灣「抹茶」周搜尋量較今日 +25%",
-          "verify_date": "2026-05-09",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 5,
           "name": "Cheerble Drinkie 遠端自清潔寵物飲水機",
           "category": "寵物",
           "score": 61,
@@ -1378,1286 +475,11 @@
       ]
     },
     {
-      "date": "2026-04-10",
-      "evolution": "今日進化（rerun）：B. 需求驗證升級 — 新增「文化審美反向」硬門檻，台灣美白文化下曬黑/美黑/self-tanning/古銅肌類產品直接刷掉，重跑往美白/防曬/淡斑/提亮方向",
-      "products": [
-        {
-          "rank": 1,
-          "name": "B9 菸鹼醯胺煥白提亮霜",
-          "category": "美妝保養",
-          "score": 80,
-          "price": "$990",
-          "margin": "4.9x",
-          "highlight": "韓國 NDP 同概念 2024 年度品牌獎得主，TikTok 亮白趨勢，台灣完全空白",
-          "source": "韓國 NDP Vitamin B9 Tone-Up Cream 概念延伸 / TikTok + Amazon KR",
-          "demand_validation": "國外爆紅：韓國 NDP B9 Tone-Up Cream 為 2024 Korean Consumer Brand of the Year Winner，Amazon 韓國提亮霜品類 #1 暢銷，TikTok #tonupcream 相關影片累計 8000 萬+ 觀看，B9 葉酸成分在皮膚學界被視為新一代提亮成分（比 Vit C 更穩定）。台灣缺席：蝦皮搜尋「B9 提亮霜」僅 2 個零星代購無品牌化，momo/PChome 完全空白，Watsons/Cosmed/Tomod's 無同類產品上架。台灣機會：母親節（5/11，距 31 天）送禮黃金窗口，B9 成分對消費者新鮮度高，可包裝為「韓系皮膚科級提亮」。",
-          "cost_breakdown": "1688 OEM 菸鹼醯胺+葉酸(B9)提亮霜 50ml ¥30 → 落地成本 NTD$189 (¥30×4.5×1.4) → 建議售價 $990 → 毛利 4.9x 🌟爆品",
-          "competition": "蝦皮：2 個零星代購（無 B9 主打）｜momo：0 結果｜PChome：0 結果｜Watsons/Cosmed：無同類 B9 產品｜市場空白度：全空白，優先推薦",
-          "market_window": "窗口 12 個月+（B9 成分在台灣完全新鮮，消費者認知零基礎）。🎁 母親節送禮窗口（距 31 天）+5：提亮霜送媽媽為經典場景。夏季 4-9 月為美白需求高峰期。",
-          "strategy": "切入：以「韓系皮膚科 B9 煥白提亮」為賣點，主打睡前使用、晨起亮一階。包裝走簡約白瓷風，定位中高端（$990-1200 價帶）。KOL：小紅書風美妝博主 + IG 醫美帳號 before/after。冷啟動：母親節檔期預熱，搭配「媽媽氣色禮盒」組合行銷。",
-          "risks": "①B9 成分需消費者教育（但有 NDP 韓國爆紅故事可參考）②提亮霜品類競爭中度（主要對手：Christian Dior Capture、蘭蔻菁萃等，但定位不同）③葉酸成分穩定性需 OEM 工廠處理得當",
-          "repurchase_detail": "日常用品每日 1 次，50ml 裝約 2 個月用完，複購率高",
-          "links": [
-            "https://www.amazon.com/NDP-Vitamin-Tone-Cream-Moisturizer/dp/B07DLSMZ7M"
-          ],
-          "scores": {
-            "margin": 85,
-            "demand": 88,
-            "window": 85,
-            "barrier": 65,
-            "viral": 82,
-            "difficulty": 75,
-            "repurchase": 75
-          },
-          "prediction": "4 週後蝦皮「B9 提亮霜」關鍵字賣家數突破 5 個，或 Amazon 韓國類別該類產品前 5 名穩定",
-          "verify_date": "2026-05-08",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 2,
-          "name": "傳明酸美白淡斑精華",
-          "category": "美妝保養",
-          "score": 78,
-          "price": "$1280",
-          "margin": "4.5x",
-          "highlight": "日本 Transino 同成分概念，淡斑剛需，台灣傳明酸精華品牌化空白",
-          "source": "日本 Transino Whitening Essence EX 概念延伸 / Daiichi Sankyo 50 年研發成分",
-          "demand_validation": "國外爆紅：日本 Transino（第一三共製藥）傳明酸系列累計銷售 1500 萬瓶，為日本肝斑（melasma）治療領域金標準成分，Amazon Japan 美白精華類 #1-3 長期穩居，Cosme 大賞連續 5 年入圍。台灣缺席：蝦皮傳明酸精華多為代購日本 Transino（約 8-10 賣家，價格混亂 NT$1500-2200），momo/PChome 無品牌化傳明酸精華，屈臣氏無同類商品。台灣機會：台灣淡斑/美白市場規模龐大，傳明酸成分消費者已有基礎認知但無本土品牌，是 OEM 切入絕佳空窗。",
-          "cost_breakdown": "1688 OEM 傳明酸 3% 精華 30ml ¥45 → 落地成本 NTD$284 → 建議售價 $1280 → 毛利 4.5x 🌟爆品",
-          "competition": "蝦皮：傳明酸精華約 30 個結果，多為日本 Transino 代購與雜牌｜momo：5 個結果皆為歐美品牌（不主打傳明酸）｜PChome：3 個結果｜市場空白度：無台灣在地品牌化傳明酸精華，優先推薦",
-          "market_window": "窗口 9-12 個月（Transino 成分教育已完成，但台灣品牌化競爭者尚未出現）。🎁 母親節送禮窗口（距 31 天）+5。夏季 4-9 月淡斑高峰期。",
-          "strategy": "切入：主打「日系藥妝級傳明酸 3% 美白淡斑」，對標 Transino 定位但價格 NT$1280（比代購便宜 30%）。主視覺走日系白+粉藍，包裝強調成分濃度與醫藥級。KOL：醫美中心合作 + 熟齡保養 YouTuber。冷啟動：母親節「給媽媽的淡斑禮盒」。",
-          "risks": "①傳明酸成分需衛福部化妝品備案（流程 2-4 週）②對標 Transino 易被比較，必須在成分濃度與價格上明確區隔③保存條件需注意",
-          "repurchase_detail": "淡斑需連續使用 2-3 個月見效，30ml 約 1 個月用完，複購週期短",
-          "links": [
-            "https://www.amazon.in/TRANSINO-Medicated-Whitening-Essence-Serum/dp/B07B53RN5C"
-          ],
-          "scores": {
-            "margin": 82,
-            "demand": 80,
-            "window": 82,
-            "barrier": 72,
-            "viral": 72,
-            "difficulty": 72,
-            "repurchase": 80
-          },
-          "prediction": "4 週後蝦皮「傳明酸精華」品牌化（非代購）賣家數突破 3 個，或 Google Trends 台灣「傳明酸」熱度較今日+20%",
-          "verify_date": "2026-05-08",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 3,
-          "name": "韓系純物理礦物防曬乳 SPF50+",
-          "category": "美妝保養",
-          "score": 78,
-          "price": "$890",
-          "margin": "4.2x",
-          "highlight": "韓國 Aestura DermaUV 365 同類，TikTok 礦物防曬趨勢，夏季剛需",
-          "source": "韓國 Aestura DermaUV 365 + 韓系 Derma 防曬概念 / TikTok + Amazon KR",
-          "demand_validation": "國外爆紅：韓國 Aestura DermaUV 365 為 Amorepacific 旗下皮膚科品牌，2024-2025 年 TikTok #mineralsunscreen 話題 1.8 億觀看，Amazon Korea 防曬類 top 5，韓國皮膚科醫師推薦純物理防曬首選。日本 Biore UV 礦物系列同步崛起。台灣缺席：蝦皮純物理防曬多為美國品牌（Blue Lizard/ThinkSport），韓系純物理防曬品牌化零星（4-6 個賣家），momo/PChome 無韓系 derma 純物理防曬定位商品，Watsons 無同類主打。台灣機會：台灣敏感肌/兒童族群對純物理防曬需求明確，韓系 derma 定位切入點清晰。",
-          "cost_breakdown": "1688 OEM 氧化鋅+二氧化鈦 SPF50+ 50ml ¥30 → 落地成本 NTD$189 → 建議售價 $890 → 毛利 4.2x 🌟爆品",
-          "competition": "蝦皮：純物理防曬約 50 個結果，韓系定位僅 6 個｜momo：12 個結果皆為美國/歐洲品牌｜PChome：8 個結果｜市場空白度：韓系 derma 定位純物理防曬品牌化空白",
-          "market_window": "窗口 6-9 個月（夏季為主要窗口，錯過夏季等明年）。🎁 母親節送禮窗口（距 31 天）+5：防曬送媽媽實用度高。⚠️ 防曬品為夏季強季節性，建議 4-6 月前鋪貨完成。",
-          "strategy": "切入：主打「韓系皮膚科純物理防曬，敏感肌/孕婦/兒童可用」，主視覺走醫美淨白風。定位 $890 中價帶（比美國品牌便宜，比屈臣氏高一階）。KOL：皮膚科醫師合作 + 親子 YouTuber。冷啟動：夏季檔期 + 母親節親子檔期雙攻。",
-          "risks": "①防曬品需衛福部特化驗證（流程 3-6 個月，務必提前申請）②純物理防曬質地較厚重，需在配方上優化③夏季為主，冬季銷量下降",
-          "repurchase_detail": "防曬日常用品，50ml 約 1.5 個月用完，夏季複購率極高",
-          "links": [
-            "https://int.aestura.com/products/derma-uv365-barrier-hydro-mineral-sunscreen"
-          ],
-          "scores": {
-            "margin": 78,
-            "demand": 85,
-            "window": 88,
-            "barrier": 62,
-            "viral": 78,
-            "difficulty": 68,
-            "repurchase": 88
-          },
-          "prediction": "4 週後蝦皮「韓系純物理防曬」賣家數突破 10 個，或台灣 Google Trends「礦物防曬」熱度較今日+30%",
-          "verify_date": "2026-05-08",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 4,
-          "name": "雪白嫩膚全身美白身體乳",
-          "category": "美妝保養",
-          "score": 75,
-          "price": "$690",
-          "margin": "5.0x",
-          "highlight": "韓國 Cosnori Whitening Dress Cream 同類，TikTok 全身亮白趨勢",
-          "source": "韓國 Cosnori Whitening Dress Cream 概念延伸 / TikTok 趨勢",
-          "demand_validation": "國外爆紅：韓國 Cosnori Whitening Dress Cream 開創「露肩禮服前保養」品類，TikTok #dresscream 話題 3200 萬觀看，2025 年韓國 Olive Young 身體乳類上升 #3，Amazon Korea 身體護理新品上架即爆。台灣缺席：台灣身體美白乳多為歐萊雅/妮維雅大品牌（無主打「婚禮/禮服」場景），蝦皮「婚禮身體乳」僅 3-5 個代購，momo/PChome 無品牌化亮白身體乳。台灣機會：台灣結婚季（春秋）+ 夏季露肩風潮提供明確場景，禮盒送禮場景清晰。",
-          "cost_breakdown": "1688 OEM 菸鹼醯胺+維他命 C 美白身體乳 300ml ¥22 → 落地成本 NTD$139 → 建議售價 $690 → 毛利 5.0x 🌟爆品",
-          "competition": "蝦皮：美白身體乳約 80 個結果，定位「婚禮/禮服」僅 3 個｜momo：5 個結果皆為開架品牌｜PChome：3 個結果｜市場空白度：禮服/婚禮場景定位空白",
-          "market_window": "窗口 9-12 個月（身體美白為長青需求，場景定位為差異化關鍵）。🎁 母親節送禮窗口（距 31 天）+5：媽媽保養經典品項。結婚季春秋雙高峰。",
-          "strategy": "切入：主打「新娘禮服前 14 天保養」場景，包裝走白紗禮服風。目標客群：25-40 歲女性，結婚/活動前短期衝亮。KOL：婚禮 KOL + 新娘秘書。冷啟動：結婚季 + 母親節雙檔期。",
-          "risks": "①身體乳品類競爭激烈，差異化靠場景而非成分②銷量受結婚季/活動季影響③身體乳毛利雖高但客單價上限受限",
-          "repurchase_detail": "300ml 大容量約 2-3 個月用完，複購中等",
-          "links": [
-            "https://www.amazon.com/COSNORI-Dress-Tone-up-Quick-Balancer/dp/B076VX66DL"
-          ],
-          "scores": {
-            "margin": 85,
-            "demand": 75,
-            "window": 85,
-            "barrier": 58,
-            "viral": 72,
-            "difficulty": 78,
-            "repurchase": 72
-          },
-          "prediction": "4 週後蝦皮「婚禮身體乳」或「雪白身體乳」關鍵字賣家數突破 8 個，或 Google Trends「婚前保養」熱度較今日+15%",
-          "verify_date": "2026-05-08",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 5,
-          "name": "夜間修護煥白安瓶精華",
-          "category": "美妝保養",
-          "score": 74,
-          "price": "$1490",
-          "margin": "4.4x",
-          "highlight": "日韓 Overnight Brightening 晚間修護概念，安瓶單支高客單",
-          "source": "日韓 Overnight Brightening Ampoule 趨勢 / 小紅書 + Amazon JP",
-          "demand_validation": "國外爆紅：日韓夜間修護煥白安瓶為 2025 年 K-beauty/J-beauty 雙市場新興類別，小紅書「夜間白」話題 1200 萬觀看，Amazon Japan Ampoule 類上升 60%，韓國 Medicube/Abib 同類新品推出即賣斷貨。台灣缺席：蝦皮安瓶多為歐美品牌（Estée Lauder/Lancome），韓系夜間煥白安瓶品牌化僅 4-6 個賣家，momo 無同類主打。台灣機會：高單價安瓶類在台灣接受度高，夜間保養流程消費者教育充足，切入點清晰。",
-          "cost_breakdown": "1688 OEM 菸鹼醯胺+傳明酸+肽類夜間修護安瓶 30ml×7 支 ¥80 → 落地成本 NTD$504 → 建議售價 $1490 → 毛利 3.0x（單支禮盒包裝成本高）→ 調整：散裝單盒 30ml ¥48 → 落地 NTD$302 → 毛利 4.9x 🌟",
-          "competition": "蝦皮：夜間煥白安瓶約 20 個結果，多為歐美大牌｜momo：8 個結果｜PChome：5 個結果｜市場空白度：日韓定位夜間煥白安瓶空白",
-          "market_window": "窗口 9-12 個月（安瓶為成熟品類，夜間煥白為新興賣點）。🎁 母親節送禮窗口（距 31 天）+5：高客單送禮標的。",
-          "strategy": "切入：主打「睡前 3 滴，晨起亮一階」，包裝走高端日系。定位 $1490 高客單，目標 30-45 歲熟齡客群。KOL：美妝博主夜間保養 routine + 醫美診所合作。冷啟動：母親節高端禮盒。",
-          "risks": "①高客單客群較小②夜間煥白概念需教育消費者③安瓶形式對 OEM 包裝要求高",
-          "repurchase_detail": "30ml 約 1 個月用完，一次一盒，複購中等",
-          "links": [
-            "https://www.amazon.com/medicube-Brightening-Overnight-Elasticity-Moisturizing/dp/B0DPJRS9DS"
-          ],
-          "scores": {
-            "margin": 82,
-            "demand": 72,
-            "window": 78,
-            "barrier": 65,
-            "viral": 68,
-            "difficulty": 75,
-            "repurchase": 78
-          },
-          "prediction": "4 週後蝦皮「夜間煥白安瓶」或「overnight brightening」關鍵字賣家數突破 5 個＆小紅書台灣區該話題筆記數+100",
-          "verify_date": "2026-05-08",
-          "verdict": null,
-          "verdict_note": null
-        }
-      ]
-    },
-    {
-      "date": "2026-04-09",
-      "evolution": "今日進化：新增季節/節慶機會評估框架（F方向），母親節5/11前6週為黃金進場窗口，送禮場景產品優先加權",
-      "products": [
-        {
-          "rank": 1,
-          "name": "淋巴輪廓臉部刷",
-          "category": "美妝保養",
-          "score": 82,
-          "price": "$490",
-          "margin": "7.9x",
-          "highlight": "TikTok 5億+播放的淋巴排毒趨勢，台灣幾乎空白，毛利近8倍",
-          "source": "TikTok / Amazon US",
-          "demand_validation": "TikTok #lymphaticdrainage 超過5億播放，Amazon BSR美容工具類前200；台灣蝦皮僅3-5家賣臉部刷但無淋巴概念包裝，momo/PChome無專門品牌",
-          "cost_breakdown": "1688裸價約NTD 25-35 × 1.4 = 落地NTD 42-49；建議售價$490；毛利約7.9x 🌟爆品",
-          "competition": "蝦皮：臉部刷約20家但無淋巴定位；momo：無專門品牌；PChome：無。市場空白度高",
-          "market_window": "歐美已爆但台灣尚未跟進，預估窗口6-12個月；母親節送禮場景加分",
-          "strategy": "蝦皮切入淋巴排毒概念包裝，搭配教學短影片行銷，母親節禮盒組合",
-          "risks": "淋巴排毒功效宣稱需謹慎，避免醫療廣告法規問題；進入門檻低",
-          "repurchase_detail": "刷具耐用，複購率低；但可延伸精油/按摩霜耗材",
-          "links": [
-            "https://www.amazon.com/Lymphatic-Drainage-Massager-Ergonomically-Precisely/dp/B0FB2VF3BW"
-          ],
-          "scores": {
-            "margin": 92,
-            "demand": 80,
-            "window": 70,
-            "barrier": 60,
-            "viral": 85,
-            "difficulty": 88,
-            "repurchase": 40
-          },
-          "prediction": "4週內蝦皮「淋巴臉部刷」搜尋結果從目前<5家增至≥10家賣家",
-          "verify_date": "2026-05-07",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 2,
-          "name": "Razor Rinser 2.0 剃刀清洗器",
-          "category": "健康療癒",
-          "score": 77,
-          "price": "$690",
-          "margin": "4.5x",
-          "highlight": "Kickstarter 1043%達標的男性浴室神器，台灣完全空白",
-          "source": "Kickstarter",
-          "demand_validation": "Kickstarter達成率1043%（目標$15K實際$156K+），2700+贊助者驗證需求；解決刮鬍刀堵塞的普遍痛點",
-          "cost_breakdown": "預估1688開模NTD 65-80 × 1.4 = 落地NTD 91-112；建議售價$690；毛利約4.5x 🟢優質",
-          "competition": "蝦皮：無同類產品；momo：無；PChome：無。完全空白市場",
-          "market_window": "Kickstarter出貨後約6-12個月台灣才有仿品，窗口長；父親節8/8送禮場景",
-          "strategy": "蝦皮首發+短影片展示清洗效果對比，主打父親節/男性禮品",
-          "risks": "需開模生產，初期MOQ較高；產品單一功能需包裝提升價值感",
-          "repurchase_detail": "一次性購買，無耗材複購；需靠配件或新品延伸",
-          "links": [
-            "https://www.kickstarter.com/projects/thecleanshave/razor-rinser-20-making-shaving-easier-and-cleaner"
-          ],
-          "scores": {
-            "margin": 85,
-            "demand": 68,
-            "window": 78,
-            "barrier": 58,
-            "viral": 72,
-            "difficulty": 85,
-            "repurchase": 35
-          },
-          "prediction": "4週內蝦皮出現首家「剃刀清洗器」賣家，或Amazon同品出現在Movers & Shakers",
-          "verify_date": "2026-05-07",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 3,
-          "name": "頭皮微針滾輪",
-          "category": "美妝保養",
-          "score": 76,
-          "price": "$590",
-          "margin": "8.0x",
-          "highlight": "養髮護髮大趨勢下的高毛利入門工具，台灣品牌化空白",
-          "source": "Amazon US / TikTok",
-          "demand_validation": "Amazon US頭皮微針滾輪BSR美容工具前500；TikTok #scalpdermaroller 破億播放；養髮市場年增15%+",
-          "cost_breakdown": "1688裸價NTD 30-40 × 1.4 = 落地NTD 42-56；建議售價$590；毛利約8.0x 🌟爆品",
-          "competition": "蝦皮：約15家但多為臉部微針滾輪，頭皮專用品牌化包裝<5家；momo：有零星但無專門品牌；PChome：無",
-          "market_window": "養髮趨勢持續增長，窗口12個月+；男女皆適用擴大受眾",
-          "strategy": "蝦皮切入「頭皮專用」定位區隔臉部產品，搭配養髮精華組合售賣",
-          "risks": "微針產品需注意衛生安全宣稱；競爭者進入門檻低",
-          "repurchase_detail": "建議3個月更換滾輪頭，有耗材複購潛力；搭配養髮液提升LTV",
-          "links": [
-            "https://www.amazon.com/Derma-Roller-Microneedling-Tool-Beard/dp/B0G6Y3CK9V"
-          ],
-          "scores": {
-            "margin": 92,
-            "demand": 70,
-            "window": 72,
-            "barrier": 52,
-            "viral": 75,
-            "difficulty": 85,
-            "repurchase": 65
-          },
-          "prediction": "4週內Google Trends TW「頭皮滾輪」搜尋量周均值突破現有基準的150%",
-          "verify_date": "2026-05-07",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 4,
-          "name": "保濕腳跟襪",
-          "category": "美妝保養",
-          "score": 74,
-          "price": "$490",
-          "margin": "5.3x",
-          "highlight": "解決腳跟乾裂的高複購品，母親節送禮潛力大",
-          "source": "Amazon US / Pinterest",
-          "demand_validation": "Amazon US凝膠保濕襪BSR健康護理前300；Pinterest「cracked heel remedy」儲存破50K；冬轉春換季需求高峰",
-          "cost_breakdown": "1688裸價NTD 35-45 × 1.4 = 落地NTD 49-63；建議售價$490；毛利約5.3x 🌟爆品",
-          "competition": "蝦皮：約30家但多為低價無品牌；momo：有2-3品牌但價位$200-300偏低；PChome：少。品牌化空間大",
-          "market_window": "常青品類，窗口18個月+；母親節禮盒場景加分",
-          "strategy": "品牌化包裝+精油配方升級差異化，母親節組合禮盒（襪+護足霜）",
-          "risks": "低技術門檻，需靠品牌包裝建立溢價；蝦皮價格戰風險",
-          "repurchase_detail": "凝膠墊約3-6個月需更換，中高複購；搭配護足霜耗材提升LTV",
-          "links": [
-            "https://www.amazon.com/TEAWOO-Moisturizing-Cracked-Treatment-Toeless/dp/B0CKN4BK55"
-          ],
-          "scores": {
-            "margin": 88,
-            "demand": 72,
-            "window": 75,
-            "barrier": 48,
-            "viral": 62,
-            "difficulty": 90,
-            "repurchase": 70
-          },
-          "prediction": "母親節前3週(4/20-5/4)蝦皮「保濕襪」搜尋量較當前增長≥80%",
-          "verify_date": "2026-05-07",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 5,
-          "name": "DJcong 設計獎睡眠耳塞",
-          "category": "健康療癒",
-          "score": 72,
-          "price": "$690",
-          "margin": "4.5x",
-          "highlight": "紅點設計獎加持的機能耳塞，降噪+舒適兼具",
-          "source": "Amazon JP / Makuake",
-          "demand_validation": "Makuake達成率200%+；Amazon JP睡眠耳塞BSR前100；全球睡眠經濟年增8%，台灣失眠人口破百萬",
-          "cost_breakdown": "1688/品牌合作NTD 65-80 × 1.4 = 落地NTD 91-112；建議售價$690；毛利約4.5x 🟢優質",
-          "competition": "蝦皮：耳塞品類競爭多但設計獎款<3家；momo：有3M等大牌但無設計感定位；PChome：少",
-          "market_window": "睡眠經濟持續成長，窗口12個月+；設計獎背書提供差異化",
-          "strategy": "蝦皮主打「紅點設計獎+降噪科技」高端定位，搭配睡眠品質內容行銷",
-          "risks": "NCC認證需確認（如含電子元件）；大品牌3M等已有市場基礎",
-          "repurchase_detail": "耳塞套建議2-3個月更換，有耗材複購；可延伸睡眠周邊產品線",
-          "links": [
-            "https://www.amazon.co.jp/-/en/Earplugs-Certified-Protection-Cancelling-Comfortable/dp/B0FL1BVGJD"
-          ],
-          "scores": {
-            "margin": 85,
-            "demand": 75,
-            "window": 80,
-            "barrier": 60,
-            "viral": 65,
-            "difficulty": 82,
-            "repurchase": 55
-          },
-          "prediction": "4週內蝦皮「設計耳塞」或「降噪耳塞」搜尋結果中出現≥2家新賣家",
-          "verify_date": "2026-05-07",
-          "verdict": null,
-          "verdict_note": null
-        }
-      ]
-    },
-    {
-      "date": "2026-04-08",
-      "evolution": "今日進化：在每個 Notion Toggle 的📍段落首行新增「💡 核心推薦理由」一句話摘要（方向 E），讓使用者開啟 toggle 即見核心邏輯，免讀 8 段全文",
-      "products": [
-        {
-          "rank": 1,
-          "name": "EATi One 10合1鈦合金多功能餐具",
-          "category": "廚房家居",
-          "score": 78,
-          "price": "$790",
-          "margin": "4.2x",
-          "highlight": "Kickstarter 910%；露營×廚房跨界；10合1演示天生病毒；台灣戶外餐具空白",
-          "source": "Kickstarter",
-          "demand_validation": "Kickstarter 910%（29天後結束），New Atlas + The Awesomer 媒體報導；septem studio 第三次眾籌活動，重複創業者驗證市場",
-          "cost_breakdown": "1688裸價CNY 30 × 4.5 × 1.4 = NTD 189落地成本",
-          "competition": "蝦皮：泛型鈦合金叉勺<10賣家，10合1全功能型空白；momo/PChome：空白",
-          "market_window": "眾籌活躍，台灣市場尚未跟進，12-18個月窗口",
-          "strategy": "蝦皮+PChome「露營萬能工具組」定位，搭配「一根搞定10件事」短影片行銷，攻佔台灣露營社群",
-          "risks": "食品接觸鈦合金需確認台灣CNS食品安全規範；競品快速仿製風險；一次性耐用品複購率低",
-          "repurchase_detail": "鈦合金耐用品一次性購買，客製禮盒組+收納袋LTV NTD 800-1,200",
-          "links": [
-            "https://www.kickstarter.com/projects/septemstudio/eati-one-all-in-one-titanium-adventure-utensil"
-          ],
-          "scores": {
-            "margin": 85,
-            "demand": 75,
-            "window": 78,
-            "barrier": 65,
-            "viral": 78,
-            "difficulty": 82,
-            "repurchase": 35
-          },
-          "prediction": "若 2026-05-06 前 Kickstarter 完成籌款且台灣蝦皮出現 ≥3 個同類型品牌賣家，視為市場驗證成功",
-          "verify_date": "2026-05-06",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 2,
-          "name": "b.tan 自曬黑慕斯（健康小麥色美妝）",
-          "category": "美妝保養",
-          "score": 74,
-          "price": "$790",
-          "margin": "5.5x",
-          "highlight": "Amazon US #1趨勢；台灣自曬黑市場空白；消耗品高複購；文化窗口剛開始",
-          "source": "Amazon US Movers & Shakers",
-          "demand_validation": "Amazon US Beauty Movers & Shakers #1 trending；TikTok self-tanner類影片累積數億觀看；「健康古銅色」已是歐美護膚主流品類",
-          "cost_breakdown": "1688裸價CNY 20 × 4.5 × 1.4 = NTD 126落地成本",
-          "competition": "蝦皮：自曬黑類空白（<5賣家，均不知名小品牌）；momo：無品牌化；PChome：空白",
-          "market_window": "台灣自曬黑空白18個月+，TikTok文化窗口剛開始，夏季前（5-6月）切入",
-          "strategy": "蝦皮「夏日健康小麥色」定位，主打TikTok+Instagram短影片，搭配台灣美妝KOL合作試用",
-          "risks": "進口化妝品需TFDA備查登錄；台灣市場對自曬黑接受度不確定（文化壁壘）",
-          "repurchase_detail": "消耗品每月1-2瓶，高複購率，LTV NTD 2,400-4,800/年/客",
-          "links": [
-            "https://www.amazon.com/b-tan-Dark-Self-Tanner-Tanned/dp/B0777TS92M"
-          ],
-          "scores": {
-            "margin": 88,
-            "demand": 55,
-            "window": 82,
-            "barrier": 60,
-            "viral": 68,
-            "difficulty": 85,
-            "repurchase": 75
-          },
-          "prediction": "若 2026-05-06 前台灣蝦皮自曬黑類搜尋結果 ≥10 個賣家出現，視為市場開始啟動",
-          "verify_date": "2026-05-06",
-          "verdict": null,
-          "verdict_note": null
-        },
-        {
-          "rank": 3,
-          "name": "COZYTIME LUMO AI紅外線無煙烤肉爐",
-          "category": "廚房家居",
-          "score": 67,
-          "price": "$2,690",
-          "margin": "2.85x",
-          "highlight": "CES 2026+Kickstarter 1434%；AI無煙烤肉；毛利偏緊，中秋節應用明確",
-          "source": "Kickstarter",
-          "demand_validation": "CES 2026 Dezeen/Yanko Design雙媒體報導，Kickstarter昨日1434%（45天後結束），「光加熱4倍速」概念極具話題性",
-          "cost_breakdown": "1688紅外線電烤爐CNY 150 × 4.5 × 1.4 = NTD 945落地成本",
-          "competition": "蝦皮：無煙烤肉爐50+賣家（白牌為主），AI紅外線型幾乎無；momo：無AI款；PChome：空白",
-          "market_window": "全球剛起步，台灣6-12個月窗口，中秋節前（7-8月）是關鍵行銷時機",
-          "strategy": "蝦皮+momo「AI智能無煙烤肉爐」定位，主打中秋節前2個月行銷，與台灣烹飪KOL合作實測",
-          "risks": "電子烹飪器具需BSMI商品檢驗+電安法規；毛利偏緊建議追蹤Kickstarter完成後台灣代理情況",
-          "repurchase_detail": "油脂收集托盤替換+烤盤配件補購，LTV NTD 3,500-5,000（含配件）",
-          "links": [
-            "https://www.kickstarter.com/projects/cozytime/cozytime-lumo-first-ai-infrared-indoor-grill-smoke-free"
-          ],
-          "scores": {
-            "margin": 62,
-            "demand": 82,
-            "window": 72,
-            "barrier": 60,
-            "viral": 80,
-            "difficulty": 58,
-            "repurchase": 45
-          },
-          "prediction": "若 2026-05-06 前 Kickstarter 籌款超過 50 萬港幣且台灣有代理商接洽，視為可進場信號",
-          "verify_date": "2026-05-06",
-          "verdict": null,
-          "verdict_note": null
-        }
-      ]
-    },
-    {
-      "date": "2026-04-07",
-      "evolution": "D方向v2.4：跨界創新指數整合進競爭壁壘維度，2域+5分、3域+10分",
-      "products": [
-        {
-          "rank": 1,
-          "name": "HalfRun UV防護跑步口罩",
-          "category": "健康療癒",
-          "score": 82,
-          "price": "$790",
-          "margin": "5.7x",
-          "highlight": "韓國Wadiz眾籌；跑步×UV×呼吸科技三域跨界；KF72+18G超輕；momo無跑步UV專屬品；爆品毛利",
-          "source": "Wadiz (Korea)",
-          "demand_validation": "Wadiz熱門+韓國跑步社群+YouTube 10K+觀看",
-          "cost_breakdown": "CNY 22 × 4.5 × 1.4 = NTD 139",
-          "competition": "蝦皮/momo僅一般醫用口罩，無跑步UV專屬品",
-          "market_window": "韓國已有，台灣12-18月空白窗口",
-          "strategy": "蝦皮切入「路跑族UV口罩」，搭配賽事曝光+KOL",
-          "risks": "仿製風險高，需快速建立品牌",
-          "repurchase_detail": "補購週期3-6月，多色款加成",
-          "links": [
-            "https://www.amazon.com/SUIGOLF-KOREA-Type-Protection-Balaclava/dp/B0DSJ7VR21"
-          ],
-          "scores": {
-            "margin": 95,
-            "demand": 68,
-            "window": 72,
-            "barrier": 75,
-            "viral": 78,
-            "difficulty": 88,
-            "repurchase": 55
-          }
-        },
-        {
-          "rank": 2,
-          "name": "KURA スクエア型廚房米桶",
-          "category": "廚房家居",
-          "score": 74,
-          "price": "$990",
-          "margin": "3.5x",
-          "highlight": "Makuake 10078%；方形完美嵌廚房；內置提取桶免量米；廚房整理短影片素材",
-          "source": "Makuake (Japan)",
-          "demand_validation": "Makuake 10078%，¥30M籌資；廚房收納品類Pinterest高收藏",
-          "cost_breakdown": "CNY 45 × 4.5 × 1.4 = NTD 284",
-          "competition": "蝦皮/momo有傳統圓形米桶，無方形嵌入式品牌",
-          "market_window": "台灣廚房家居競爭中等，差異化設計可突圍",
-          "strategy": "蝦皮切入「日本設計方形米桶」，搭配廚房整理KOL",
-          "risks": "食品容器需符合CNS標準",
-          "repurchase_detail": "一次性購買，無耗材",
-          "links": [
-            "https://www.makuake.com/project/kura/"
-          ],
-          "scores": {
-            "margin": 75,
-            "demand": 72,
-            "window": 68,
-            "barrier": 65,
-            "viral": 65,
-            "difficulty": 90,
-            "repurchase": 30
-          }
-        },
-        {
-          "rank": 3,
-          "name": "EMS骨盆底肌訓練褲（LaLuna）",
-          "category": "健康療癒",
-          "score": 70,
-          "price": "$1,290",
-          "margin": "3.15x",
-          "highlight": "Makuake 9831%；ジェル不要EMS；骨盆底肌台灣空白；momo=0結果",
-          "source": "Makuake (Japan)",
-          "demand_validation": "Makuake 9831%，¥9.8M籌資；日本TikTok EMS購買意圖留言大量",
-          "cost_breakdown": "CNY 65 × 4.5 × 1.4 = NTD 410",
-          "competition": "momo搜尋EMS電波素裤=0結果，骨盆底肌細分完全空白",
-          "market_window": "日本剛起飛，台灣6-12月窗口需快進",
-          "strategy": "蝦皮以「產後修復骨盆底肌」定位，與婦產科/月子中心KOL合作",
-          "risks": "EMS電子類需BSMI，退貨-8，毛利偏低需提高客單",
-          "repurchase_detail": "主機一次性，後續耗材開發潛力",
-          "links": [
-            "https://www.makuake.com/project/laluna-kotsubanteikin/"
-          ],
-          "scores": {
-            "margin": 65,
-            "demand": 78,
-            "window": 68,
-            "barrier": 72,
-            "viral": 72,
-            "difficulty": 85,
-            "repurchase": 50
-          }
-        }
-      ]
-    },
-    {
-      "date": "2026-04-06",
-      "evolution": "今日進化：C. 成本模型精化 — 新增毛利分層標籤（🔵門檻2.8-3.4x / 🟡理想3.5-3.9x / 🟢優質4.0-4.9x / 🌟爆品5.0x+），讓Gunter一眼判斷毛利品質",
-      "products": [
-        {
-          "rank": 1,
-          "name": "fru:C 維C白色膠囊精華",
-          "category": "美妝保養",
-          "score": 80,
-          "price": "$1,290",
-          "margin": "4.4x",
-          "highlight": "捏破膠囊即用天生病毒基因；momo/PChome幾乎空白；LDK認證；護膚耗材高複購",
-          "source": "Amazon JP Beauty",
-          "demand_validation": "Amazon JP 3,000+評論，LDK雜誌認證推薦；YouTube 10K+觀看影片15+部",
-          "cost_breakdown": "1688裸價CNY 47，落地成本NTD 293（CNY 47 × 4.5 × 1.4）",
-          "competition": "蝦皮：2-3個白牌，無品牌化；momo：查無品牌化膠囊維C精華；PChome：空白",
-          "market_window": "台灣落後日本12-18個月，膠囊型態尚無品牌佔據，窗口中期",
-          "strategy": "蝦皮以「日本LDK認證膠囊維C精華」切入，強調一次性新鮮即用。搭配護膚KOL開箱。",
-          "risks": "化妝品進口需衛福部查驗。膠囊破裂需特殊包材。退貨風險低。",
-          "repurchase_detail": "耗材型高複購，一盒28顆約1個月用量。終身價值NTD 3,000–5,000/年/客",
-          "links": [
-            "https://www.amazon.co.jp/fru-C/dp/B0B6FJ8CTG"
-          ],
-          "scores": {
-            "margin": 82,
-            "demand": 78,
-            "window": 75,
-            "barrier": 65,
-            "viral": 85,
-            "difficulty": 88,
-            "repurchase": 80
-          }
-        },
-        {
-          "rank": 2,
-          "name": "デオコ 薬用除臭沐浴乳",
-          "category": "美妝保養",
-          "score": 74,
-          "price": "$790",
-          "margin": "3.6x",
-          "highlight": "日本醫藥部外品除臭認證；PChome零結果；女性體臭護理台灣新品類",
-          "source": "Amazon JP Personal Care",
-          "demand_validation": "Amazon JP個護排行前50，Rohto大品牌背書；YouTube 10K+觀看影片20+部",
-          "cost_breakdown": "1688裸價CNY 35，落地成本NTD 220（CNY 35 × 4.5 × 1.4）",
-          "competition": "蝦皮：少量一般除臭沐浴乳，無DEOCO品牌；momo：無日系醫藥認證除臭；PChome：查無結果",
-          "market_window": "日本成熟品，台灣滲透率低，窗口中期",
-          "strategy": "蝦皮以「日本Rohto醫藥部外品除臭沐浴乳」切入。搭配夏季行銷時機。",
-          "risks": "「醫藥部外品」字樣需注意衛福部廣告規範，行銷用語調整為「除臭保養」。",
-          "repurchase_detail": "沐浴乳耗材型，約1-2個月複購一次。終身價值NTD 2,000–3,500/年/客",
-          "links": [
-            "https://www.rohto.co.jp/product/deoco/"
-          ],
-          "scores": {
-            "margin": 75,
-            "demand": 72,
-            "window": 72,
-            "barrier": 58,
-            "viral": 68,
-            "difficulty": 90,
-            "repurchase": 68
-          }
-        },
-        {
-          "rank": 3,
-          "name": "ANUA 壬二酸3% CICA 化妝水",
-          "category": "美妝保養",
-          "score": 70,
-          "price": "$990",
-          "margin": "3.4x",
-          "highlight": "KBeauty壬二酸化妝水台灣空白；momo無ANUA品牌；CICA舒緩配方差異化",
-          "source": "Amazon JP KBeauty",
-          "demand_validation": "Amazon JP KBeauty前100，評論2,000+；Reddit r/SkincareAddiction多次提及；YouTube成分解析10K+觀看10+部",
-          "cost_breakdown": "1688裸價CNY 46，落地成本NTD 291（CNY 46 × 4.5 × 1.4）",
-          "competition": "蝦皮：壬二酸精華有多款，化妝水劑型幾乎空白；momo：搜ANUA查無品牌；PChome：空白",
-          "market_window": "壬二酸化妝水台灣空白，成分爆紅持續滲透中，窗口中長期",
-          "strategy": "蝦皮以「ANUA壬二酸CICA化妝水 韓國熱銷」切入，強調劑型差異+成分科普。",
-          "risks": "化妝品進口需衛福部查驗。壁壘較弱，仿品風險中等。毛利3.4x屬門檻邊緣。",
-          "repurchase_detail": "化妝水耗材型，約1-2個月複購一次。終身價值NTD 2,000–3,000/年/客",
-          "links": [
-            "https://www.amazon.com/Hyaluron-Soothing-Sensitive-Hyaluronic-Niacinamide/dp/B0DG1DQ2S7"
-          ],
-          "scores": {
-            "margin": 73,
-            "demand": 70,
-            "window": 75,
-            "barrier": 50,
-            "viral": 68,
-            "difficulty": 88,
-            "repurchase": 65
-          }
-        }
-      ]
-    },
-    {
-      "date": "2026-04-05",
-      "evolution": "今日進化：需求驗證升級 B — 新增 YouTube 影片數作為第四量化信號（10K+觀看影片數），讓需求強度更可量化",
-      "products": [
-        {
-          "rank": 1,
-          "name": "電動頭皮按摩器",
-          "category": "美妝保養",
-          "score": 85,
-          "price": "$999",
-          "margin": "4.5x",
-          "highlight": "Amazon BSR<400+TikTok 50+翻拍+YouTube 200K+；頭皮按摩蝦皮無品牌化競品；充電防水傻瓜操作",
-          "source": "Amazon US + Etsy 跨界矩陣日",
-          "demand_validation": "Amazon BSR <400，10,000+評論；TikTok #scalpmassage 50+獨立創作者翻拍；YouTube頭皮按摩教學200K+觀看（今日新增B進化信號）；台灣蝦皮約4個白牌，無品牌化，momo/PChome空白",
-          "cost_breakdown": "1688裸價 CNY35 → NTD 158 → 落地 NTD 221（×1.4）；建議售價 $999；毛利 4.5x",
-          "competition": "蝦皮：約4個白牌，無品牌化頭皮按摩器；momo：空白；PChome：空白；市場空白度：優先",
-          "market_window": "已在日本爆紅，台灣落後約4-6個月，窗口尚開；68分",
-          "strategy": "蝦皮以「充電式電動頭皮按摩器」切入，強調防脫髮+頭皮健康。聯繫美妝KOL合作開箱，後續搭配頭皮精華套組",
-          "risks": "充電設備建議取得BSMI認證；防水等級需標示清楚；電子類退貨風險-8分",
-          "repurchase_detail": "主體一次性，可推替換梳頭/精華套組；預估6個月LTV NT$1,500-2,200",
-          "links": [
-            "https://www.amazon.com/arboleaf-Rechargeable-Waterproof-Scratcher-Removable/dp/B0C781HTS4"
-          ],
-          "scores": {
-            "margin": 82,
-            "demand": 85,
-            "window": 68,
-            "barrier": 40,
-            "viral": 88,
-            "difficulty": 92,
-            "repurchase": 65
-          }
-        },
-        {
-          "rank": 2,
-          "name": "冰塊臉部輪廓模具",
-          "category": "美妝保養",
-          "score": 80,
-          "price": "$299",
-          "margin": "6.0x",
-          "highlight": "廚具×美妝跨界；6x超高毛利；冰敷緊緻TikTok病毒型；三平台幾乎空白；傻瓜操作",
-          "source": "Amazon US + Pinterest 跨界矩陣日",
-          "demand_validation": "Amazon BSR <500，Contour Cube 穩定銷售；Pinterest「ice face routine」15K+儲存；TikTok「morning ice routine」百萬觀看；台灣蝦皮僅5個賣家，無品牌化，momo/PChome空白",
-          "cost_breakdown": "1688裸價 CNY8 → NTD 36 → 落地 NTD 50（×1.4）；建議售價 $299；毛利 6.0x",
-          "competition": "蝦皮：約5個賣家，無品牌化；momo：空白；PChome：空白；市場空白度：優先",
-          "market_window": "台灣市場剛開始出現，建議盡快進場；65分",
-          "strategy": "蝦皮以「臉部冰塊緊緻模具」切入，定價$299-349測試。聯繫保養KOL做morning routine影片，後續發展保養套組",
-          "risks": "食品矽膠材料需確認無毒認證；使用說明需清楚；複購率較低需搭配其他產品線",
-          "repurchase_detail": "主體一次性（模具耐用），可推不同尺寸套組；預估6個月LTV NT$500-900",
-          "links": [
-            "https://www.amazon.com/Contour-Cube-Original-180ml-Black/dp/B0BWX3811X"
-          ],
-          "scores": {
-            "margin": 90,
-            "demand": 78,
-            "window": 65,
-            "barrier": 45,
-            "viral": 85,
-            "difficulty": 95,
-            "repurchase": 40
-          }
-        },
-        {
-          "rank": 3,
-          "name": "天然食材面膜機",
-          "category": "美妝保養",
-          "score": 79,
-          "price": "$1,299",
-          "margin": "3.4x",
-          "highlight": "DIY天然食材面膜機台灣幾乎空白；Pinterest 15K+儲存；食材包耗材複購；高客單品牌化機會",
-          "source": "Etsy + Pinterest 跨界矩陣日",
-          "demand_validation": "Pinterest 15K+儲存；YouTube DIY面膜機器教學影片50K+有機增長；Etsy相關手工DIY面膜材料包熱銷；台灣蝦皮約10個賣家但多為貼片式，打磨機式幾乎空白",
-          "cost_breakdown": "1688裸價 CNY60 → NTD 270 → 落地 NTD 378（×1.4）；建議售價 $1,299；毛利 3.4x",
-          "competition": "蝦皮：約10個賣家但形式不同（貼片式/粉末包），天然食材打磨機式幾乎空白；momo：無同類產品；PChome：無同類產品；市場空白度：優先",
-          "market_window": "台灣剛起步，6-18個月窗口期；72分",
-          "strategy": "蝦皮以「天然食材面膜機」切入，推出starter kit（機器+3種食材包）。聯繫美食+美妝跨界KOL合作",
-          "risks": "食品接觸材料需確認安全認證；操作比冰塊模具複雜，客服需求稍高",
-          "repurchase_detail": "機器一次性，食材包耗材高複購；每月食材補充包$299-399；預估6個月LTV NT$2,000-3,500",
-          "links": [
-            "https://www.etsy.com/search?q=diy+face+mask+maker+machine"
-          ],
-          "scores": {
-            "margin": 72,
-            "demand": 80,
-            "window": 72,
-            "barrier": 58,
-            "viral": 82,
-            "difficulty": 62,
-            "repurchase": 72
-          }
-        },
-        {
-          "rank": 4,
-          "name": "桌下暖腿電熱墊",
-          "category": "健康療癒",
-          "score": 73,
-          "price": "$1,799",
-          "margin": "3.2x",
-          "highlight": "辦公×療癒跨界；WFH暖腿需求；電熱桌下款台灣空白；電子類退貨風險-8",
-          "source": "Amazon US + Pinterest 跨界矩陣日",
-          "demand_validation": "Amazon US「Office Heating」品類上升趨勢；Pinterest「cozy home office setup」15K+儲存；台灣蝦皮約15個賣家但多為毛毯/暖暖包類，電熱桌下固定款幾乎空白",
-          "cost_breakdown": "1688裸價 CNY90 → NTD 405 → 落地 NTD 567（×1.4）；建議售價 $1,799；毛利 3.2x",
-          "competition": "蝦皮：約15個賣家但多為毛毯/暖暖包；momo：有電熱墊但非桌下辦公設計款；PChome：無特定桌下辦公款；市場空白度：可考慮",
-          "market_window": "台灣WFH族群形成中，窗口6-18個月；70分",
-          "strategy": "蝦皮以「桌下USB暖腿墊」切入，強調WFH辦公升級。可在辦公用品節日主推，後續搭配護眼燈/人體工學配件",
-          "risks": "電熱設備需BSMI認證（必取）；過熱保護機制需確認；電子類退貨風險-8分；冬季季節性明顯",
-          "repurchase_detail": "主體一次性，電熱設備耐用性強；後續推配件（保護套/收納袋）；預估6個月LTV NT$1,800-2,500",
-          "links": [
-            "https://www.amazon.com/s?k=under+desk+foot+warmer+heating+pad"
-          ],
-          "scores": {
-            "margin": 68,
-            "demand": 75,
-            "window": 70,
-            "barrier": 62,
-            "viral": 72,
-            "difficulty": 85,
-            "repurchase": 45
-          }
-        }
-      ]
-    },
-    {
-      "date": "2026-04-04",
-      "evolution": "今日進化：建立歷史產品去重系統，每次排程前核查Notion歷史產品防止重複",
-      "products": [
-        {
-          "rank": 1,
-          "name": "自動炒菜攪拌器",
-          "category": "廚房家居",
-          "score": 75,
-          "price": "$590",
-          "margin": "3.7x",
-          "highlight": "懶人炒菜神器蝦皮零競品，TikTok懶人廚房trend",
-          "source": "TikTok KOL / Amazon",
-          "demand_validation": "Amazon SAKI 4.5★長年熱銷，TikTok #lazycooking數十億觀看；蝦皮零鍋邊攪拌器",
-          "cost_breakdown": "1688 CNY 25 → 落地NT$157，售價$590，毛利3.7x",
-          "competition": "蝦皮0個專屬賣家，momo/PChome無此品類",
-          "market_window": "台灣空白18個月+",
-          "strategy": "蝦皮廚房品類首發主打懶人神器，TikTok煮粥場景示範",
-          "risks": "BSMI認證需求；一次性購買LTV低；壁壘偏低",
-          "repurchase_detail": "一次性購買為主，節慶禮品場景推廣",
-          "links": [
-            "https://www.amazon.com/dp/B07DV2YQBJ"
-          ],
-          "scores": {
-            "margin": 85,
-            "demand": 65,
-            "window": 85,
-            "barrier": 58,
-            "viral": 82,
-            "difficulty": 90,
-            "repurchase": 35
-          }
-        },
-        {
-          "rank": 2,
-          "name": "蠶絲枕頭套",
-          "category": "生活禮品",
-          "score": 75,
-          "price": "$1,490",
-          "margin": "3.4x",
-          "highlight": "蠶絲護髮護膚美容效果，KOL before-after展示，高品質款空白",
-          "source": "TikTok KOL / Amazon",
-          "demand_validation": "Amazon Silk Pillowcase年增15%，TikTok #silkpillowcase數億觀看",
-          "cost_breakdown": "1688 CNY 70 → 落地NT$441，售價$1,490，毛利3.4x",
-          "competition": "蝦皮白牌多但22momme品牌化款不足，momo少數白牌，PChome無",
-          "market_window": "台灣高品質款窗口18個月+",
-          "strategy": "蝦皮美容/寢具差異化，品牌定位22 Momme真絲",
-          "risks": "蠶絲含量需核實；布料退貨率偏高",
-          "repurchase_detail": "每6-12個月替換，延伸蠶絲系列",
-          "links": [
-            "https://www.amazon.com/s?k=22+momme+silk+pillowcase"
-          ],
-          "scores": {
-            "margin": 72,
-            "demand": 68,
-            "window": 82,
-            "barrier": 60,
-            "viral": 70,
-            "difficulty": 85,
-            "repurchase": 55
-          }
-        },
-        {
-          "rank": 3,
-          "name": "LED光療面罩",
-          "category": "美妝保養",
-          "score": 74,
-          "price": "$1,990",
-          "margin": "3.2x",
-          "highlight": "居家醫美化趨勢，TikTok before-after百萬爆紅，中端品牌化款空白",
-          "source": "TikTok KOL / Amazon",
-          "demand_validation": "TikTok #ledmask數億觀看，Amazon美容電器長年熱銷",
-          "cost_breakdown": "1688 CNY 100 → 落地NT$630，售價$1,990，毛利3.2x",
-          "competition": "蝦皮低端白牌多，momo高端進口品牌NT$3000+，中端空白",
-          "market_window": "中端品牌化款窗口12-18個月",
-          "strategy": "蝦皮美容電器中端品牌定位，TikTok KOL效果展示",
-          "risks": "電子類退貨風險高；需確認LED功率安全",
-          "repurchase_detail": "主機一次性，延伸配套精華液月複購",
-          "links": [
-            "https://www.amazon.com/s?k=led+light+therapy+face+mask"
-          ],
-          "scores": {
-            "margin": 80,
-            "demand": 78,
-            "window": 78,
-            "barrier": 55,
-            "viral": 88,
-            "difficulty": 70,
-            "repurchase": 35
-          }
-        }
-      ]
-    },
-    {
-      "date": "2026-04-03",
-      "evolution": "E. 報告呈現優化 — 新增🟢/🟡/🔴進場訊號，一眼判斷優先順序",
-      "products": [
-        {
-          "rank": 1,
-          "name": "貓咪造型陶瓷個人不沾鍋",
-          "category": "廚房家居",
-          "score": 74,
-          "price": "$790",
-          "margin": "3.3x",
-          "highlight": "飛力V爆款原型驗證台灣需求；momo僅KAI日系品牌NT$242+；蝦皮無直競；貓+廚具TikTok天生病毒；母親節禮盒機會",
-          "source": "flyingV + Pinkoi 居家餐廚（週五台灣本地）",
-          "demand_validation": "flyingV MONGPAN crowdfunding成功驗證TW需求；TikTok動物造型廚具億次觀看；momo僅KAI高端品牌，大眾款完全空白",
-          "cost_breakdown": "1688 CNY38≈NT$169 × 1.4 = NT$237落地成本",
-          "competition": "蝦皮：無貓型造型鍋；momo：KAI貝印Nyammy日系品牌NT$242-328；PChome：無品牌",
-          "market_window": "中期12-18個月，momo日系品牌存在但大眾款空白",
-          "strategy": "蝦皮廚具品類差異化切入；母親節禮盒套裝；後續兔子/熊系列延伸",
-          "risks": "食品接觸陶瓷需衛福部規範；易碎需加強包裝；KAI品牌存在需外觀差異化",
-          "repurchase_detail": "耐用品，延伸不同造型系列；年LTV NT$400-800",
-          "links": [
-            "https://www.pinkoi.com/search/products?q=%E8%B2%93%E9%99%B6%E7%93%B7%E9%8D%8B"
-          ],
-          "scores": {
-            "margin": 76,
-            "demand": 82,
-            "window": 75,
-            "barrier": 58,
-            "viral": 85,
-            "difficulty": 72,
-            "repurchase": 60
-          }
-        },
-        {
-          "rank": 2,
-          "name": "可視無線挖耳棒",
-          "category": "健康療癒",
-          "score": 69,
-          "price": "$690",
-          "margin": "3.9x",
-          "highlight": "Pinkoi生活好物趨勢信號；鏡頭before/after視覺衝擊強；家庭護理新奇感；3.9x高毛利；操作門檻低",
-          "source": "Pinkoi 生活好物趨勢（週五台灣本地）",
-          "demand_validation": "TikTok ear cleaning camera系列百萬觀看；Amazon個人護理品類熱銷；台灣momo僅基本款，可視版品牌化不足",
-          "cost_breakdown": "1688 CNY28≈NT$125 × 1.4 = NT$175落地成本",
-          "competition": "蝦皮：電動挖耳棒有多款但可視無線版較少；momo：基本電動款有品牌NT$299-799；PChome：無品牌",
-          "market_window": "中短期6-12個月，基本款已有競爭，差異化窗口有限",
-          "strategy": "蝦皮個人護理品類切入；家庭組合套裝（大人+小孩款）；短影片展示鏡頭畫面導流",
-          "risks": "USB充電小家電無需BSMI；App連接需確認iOS/Android相容；需強調非醫療器材定位",
-          "repurchase_detail": "替換耳挖頭NT$99-149/組（3個月）；年LTV NT$400-700",
-          "links": [
-            "https://www.amazon.com/s?k=wireless+ear+camera"
-          ],
-          "scores": {
-            "margin": 80,
-            "demand": 68,
-            "window": 62,
-            "barrier": 52,
-            "viral": 72,
-            "difficulty": 80,
-            "repurchase": 68
-          }
-        },
-        {
-          "rank": 3,
-          "name": "保溫飲料手提袋（Stanley款）",
-          "category": "生活禮品",
-          "score": 68,
-          "price": "$590",
-          "margin": "3.8x",
-          "highlight": "Pinkoi STANLEY暢銷配件空缺；春日外出穿搭配件需求高；操作難度極低；快速上架驗證",
-          "source": "Pinkoi 居家餐廚暢銷（週五台灣本地）",
-          "demand_validation": "Pinkoi STANLEY系列為居家餐廚暢銷；春日包包新品為Pinkoi首要搜尋趨勢；台灣STANLEY大容量杯普及，專用袋品牌化不足",
-          "cost_breakdown": "1688 CNY25≈NT$111 × 1.4 = NT$156落地成本",
-          "competition": "蝦皮：飲料提袋有白牌，STANLEY尺寸專屬品牌化不足；momo：一般保溫杯袋有基本款；PChome：無品牌",
-          "market_window": "中期12-18個月，STANLEY台灣趨勢仍在上升",
-          "strategy": "蝦皮STANLEY配件關鍵字切入；春夏穿搭KOL合作；後續延伸其他品牌尺寸",
-          "risks": "布製品無需認證；競品白牌多，需靠設計感和品牌包裝差異化；STANLEY品牌字樣不可使用（描述相容即可）",
-          "repurchase_detail": "不同印花/顏色系列重購；每季新色複購；年LTV NT$500-900",
-          "links": [
-            "https://www.pinkoi.com/browse?catp=group_52"
-          ],
-          "scores": {
-            "margin": 78,
-            "demand": 65,
-            "window": 70,
-            "barrier": 50,
-            "viral": 75,
-            "difficulty": 80,
-            "repurchase": 60
-          }
-        }
-      ]
-    },
-    {
-      "date": "2026-04-02",
-      "evolution": "今日進化：成本模型標準化（落地成本 = 1688裸價 × 1.4）",
-      "products": [
-        {
-          "rank": 1,
-          "name": "水晶穴位耳豆（Social Wellness版）",
-          "category": "健康療癒",
-          "score": 74,
-          "price": "$490",
-          "margin": "4.5x",
-          "highlight": "momo=0確認+小紅書封鎖信息差；Social Wellness穴位美學版台灣空白",
-          "source": "訓練知識（小紅書/Douyin趨勢+台灣直查momo）",
-          "demand_validation": "TikTok耳豆影片百萬觀看；小紅書封鎖台灣缺席；穴位美學品牌機會；中醫文化背景接受度高",
-          "cost_breakdown": "1688裸價NT$50×1.4=落地NT$70；售價$490；蝦皮淨利$356/盒",
-          "competition": "蝦皮15-20賣家（醫療/白牌），momo=0（確認），PChome=磁立舒醫療品牌；可考慮",
-          "market_window": "Social wellness版本空白6-12個月",
-          "strategy": "蝦皮差異化定位（美學包裝 vs 醫療白牌）；IG KOL推廣穴位美學；水晶禮盒切入送禮市場",
-          "risks": "BSMI需求低；教育成本稍高；水晶品質差異大需驗樣",
-          "repurchase_detail": "30天用完月複購30-45%；套組升級帶動LTV；年NT$1,800-2,400",
-          "links": [
-            "https://www.amazon.com/s?k=acupressure+ear+seeds+crystal"
-          ],
-          "scores": {
-            "margin": 82,
-            "demand": 78,
-            "window": 68,
-            "barrier": 55,
-            "viral": 75,
-            "difficulty": 80,
-            "repurchase": 72
-          }
-        },
-        {
-          "rank": 2,
-          "name": "礦石造型手工皂禮盒",
-          "category": "生活禮品",
-          "score": 70,
-          "price": "$690",
-          "margin": "3.8x",
-          "highlight": "三大平台少於3賣家；小紅書礦石美學禮品爆款；節慶禮品藍海",
-          "source": "訓練知識（小紅書/Douyin 2024-2025趨勢）",
-          "demand_validation": "小紅書礦石皂10萬+帖文；台灣小紅書封鎖缺席；節慶禮品機會",
-          "cost_breakdown": "1688裸價NT$200×1.4=落地NT$280；售價$690；蝦皮淨利$345/套",
-          "competition": "蝦皮少於10手作賣家，momo無，PChome無；優先推薦",
-          "market_window": "台灣空白12-18個月；小紅書封鎖視覺趨勢信息差",
-          "strategy": "蝦皮節慶禮品切入；IG視覺行銷；後期Pinkoi質感定位",
-          "risks": "成分標示需符合衛福部規範；保存期限管理；節慶庫存管理",
-          "repurchase_detail": "每2-3個月節慶重購；年LTV$1,200-2,000",
-          "links": [
-            "https://www.pinterest.com/search/pins/?q=mineral+stone+soap+gift"
-          ],
-          "scores": {
-            "margin": 78,
-            "demand": 72,
-            "window": 75,
-            "barrier": 58,
-            "viral": 72,
-            "difficulty": 72,
-            "repurchase": 55
-          }
-        },
-        {
-          "rank": 3,
-          "name": "碳酸泡騰卸妝錠（觀察中）",
-          "category": "美妝保養",
-          "score": 66,
-          "price": "$390",
-          "margin": "3.5x",
-          "highlight": "加水秒變潔顏泡泡；TikTok天生病毒型；台灣特定形式待驗證",
-          "source": "訓練知識（TikTok/Douyin 2024-2025）",
-          "demand_validation": "Douyin碳酸卸妝錠影片數百萬觀看；台灣信息差待確認；環保便攜訴求",
-          "cost_breakdown": "1688裸價NT$30×1.4=落地NT$42；售價$390；蝦皮淨利$301/盒",
-          "competition": "蝦皮碳酸泡騰形式待驗證（估少於5賣家），momo/PChome無；待驗證",
-          "market_window": "特定形式空白估12-18個月（待驗證）",
-          "strategy": "蝦皮美妝首發；旅行7天套組；環保訴求切入",
-          "risks": "受潮失效需密封；台灣法規需確認；市場接受度待驗證",
-          "repurchase_detail": "30粒月用量；月複購25-35%；年LTV$1,200-1,800",
-          "links": [
-            "https://www.amazon.com/s?k=effervescent+cleansing+tablets"
-          ],
-          "scores": {
-            "margin": 70,
-            "demand": 60,
-            "window": 62,
-            "barrier": 45,
-            "viral": 80,
-            "difficulty": 82,
-            "repurchase": 72
-          }
-        }
-      ]
-    },
-    {
-      "date": "2026-04-01",
-      "evolution": "今日進化：A. 數據源擴展 — 首次系統測試 Product Hunt 作為歐美新品來源，確認今日 top 10 全為 AI/軟體，不適合實體選品，建議週三改用 Indiegogo 硬體類替代",
-      "products": [
-        {
-          "rank": 1,
-          "name": "淋浴芳香蒸汽錠",
-          "category": "美妝保養",
-          "score": 73,
-          "price": "$890",
-          "margin": "3.2x",
-          "highlight": "TikTok #showersteamer 10億+觀看空白品類，台灣浴缸少反成優勢，禮盒裝毛利3.2x",
-          "source": "Amazon US Beauty Movers & Shakers",
-          "demand_validation": "Amazon美妝飆升榜Cleverfy/Body Restore多品牌上榜；TikTok #showersteamer超過10億次觀看；蝦皮搜索shower steamer顯示蓮蓬頭而非蒸汽錠，品類完全未被認知；台灣多數家庭無浴缸，淋浴蒸汽錠反而更實用",
-          "cost_breakdown": "1688精油蒸汽錠6個+禮盒NT$180，海運關稅NT$60，最後一哩NT$40，落地NT$280，售價NT$890，毛利3.2x",
-          "competition": "蝦皮搜shower steamer顯示蓮蓬頭（完全不相關），品類認知零；momo/PChome無相關品牌；優先推薦",
-          "market_window": "中期12-18個月，品類教育成本本身是壁壘，保護空白期",
-          "strategy": "禮盒裝主攻送禮市場（母親節/生日）；蝦皮美妝品類首發；配合浴室routine短影片導流",
-          "risks": "浴用化妝品需確認衛福部申報要求；精油成分需無過敏原；避免宣稱醫療效果",
-          "repurchase_detail": "消耗品，6個裝使用1-2週，重購率中高。年LTV約NT$2,000-3,500",
-          "links": [
-            "https://www.amazon.com/Cleverfy-Aromatherapy-Shower-Steamers-Relaxation/dp/B09VTHB39V"
-          ],
-          "scores": {
-            "margin": 75,
-            "demand": 82,
-            "window": 73,
-            "barrier": 55,
-            "viral": 80,
-            "difficulty": 75,
-            "repurchase": 68
-          }
-        },
-        {
-          "rank": 2,
-          "name": "酸麵包職人發酵套組",
-          "category": "廚房家居",
-          "score": 68,
-          "price": "$990",
-          "margin": "3.5x",
-          "highlight": "台灣烘焙社群10萬+人，蝦皮無品牌化banneton，酸麵包熱潮剛起步，送禮套組定位",
-          "source": "Amazon US Kitchen Movers & Shakers",
-          "demand_validation": "TikTok #sourdough超過100億次觀看；Amazon廚房飆升榜DOYOLLA發酵籃套組上榜；台灣搜尋酸麵包發酵籃只有英文Amazon/Walmart結果；台灣烘焙FB社群超過10萬人；咖啡廳開始賣酸麵包",
-          "cost_breakdown": "1688天然藤籃2個+麻布袋+刮板NT$220，禮盒NT$40，海運關稅NT$50，最後一哩NT$30，落地NT$340，售價NT$990，毛利3.5x",
-          "competition": "蝦皮少量白牌散賣單個藤籃，無成套品牌化套組；momo/PChome未見品牌化banneton；優先推薦",
-          "market_window": "中期12-24個月，酸麵包在台灣剛起步，家庭自製族群快速增加",
-          "strategy": "主打職人烘焙禮盒定位；FB台灣烘焙社群廣告精準投放；烘焙KOL開箱；蝦皮廚房品類首發",
-          "risks": "藤籃體積大庫存壓力較高；1688藤籃品質差異大需嚴格選廠驗樣；無特殊認證需求",
-          "repurchase_detail": "耐用品，直接複購率低；可拓展麵粉、發酵罐等消耗品附加銷售。年LTV約NT$800-1,500",
-          "links": [
-            "https://www.amazon.com/DOYOLLA-Shaped-Banneton-Brotform-Proofing/dp/B0148CJARO"
-          ],
-          "scores": {
-            "margin": 80,
-            "demand": 73,
-            "window": 75,
-            "barrier": 45,
-            "viral": 73,
-            "difficulty": 65,
-            "repurchase": 45
-          }
-        },
-        {
-          "rank": 3,
-          "name": "桌面療癒禪意沙盤",
-          "category": "生活禮品",
-          "score": 64,
-          "price": "$1,490",
-          "margin": "2.9x",
-          "highlight": "ASMR沙盤影片天生viral，辦公桌療癒商品需求成長，台灣白牌品質差品牌化空間存在",
-          "source": "Indiegogo (SANDSARA Mini Pro類型)",
-          "demand_validation": "Indiegogo SANDSARA Mini Pro 116名追蹤者快速積累；TikTok #zengarden ASMR影片高互動；Pinterest禪意沙盤儲存數持續增長；台灣辦公室療癒商品市場成長",
-          "cost_breakdown": "1688實木沙盤+精細沙+耙子+配件NT$350，精品包裝NT$50，海運關稅NT$80，最後一哩NT$40，落地NT$520，售價NT$1490，毛利2.9x",
-          "competition": "蝦皮少量白牌日式枯山水但品質低無品牌包裝；momo偶見低品質白牌；PChome無品牌；可考慮",
-          "market_window": "窗口6-12個月，台灣已有白牌競品，需快速建立品牌差異化",
-          "strategy": "高品質實木款切入差異化競爭；主打辦公桌靜心助眠定位；ASMR短影片展示；後續進入Pinkoi",
-          "risks": "沙粒運輸易散落需特別包裝防漏；台灣白牌競品已有，品牌壁壘偏低需快速建立；無特殊認證需求",
-          "repurchase_detail": "耐用品，複購率低；可額外銷售彩色沙/補充配件NT$199-299。年LTV約NT$500-800",
-          "links": [
-            "https://www.indiegogo.com/projects/sandsara-mini-pro-redefining-the-desktop-zen-garden"
-          ],
-          "scores": {
-            "margin": 68,
-            "demand": 65,
-            "window": 72,
-            "barrier": 37,
-            "viral": 82,
-            "difficulty": 60,
-            "repurchase": 35
-          }
-        }
-      ]
-    },
-    {
-      "date": "2026-03-31",
-      "evolution": "C. 成本模型精化 — 標準落地成本公式：CNY × 4.5 × 1.2 = 落地成本；v2.1 七維度評分正式啟用",
-      "source": "週二日韓 (Makuake / Wadiz / Amazon JP/KR)",
-      "products": [
-        {
-          "rank": 1,
-          "name": "超音波隱形眼鏡清洗機",
-          "category": "健康療癒",
-          "score": 70,
-          "price": "TWD 1,980",
-          "margin": "3.4x",
-          "highlight": "台灣75%隱眼滲透率卻無日本認證品牌，超音波清洗差異化，認證門檻低好切入",
-          "source": "日本 Citizen CL-03M 長年 Amazon JP BSR 前列；全球市場 CAGR 15%",
-          "demand_validation": "Citizen CL-03M 日本熱銷多年；CAGR 15%；台灣3大平台完全空白",
-          "cost_breakdown": "1688 CNY100 × 4.5 = NTD450 × 1.2 = 落地NTD540 → 售NTD1,980 → 毛利3.4x",
-          "competition": "蝦皮/momo/PChome 三大平台完全空白；無本地品牌賣家",
-          "market_window": "中期 12-18個月",
-          "strategy": "蝦皮保健品類首發，搭配隱形眼鏡藥水套裝；後續進眼科診所通路",
-          "risks": "認證門檻低（無需BSMI/NCC）；需確認超音波頻率對軟式鏡片安全",
-          "repurchase_detail": "清洗液耗材 NT$199-299/月；年LTV NT$2,400-3,600",
-          "links": [
-            "https://www.amazon.co.jp/s?k=Citizen+CL-03M+%E3%82%B3%E3%83%B3%E3%82%BF%E3%82%AF%E3%83%88%E3%83%AC%E3%83%B3%E3%82%BA%E6%B4%97%E6%B5%84%E6%A9%9F"
-          ],
-          "scores": {
-            "margin": 75,
-            "demand": 78,
-            "window": 70,
-            "barrier": 55,
-            "viral": 68,
-            "difficulty": 75,
-            "repurchase": 65
-          }
-        },
-        {
-          "rank": 2,
-          "name": "電子神經刺激防暈手環",
-          "category": "健康療癒",
-          "score": 67,
-          "price": "TWD 1,580",
-          "margin": "3.3x",
-          "highlight": "EmeTerm全球$2M+ Kickstarter驗證，日本旅遊爆發，台灣僅東森/代購，電子刺激科技感",
-          "source": "EmeTerm Kickstarter $2M+ FDA 510(k)；日本Amazon暈車対策品類BSR",
-          "demand_validation": "EmeTerm Kickstarter超$2M；FDA認證；日本旅遊復甦；台灣代購需求但無正規通路",
-          "cost_breakdown": "1688 CNY80 × 4.5 = NTD360 × 1.2 = 落地NTD432 → 售NTD1,580 → 毛利3.3x",
-          "competition": "蝦皮僅傳統磁石手環(NT$99-299)；momo/PChome完全無電子刺激款",
-          "market_window": "中期 12-18個月",
-          "strategy": "蝦皮旅遊/健康品類首發；搭配旅遊季廣告；合作旅遊KOL開箱",
-          "risks": "宣稱醫療效果需注意TFDA；需確認1688貨源電流安全參數",
-          "repurchase_detail": "本體一次性購買；可發展旅遊配件套組；年LTV NT$800-1,200",
-          "links": [
-            "https://www.emeterm.com/"
-          ],
-          "scores": {
-            "margin": 72,
-            "demand": 72,
-            "window": 65,
-            "barrier": 65,
-            "viral": 70,
-            "difficulty": 52,
-            "repurchase": 62
-          }
-        },
-        {
-          "rank": 3,
-          "name": "石墨烯EMS頸椎熱敷帶",
-          "category": "健康療癒",
-          "score": 60,
-          "price": "TWD 1,880",
-          "margin": "2.9x",
-          "highlight": "日韓辦公族爆款，石墨烯+EMS組合差異化，台灣momo僅基礎款，市場窗口短需快速行動",
-          "source": "日本Makuake頸椎護理多款200-500%超額；小紅書石墨烯EMS大量內容",
-          "demand_validation": "Makuake多款超額達標；小紅書大量討論；辦公族頸痛剛需；台灣遠距辦公族增加",
-          "cost_breakdown": "1688 CNY120 × 4.5 = NTD540 × 1.2 = 落地NTD648 → 售NTD1,880 → 毛利2.9x",
-          "competition": "蝦皮僅基礎款；momo有Beurer/SKG基礎EMS款(NT$1,200-2,500)但無石墨烯；輕競爭",
-          "market_window": "短期 6-12個月（高複製風險）",
-          "strategy": "蝦皮健康品類首發，差異化定位石墨烯+雙效；短影片導流是關鍵",
-          "risks": "BSMI可能需要；EMS可能歸類醫療器材需衛福部查驗；市場窗口短momo品牌追進快",
-          "repurchase_detail": "更換配件NT$199-299；年LTV NT$600-1,000（複購率偏低）",
-          "links": [
-            "https://www.amazon.com/s?k=graphene+neck+heating+pad+EMS"
-          ],
-          "scores": {
-            "margin": 63,
-            "demand": 73,
-            "window": 45,
-            "barrier": 43,
-            "viral": 65,
-            "difficulty": 72,
-            "repurchase": 50
-          }
-        }
-      ]
-    },
-    {
       "date": "2026-03-30",
       "evolution": "B. 需求驗證升級｜新增 Google Trends 跨國搜尋熱度比對，量化「信息差」指標：比較產品在東南亞 vs 台灣的搜尋熱度差異，熱度差越大代表市場空白信號越強。實際應用於3個產品的需求驗證段落。效果：提供量化的市場空白證據，增強需求驗證可信度。",
       "products": [
         {
           "rank": 1,
-          "name": "3合1紅光導油頭皮按摩梳",
-          "category": "美妝保養",
-          "score": 76,
-          "price": "NT$1,290",
-          "margin": "4.6x",
-          "highlight": "🔴蝦皮無3合1款；TikTok #scalpcare 數十億觀看；3合1導油紅光按摩台灣完全空白；毛利4.6x；紅光+精油導入+電動按摩三效合一",
-          "source": "TikTok Shop SEA美容品類#1 GMV類目。泰國TikTok Shop美容健康品類GMV達$28.5億，紅光頭皮按摩梳是2025-2026最火爆的美容小家電之一。3合1 = 紅光LED生髮 + 精油自動導入 + 電動按摩，比台灣現有基本紅光梳多了「導油」功能，是關鍵差異化。分類：美容科技（可延伸護髮精油、頭皮檢測儀、生髮精華液）",
-          "demand_validation": "【國外爆紅】TikTok #scalpcare數十億觀看、#redlighttherapy持續增長。Google Trends「scalp massager red light」2025峰值69，年增15-20%。【台灣空白】蝦皮搜「紅光頭皮按摩梳」僅有基本款，無導油功能版本🔴。momo有電流梳和基本紅光梳但無3合1🔴。PChome空白🔴。【信息差指標】「red light scalp massager」泰國搜尋量高、台灣接近零→信息差極大✅",
-          "cost_breakdown": "1688採購¥15-30（紅光LED+導油槽+電動按摩模組+IPX7防水）≈NT$200-350 → 落地成本NT$200-350（含海運+關稅+物流+包材）。建議售價NT$1,290｜毛利3.7-6.5x（均值4.6x）✅。蝦皮淨利預估NT$750/支（扣平台14%後）",
-          "competition": "蝦皮搜「紅光頭皮梳」約2-3頁結果，全部是基本款無導油功能✅。momo有小米有品紅光梳NT$599但無導油功能。台灣零個「3合1導油紅光按摩」產品。國際品牌Breo Scalp3（US$99）、OPUSCALP（US$150+）均未進入台灣",
-          "strategy": "蝦皮美容品類首發 → momo個人護理 → Pinkoi質感定位。搭配精油套裝販售提升客單價。全年銷售無季節性限制",
-          "risks": "認證門檻低：USB充電小家電，無需BSMI。紅光LED功率低，不涉及醫療器材認證。風險：技術門檻低易被模仿，需搶先建立品牌認知和KOL口碑",
-          "repurchase_detail": "替換按摩頭NT$149-199。搭售護髮精油套裝NT$399-599。延伸：頭皮檢測儀、生髮精華液。年LTV約NT$800-1,500",
-          "links": [
-            "https://www.amazon.com/s?k=YXYOUNG+red+light+scalp+massager+comb"
-          ],
-          "scores": {
-            "margin": 90,
-            "demand": 80,
-            "barrier": 55,
-            "viral": 85,
-            "difficulty": 80,
-            "repurchase": 45
-          }
-        },
-        {
-          "rank": 2,
-          "name": "AI 智慧賞鳥餵食器相機",
-          "category": "科技電子",
-          "score": 71,
-          "price": "NT$3,490",
-          "margin": "3.2x",
-          "highlight": "🔴台灣完全空白；Birdfy Kickstarter募$270萬+驗證需求；691鳥種+世界賞鳥博覽會在台中；手機即時通知「有鳥來了！」",
-          "source": "東南亞自然觀察科技趨勢。Birdfy（Netvue旗下）從Kickstarter起家，2K HD相機+AI辨識6,000+鳥種+太陽能供電+手機即時通知。亞太地區帶動自然觀察科技消費。分類：自然科技（可延伸蝴蝶觀察器、松鼠餵食器、戶外生態攝影機）",
-          "demand_validation": "【國外爆紅】Birdfy Kickstarter募資US$270萬+，Bird Buddy募資US$740萬+。Amazon庭院品類4.3+星。【台灣空白】蝦皮搜「智慧餵鳥器」「bird feeder camera」零結果🔴。momo/PChome僅有傳統鳥類餵食器🔴。完全市場空白。【台灣機會】691種鳥類、32種特有種。2025世界賞鳥博覽會在台中舉辦。【信息差指標】「bird feeder camera」美國/歐洲搜尋量極高，台灣接近零→品類未被認知✅",
-          "cost_breakdown": "1688 OEM WiFi鳥類餵食器相機¥150-250（含1080P/2K相機+WiFi+太陽能板+APP）→ 落地成本NT$900-1,300（含海運+關稅+物流+包材）。建議售價NT$3,490｜毛利2.7-3.9x（均值3.2x）✅。蝦皮淨利預估NT$1,700/台（扣平台14%後）",
-          "competition": "蝦皮/momo/PChome三大平台完全空白✅。國際品牌Birdfy、Bird Buddy均無台灣代理。NT$3,490定價遠低於Bird Buddy PRO（US$299≈NT$9,600+），價格空間大",
-          "strategy": "蝦皮生活品類首發 → momo 3C周邊 → Pinkoi/citiesocial質感生活定位。春秋鳥類遷徙季為旺季。搭配鳥類知識卡片/圖鑑提升體驗",
-          "risks": "NCC認證（WiFi裝置）：約2-3個月，NT$15,000-30,000。BSMI（鋰電池）建議申請。APP需中文化並支援台灣常見鳥種辨識。太陽能板需適應台灣多雨氣候",
-          "repurchase_detail": "鳥飼料/種孙NT$199-399（每月）。替換太陽能板NT$499。延伸配件：鳥巢相機、蜂鳥特化餵食器。年LTV約NT$2,000-3,500",
-          "links": [
-            "https://www.birdfy.com/products/birdfy-feeder"
-          ],
-          "scores": {
-            "margin": 75,
-            "demand": 80,
-            "barrier": 70,
-            "viral": 65,
-            "difficulty": 55,
-            "repurchase": 60
-          }
-        },
-        {
-          "rank": 3,
           "name": "智能遙控自動狗拋球機",
           "category": "寵物",
           "score": 68,
@@ -2691,33 +513,6 @@
       "products": [
         {
           "rank": 1,
-          "name": "AI 智慧賞鳥攝影餵食器",
-          "category": "科技電子",
-          "score": 74,
-          "price": "NT$2,490",
-          "margin": "3.1x",
-          "highlight": "🔴蝦皮台灣零賣家；Bird Buddy全球Kickstarter募資US$6.6M+驗證需求；拍鳥UGC天然viral；台灣691種鳥類、32種特有種；自然觀察×AI跨界",
-          "source": "週日跨界混搭日：自然觀察×AI科技×UGC社群。Bird Buddy在全球Kickstarter募資超US$6.6M，結合AI鳥種辨識攝影機和餵食器，用戶在手機即時收到「鳥兒來訪通知」並自動拍照記錄。跨界創新指數：野生動物觀察×AI影像辨識×社群分享，三重價值疊加。",
-          "demand_validation": "蝦皮台灣驗證：搜尋「智慧餵鳥器」「AI鳥類攝影機」結果為雰🔴完全空白。全球需求驗證：Bird Buddy Kickstarter募資US$6.6M+，全球出貨超50,000台。Google Trends：「bird feeder camera」全球搜尋量持續上升，2025-2026年為高峰。台灣賞鳥人口：台灣野鳥學會會員穩定成長，eBird台灣記錄全球前列",
-          "cost_breakdown": "1688採購CNY 120-250（AI攝影+WiFi+太陽能充電款）≈NT$540-1,125 → 落地成本NT$645-1,204（含海運+關稅+物流+包材）。建議售價NT$2,490｜毛利2.5-3.9x（均值3.1x）✅。蝦皮淨利預估NT$987/台（扣平台14%後，淨利率約46%）",
-          "competition": "蝦皮台灣：零結果，完全空白市場✅。momo/PChome：僅有傳統鳥屋/餵食器（NT$200-600），無任何AI攝影功能產品。全球競品：Bird Buddy（US$199-299）、Birdfy（US$159-199），均未進入台灣。差異化：品牌化「台灣賞鳥」定位，在地化鳥種AI辨識（五色鳥、藍鵲等台灣特有種）",
-          "strategy": "蝦皮首發（搶佔品類搜尋）→ momo（品牌溢價）→ 自有官網（社群經營）。旺季：春季（3-5月鳥類繁殖季）為黃金期。套裝：單機NT$2,490 / 太陽能充電版NT$2,990 / 含鳥飼料禮盒NT$3,290",
-          "risks": "NCC認證（WiFi/藍牙模組）：必需，3-6個月，NT$50,000-80,000。1688通用款AI辨識精度可能不如原廠；App品質是關鍵。防水：戶外使用需IP65+。Bird Buddy有設計專利，外觀需做差異化",
-          "repurchase_detail": "鳥飼料（向日葵籽、混合穀物）每月NT$199-399→年複購NT$2,400-4,800✅。替換攝影模組/升級版→2年一次NT$1,500。社群會員訂閱（鳥種圖鑑+月報）NT$99/月。年LTV估計NT$3,000-5,500",
-          "links": [
-            "https://mybirdbuddy.com/"
-          ],
-          "scores": {
-            "margin": 75,
-            "demand": 80,
-            "barrier": 70,
-            "viral": 85,
-            "difficulty": 65,
-            "repurchase": 50
-          }
-        },
-        {
-          "rank": 2,
           "name": "AI 寵物健康監測智慧項圈",
           "category": "寵物",
           "score": 73,
@@ -2742,150 +537,9 @@
             "difficulty": 55,
             "repurchase": 60
           }
-        },
-        {
-          "rank": 3,
-          "name": "App 控制桌面動態沙畫機",
-          "category": "生活禮品",
-          "score": 70,
-          "price": "NT$3,990",
-          "margin": "2.8x",
-          "highlight": "🔴蝦皮基本零；Oasis Mini全球累計50,000+台銷量；kinetic sand art TikTok破百萬播；藝術×數位科技×療癒跨界；禮物場景完美",
-          "source": "週日跨界混搭日：藝術×數位科技×療癒文化。Grounded的Oasis Mini在全球已售出50,000+台，利用磁力驅動鋼珠在細沙上自動繪製圖案，搭配App選擇數百種動態沙畫模式，是「永遠不重複的桌面藝術品」。跨界創新指數：冥想藝術×機械工程×App生態，三重價值疊加。",
-          "demand_validation": "蝦皮台灣驗證：搜尋「動態沙畫機」「kinetic sand table」結果基本為零——僅有兒童動力沙玩具和1個中國直郵賣家🔴市場空白。全球驗證：Oasis Mini（US$139-149）全球累計50,000+台銷量，4.5星評價。社群驗證：TikTok上kinetic sand art影片經常破百萬播放，療癒系內容高度viral",
-          "cost_breakdown": "1688採購CNY 200-400（磁力驅動+App控制+多圖案款）≈NT$900-1,800 → 落地成本NT$1,075-1,720（含海運+關稅+物流+包材）。建議售價NT$3,990｜毛利2.3-3.7x（均值2.8x）✅。蝦皮淨利預估NT$1,651/台（扣平台14%後，淨利率約48%）",
-          "competition": "蝦皮：基本無競品（僅兒童動力沙和1個中國直郵）✅。國際品牌：Sisyphus（US$599-1,700超高端）、Oasis Mini（US$139中端）。差異化：中文App+台灣設計師合作沙畫圖案+禮盒包裝。壁壘：App生態（獨家圖案）+品牌定位（「桌上的冥想花園」）",
-          "strategy": "蝦皮首發（搶佔品類）→ Pinkoi（設計感定位）→ momo（品牌溢價）。旺季：聖誕節禮物季（10-12月）、情人節（2月）、新居落成/搬家季。套裝：單機NT$3,990 / 含額外沙+清潔工具NT$4,590 / 豪華禮盒NT$5,290",
-          "risks": "BSMI認證（含馬達/電源）：必需，2-3個月，NT$30,000-50,000。精密機械雰件運輸中可能損壞，包裝需加強防震。App品質：1688白牌App可能不穩定，需驗證可靠性。噪音：磁力馬達運轉聲音需控制在30dB以下",
-          "repurchase_detail": "替換沙粒NT$299-399/次（每6個月）。新圖案包App內購NT$99-199（季度更新）。延伸產品：大尺寸版NT$6,990、壁掛版NT$8,990。年LTV估計NT$1,200-2,000",
-          "links": [
-            "https://grounded.so/"
-          ],
-          "scores": {
-            "margin": 70,
-            "demand": 75,
-            "barrier": 60,
-            "viral": 90,
-            "difficulty": 70,
-            "repurchase": 45
-          }
-        },
-        {
-          "rank": 4,
-          "name": "EEG 腦波 AI 助眠儀",
-          "category": "健康療癒",
-          "score": 69,
-          "price": "NT$4,990",
-          "margin": "2.9x",
-          "highlight": "🟡蝦皮零（僅低階音樂眼罩）；台灣250-400萬人受失眠困擾；Elemind CES 2025獲獎；技術壁壘極高；1688供應鏈待驗證；健康×腦科學跨界",
-          "source": "週日跨界混搭日：健康×腦科學×AI。EEGSmart UMind Sleep等產品利用EEG腦波感測技術即時監測睡眠狀態，AI演算法在偵測到淺眠時自動播放特定頻率音頻，引導大腦進入深度睡眠。跨界創新指數：神經科學×穿戴科技×AI音頻治療，頂級跨界深度。",
-          "demand_validation": "蝦皮台灣驗證：搜尋「智能睡眠眼罩」零結果；「腦波眼罩」僅顯示低階alpha波音樂助眠眼罩（NT$199-499）🔴EEG等級產品完全空白。台灣失眠市場：約250-400萬人受失眠困擾（人口17%+），安眠藥依賴人口逐年增加。全球驗證：Muse S（US$349）、Elemind（US$349 CES 2025獲獎）。PTT/Dcard：失眠話題討論量大，「不想吃安眠藥」是常見需求",
-          "cost_breakdown": "1688採購CNY 300-500（EEG感測+藍牙+App款）≈NT$1,350-2,250 → 落地成本NT$1,520-2,370（含海運+關稅+物流+包材）。建議售價NT$4,990｜毛利2.1-3.3x（均值2.9x）✅。⚠️注意：1688上EEG等級供應商較少，可能需直接聯繫EEGSmart等品牌談ODM",
-          "competition": "蝦皮：僅有NT$199-499的低階音樂助眠眼罩，無EEG腦波產品✅。飛利浦SmartSleep：台灣已停售，市場空出。國際高端：Muse S（US$349）、Elemind（US$349）均未進入台灣。差異化：NT$4,990定價 vs 國際品牌US$349（約NT$11,000），價格優勢明顯。壁壘：EEG技術門檻極高+認證複雜+一般白牌難以進入",
-          "strategy": "自有官網（品牌故事+科技感）→ momo（健康科技品類）→ 蝦皮（擴量）。旺季：全年穩定（失眠無季節性），年底壓力季略高。套裝：單機NT$4,990 / 含薰衣草助眠精油NT$5,490 / 年度訂閱包NT$5,990",
-          "risks": "BSMI+NCC認證：必需，預估4-6個月，NT$80,000-120,000。醫療器材認證：若宣稱治療失眠效果，可能需衛福部醫療器材許可⚠️。最大風險：1688供應鏈不確定——EEG等級感測器供應商有限，可能需找深圳專業廠商。App風險：腦波數據解讀需專業演算法，白牌App數據可能不可靠",
-          "repurchase_detail": "替換眼罩海綿墊NT$299/次（每3個月）。進階AI音頻包訂閱NT$99/月。延伸產品：冥想頭帶、腦波專注力訓練器。年LTV估計NT$2,000-3,500",
-          "links": [
-            "https://choosemuse.com/"
-          ],
-          "scores": {
-            "margin": 65,
-            "demand": 80,
-            "barrier": 85,
-            "viral": 70,
-            "difficulty": 40,
-            "repurchase": 55
-          }
-        }
-      ]
-    },
-    {
-      "date": "2026-03-28",
-      "evolution": "系統啟動 ｜ 進化機制設計完成，六大方向池建立，從A.數據源擴展、B.需求驗證升級、C.成本模型精化、D.評分模型迭代、E.報告呈現優化、F.分析框架創新六大方向每日選擇1-2個持續改進。明日起正式執行每日自我進化機制。",
-      "products": [
-        {
-          "rank": 1,
-          "name": "UV-C 磁吸旅行電動牙刷套裝",
-          "category": "健康療癒",
-          "score": 63,
-          "price": "NT$1,490",
-          "margin": "3.0x",
-          "highlight": "蝦皮「電動牙刷」搜尋量極大；UV-C殺菌+磁吸旅行座差異化；中間價位NT$1,000-2,000缺乏強勢品牌；刷頭複購護城河",
-          "source": "Kickstarter「Gentle X by Tusk Oral Care」— 40,000 RPM + 100天續航 + UV-C殺菌座 + 磁吸壁掛。分類：品牌型（口腔護理品牌，可延伸刷頭、牙膏、漱口水）",
-          "demand_validation": "蝦皮「電動牙刷」搜尋量極大，長期熱搜品類✅。「旅行電動牙刷」「UV-C牙刷」結果較少→品牌化空間存在。判斷：供給充足但品牌真空——中間價位NT$1,000-2,000缺乏強勢品牌",
-          "cost_breakdown": "1688採購CNY 80≈NT$352 → 落地成本NT$497（含海運、關稅、物流、包材）。建議售價NT$1,490｜毛利3.0x✅。蝦皮淨利預估NT$583（扣平台抽成+廣告費後，淨利率39%）",
-          "competition": "低價帶NT$199-799白牌大量｜高價帶NT$2,000+飛利浦/Oral-B。中間帶品牌稀少，UV-C+旅行定位可差異化。壁壘：BSMI認證可建立門檻，但整體偏低",
-          "strategy": "蝦皮（跑量驗證）→ momo（提價建品牌）→ 自有官網（訂閱制刷頭）。旺季：暑假、連假前可加碼廣告",
-          "risks": "BSMI（鋰電池）：2-3個月、NT$30,000-50,000。風險：白牌仿品多，需靠品牌識別+訂閱制刷頭做護城河",
-          "repurchase_detail": "刷頭3個月換一次，每組NT$199-299，年LTV可達NT$800-1,200。可延伸：旅行漱口水、牙膏、牙線→完整口腔護理品牌",
-          "links": [
-            "https://www.kickstarter.com/projects/tuskoralcare/gentlex-the-worlds-most-convenient-toothbrush"
-          ],
-          "scores": {
-            "margin": 70,
-            "demand": 80,
-            "barrier": 20,
-            "viral": 55,
-            "difficulty": 60,
-            "repurchase": 80
-          }
-        },
-        {
-          "rank": 2,
-          "name": "AI 語音陪伴玩偶 BubblePal",
-          "category": "科技電子",
-          "score": 60,
-          "price": "NT$1,980",
-          "margin": "3.2x",
-          "highlight": "AI玩具市場YoY+125%；台灣零品牌化產品；小孩跟玩偶對話短影音天然爆紅；低生育率→單孩高消費趨勢",
-          "source": "CES 2026 AI玩具趨勢 + Haivivi BubblePal（Amazon US$89-149）。全球AI玩具市場2024年$110億→預估2030年$580億。分類：品牌型（AI兒童陪伴品牌，可延伸不同角色、教育內容）",
-          "demand_validation": "全球AI玩具搜尋量YoY+125%，中國市場2025年達290億人民幣。台灣蝦皮「AI玩具」「智能玩偶」幾乎無品牌化產品。PTT/Dcard親子版零星討論，無具體產品推薦。判斷：需求正在萌芽，供給完全空白——台灣父母接受度高，但沒好選擇",
-          "cost_breakdown": "1688採購CNY 100≈NT$440 → 落地成本NT$620（含海運、物流、包材）。建議售價NT$1,980｜毛利3.2x✅。蝦皮淨利預估NT$815（扣平台抽成+廣告費後，淨利率41%）",
-          "competition": "台灣僅有「故事機」（NT$500-1,500），無真正AI對話功能。BubblePal未進入台灣市場，無直接競爭。壁壘：繁體中文AI語音對話品質是關鍵門檻",
-          "strategy": "自有官網+親子社群精準投放 → 蝦皮驗證 → momo上架。旺季：兒童節（4月）、聖誕節、開學季",
-          "risks": "NCC認證（WiFi/藍牙）：3-6個月｜兒童安全認證（ST標誌）：必需。最大風險：繁中AI對話品質——語音辨識不佳或回答不自然=產品失敗。隱私：AI收集兒童語音數據需符合個資法",
-          "repurchase_detail": "不同角色外殼NT$399-599/隻+教育內容訂閱NT$99/月。潛在年LTV：NT$3,000+",
-          "links": [
-            "https://www.amazon.com/BubblePal-Interactive-Companion-Learning-Companionship/dp/B0DMPB3B88"
-          ],
-          "scores": {
-            "margin": 70,
-            "demand": 55,
-            "barrier": 40,
-            "viral": 90,
-            "difficulty": 30,
-            "repurchase": 60
-          }
-        },
-        {
-          "rank": 3,
-          "name": "無訂閱 AI 運動手環 Luna Band",
-          "category": "健康療癒",
-          "score": 60,
-          "price": "NT$1,990",
-          "margin": "3.1x",
-          "highlight": "CES 2026爆款；「免月費」強差異化直接打Whoop痛點；蝦皮運動手環穩定需求；無螢幕+語音+恢復導向全新品類",
-          "source": "CES 2026爆款「Luna Band」— 無螢幕AI語音健身手環。US$149買斷、無月費（對比Whoop 5.0需US$199/年）。分類：品牌型（健康穿戴品牌，可延伸運動配件產品線）",
-          "demand_validation": "蝦皮「運動手環」「智慧手環」數千筆結果，長期穩定需求✅。momo、PChome皆有「智慧穿戴」獨立品類。「無訂閱」「免月費」在台灣全新定位，概念共鳴度高。判斷：需求成熟但差異化定位未被佔據——「免月費」直接打痛點",
-          "cost_breakdown": "1688採購CNY 100≈NT$440 → 落地成本NT$640（含海運、NCC分攤、物流）。建議售價NT$1,990｜毛利3.1x✅。蝦皮淨利預估NT$803（扣平台抽成+廣告費後，淨利率40%）",
-          "competition": "小米手環NT$795｜Garmin NT$3,000+｜Fitbit NT$2,000+。以上全是「螢幕型」，Luna Band「無螢幕+語音+恢復導向」是全新品類。壁壘：NCC認證完成後是門檻；App品質是長期護城河",
-          "strategy": "蝦皮+健身社群團購 → momo → 自有品牌官網。旺季：年初（新年目標）、夏季（減脂季）",
-          "risks": "NCC認證（藍牙）：3-6個月、NT$50,000-80,000。App品質風險：1688白牌手環配套App通常極差，需慎選供應商或自建。售後：電子產品退貨率5-10%，需預留成本",
-          "repurchase_detail": "手環帶可更換NT$299-499/條，未來可推進階版升級銷售。年LTV偏低（一次性購買為主）",
-          "links": [
-            "https://www.androidcentral.com/wearables/luna-band-ces-2026-reveal"
-          ],
-          "scores": {
-            "margin": 70,
-            "demand": 75,
-            "barrier": 50,
-            "viral": 50,
-            "difficulty": 40,
-            "repurchase": 50
-          }
         }
       ]
     }
   ],
-  "lastUpdated": "2026-04-18T09:49:18.390Z"
+  "lastUpdated": "2026-04-19T13:13:28.000Z"
 }
