@@ -640,7 +640,9 @@ function cardHTML(p, displayIndex) {
   const key = `${p._date}-${p.rank}`;
   const dims = getDims(p.scores);
   const myV = G.votes[key];
-  const links = Array.isArray(p.links) ? p.links : Object.values(p.links || {});
+  const links = Array.isArray(p.links)
+    ? p.links
+    : (typeof p.links === 'string' ? (p.links ? [p.links] : []) : Object.values(p.links || {}));
   const showDateInMeta = !G.sort.startsWith('date-');
 
   const scoreBars = dims.map(d => {
