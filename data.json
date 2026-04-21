@@ -7,7 +7,7 @@
         {
           "rank": 1,
           "name": "智能溫控濕糧餵食器（半導體致冷+預熱雙溫控）",
-          "category": "食品零食",
+          "category": "寵物食品零食",
           "score": 88,
           "price": "NT$3,999",
           "margin": "3.8x 🟢優質",
@@ -40,7 +40,7 @@
         {
           "rank": 2,
           "name": "2026 仿真飛鳥互動電動逗貓玩具（動作感應版）",
-          "category": "訓練行為",
+          "category": "寵物訓練行為",
           "score": 78,
           "price": "NT$899",
           "margin": "4.5x 🟢優質",
@@ -73,7 +73,7 @@
         {
           "rank": 3,
           "name": "矽膠舔食墊豐富化組合（7 件 #ditchthebowl）",
-          "category": "用品器具",
+          "category": "寵物用品器具",
           "score": 76,
           "price": "NT$599",
           "margin": "5.2x 🌟爆品",
@@ -106,7 +106,7 @@
         {
           "rank": 4,
           "name": "寵物餵藥三件組（矽膠餵藥器+7日分藥盒+口腔開合器）",
-          "category": "護理美容",
+          "category": "寵物護理美容",
           "score": 72,
           "price": "NT$499",
           "margin": "3.5x 🟡理想",
@@ -139,7 +139,7 @@
         {
           "rank": 5,
           "name": "RFID 多貓識別智能選擇性餵食器（SureFeed 型）",
-          "category": "智能科技",
+          "category": "寵物智能科技",
           "score": 68,
           "price": "NT$4,290",
           "margin": "2.9x 🔵門檻",
@@ -178,7 +178,7 @@
         {
           "rank": 1,
           "name": "AquaPurr 4 水龍頭感應式寵物直飲器",
-          "category": "智能科技",
+          "category": "寵物智能科技",
           "score": 77,
           "price": "$1,980",
           "margin": "3.2x",
@@ -211,7 +211,7 @@
         {
           "rank": 2,
           "name": "PetPace Smart Collar V3.0 AI 健康監測項圈",
-          "category": "智能科技",
+          "category": "寵物智能科技",
           "score": 76,
           "price": "$3,980",
           "margin": "3.5x",
@@ -244,7 +244,7 @@
         {
           "rank": 3,
           "name": "PETKIT YUMSHARE 雙料倉 AI 鏡頭智能餵食器",
-          "category": "智能科技",
+          "category": "寵物智能科技",
           "score": 76,
           "price": "$2,980",
           "margin": "3.8x",
@@ -277,7 +277,7 @@
         {
           "rank": 4,
           "name": "Rcae 矽膠折疊式寵物嗅聞慢食墊 2.0",
-          "category": "訓練行為",
+          "category": "寵物訓練行為",
           "score": 70,
           "price": "$790",
           "margin": "4.2x",
@@ -310,7 +310,7 @@
         {
           "rank": 5,
           "name": "Chillz / Green Pet Shop 重壓感應寵物降溫凝膠墊",
-          "category": "用品器具",
+          "category": "寵物用品器具",
           "score": 74,
           "price": "$690",
           "margin": "4.0x",
@@ -883,5 +883,5 @@
       ]
     }
   ],
-  "last_updated": "2026-04-21T00:44:51.050Z"
+  "last_updated": "2026-04-21T11:54:24.898Z"
 }
