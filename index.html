@@ -222,6 +222,12 @@ body { font-family: var(--font); font-feature-settings: var(--font-feat); color:
   line-height: 1.6;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
 }
+/* 展開狀態：拿掉亮點說明的 2 行截斷，讓使用者看完整段話 */
+.card:has(.det.open) .card-hl {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
 
 /* Score badge — rounded square, bold */
 .card-score {
