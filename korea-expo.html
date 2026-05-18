@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EE MEGAZOO 2026 攻略</title>
+<meta name="description" content="韓國寵物展看展精華 — 市場洞察、值得去的攤位、可引進機會。">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-2: #4a4a4a;
+    --ink-3: #888;
+    --line: #e5e5e5;
+    --bg: #fafaf8;
+    --paper: #ffffff;
+    --accent: #c8102e;
+    --accent-2: #003478;
+    --gold: #b8860b;
+    --highlight: #fff8e6;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans CJK TC", "Noto Sans CJK KR", "Microsoft JhengHei", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.75;
+    font-size: 15.5px;
+  }
+  .container { max-width: 880px; margin: 0 auto; padding: 32px 24px 80px; }
+
+  header.mast {
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 3px solid var(--ink);
+  }
+  .kicker {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: clamp(28px, 4.5vw, 40px);
+    margin: 0 0 4px;
+    letter-spacing: -0.6px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .subtitle {
+    font-size: 14px;
+    color: var(--ink-2);
+    font-weight: 400;
+    margin-top: 8px;
+  }
+  .subtitle strong { color: var(--ink); font-weight: 600; }
+
+  section { margin-bottom: 48px; }
+  section > h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  section > h2 .num {
+    color: white;
+    background: var(--ink);
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  section > .lede {
+    color: var(--ink-2);
+    font-size: 14.5px;
+    margin: 0 0 24px;
+    padding-left: 40px;
+  }
+
+  /* Insight blocks */
+  .insight {
+    padding: 18px 24px;
+    margin: 14px 0;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent-2);
+    border-radius: 6px;
+  }
+  .insight-title {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+  .insight-body {
+    font-size: 14.5px;
+    color: var(--ink-2);
+  }
+  .insight-body strong { color: var(--ink); }
+  .insight-body em { color: var(--accent); font-style: normal; font-weight: 600; }
+
+  /* Brand cards */
+  .brand {
+    padding: 22px 26px;
+    margin: 16px 0;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+  .brand.starred {
+    background: linear-gradient(180deg, var(--highlight) 0%, var(--paper) 60%);
+    border-left: 4px solid var(--gold);
+  }
+  .brand-rank {
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .brand h3 {
+    font-size: 19px;
+    margin: 0 0 4px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+  }
+  .brand h3 .ko {
+    font-size: 14px;
+    color: var(--accent-2);
+    font-weight: 500;
+    margin-left: 6px;
+  }
+  .brand-meta {
+    font-size: 13px;
+    color: var(--ink-3);
+    margin-bottom: 14px;
+  }
+  .brand-meta span:not(:last-child)::after {
+    content: " · ";
+    color: var(--line);
+  }
+  .brand-row {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 14px;
+    margin: 10px 0;
+    font-size: 14.5px;
+  }
+  .brand-row-label {
+    color: var(--ink-3);
+    font-size: 11.5px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 3px;
+  }
+  .brand-row-value { color: var(--ink); }
+  .brand-row-value strong { color: var(--accent); }
+
+  /* Opportunity list */
+  .opp {
+    padding: 16px 20px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    margin: 10px 0;
+  }
+  .opp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+  .opp-title {
+    font-weight: 700;
+    font-size: 15.5px;
+    flex: 1;
+  }
+  .opp-from {
+    font-size: 11.5px;
+    color: var(--ink-3);
+    font-family: monospace;
+    white-space: nowrap;
+  }
+  .opp-body {
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.65;
+  }
+  .opp-body strong { color: var(--ink); }
+  .opp-arrow {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--line);
+    font-size: 13.5px;
+    color: var(--accent);
+  }
+  .opp-arrow::before {
+    content: "→ 展場找：";
+    font-weight: 700;
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .container { padding: 20px 16px 60px; }
+    section > .lede { padding-left: 0; }
+    .brand-row { grid-template-columns: 1fr; gap: 2px; }
+    .brand-row-label { padding-top: 0; }
+  }
+  @media print {
+    body { background: white; }
+    .insight, .brand, .opp { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="mast">
+    <div class="kicker">MEGAZOO 2026 Season 1 · 看展精華</div>
+    <h1>EE 韓國寵物展戰術手冊</h1>
+    <p class="subtitle">
+      <strong>2026/5/29–5/31</strong> · KINTEX 일산 Hall 7–8 · 約 700 攤位<br>
+      這份手冊只給你 EE 在展場走走看看以外得到不到的三類東西：戰略視野、值得去的攤位、可立即引進的商機。
+    </p>
+  </header>
+
+  <!-- Section 1: Strategic Insights -->
+  <section>
+    <h2><span class="num">1</span>韓國寵物市場 — 你應該知道的 5 件事</h2>
+    <p class="lede">這 5 件事決定了 EE 在展場該找誰、該談什麼。看完再走攤位，效率差 3 倍。</p>
+
+    <div class="insight">
+      <div class="insight-title">① Humanization 比中台早 1–2 年</div>
+      <div class="insight-body">
+        하림펫푸드 더리얼 100% human-grade 配方多年前就上市；2025 年又出
+        <strong>더리얼 로우 RAW 凍乾生食線</strong>（4 月 DOG line 牛/鮭兩款、6 月又出 패티 漢堡排型態）。
+        台灣才剛開始有「人類能吃」訴求進主流通路。
+        <em>現在進是時機點，2-3 年後台灣大廠跟上空間就窄了。</em>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-title">② 上市食品集團的寵物副線 = OEM 最佳窗口</div>
+      <div class="insight-body">
+        農심（拉麵）、풀무원（豆腐 / 健康食品）、KGC 인삼공사（人蔘）、하림（雞肉）——韓國四大食品集團都有寵物副線。
+        <strong>食品集團通常有自家工廠空閒產能，比純寵物廠更願意接小量 OEM。</strong>
+        EE 想做自有品牌，這些是首選談判對象，比直接找中國 OEM 更有差異化故事可講。
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-title">③ 韓國本土 grooming 品牌品質亞洲第一，但出海能力差</div>
+      <div class="insight-body">
+        吹風機、剃毛刀、洗毛精、免水乾洗摩絲——這些品類韓國設計感跟工藝水準高，
+        但本土品牌幾乎沒做海外，主要靠 K-pop 消費文化外溢。<em>對 EE 是「品好 / 競爭少」甜蜜區。</em>
+        現場可以挑願意接 OEM 的小廠談台灣獨家。
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-title">④ 韓國 펫테크 startups IoT vitals 走在中國前面</div>
+      <div class="insight-body">
+        Petpuls（Seoul National Univ. R&D 背景）、핏펫（FitPet）、바램시스템（BAReM）等寵物 IoT 健康監測新創——
+        韓國人類 healthtech 強帶動，技術成熟度比中國同類品高。<strong>這些是 Series A/B 級新創，產品有了、商業化能力還在打磨</strong>，
+        正是 EE 撿便宜談獨家代理的時點。
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-title">⑤ PETKIT 已建韓國法人，繞道找比直接對中國談更彈性</div>
+      <div class="insight-body">
+        펫킷코리아（petkitkorea.com）是中國 PETKIT 的韓國正式法人。
+        中國 PETKIT 直接找台灣代理權通常碰壁，但透過韓國法人有時可以拿到更好條件。
+        對應 EE 5/11 #5 PUROBOT PRO 2 + 5/8 #2 智能飲水機選品，是現場直接談的機會。
+        PETKIT 剛拿 CES 2026 Microsoft AI Innovation Award，故事性也夠。
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Booth Recommendations -->
+  <section>
+    <h2><span class="num">2</span>5 家最值得去的攤位</h2>
+    <p class="lede">不是 12 家，5 家。每家是因為「現在這個時點對 EE 有特定機會」才入選——沒有 just because 大廠就列。</p>
+
+    <!-- Brand 1 -->
+    <div class="brand starred">
+      <div class="brand-rank">★ 第一順位</div>
+      <h3>대주산업 OLIVE / SHAKE IT <span class="ko">대주펫푸드</span></h3>
+      <div class="brand-meta">
+        <span>KOSDAQ 003310</span><span>韓國寵物食品 TOP 3</span><span>2024 營收 1,060 億₩</span>
+      </div>
+
+      <div class="brand-row">
+        <div class="brand-row-label">做什麼</div>
+        <div class="brand-row-value">兩個自有品牌：올리브 OLIVE（2021）+ 쉑잇 SHAKE IT（2020）。凍乾、發酵主食、訓練零食都有，主打中高價帶。</div>
+      </div>
+      <div class="brand-row">
+        <div class="brand-row-label">現在的機會</div>
+        <div class="brand-row-value">2025 Q3 累計營業利益 <strong>+10.5%</strong> / 營收 -3.7% — 公司在做高毛利結構轉型、<strong>想拓海外但量還沒起來</strong>，是 EE 議價最好的時點。</div>
+      </div>
+      <div class="brand-row">
+        <div class="brand-row-label">EE 切入</div>
+        <div class="brand-row-value">쉑잇 凍乾線 OEM 給自有品牌（對應 EE 5/5 #1 蘑菇免疫嚼錠、5/10 #1 牛初乳腸道粉的價帶）。最小 OEM 量是談判核心。</div>
+      </div>
+    </div>
+
+    <!-- Brand 2 -->
+    <div class="brand starred">
+      <div class="brand-rank">★ 第二順位</div>
+      <h3>하림펫푸드 더리얼 <span class="ko">Harim THE REAL</span></h3>
+      <div class="brand-meta">
+        <span>KOSDAQ 136480 子公司</span><span>韓國 humanization 龍頭</span><span>2024 營收 521 億₩</span>
+      </div>
+
+      <div class="brand-row">
+        <div class="brand-row-label">做什麼</div>
+        <div class="brand-row-value">100% human-grade 配方，韓國首座寵物食品專用工廠「Happy Dance Studio」生產。3 種型態 × 4 種蛋白（雞/鮭/鴨/牛）；<strong>1kg 包裝內含 5×200g 子袋 + 量杯</strong>——這個包裝設計台灣寵物食品幾乎沒人做過。</div>
+      </div>
+      <div class="brand-row">
+        <div class="brand-row-label">現在的機會</div>
+        <div class="brand-row-value">2025 年 4 月起陸續推出 <em>「더리얼 로우」RAW 凍乾生食線</em>（DOG line 牛/鮭 + 6 月 漢堡排 패티），台灣完全沒有對應產品；新品代理權絕對沒談。</div>
+      </div>
+      <div class="brand-row">
+        <div class="brand-row-label">EE 切入</div>
+        <div class="brand-row-value">優先：拿 더리얼 로우 RAW 線台灣獨家代理 / 大盤通路。次要：學 5×200g 子袋 + 量杯包裝結構，套到自有品牌。</div>
+      </div>
+    </div>
+
+    <!-- Brand 3 -->
+    <div class="brand starred">
+      <div class="brand-rank">★ 第三順位</div>
+      <h3>풀무원 아미오 <span class="ko">Pulmuone Amio</span></h3>
+      <div class="brand-meta">
+        <span>KOSPI 017810</span><span>韓國代表性健康食品 / 豆腐領導品牌</span><span>19 年連續「最受尊敬企業」</span>
+      </div>
+
+      <div class="brand-row">
+        <div class="brand-row-label">做什麼</div>
+        <div class="brand-row-value">풀무원（韓國 #1 豆腐 / 健康食品品牌、年銷量級）延伸出來的寵物食品線。主打<strong>豆腐 + 韓國植物食材基底寵物食品</strong>——全球幾乎沒人這樣做。</div>
+      </div>
+      <div class="brand-row">
+        <div class="brand-row-label">現在的機會</div>
+        <div class="brand-row-value">豆腐基寵物食品是世界少見的 unique category。<strong>풀무원有人類食品集團的供應鏈規模，但寵物線還小，相對好接觸</strong>。台灣 vegan / 高敏寵物市場剛起，缺差異化故事。</div>
+      </div>
+      <div class="brand-row">
+        <div class="brand-row-label">EE 切入</div>
+        <div class="brand-row-value">豆腐基底凍乾 / 拌飯零食條台灣獨家。「韓國 #1 豆腐廠做寵物食品」這個 narrative 一上 momo 就好賣，比起一般凍乾差異化大。</div>
+      </div>
+    </div>
+
+    <!-- Brand 4 -->
+    <div class="brand">
+      <div class="brand-rank">第四順位</div>
+      <h3>이글벳 <span class="ko">Eagle Veterinary Tech</span></h3>
+      <div class="brand-meta">
+        <span>KOSDAQ 044960</span><span>1970 年成立，2000 年上市</span><span>少數 KOSDAQ 上市的動物用藥廠</span>
+      </div>
+
+      <div class="brand-row">
+        <div class="brand-row-label">做什麼</div>
+        <div class="brand-row-value">獸醫處方藥、骨關節注射、寵物 bio-feed。KOSDAQ 上市、財務透明、合規性強。<strong>與종근당바이오合作的「라비벳」益生菌補充劑是韓國寵物益生菌販售 #1</strong>。</div>
+      </div>
+      <div class="brand-row">
+        <div class="brand-row-label">現在的機會</div>
+        <div class="brand-row-value">對應 EE 5/11 #1 Hill's Metabolic 處方減重嚼錠選品（score 82）。<strong>寵物 GLP-1 / 減重 Rx 正在熱，이글벳有能力做 prescription 版的廠。</strong></div>
+      </div>
+      <div class="brand-row">
+        <div class="brand-row-label">EE 切入</div>
+        <div class="brand-row-value">處方藥代理利潤結構好（毛利通常 40%+）但需動物醫院通路。談台灣分區代理、第一階段以小批處方零食切入。라비벳益生菌如果未在台上市，是低門檻試水單選項。</div>
+      </div>
+    </div>
+
+    <!-- Brand 5 -->
+    <div class="brand">
+      <div class="brand-rank">第五順位</div>
+      <h3>농심 반려다움 / Vetanic <span class="ko">Nongshim Pet</span></h3>
+      <div class="brand-meta">
+        <span>KOSPI 004370</span><span>拉麵巨頭跨界寵物</span><span>已布局動物醫院 B2B 通路</span>
+      </div>
+
+      <div class="brand-row">
+        <div class="brand-row-label">做什麼</div>
+        <div class="brand-row-value">辛拉麵母公司進入寵物市場。已有「반려다움」食品線，<strong>並由社內 startup 註冊「Vetanic（베타닉）」商標</strong>——指定為動物사료用 영양보충제 / 단백질보충제 / 식이보충제，主攻動物醫院 B2B。</div>
+      </div>
+      <div class="brand-row">
+        <div class="brand-row-label">現在的機會</div>
+        <div class="brand-row-value"><em>Vetanic 線還在通路鋪設前期，談海外代理權條件相對好</em>。展場上可能直接看到 prototype 或 launch plan。</div>
+      </div>
+      <div class="brand-row">
+        <div class="brand-row-label">EE 切入</div>
+        <div class="brand-row-value">Vetanic 線台灣首發合作（動物醫院通路）。農心人類食品 R&D 強、配方科學性可信，比新創品牌更容易過台灣 TFDA 飼料登記。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Opportunity List -->
+  <section>
+    <h2><span class="num">3</span>可立即引進的商機 — 7 項</h2>
+    <p class="lede">過去 10 天 EE 每日選品中，研判「韓國通路可能比中台早 6-12 個月」的 7 項。展場上找對應品牌驗證 + 拿樣品 + 詢報價。</p>
+
+    <div class="opp">
+      <div class="opp-head">
+        <span class="opp-title">1. Hill's Metabolic + j/d 處方減重嚼錠</span>
+        <span class="opp-from">EE 5/11 #1 · 82 分</span>
+      </div>
+      <div class="opp-body">
+        Hill's 2026-04-30 全球新品。韓國經 Hill's KR / Royal Canin 通路可能領先中台 6-12 個月。台灣蝦皮 &lt;5 賣家、momo / PChome 零。
+      </div>
+      <div class="opp-arrow">Hill's KR 攤位確認嚼錠 SKU 韓國上市進度。順便去 이글벳攤談「處方類仿型」可能。</div>
+    </div>
+
+    <div class="opp">
+      <div class="opp-head">
+        <span class="opp-title">2. 寵物術後恢復連身衣（替代頭錐 cone）</span>
+        <span class="opp-from">EE 5/9 #2</span>
+      </div>
+      <div class="opp-body">
+        韓國寵物醫療文化發達，連身衣已有專業品牌取代傳統頭錐。中台仍以頭錐為主，這個品類空白。
+      </div>
+      <div class="opp-arrow">寵物醫療區掃街找韓國本土連身衣品牌，拿樣品 + 報價。</div>
+    </div>
+
+    <div class="opp">
+      <div class="opp-head">
+        <span class="opp-title">3. 免水乾洗摩絲（earthbath / Ark Naturals 仿型）</span>
+        <span class="opp-from">EE 5/11 #3</span>
+      </div>
+      <div class="opp-body">
+        韓國 grooming 通路強。中國多為噴霧形式、台灣 momo 幾乎沒有摩絲品。
+      </div>
+      <div class="opp-arrow">grooming 區找韓國本土摩絲品牌，注意酵素 / probiotic 配方差異與 OEM 可能。</div>
+    </div>
+
+    <div class="opp">
+      <div class="opp-head">
+        <span class="opp-title">4. AI 寵物呼吸頻率睡眠監測儀</span>
+        <span class="opp-from">EE 5/1 #5</span>
+      </div>
+      <div class="opp-body">
+        韓國 펫테크 startups（Petpuls / 핏펫 / 바램）IoT vitals 技術走中國前面。中台正規韓國品牌引進近乎零。
+      </div>
+      <div class="opp-arrow">펫테크區一輪掃下來，挑願意做小量試水單的新創談獨家。</div>
+    </div>
+
+    <div class="opp">
+      <div class="opp-head">
+        <span class="opp-title">5. 寵物口腔 probiotic 粉（Native Pet GutWell 仿型）</span>
+        <span class="opp-from">EE 5/8 #1</span>
+      </div>
+      <div class="opp-body">
+        韓國 oral probiotic 應用先進（人類 oral biotics 帶動）。中台寵物口腔 probiotic 還是空白。
+      </div>
+      <div class="opp-arrow">保健品區找韓國本土口腔 probiotic 品牌；注意菌株來源與 GMP 認證。</div>
+    </div>
+
+    <div class="opp">
+      <div class="opp-head">
+        <span class="opp-title">6. 凍乾發酵蔬菜益生原拌飯零食條（西洋蓍草 + 鳳梨酶）</span>
+        <span class="opp-from">EE 5/5 #4</span>
+      </div>
+      <div class="opp-body">
+        韓國發酵食品文化深厚（kimchi / 청국장等），植物發酵 + 寵物應用是潛在 unique angle。中台缺發酵蔬菜寵物應用。
+      </div>
+      <div class="opp-arrow">대주산업 쉑잇攤位問是否有發酵線；保健品區掃韓國本土發酵寵物食品品牌。</div>
+    </div>
+
+    <div class="opp">
+      <div class="opp-head">
+        <span class="opp-title">7. PCM 相變寵物中暑冰圍頸圈</span>
+        <span class="opp-from">EE 5/2 #1</span>
+      </div>
+      <div class="opp-body">
+        韓國夏季高濕高溫，寵物中暑商品需求集中 6-8 月。中台已有但 PCM 相變材料級別少。
+      </div>
+      <div class="opp-arrow">夏季商品區 / 戶外品牌跨界區找 PCM 系列；台灣 6-8 月正好缺貨。</div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
